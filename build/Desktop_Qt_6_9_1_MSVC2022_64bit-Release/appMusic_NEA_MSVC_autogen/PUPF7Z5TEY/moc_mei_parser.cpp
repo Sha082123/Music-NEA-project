@@ -41,13 +41,19 @@ template <> constexpr inline auto mei_parser::qt_create_metaobjectdata<qt_meta_t
         "mei_parser",
         "insert_break",
         "",
-        "measure_number"
+        "id",
+        "measure_number",
+        "delete_break"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Method 'insert_break'
-        QtMocHelpers::MethodData<void(int)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 3 },
+        QtMocHelpers::MethodData<void(QString, int)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 3 }, { QMetaType::Int, 4 },
+        }}),
+        // Method 'delete_break'
+        QtMocHelpers::MethodData<void(int)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 4 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -72,7 +78,8 @@ void mei_parser::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<mei_parser *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->insert_break((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 0: _t->insert_break((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 1: _t->delete_break((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -97,14 +104,14 @@ int mei_parser::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

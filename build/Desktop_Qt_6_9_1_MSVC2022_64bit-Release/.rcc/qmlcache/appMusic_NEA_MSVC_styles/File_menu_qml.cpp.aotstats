@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 371,
+                        "durationMicroseconds": 1010,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 9
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 443,
+                        "durationMicroseconds": 773,
                         "errorMessage": "",
                         "functionName": "acceptedButtons",
                         "line": 33
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 369,
+                        "durationMicroseconds": 948,
                         "errorMessage": "Cannot access value for name mouse",
                         "functionName": "onPressed",
                         "line": 34
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 299,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 32
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 1099,
+                        "durationMicroseconds": 2811,
                         "errorMessage": "Cannot access value for name TextInput",
                         "functionName": "wrapMode",
                         "line": 49

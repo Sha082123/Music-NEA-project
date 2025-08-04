@@ -40,6 +40,7 @@ template <> constexpr inline auto xml_parser::qt_create_metaobjectdata<qt_meta_t
     QtMocHelpers::StringRefStorage qt_stringData {
         "xml_parser",
         "element_from_point",
+        "QVariantList",
         "",
         "point",
         "page_number"
@@ -47,8 +48,8 @@ template <> constexpr inline auto xml_parser::qt_create_metaobjectdata<qt_meta_t
 
     QtMocHelpers::UintData qt_methods {
         // Method 'element_from_point'
-        QtMocHelpers::MethodData<QString(const QPointF &, const int &)>(1, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QPointF, 3 }, { QMetaType::Int, 4 },
+        QtMocHelpers::MethodData<QVariantList(const QPointF &, const int &)>(1, 3, QMC::AccessPublic, 0x80000000 | 2, {{
+            { QMetaType::QPointF, 4 }, { QMetaType::Int, 5 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -73,8 +74,8 @@ void xml_parser::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<xml_parser *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: { QString _r = _t->element_from_point((*reinterpret_cast< std::add_pointer_t<QPointF>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
-            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 0: { QVariantList _r = _t->element_from_point((*reinterpret_cast< std::add_pointer_t<QPointF>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }

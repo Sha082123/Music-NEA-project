@@ -14,7 +14,7 @@ public:
     explicit xml_parser(QObject *parent = nullptr);
     std::string parse_xml(const QString &svg_data);
 
-    Q_INVOKABLE QString element_from_point(const QPointF &point, const int &page_number);
+    Q_INVOKABLE QVariantList element_from_point(const QPointF &point, const int &page_number);
 
     void set_info_for_note(QString &id, int &measure_number, int &start_beat, int &end_beat, QString note_name);
     void set_info_for_rest(QString &id, int &measure_number, int &start_beat, int &end_beat);

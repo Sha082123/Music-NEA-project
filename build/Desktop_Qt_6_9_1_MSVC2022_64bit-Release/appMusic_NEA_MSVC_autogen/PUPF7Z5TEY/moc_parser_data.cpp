@@ -46,6 +46,8 @@ template <> constexpr inline auto parser_data::qt_create_metaobjectdata<qt_meta_
         "id",
         "input",
         "delete_break_item",
+        "new_break_item",
+        "apply_breaks",
         "reh_y_coords",
         "QVariantList",
         "break_list"
@@ -57,19 +59,25 @@ template <> constexpr inline auto parser_data::qt_create_metaobjectdata<qt_meta_
         // Signal 'break_listChanged'
         QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'update_break_list'
-        QtMocHelpers::MethodData<bool(QString, QString)>(4, 2, QMC::AccessPublic, QMetaType::Bool, {{
+        QtMocHelpers::MethodData<int(QString, QString)>(4, 2, QMC::AccessPublic, QMetaType::Int, {{
             { QMetaType::QString, 5 }, { QMetaType::QString, 6 },
         }}),
         // Method 'delete_break_item'
-        QtMocHelpers::MethodData<bool(QString)>(7, 2, QMC::AccessPublic, QMetaType::Bool, {{
+        QtMocHelpers::MethodData<int(QString)>(7, 2, QMC::AccessPublic, QMetaType::Int, {{
             { QMetaType::QString, 5 },
         }}),
+        // Method 'new_break_item'
+        QtMocHelpers::MethodData<int(QString)>(8, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::QString, 6 },
+        }}),
+        // Method 'apply_breaks'
+        QtMocHelpers::MethodData<void()>(9, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'reh_y_coords'
-        QtMocHelpers::PropertyData<QVariantList>(8, 0x80000000 | 9, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 0),
+        QtMocHelpers::PropertyData<QVariantList>(10, 0x80000000 | 11, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 0),
         // property 'break_list'
-        QtMocHelpers::PropertyData<QVariantList>(10, 0x80000000 | 9, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 1),
+        QtMocHelpers::PropertyData<QVariantList>(12, 0x80000000 | 11, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 1),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -93,10 +101,13 @@ void parser_data::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         switch (_id) {
         case 0: _t->reh_y_coordsChanged(); break;
         case 1: _t->break_listChanged(); break;
-        case 2: { bool _r = _t->update_break_list((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 3: { bool _r = _t->delete_break_item((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 2: { int _r = _t->update_break_list((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 3: { int _r = _t->delete_break_item((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 4: { int _r = _t->new_break_item((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 5: _t->apply_breaks(); break;
         default: ;
         }
     }
@@ -143,14 +154,14 @@ int parser_data::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 6;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty

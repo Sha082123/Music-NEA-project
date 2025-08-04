@@ -56,7 +56,7 @@ qt_add_qml_module(appMusic_NEA_MSVC
         SOURCES
         SOURCES
         SOURCES
-        SOURCES data_parsing/selection_handler.h data_parsing/selection_handler.cpp
+        SOURCES
         SOURCES data_parsing/xml_parser.h data_parsing/xml_parser.cpp
         SOURCES data_parsing/mei_parser.h data_parsing/mei_parser.cpp
         SOURCES data_parsing/parser_data.h data_parsing/parser_data.cpp

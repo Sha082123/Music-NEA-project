@@ -18,7 +18,7 @@
                     ],
                     "index": 0,
                     "name": "element_from_point",
-                    "returnType": "QString"
+                    "returnType": "QVariantList"
                 }
             ],
             "object": true,

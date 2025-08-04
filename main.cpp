@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
     g_image_provider = new image_provider(); // Initialize the global image provider
     g_verovio_loader = new verovio_loader(); // Initialize the global Verovio loader
     g_resvg_loader = new resvg_loader(); // Initialize the global Resvg loader
-    g_selection_handler = new selection_handler(); // Initialize the global selection handler
     g_xml_parser = new xml_parser(); // Initialize the global XML parser
     g_mei_parser = new mei_parser(); // Initialize the global MEI parser
     g_parser_data = new parser_data(); // Initialize the global parser data
@@ -33,7 +32,7 @@ int main(int argc, char *argv[])
     engine.rootContext ()->setContextProperty("file_open", new file_open());
     engine.rootContext()->setContextProperty("render", new render_file(&engine));
     engine.rootContext()->setContextProperty("scan_existing", new scan_existing(&engine));
-    engine.rootContext()->setContextProperty ("selection_handler", g_selection_handler);
+    engine.rootContext()->setContextProperty ("xml_parser", g_xml_parser);
     engine.rootContext()->setContextProperty ("mei_parser", g_mei_parser);
     engine.rootContext()->setContextProperty ("parser_data", g_parser_data);
 

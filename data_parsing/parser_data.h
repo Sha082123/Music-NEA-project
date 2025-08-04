@@ -14,8 +14,15 @@ public:
     explicit parser_data(QObject *parent = nullptr);
 
     void parse();
-    Q_INVOKABLE bool update_break_list(QString id, QString input); // returns an error message // qml cant pass reference
-    Q_INVOKABLE bool delete_break_item(QString id);
+    Q_INVOKABLE int update_break_list(QString id, QString input); // 0 = no error, -1 = invalid input,
+                                                                  // -2 = out of range, -3 = already exists
+
+    Q_INVOKABLE int delete_break_item(QString id); // 0 = no error, -1 = could not find break id
+
+    Q_INVOKABLE int new_break_item(QString input);  // 0 = no error, -1 = invalid input,
+                                                    // -2 = out of range, -3 = already exists
+
+    Q_INVOKABLE void apply_breaks(); // Applies the break action list
 
     int getNumber_of_measures() const;
     QVariantList reh_y_coords() const;
@@ -33,6 +40,14 @@ private:
     QVariantList m_reh_y_coords;
 
     QVariantList m_break_list;
+
+    struct break_element {
+        int mode; // 0 for delete, 1 for new
+        QString id;
+        int measure_number;
+    };
+
+    QVector<break_element> break_action_list; // stores actions in order
 
     void parse_reh_list();
     void parse_break_list();

@@ -8,6 +8,7 @@ Window {
     height: 600
 
     property string error_message: "";
+    //signal save_button_clicked()
 
     Text {
         text: "Message: " + error_message
@@ -25,6 +26,12 @@ Window {
             bottom: parent.bottom
             margins: 10
         }
+
+        onClicked: {
+            parser_data.apply_breaks()
+            render.update()
+
+        }
     }
 
     Button {
@@ -38,6 +45,12 @@ Window {
             left: parent.left
             bottom: parent.bottom
             margins: 10
+        }
+
+        onClicked: {
+            // Handle cancel action
+            console.log("Cancel button clicked");
+            break_manager.close();
         }
     }
 
@@ -136,13 +149,25 @@ Window {
                         }
 
                         onClicked: {
-                            if (parser_data.delete_break_item(modelData[0]) === true) {
-                                console.log("Break removed successfully");
-                                break_manager.error_message = "Removed from buffer: " + modelData[0];
-                            } else {
-                                console.log("Failed to remove break");
-                                break_manager.error_message = "Failed to remove break";
-                            };
+
+                            switch(parser_data.delete_break_item(modelData[0])) {
+                                case 0:
+                                    console.log("Break removed successfully");
+                                    break_manager.error_message = "Removed from buffer: " + modelData[0];
+                                    break;
+                                case -1:
+                                    console.log("error code -1");
+                                    break_manager.error_message = "Could not find break";
+                                    break;
+                                }
+
+                            // if (parser_data.delete_break_item(modelData[0]) === true) {
+                            //     console.log("Break removed successfully");
+                            //     break_manager.error_message = "Removed from buffer: " + modelData[0];
+                            // } else {
+                            //     console.log("Failed to remove break");
+                            //     break_manager.error_message = "Failed to remove break";
+                            // };
                         }
 
                     }
@@ -154,14 +179,37 @@ Window {
                         text: modelData[1]
 
                         onEditingFinished: {
-                            if (parser_data.update_break_list(modelData[0], text) === true) {
-                                console.log("Break updated successfully");
-                                break_manager.error_message = "Added to buffer: measure " + text
-                            } else {
-                                console.log("Failed to update break");
-                                break_manager.error_message = "Failed to update break";
-                                text = modelData[1]; // Reset to original value
-                            };
+
+                            switch (parser_data.update_break_list(modelData[0], text)) {
+                                case 0:
+                                    console.log("Break updated successfully");
+                                    break_manager.error_message = "Added to buffer: measure " + text;
+                                    break;
+                                case -1:
+                                    console.log("error code -1");
+                                    break_manager.error_message = "Invalid input";
+                                    text = modelData[1]
+                                    break;
+                                case -2:
+                                    console.log("error code -2");
+                                    break_manager.error_message = "Measure out of range";
+                                    text = modelData[1]
+                                    break;
+                                case -3:
+                                    console.log("error code -3");
+                                    break_manager.error_message = "Measure already exists";
+                                    text = modelData[1]
+                                    break;
+                            }
+
+                            // if (parser_data.update_break_list(modelData[0], text) === true) {
+                            //     console.log("Break updated successfully");
+                            //     break_manager.error_message = "Added to buffer: measure " + text
+                            // } else {
+                            //     console.log("Failed to update break");
+                            //     break_manager.error_message = "Failed to update break";
+                            //     text = modelData[1]; // Reset to original value
+                            // };
                         }
                     }
                 }
@@ -171,6 +219,9 @@ Window {
 
     Popup {
         id: popup
+
+        property bool editing_finished_guard: false
+
         anchors.centerIn: parent
         width: 200
         height: 70
@@ -190,6 +241,7 @@ Window {
         }
 
         TextInput {
+            id: text_input
             text: "Enter here"
             verticalAlignment: Text.AlignVCenter
             anchors {
@@ -199,14 +251,59 @@ Window {
             }
 
             onEditingFinished: {
-                popup.close()
-                if (parser_data.update_break_list(("break_at_" + text), text) === true) {
-                    console.log("Break added successfully");
-                    break_manager.error_message = "Added to buffer: measure " + text
-                } else {
-                    console.log("Failed to update break");
-                    break_manager.error_message = "Invalid input";
-                };
+
+                if (popup.editing_finished_guard === true) {
+                    return // prevent multiple calls from focus loss
+                }
+
+                popup.editing_finished_guard = true
+
+                console.log("run through")
+
+                switch (parser_data.new_break_item(text)) {
+                    case 0:
+                        console.log("Break added successfully");
+                        break_manager.error_message = "Added to buffer: measure " + text;
+                        popup.close();
+                        break;
+                    case -1:
+                        console.log("error code -1");
+                        break_manager.error_message = "Invalid input";
+                        popup.close();
+                        break;
+                    case -2:
+                        console.log("error code -2");
+                        break_manager.error_message = "Measure out of range";
+                        popup.close();
+                        break;
+                    case -3:
+                        console.log("error code -3");
+                        break_manager.error_message = "Measure already exists";
+                        popup.close();
+                        break;
+                }
+
+                // if (parser_data.new_break_item(text) === true) {
+                //     console.log(text)
+                //     console.log("Break added successfully");
+                //     break_manager.error_message = "Added to buffer: measure " + text
+                //     popup.close()
+                // }
+
+                // else {
+                //     console.log(text)
+                //     console.log("Hello")
+                //     console.log("Failed to update break");
+                //     break_manager.error_message = "Invalid input";
+                //     popup.close()
+                // };
+
+            }
+
+            onActiveFocusChanged: {
+                if (activeFocus === false) {
+                    popup.editing_finished_guard = false; // Reset guard when focus is lost
+                }
             }
         }
     }

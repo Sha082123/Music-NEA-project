@@ -3,44 +3,6 @@
         {
             "className": "selection_handler",
             "lineNumber": 7,
-            "methods": [
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "page_number",
-                            "type": "int"
-                        },
-                        {
-                            "name": "x",
-                            "type": "double"
-                        },
-                        {
-                            "name": "y",
-                            "type": "double"
-                        },
-                        {
-                            "name": "file_name",
-                            "type": "QString"
-                        }
-                    ],
-                    "index": 0,
-                    "name": "get_element_at_coords",
-                    "returnType": "QString"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "page_number",
-                            "type": "int"
-                        }
-                    ],
-                    "index": 1,
-                    "name": "parse_page_xml",
-                    "returnType": "void"
-                }
-            ],
             "object": true,
             "qualifiedClassName": "selection_handler",
             "superClasses": [

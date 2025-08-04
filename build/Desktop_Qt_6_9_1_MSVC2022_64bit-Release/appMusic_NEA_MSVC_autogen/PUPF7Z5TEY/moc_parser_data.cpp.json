@@ -18,7 +18,7 @@
                     ],
                     "index": 2,
                     "name": "update_break_list",
-                    "returnType": "bool"
+                    "returnType": "int"
                 },
                 {
                     "access": "public",
@@ -30,7 +30,25 @@
                     ],
                     "index": 3,
                     "name": "delete_break_item",
-                    "returnType": "bool"
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "input",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "new_break_item",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "apply_breaks",
+                    "returnType": "void"
                 }
             ],
             "object": true,

@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 270,
+                        "durationMicroseconds": 1250,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 22
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 268,
+                        "durationMicroseconds": 1106,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 24
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 108,
+                        "durationMicroseconds": 485,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 32
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 456,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 39
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 65,
+                        "durationMicroseconds": 440,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 46
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 16,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 528,
                         "errorMessage": "Cannot access value for name originalWidth",
                         "functionName": "width",
                         "line": 53
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 1113,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 58
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 80,
+                        "durationMicroseconds": 500,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 59
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 113,
+                        "durationMicroseconds": 585,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 54
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 463,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 55
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 153,
+                        "durationMicroseconds": 619,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 65
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 485,
+                        "durationMicroseconds": 1954,
                         "errorMessage": "",
                         "functionName": "onEntered",
                         "line": 69
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 19,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 435,
                         "errorMessage": "Cannot access value for name originalWidth",
                         "functionName": "onExited",
                         "line": 74
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 287,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 63

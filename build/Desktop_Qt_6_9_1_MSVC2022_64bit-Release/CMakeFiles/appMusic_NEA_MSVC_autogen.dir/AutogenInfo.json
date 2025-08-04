@@ -1959,12 +1959,6 @@
 			null
 		],
 		[
-			"D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/selection_handler.h",
-			"MU",
-			"PUPF7Z5TEY/moc_selection_handler.cpp",
-			null
-		],
-		[
 			"D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/xml_parser.h",
 			"MU",
 			"PUPF7Z5TEY/moc_xml_parser.cpp",
@@ -2134,11 +2128,6 @@
 		],
 		[
 			"D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/parser_data.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/selection_handler.cpp",
 			"MU",
 			null
 		],

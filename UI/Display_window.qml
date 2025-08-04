@@ -56,7 +56,7 @@ Rectangle {
             text: "R"
 
             onClicked: {
-                mei_parser.insert_break(1)
+                mei_parser.insert_break("break_test", 1)
 
                 console.log("refreshing...")
                 refreshed() // Trigger the click event to refresh the image source
@@ -105,6 +105,22 @@ Rectangle {
                 break_window.visible = true
             }
         }
+
+        Button {
+            id: delete_break
+            anchors.left: break_manager.left
+            anchors.bottom: parent.bottom
+            width: parent.height
+            height: parent.height
+            text: "X"
+
+            onClicked: {
+                mei_parser.delete_break(1)
+
+                console.log("deleting...")
+                refreshed() // Trigger the click event to refresh the image source
+            }
+        }
     }
 
     Rectangle {
@@ -149,6 +165,32 @@ Rectangle {
                     // LOGIC PROBLEM HERE!!! ORIGIN Y IS BEING ANNOYING
                     // RESIZING MAKES JUMPING NOT WORK
                 }
+            }
+        }
+
+
+        Rectangle {
+            id: selection_view
+
+            property int measure_number: 0
+            property int start_beat: 0
+            property int end_beat: 0
+            property string note_name: "g4"
+
+            anchors {
+                bottom: parent.bottom
+                left: parent.left
+                right: parent.right
+
+                margins: 10
+            }
+
+            height: 50
+
+            Text {
+                text: "Measure: " + selection_view.measure_number +
+                      "\n" + "Beats: " + selection_view.start_beat + "-" + selection_view.end_beat +
+                      "\n" + "Note: " + selection_view.note_name
             }
         }
     }
@@ -286,24 +328,51 @@ Rectangle {
                         property real x_coords: 0
                         property real y_coords: 0
 
+                        property var element_data: []
+
+                        focus: true
+
                         anchors.fill: parent
                         onClicked: {
-                            //selection_handler.parse_page_xml(index+1)
+                            clicker.focus = true
+
+                            clicker.forceActiveFocus()
 
                             x_coords = (mouse.x/viewer.scale_factor) - 50
                             y_coords = mouse.y/viewer.scale_factor
 
-                            var point = music.mapToItem(viewer, 0, 0)
+                            //var point = music.mapToItem(viewer, 0, 0)
                             //console.log("Image top-left relative to ListView:", x_coords, y_coords)
                             //console.log("Image clicked: ", modelData)
                             // console.log(selection_handler.get_element_at_coords(1, clicker.x_coords, clicker.y_coords))
-                            selection_handler.get_element_at_coords(index + 1, x_coords, y_coords, modelData)
+                            element_data = xml_parser.element_from_point(Qt.point(x_coords, y_coords), index + 1)
                             console.log(x_coords, y_coords)
 
                             music.source = modelData + "/reloader"
                             music.source = modelData
 
+                            // property int measure_number: 0
+                            // property int start_beat: 0
+                            // property int end_beat: 0
+                            // property string note_name: "g4"
 
+                            console.log(element_data)
+
+                            selection_view.measure_number = element_data[1]
+                            selection_view.start_beat = element_data[2]
+                            selection_view.end_beat = element_data[3]
+                            selection_view.note_name = element_data[4]
+
+                        }
+
+                        Keys.onPressed: (event) => {
+                            if (event.key === Qt.Key_W) {
+                                key_logger.forceActiveFocus()
+                                console.log("Return pressed, making break")
+                                parser_data.new_break_item(selection_view.measure_number)
+                                parser_data.apply_breaks()
+                                render.update()
+                            }
                         }
                     }
                 }

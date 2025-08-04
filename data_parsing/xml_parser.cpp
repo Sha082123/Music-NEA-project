@@ -68,7 +68,7 @@ std::string xml_parser::parse_xml(const QString &svg_data)
     return xml_data.toStdString ();
 }
 
-QString xml_parser::element_from_point(const QPointF &point, const int &page_number)
+QVariantList xml_parser::element_from_point(const QPointF &point, const int &page_number)
 {
     //qInfo() << "Searching for element at point: " << point;
     //qInfo() << "Searching page : " << page_number;
@@ -105,7 +105,7 @@ QString xml_parser::element_from_point(const QPointF &point, const int &page_num
             qInfo() << "Found note id: " << note.id << " at position: " << note.position << Qt::endl
                     << " at measure: " << note.measure_number << " start beat: " << note.start_beat
                     << " end beat: " << note.end_beat << " note name: " << note.note_name;
-            return note.id;
+            return QVariantList{note.id, note.measure_number, note.start_beat, note.end_beat, note.note_name};
         }
     }
 
@@ -116,7 +116,7 @@ QString xml_parser::element_from_point(const QPointF &point, const int &page_num
             qInfo() << "Found rest id: " << rest.id << " at position: " << rest.position << Qt::endl
                     << " at measure: " << rest.measure_number << " start beat: " << rest.start_beat
                     << " end beat: " << rest.end_beat;
-            return rest.id;
+            return QVariantList{rest.id, rest.measure_number, rest.start_beat, rest.end_beat, rest.note_name};
         }
     }
 
@@ -126,11 +126,11 @@ QString xml_parser::element_from_point(const QPointF &point, const int &page_num
 
             qInfo() << "Found rehearsal mark id: " << reh.id << " at position: " << reh.position << Qt::endl
                     << " at measure: " << reh.measure_number;
-            return reh.id;
+            return QVariantList{reh.id, reh.measure_number, reh.start_beat, reh.end_beat, reh.note_name};
         }
     }
 
-    return "No element found at coordinates"; // No element found at the given point
+    return QVariantList{}; // No element found at the given point
 }
 
 void xml_parser::set_info_for_note(QString &id, int &measure_number, int &start_beat, int &end_beat, QString note_name)

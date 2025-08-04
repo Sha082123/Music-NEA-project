@@ -18,7 +18,8 @@ public:
 
     QString export_mei_data();
 
-    Q_INVOKABLE void insert_break(int measure_number);
+    Q_INVOKABLE void insert_break(QString id, int measure_number);
+    Q_INVOKABLE void delete_break(int measure_number);
 
     // EDITING DATA -----------------------------------------------------------------------------
     // EDITING DATA -----------------------------------------------------------------------------

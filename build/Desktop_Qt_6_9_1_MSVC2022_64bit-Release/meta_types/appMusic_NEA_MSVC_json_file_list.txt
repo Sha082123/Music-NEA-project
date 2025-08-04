@@ -2,7 +2,6 @@ D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/app
 D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include/../MBI2Q3SVGB/moc_scan_existing.cpp.json
 D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include/../PUPF7Z5TEY/moc_mei_parser.cpp.json
 D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include/../PUPF7Z5TEY/moc_parser_data.cpp.json
-D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include/../PUPF7Z5TEY/moc_selection_handler.cpp.json
 D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include/../PUPF7Z5TEY/moc_xml_parser.cpp.json
 D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include/../RZRAGMB46M/moc_image_provider.cpp.json
 D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include/../RZRAGMB46M/moc_render_file.cpp.json

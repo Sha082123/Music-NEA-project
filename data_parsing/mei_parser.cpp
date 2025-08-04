@@ -748,21 +748,46 @@ QString mei_parser::export_mei_data()
     return document.toString();
 }
 
-void mei_parser::insert_break(int measure_number)
+void mei_parser::insert_break(QString id, int measure_number)
 {
     QDomElement root = document.documentElement();
 
     QDomNodeList measure_elements = root.elementsByTagName("measure");
 
-    for (QDomNode measure : measure_elements) {
-        QDomElement measure_element = measure.toElement();
+    for (int index = 0; index < measure_elements.count(); ++index) {
+        QDomElement measure_element = measure_elements.at(index).toElement();
 
         if (measure_element.attribute("n").toInt() == measure_number) {
             QDomElement break_element = document.createElement("sb");
-            break_element.setAttribute("xml:id", "break_" + QString::number(measure_number));
+            break_element.setAttribute("xml:id", id);
 
             QDomNode parent_node = measure_element.parentNode();
             parent_node.insertAfter(break_element, measure_element);
+
+            return;
+        }
+    }
+}
+
+void mei_parser::delete_break(int measure_number)
+{
+    QDomElement root = document.documentElement();
+
+    QDomNodeList measure_elements = root.elementsByTagName("measure");
+
+    for (int index = 0; index < measure_elements.count(); ++index) {
+        QDomElement measure_element = measure_elements.at(index).toElement();
+
+        if (measure_element.attribute("n").toInt() == measure_number) {
+            QDomNode break_node = measure_element.nextSibling();
+
+            QDomNode parent_node = measure_element.parentNode();
+
+            parent_node.removeChild(break_node);
+
+            qInfo() << Qt::endl << Qt::endl << Qt::endl;
+            qInfo() << "Break deleted from measure " << measure_number;
+            qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
             return;
         }

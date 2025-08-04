@@ -192,12 +192,28 @@
                         "access": "public",
                         "arguments": [
                             {
+                                "name": "id",
+                                "type": "QString"
+                            },
+                            {
                                 "name": "measure_number",
                                 "type": "int"
                             }
                         ],
                         "index": 0,
                         "name": "insert_break",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "measure_number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "delete_break",
                         "returnType": "void"
                     }
                 ],
@@ -234,7 +250,7 @@
                         ],
                         "index": 2,
                         "name": "update_break_list",
-                        "returnType": "bool"
+                        "returnType": "int"
                     },
                     {
                         "access": "public",
@@ -246,7 +262,25 @@
                         ],
                         "index": 3,
                         "name": "delete_break_item",
-                        "returnType": "bool"
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "input",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 4,
+                        "name": "new_break_item",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "apply_breaks",
+                        "returnType": "void"
                     }
                 ],
                 "object": true,
@@ -311,62 +345,6 @@
     {
         "classes": [
             {
-                "className": "selection_handler",
-                "lineNumber": 7,
-                "methods": [
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "page_number",
-                                "type": "int"
-                            },
-                            {
-                                "name": "x",
-                                "type": "double"
-                            },
-                            {
-                                "name": "y",
-                                "type": "double"
-                            },
-                            {
-                                "name": "file_name",
-                                "type": "QString"
-                            }
-                        ],
-                        "index": 0,
-                        "name": "get_element_at_coords",
-                        "returnType": "QString"
-                    },
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "page_number",
-                                "type": "int"
-                            }
-                        ],
-                        "index": 1,
-                        "name": "parse_page_xml",
-                        "returnType": "void"
-                    }
-                ],
-                "object": true,
-                "qualifiedClassName": "selection_handler",
-                "superClasses": [
-                    {
-                        "access": "public",
-                        "name": "QObject"
-                    }
-                ]
-            }
-        ],
-        "inputFile": "selection_handler.h",
-        "outputRevision": 69
-    },
-    {
-        "classes": [
-            {
                 "className": "xml_parser",
                 "lineNumber": 10,
                 "methods": [
@@ -384,7 +362,7 @@
                         ],
                         "index": 0,
                         "name": "element_from_point",
-                        "returnType": "QString"
+                        "returnType": "QVariantList"
                     }
                 ],
                 "object": true,

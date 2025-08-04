@@ -106,19 +106,37 @@ void parser_data::setBreak_list(const QVariantList &newBreak_list)
     emit break_listChanged();
 }
 
-bool parser_data::update_break_list(QString id, QString input)
+int parser_data::update_break_list(QString id, QString input)
 {
     if (input.toInt() <= 0) { // 0 also if not numeric
-        return false;
+        return -1; // -1  for invalid input
     }
 
     else if (input.toInt() > number_of_measures) {
-        return false;
+        return -2; // -2  for out of range
+    }
+
+    for (const QVariant &break_item : m_break_list) {
+        if (break_item.toList()[1] == input.toInt()) {
+            return -3; // Break with this measure number already exists
+        }
     }
 
     for (int index = 0; index < m_break_list.size(); ++index) {
         QVariantList break_item = m_break_list[index].toList();
         if (break_item[0].toString() == id) {
+
+            // add break element info for delete (!!BEFORE UPDATING THE ITEM!!)
+            break_element break_struct;
+            break_struct.id = break_item[0].toString();
+            break_struct.measure_number = break_item[1].toInt();
+            break_struct.mode = 0; // 0 for delete
+
+            break_action_list.append(break_struct);
+
+            qInfo() << "Break item added to be deleted: " << break_struct.id
+                    << " with measure number: " << break_struct.measure_number << "mode: " << break_struct.mode;
+
             // Update the measure number
             break_item[1] = input.toInt();
             m_break_list[index] = QVariant::fromValue(break_item);
@@ -127,37 +145,116 @@ bool parser_data::update_break_list(QString id, QString input)
 
             //qInfo() << m_break_list;
 
-            return true; // No error
+            // add break element info for new
+            break_struct.measure_number = break_item[1].toInt();
+            break_struct.mode = 1; // 1 for new
+            break_action_list.append(break_struct);
+
+            qInfo() << "Break item added to be edited: " << break_struct.id
+                    << " with measure number: " << break_struct.measure_number << "mode: " << break_struct.mode;
+
+            return 0; // No error
         }
     }
 
+    return false;
+
     // if the break is not found, then add a new break
 
-    m_break_list << QVariant::fromValue(QVariantList{id, input.toInt()});
+    // m_break_list << QVariant::fromValue(QVariantList{id, input.toInt()});
 
-    break_list_sort();
+    // break_list_sort();
 
-    return true;
+    // return true;
 
 
 }
 
-bool parser_data::delete_break_item(QString id)
+int parser_data::delete_break_item(QString id)
 {
 
     for (int index = 0; index < m_break_list.size(); ++index) {
         QVariantList break_item = m_break_list[index].toList();
         if (break_item[0].toString() == id) {
+
+            // add break element info for delete (!!BEFORE REMOVING THE ITEM!!)
+            break_element break_struct;
+            break_struct.id = break_item[0].toString();
+            break_struct.measure_number = break_item[1].toInt();
+            break_struct.mode = 0; // 0 for delete
+
+            break_action_list.append(break_struct);
+
+            qInfo() << "Break item added to be deleted: " << break_struct.id
+                    << " with measure number: " << break_struct.measure_number << "mode: " << break_struct.mode;
+
             // Update the measure number
             m_break_list.removeAt(index);
             emit break_listChanged();
 
             //qInfo() << m_break_list;
 
-            return true; // No error
+            return 0; // No error
         }
     }
 
-    return false;
+    return -1; // -1 for not found
 
+}
+
+int parser_data::new_break_item(QString input)
+{
+    if (input.toInt() <= 0) { // 0 also if not numeric
+        return -1; // invalid input
+    }
+
+    else if (input.toInt() > number_of_measures) {
+        return -2; // out of range
+    }
+
+    for (const QVariant &break_item : m_break_list) {
+        if (break_item.toList()[1] == input.toInt()) {
+            return -3; // Break with this measure number already exists
+        }
+    }
+
+    QString id = "new_break_" + input; // Generate a new ID for the break
+
+    m_break_list << QVariant::fromValue(QVariantList{id, input.toInt()});
+
+    break_list_sort();
+
+    break_element break_struct;
+    break_struct.id = id;
+    break_struct.measure_number = input.toInt();
+    break_struct.mode = 1; // 1 for new
+
+    break_action_list.append(break_struct);
+
+    qInfo() << "Break item added: " << break_struct.id
+            << " with measure number: " << break_struct.measure_number << "mode: " << break_struct.mode;
+
+    return 0; // no error
+}
+
+void parser_data::apply_breaks()
+{
+    for (const break_element &break_action : break_action_list) {
+        if (break_action.mode == 0) { // delete
+            g_mei_parser->delete_break(break_action.measure_number);
+
+            qInfo() << Qt::endl << Qt::endl << Qt::endl;
+            qInfo() << "Break deleted from measure " << break_action.measure_number;
+        }
+        else if (break_action.mode == 1) { // new
+            g_mei_parser->insert_break(break_action.id, break_action.measure_number);
+
+            qInfo() << Qt::endl << Qt::endl << Qt::endl;
+            qInfo() << "Break inserted with ID: " << break_action.id
+                    << " at measure " << break_action.measure_number;
+            qInfo() << Qt::endl << Qt::endl << Qt::endl;
+        }
+    }
+
+    break_action_list.clear(); // Clear the action list after applying the breaks
 }

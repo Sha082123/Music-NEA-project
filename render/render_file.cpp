@@ -49,8 +49,6 @@ void render_file::render_data()
 
     QStringList temp_list;
 
-    g_selection_handler->clear_svg_data(); // Clear the selection handler before adding new SVG data
-
     g_xml_parser->clear_data();
 
     pagecount = g_verovio_loader->get_page_count (); // Get the page count from the Verovio loader;
@@ -67,8 +65,6 @@ void render_file::render_data()
         svg_data = g_xml_parser->parse_xml(QString::fromStdString(svg_data));// Parse the XML for the current page
 
         g_resvg_loader->add_to_image_provider(svg_data, image_path_temp); // Add the SVG to the image provider
-
-        g_selection_handler->add_svg_data (svg_data); // Add the SVG data to the selection handler
 
         temp_list << ("image://image_provider/"  + image_path_temp); // Add the image path to the list and set it to the property so QML sees
         setlist_PNG_paths (temp_list);

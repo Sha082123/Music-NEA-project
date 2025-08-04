@@ -38,25 +38,10 @@ template <> constexpr inline auto selection_handler::qt_create_metaobjectdata<qt
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "selection_handler",
-        "get_element_at_coords",
-        "",
-        "page_number",
-        "x",
-        "y",
-        "file_name",
-        "parse_page_xml"
+        "selection_handler"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Method 'get_element_at_coords'
-        QtMocHelpers::MethodData<QString(const int, const double &, const double &, const QString &)>(1, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::Int, 3 }, { QMetaType::Double, 4 }, { QMetaType::Double, 5 }, { QMetaType::QString, 6 },
-        }}),
-        // Method 'parse_page_xml'
-        QtMocHelpers::MethodData<void(const int)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 3 },
-        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -78,14 +63,10 @@ Q_CONSTINIT const QMetaObject selection_handler::staticMetaObject = { {
 void selection_handler::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<selection_handler *>(_o);
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        switch (_id) {
-        case 0: { QString _r = _t->get_element_at_coords((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])));
-            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 1: _t->parse_page_xml((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        default: ;
-        }
-    }
+    (void)_t;
+    (void)_c;
+    (void)_id;
+    (void)_a;
 }
 
 const QMetaObject *selection_handler::metaObject() const
@@ -104,18 +85,6 @@ void *selection_handler::qt_metacast(const char *_clname)
 int selection_handler::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QObject::qt_metacall(_c, _id, _a);
-    if (_id < 0)
-        return _id;
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
-    }
-    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
-    }
     return _id;
 }
 QT_WARNING_POP

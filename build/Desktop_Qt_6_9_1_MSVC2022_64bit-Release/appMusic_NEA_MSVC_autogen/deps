@@ -1064,8 +1064,6 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/mei_parser.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/parser_data.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/parser_data.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/selection_handler.cpp \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/selection_handler.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/xml_parser.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/xml_parser.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/json/jsonxx.h \

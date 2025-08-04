@@ -232,7 +232,6 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlglobal.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/mei_parser.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/parser_data.h \
-  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/selection_handler.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/xml_parser.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/json/jsonxx.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/pugi/pugiconfig.hpp \
