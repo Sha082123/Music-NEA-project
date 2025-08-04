@@ -1,0 +1,95 @@
+# ninja log v6
+997	1204	7748227888024351	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	3fc6cac698ee682c
+85	442	7748279754367234	appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	ea08997e4117fe39
+75	1361	7748770487813949	build.ninja	65d33090e4cca9f5
+983	1204	7748227888024351	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	fcc2062c3aa00c34
+102	147	7748197878240374	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/appMusic_NEA_MSVC_qml.txt	2440ec0906e7c041
+82	130	7745417943420172	.qt/appMusic_NEA_MSVC_res.txt	bc04c63bc6ced0e0
+82	130	7745417943420172	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/appMusic_NEA_MSVC_res.txt	bc04c63bc6ced0e0
+102	147	7748197878240374	.qt/appMusic_NEA_MSVC_qml.txt	2440ec0906e7c041
+113	283	7748197879522800	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	a8de79e6bc05a060
+922	1045	7747934215241195	.rcc/qmlcache/appMusic_NEA_MSVC_welcome_page_qml.cpp.aotstats	89d55e0c852ed986
+85	442	7748279754367234	appMusic_NEA_MSVC_autogen/timestamp	ea08997e4117fe39
+113	283	7748197879522800	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	a8de79e6bc05a060
+85	442	7748279754367234	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appMusic_NEA_MSVC_autogen/timestamp	ea08997e4117fe39
+85	442	7748279754367234	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	ea08997e4117fe39
+735	793	7748002114855694	.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp	a58832b059fec68d
+735	793	7748002114855694	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp	a58832b059fec68d
+444	538	7748197881551713	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	34f7e21512c2b6aa
+444	538	7748197881551713	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	34f7e21512c2b6aa
+922	1045	7747934215241195	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_welcome_page_qml.cpp.aotstats	89d55e0c852ed986
+443	475	7748279758218585	meta_types/appMusic_NEA_MSVC_json_file_list.txt	b3507540b4e302bd
+443	475	7748279758218585	meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	b3507540b4e302bd
+443	475	7748279758218585	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/meta_types/appMusic_NEA_MSVC_json_file_list.txt	b3507540b4e302bd
+443	475	7748279758218585	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	b3507540b4e302bd
+752	983	7748227884326300	appmusic_nea_msvc_qmltyperegistrations.cpp	292b9db3e2aa0324
+741	814	7748002115144800	.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp	5e4cc8fb834dba9b
+922	1045	7747934215241195	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_welcome_page_qml.cpp	89d55e0c852ed986
+741	814	7748002115144800	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp	5e4cc8fb834dba9b
+476	519	7748279758261654	meta_types/qt6appmusic_nea_msvc_debug_metatypes.json.gen	20b3e7d20d08c1d
+476	519	7748279758261654	meta_types/qt6appmusic_nea_msvc_debug_metatypes.json	20b3e7d20d08c1d
+753	800	7748002115134779	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp	69834ceae824511
+752	983	7748227884326300	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	292b9db3e2aa0324
+476	519	7748279758261654	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/meta_types/qt6appmusic_nea_msvc_debug_metatypes.json.gen	20b3e7d20d08c1d
+476	519	7748279758261654	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/meta_types/qt6appmusic_nea_msvc_debug_metatypes.json	20b3e7d20d08c1d
+583	3334	7748276894219273	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	c711bea7fee5d74c
+752	983	7748227884326300	Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	292b9db3e2aa0324
+1062	3686	7747934215748039	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_welcome_page_qml.cpp.obj	37d4881cf36bde27
+752	983	7748227884326300	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appmusic_nea_msvc_qmltyperegistrations.cpp	292b9db3e2aa0324
+983	1204	7748227888024351	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	fcc2062c3aa00c34
+983	1204	7748227888024351	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	fcc2062c3aa00c34
+983	1204	7748227888024351	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	fcc2062c3aa00c34
+560	3852	7748276893988125	CMakeFiles/appMusic_NEA_MSVC.dir/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp.obj	6e705a87eec75731
+566	920	7748276894049229	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp.obj	fee1b32e7f321f69
+586	920	7748276894249278	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	761aff5948db1b2a
+563	3341	7748276894018095	CMakeFiles/appMusic_NEA_MSVC.dir/appmusic_nea_msvc_qmltyperegistrations.cpp.obj	f910c4f8a27dffdf
+575	3295	7748276894139266	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.obj	387e219e1c3184ec
+1209	4691	7748227888214363	CMakeFiles/appMusic_NEA_MSVC.dir/main.cpp.obj	557593b51ef9024a
+572	3608	7748276894109274	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp.obj	ae892e34908e7080
+753	800	7748002115134779	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp	69834ceae824511
+3852	4084	7748276926910278	appMusic_NEA_MSVC.exe	ddbef4b127a08e09
+922	1045	7747934215241195	.rcc/qmlcache/appMusic_NEA_MSVC_welcome_page_qml.cpp	89d55e0c852ed986
+569	3465	7748276894079271	CMakeFiles/appMusic_NEA_MSVC.dir/file_opening/file_open.cpp.obj	2127a0b3ac7b488b
+990	1203	7748227888024351	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	d19ec3ade3a78c4e
+990	1203	7748227888024351	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	d19ec3ade3a78c4e
+990	1203	7748227888024351	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	d19ec3ade3a78c4e
+990	1203	7748227888024351	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	d19ec3ade3a78c4e
+591	921	7748276894299274	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp.obj	e3bb1ab983cc34ee
+997	1204	7748227888024351	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	3fc6cac698ee682c
+578	3347	7748276894169285	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.obj	5d689c7a0c3bc399
+997	1204	7748227888024351	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	3fc6cac698ee682c
+997	1204	7748227888024351	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	3fc6cac698ee682c
+386	2825	7748266569713700	CMakeFiles/appMusic_NEA_MSVC.dir/render/render_file.cpp.obj	2dc0f0645531a1d5
+107	156	7748770511824714	.qt/appMusic_NEA_MSVC_qml.txt	2440ec0906e7c041
+107	156	7748770511824714	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/appMusic_NEA_MSVC_qml.txt	2440ec0906e7c041
+123	385	7748770513875321	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	a8de79e6bc05a060
+123	385	7748770513875321	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	a8de79e6bc05a060
+385	1079	7748770519785422	appMusic_NEA_MSVC_autogen/timestamp	ea08997e4117fe39
+385	1079	7748770519785422	appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	ea08997e4117fe39
+385	1079	7748770519785422	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appMusic_NEA_MSVC_autogen/timestamp	ea08997e4117fe39
+385	1079	7748770519785422	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	ea08997e4117fe39
+1080	1233	7748770521616018	meta_types/appMusic_NEA_MSVC_json_file_list.txt	b3507540b4e302bd
+1080	1233	7748770521616018	meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	b3507540b4e302bd
+1080	1233	7748770521616018	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/meta_types/appMusic_NEA_MSVC_json_file_list.txt	b3507540b4e302bd
+1080	1233	7748770521616018	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	b3507540b4e302bd
+1086	1241	7748770521556009	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	34f7e21512c2b6aa
+1086	1241	7748770521556009	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	34f7e21512c2b6aa
+1234	1310	7748770522644338	meta_types/qt6appmusic_nea_msvc_debug_metatypes.json.gen	20b3e7d20d08c1d
+1234	1310	7748770522644338	meta_types/qt6appmusic_nea_msvc_debug_metatypes.json	20b3e7d20d08c1d
+1234	1310	7748770522644338	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/meta_types/qt6appmusic_nea_msvc_debug_metatypes.json.gen	20b3e7d20d08c1d
+1234	1310	7748770522644338	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/meta_types/qt6appmusic_nea_msvc_debug_metatypes.json	20b3e7d20d08c1d
+1311	1536	7748770525116719	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	fcc2062c3aa00c34
+1311	1536	7748770525116719	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	fcc2062c3aa00c34
+1311	1536	7748770525116719	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	fcc2062c3aa00c34
+1311	1536	7748770525116719	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	fcc2062c3aa00c34
+1318	1536	7748770525016798	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	3fc6cac698ee682c
+1318	1536	7748770525016798	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	3fc6cac698ee682c
+1318	1536	7748770525016798	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	3fc6cac698ee682c
+1318	1536	7748770525016798	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	3fc6cac698ee682c
+1558	1955	7748770525885206	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	761aff5948db1b2a
+1553	4360	7748770525832333	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	c711bea7fee5d74c
+1548	4393	7748770525792358	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.obj	387e219e1c3184ec
+1545	4782	7748770525752337	CMakeFiles/appMusic_NEA_MSVC.dir/render/render_file.cpp.obj	2dc0f0645531a1d5
+1537	5076	7748770525672364	CMakeFiles/appMusic_NEA_MSVC.dir/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp.obj	6e705a87eec75731
+1541	5173	7748770525712554	CMakeFiles/appMusic_NEA_MSVC.dir/main.cpp.obj	557593b51ef9024a
+5174	5498	7748770562051130	appMusic_NEA_MSVC.exe	ddbef4b127a08e09

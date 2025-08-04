@@ -1,0 +1,12 @@
+-I
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release
+-I
+C:/Qt/6.9.1/msvc2022_64/qml
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qmake_Music_NEA_MSVC.qrc
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0.qrc
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.qrc
+--module
+Music_NEA_MSVC

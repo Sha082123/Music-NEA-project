@@ -1,0 +1,15 @@
+-rootPath
+D:/Comp Sci NEA/Music_NEA_MSVC
+-cmake-output
+-output-file
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake
+-importPath
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC
+-importPath
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release
+-importPath
+C:/Qt/6.9.1/msvc2022_64/qml
+-qrcFiles
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qmake_Music_NEA_MSVC.qrc
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0.qrc
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.qrc

@@ -1,0 +1,84 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 306,
+                        "errorMessage": "",
+                        "functionName": "onCompleted",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 52,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 49
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 105,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 58
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 330,
+                        "errorMessage": "",
+                        "functionName": "onEntered",
+                        "line": 62
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "Cannot access value for name originalWidth",
+                        "functionName": "onExited",
+                        "line": 67
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 56
+                    }
+                ],
+                "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/styles/FileButton.qml"
+            }
+        ],
+        "moduleId": "Music_NEA_MSVC(appMusic_NEA_MSVC)"
+    }
+]

@@ -1,0 +1,556 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 13,
+                        "durationMicroseconds": 395,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 132,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 1174,
+                        "errorMessage": "Cannot access value for name render",
+                        "functionName": "onWindowOpened",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 18,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "Cannot access value for name clicker",
+                        "functionName": "onRefreshed",
+                        "line": 33
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 488,
+                        "errorMessage": "",
+                        "functionName": "color",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 136,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 40
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 179,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 167,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 46
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 158,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 47
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"width\".",
+                        "functionName": "width",
+                        "line": 54
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"height\".",
+                        "functionName": "height",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 58
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"left\".",
+                        "functionName": "left",
+                        "line": 52
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"bottom\".",
+                        "functionName": "bottom",
+                        "line": 53
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"width\".",
+                        "functionName": "width",
+                        "line": 70
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"height\".",
+                        "functionName": "height",
+                        "line": 71
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 74
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"left\".",
+                        "functionName": "left",
+                        "line": 68
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"bottom\".",
+                        "functionName": "bottom",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"width\".",
+                        "functionName": "width",
+                        "line": 85
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"height\".",
+                        "functionName": "height",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 89
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"left\".",
+                        "functionName": "left",
+                        "line": 83
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"bottom\".",
+                        "functionName": "bottom",
+                        "line": 84
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"height\".",
+                        "functionName": "height",
+                        "line": 101
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 104
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"left\".",
+                        "functionName": "left",
+                        "line": 98
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"bottom\".",
+                        "functionName": "bottom",
+                        "line": 99
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 165,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 112
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 221,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 114
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 149,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 115
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 158,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 116
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"model\".",
+                        "functionName": "model",
+                        "line": 127
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"top\".",
+                        "functionName": "top",
+                        "line": 122
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"left\".",
+                        "functionName": "left",
+                        "line": 123
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"right\".",
+                        "functionName": "right",
+                        "line": 124
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"text\".",
+                        "functionName": "text",
+                        "line": 130
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"width\".",
+                        "functionName": "width",
+                        "line": 131
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 132
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 220,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 158
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 158,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 159
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 201,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 160
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 577,
+                        "errorMessage": "",
+                        "functionName": "onPressed",
+                        "line": 175
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 2242,
+                        "errorMessage": "",
+                        "functionName": "onPositionChanged",
+                        "line": 183
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 179,
+                        "errorMessage": "",
+                        "functionName": "onReleased",
+                        "line": 204
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 96,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 169
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 166,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 215
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 148,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 216
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 174,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 217
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 146,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 218
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 111,
+                        "errorMessage": "",
+                        "functionName": "onCompleted",
+                        "line": 239
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 87,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 241
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"fill\".",
+                        "functionName": "fill",
+                        "line": 251
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 256
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 218,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 257
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 1335,
+                        "errorMessage": "Cannot access value for name render",
+                        "functionName": "model",
+                        "line": 262
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 465,
+                        "errorMessage": "",
+                        "functionName": "onContentYChanged",
+                        "line": 264
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 365,
+                        "errorMessage": "",
+                        "functionName": "scale_factor",
+                        "line": 270
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 171,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 258
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 175,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 259
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 89,
+                        "errorMessage": "Cannot access value for name image_scale",
+                        "functionName": "width",
+                        "line": 274
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 612,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "source",
+                        "line": 275
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 221,
+                        "errorMessage": "",
+                        "functionName": "fillMode",
+                        "line": 277
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 136,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 276
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 2591,
+                        "errorMessage": "Cannot access value for name mouse",
+                        "functionName": "onClicked",
+                        "line": 290
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 93,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 289
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 97,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 312
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 49,
+                        "errorMessage": "Cannot access value for name frame",
+                        "functionName": "height",
+                        "line": 313
+                    }
+                ],
+                "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/UI/Display_window.qml"
+            }
+        ],
+        "moduleId": "Music_NEA_MSVC(appMusic_NEA_MSVC)"
+    }
+]

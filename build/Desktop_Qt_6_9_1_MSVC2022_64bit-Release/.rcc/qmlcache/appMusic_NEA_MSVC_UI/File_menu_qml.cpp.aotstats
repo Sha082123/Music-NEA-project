@@ -1,0 +1,44 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 188,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 8
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 238,
+                        "errorMessage": "",
+                        "functionName": "acceptedButtons",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 171,
+                        "errorMessage": "Cannot access value for name mouse",
+                        "functionName": "onPressed",
+                        "line": 23
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 19
+                    }
+                ],
+                "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/UI/File_menu.qml"
+            }
+        ],
+        "moduleId": "Music_NEA_MSVC(appMusic_NEA_MSVC)"
+    }
+]

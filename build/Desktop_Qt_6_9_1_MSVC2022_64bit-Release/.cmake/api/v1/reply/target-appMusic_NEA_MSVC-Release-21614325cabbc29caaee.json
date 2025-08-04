@@ -1,0 +1,2320 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "appMusic_NEA_MSVC.exe"
+		},
+		{
+			"path" : "appMusic_NEA_MSVC.pdb"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"_qt_internal_create_executable",
+			"qt6_add_executable",
+			"qt_add_executable",
+			"install",
+			"target_link_directories",
+			"target_link_libraries",
+			"set_target_properties",
+			"include",
+			"find_package",
+			"find_dependency",
+			"_qt_internal_find_qt_dependencies",
+			"qt6_add_qml_module",
+			"qt_add_qml_module",
+			"add_dependencies",
+			"_qt_internal_qml_copy_files_to_build_dir",
+			"qt6_target_qml_sources",
+			"_qt_internal_scan_qml_imports",
+			"_qt_internal_generate_deploy_qml_imports_script",
+			"cmake_language",
+			"_qt_internal_finalize_executable",
+			"qt6_finalize_target",
+			"target_include_directories",
+			"_qt_internal_qml_type_registration",
+			"include_directories",
+			"target_sources",
+			"qt6_extract_metatypes",
+			"set_source_files_properties",
+			"__qt_propagate_generated_resource",
+			"_qt_internal_process_resource",
+			"qt6_add_resources",
+			"_qt_internal_target_enable_qmlcachegen",
+			"_qt_internal_expose_deferred_files_to_ide"
+		],
+		"files" : 
+		[
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"CMakeLists.txt",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake",
+			"build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qtc/package-manager/maintenance_tool_provider.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaTargets.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfig.cmake",
+			"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Qml/Qt6QmlTargets.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Qml/Qt6QmlConfig.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Qml/Qt6QmlDependencies.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
+			"C:/Program Files (x86)/lunasvg/lib/cmake/lunasvg/lunasvgTargets.cmake",
+			"C:/Program Files (x86)/lunasvg/lib/cmake/lunasvg/lunasvgConfig.cmake",
+			"C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:787:EVAL"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 30,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 935,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 639,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 690,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 83,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 110,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 122,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 144,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 152,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 80,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 111,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 123,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 145,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 153,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 297,
+				"parent" : 16
+			},
+			{
+				"file" : 3,
+				"parent" : 17
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 55,
+				"parent" : 18
+			},
+			{
+				"file" : 2,
+				"parent" : 19
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 61,
+				"parent" : 20
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 43,
+				"parent" : 18
+			},
+			{
+				"file" : 9,
+				"parent" : 22
+			},
+			{
+				"command" : 11,
+				"file" : 9,
+				"line" : 45,
+				"parent" : 23
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 137,
+				"parent" : 24
+			},
+			{
+				"command" : 9,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 25
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 315,
+				"parent" : 26
+			},
+			{
+				"file" : 6,
+				"parent" : 27
+			},
+			{
+				"command" : 8,
+				"file" : 6,
+				"line" : 55,
+				"parent" : 28
+			},
+			{
+				"file" : 5,
+				"parent" : 29
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 61,
+				"parent" : 30
+			},
+			{
+				"command" : 13,
+				"file" : 1,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 12,
+				"file" : 10,
+				"line" : 1252,
+				"parent" : 32
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 596,
+				"parent" : 33
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 137,
+				"parent" : 24
+			},
+			{
+				"command" : 9,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 35
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 315,
+				"parent" : 36
+			},
+			{
+				"file" : 12,
+				"parent" : 37
+			},
+			{
+				"command" : 8,
+				"file" : 12,
+				"line" : 58,
+				"parent" : 38
+			},
+			{
+				"file" : 11,
+				"parent" : 39
+			},
+			{
+				"command" : 7,
+				"file" : 11,
+				"line" : 61,
+				"parent" : 40
+			},
+			{
+				"command" : 8,
+				"file" : 12,
+				"line" : 46,
+				"parent" : 38
+			},
+			{
+				"file" : 15,
+				"parent" : 42
+			},
+			{
+				"command" : 11,
+				"file" : 15,
+				"line" : 45,
+				"parent" : 43
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 137,
+				"parent" : 44
+			},
+			{
+				"command" : 9,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 45
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 315,
+				"parent" : 46
+			},
+			{
+				"file" : 14,
+				"parent" : 47
+			},
+			{
+				"command" : 8,
+				"file" : 14,
+				"line" : 55,
+				"parent" : 48
+			},
+			{
+				"file" : 13,
+				"parent" : 49
+			},
+			{
+				"command" : 7,
+				"file" : 13,
+				"line" : 61,
+				"parent" : 50
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 137,
+				"parent" : 24
+			},
+			{
+				"command" : 9,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 52
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 315,
+				"parent" : 53
+			},
+			{
+				"file" : 17,
+				"parent" : 54
+			},
+			{
+				"command" : 8,
+				"file" : 17,
+				"line" : 55,
+				"parent" : 55
+			},
+			{
+				"file" : 16,
+				"parent" : 56
+			},
+			{
+				"command" : 7,
+				"file" : 16,
+				"line" : 61,
+				"parent" : 57
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 640,
+				"parent" : 2
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 137,
+				"parent" : 24
+			},
+			{
+				"command" : 9,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 60
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 315,
+				"parent" : 61
+			},
+			{
+				"file" : 19,
+				"parent" : 62
+			},
+			{
+				"command" : 8,
+				"file" : 19,
+				"line" : 57,
+				"parent" : 63
+			},
+			{
+				"file" : 18,
+				"parent" : 64
+			},
+			{
+				"command" : 7,
+				"file" : 18,
+				"line" : 61,
+				"parent" : 65
+			},
+			{
+				"command" : 8,
+				"file" : 19,
+				"line" : 45,
+				"parent" : 63
+			},
+			{
+				"file" : 22,
+				"parent" : 67
+			},
+			{
+				"command" : 11,
+				"file" : 22,
+				"line" : 46,
+				"parent" : 68
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 137,
+				"parent" : 69
+			},
+			{
+				"command" : 9,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 70
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 315,
+				"parent" : 71
+			},
+			{
+				"file" : 21,
+				"parent" : 72
+			},
+			{
+				"command" : 8,
+				"file" : 21,
+				"line" : 55,
+				"parent" : 73
+			},
+			{
+				"file" : 20,
+				"parent" : 74
+			},
+			{
+				"command" : 7,
+				"file" : 20,
+				"line" : 61,
+				"parent" : 75
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 120,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 322,
+				"parent" : 77
+			},
+			{
+				"file" : 24,
+				"parent" : 78
+			},
+			{
+				"command" : 8,
+				"file" : 24,
+				"line" : 30,
+				"parent" : 79
+			},
+			{
+				"file" : 23,
+				"parent" : 80
+			},
+			{
+				"command" : 7,
+				"file" : 23,
+				"line" : 61,
+				"parent" : 81
+			},
+			{
+				"command" : 16,
+				"file" : 10,
+				"line" : 916,
+				"parent" : 33
+			},
+			{
+				"command" : 15,
+				"file" : 10,
+				"line" : 3503,
+				"parent" : 83
+			},
+			{
+				"command" : 14,
+				"file" : 10,
+				"line" : 2860,
+				"parent" : 84
+			},
+			{
+				"command" : 15,
+				"file" : 10,
+				"line" : 3497,
+				"parent" : 83
+			},
+			{
+				"command" : 14,
+				"file" : 10,
+				"line" : 2860,
+				"parent" : 86
+			},
+			{
+				"file" : 1,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 21,
+				"file" : 25,
+				"line" : 1,
+				"parent" : 88
+			},
+			{
+				"command" : 20,
+				"file" : 0,
+				"line" : 818,
+				"parent" : 89
+			},
+			{
+				"command" : 19,
+				"file" : 0,
+				"line" : 740,
+				"parent" : 90
+			},
+			{
+				"command" : 18,
+				"file" : 0,
+				"line" : 740,
+				"parent" : 91
+			},
+			{
+				"command" : 17,
+				"file" : 10,
+				"line" : 4401,
+				"parent" : 92
+			},
+			{
+				"command" : 14,
+				"file" : 10,
+				"line" : 4176,
+				"parent" : 93
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 796,
+				"parent" : 33
+			},
+			{
+				"command" : 22,
+				"file" : 10,
+				"line" : 3879,
+				"parent" : 95
+			},
+			{
+				"command" : 24,
+				"file" : 1,
+				"line" : 93,
+				"parent" : 0
+			},
+			{
+				"command" : 22,
+				"file" : 1,
+				"line" : 121,
+				"parent" : 0
+			},
+			{
+				"command" : 24,
+				"file" : 1,
+				"line" : 130,
+				"parent" : 0
+			},
+			{
+				"command" : 24,
+				"file" : 1,
+				"line" : 131,
+				"parent" : 0
+			},
+			{
+				"command" : 24,
+				"file" : 1,
+				"line" : 136,
+				"parent" : 0
+			},
+			{
+				"command" : 24,
+				"file" : 1,
+				"line" : 142,
+				"parent" : 0
+			},
+			{
+				"command" : 22,
+				"file" : 1,
+				"line" : 160,
+				"parent" : 0
+			},
+			{
+				"command" : 22,
+				"file" : 10,
+				"line" : 3904,
+				"parent" : 95
+			},
+			{
+				"command" : 26,
+				"file" : 10,
+				"line" : 3704,
+				"parent" : 95
+			},
+			{
+				"command" : 25,
+				"file" : 0,
+				"line" : 1486,
+				"parent" : 105
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3870,
+				"parent" : 95
+			},
+			{
+				"command" : 27,
+				"file" : 10,
+				"line" : 3894,
+				"parent" : 95
+			},
+			{
+				"command" : 30,
+				"file" : 10,
+				"line" : 850,
+				"parent" : 33
+			},
+			{
+				"command" : 29,
+				"file" : 0,
+				"line" : 401,
+				"parent" : 109
+			},
+			{
+				"command" : 28,
+				"file" : 0,
+				"line" : 2528,
+				"parent" : 110
+			},
+			{
+				"command" : 25,
+				"file" : 0,
+				"line" : 2072,
+				"parent" : 111
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 897,
+				"parent" : 33
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 83
+			},
+			{
+				"command" : 31,
+				"file" : 10,
+				"line" : 3342,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 1696,
+				"parent" : 115
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 83
+			},
+			{
+				"command" : 25,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 83
+			},
+			{
+				"command" : 30,
+				"file" : 10,
+				"line" : 3519,
+				"parent" : 83
+			},
+			{
+				"command" : 29,
+				"file" : 0,
+				"line" : 401,
+				"parent" : 132
+			},
+			{
+				"command" : 28,
+				"file" : 0,
+				"line" : 2528,
+				"parent" : 133
+			},
+			{
+				"command" : 25,
+				"file" : 0,
+				"line" : 2072,
+				"parent" : 134
+			},
+			{
+				"command" : 30,
+				"file" : 10,
+				"line" : 3555,
+				"parent" : 83
+			},
+			{
+				"command" : 29,
+				"file" : 0,
+				"line" : 401,
+				"parent" : 136
+			},
+			{
+				"command" : 28,
+				"file" : 0,
+				"line" : 2528,
+				"parent" : 137
+			},
+			{
+				"command" : 25,
+				"file" : 0,
+				"line" : 2072,
+				"parent" : 138
+			},
+			{
+				"command" : 32,
+				"file" : 0,
+				"line" : 812,
+				"parent" : 89
+			},
+			{
+				"command" : 25,
+				"file" : 0,
+				"line" : 2197,
+				"parent" : 140
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD"
+				},
+				{
+					"backtrace" : 59,
+					"fragment" : "-Zc:__cplusplus"
+				},
+				{
+					"backtrace" : 59,
+					"fragment" : "-permissive-"
+				},
+				{
+					"backtrace" : 59,
+					"fragment" : "-utf-8"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 13,
+					"define" : "LUNASVG_BUILD_STATIC"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "QT_NO_DEBUG"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_OPENGL_LIB"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "QT_QMLINTEGRATION_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QMLMETA_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QMLMODELS_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QMLWORKERSCRIPT_LIB"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "QT_QML_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QUICK_LIB"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "QT_SVG_LIB"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "QT_WIDGETS_LIB"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "QT_XML_LIB"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "UNICODE"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "WIN32"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "WIN64"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "_UNICODE"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "_WIN64"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include"
+				},
+				{
+					"backtrace" : 96,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/vrv"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/crc"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/midi"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/hum"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/json"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/pugi"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/zip"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/libmei/dist"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/libmei/addons"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/fonts/Leipzig"
+				},
+				{
+					"backtrace" : 98,
+					"path" : "D:/lunasvg/install/include/lunasvg"
+				},
+				{
+					"backtrace" : 99,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/svgpp/include"
+				},
+				{
+					"backtrace" : 100,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/svgpp/third_party"
+				},
+				{
+					"backtrace" : 101,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/boost"
+				},
+				{
+					"backtrace" : 102,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/resvg/crates/c-api"
+				},
+				{
+					"backtrace" : 103,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/mx/Sourcecode/include"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQml/6.9.1"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQml/6.9.1/QtQml"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtCore/6.9.1"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtCore/6.9.1/QtCore"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtCore"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQml"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQmlIntegration"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtNetwork"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQuick"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQmlMeta"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQmlModels"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQmlWorkerScript"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtSvg"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtXml"
+				},
+				{
+					"backtrace" : 13,
+					"isSystem" : true,
+					"path" : "C:/Program Files (x86)/lunasvg/include/lunasvg"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					59,
+					59
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				4,
+				6,
+				8,
+				10,
+				12,
+				14,
+				16,
+				18,
+				20,
+				22,
+				24,
+				26,
+				28,
+				29,
+				31,
+				33,
+				35,
+				37,
+				39,
+				41,
+				43,
+				44,
+				45
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD"
+				},
+				{
+					"backtrace" : 59,
+					"fragment" : "-Zc:__cplusplus"
+				},
+				{
+					"backtrace" : 59,
+					"fragment" : "-permissive-"
+				},
+				{
+					"backtrace" : 59,
+					"fragment" : "-utf-8"
+				},
+				{
+					"backtrace" : 108,
+					"fragment" : "/bigobj"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 13,
+					"define" : "LUNASVG_BUILD_STATIC"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "QT_NO_DEBUG"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_OPENGL_LIB"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "QT_QMLINTEGRATION_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QMLMETA_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QMLMODELS_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QMLWORKERSCRIPT_LIB"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "QT_QML_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QUICK_LIB"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "QT_SVG_LIB"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "QT_WIDGETS_LIB"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "QT_XML_LIB"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "UNICODE"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "WIN32"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "WIN64"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "_UNICODE"
+				},
+				{
+					"backtrace" : 59,
+					"define" : "_WIN64"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/include"
+				},
+				{
+					"backtrace" : 96,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/vrv"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/crc"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/midi"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/hum"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/json"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/pugi"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/include/zip"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/libmei/dist"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/libmei/addons"
+				},
+				{
+					"backtrace" : 97,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/verovio/fonts/Leipzig"
+				},
+				{
+					"backtrace" : 98,
+					"path" : "D:/lunasvg/install/include/lunasvg"
+				},
+				{
+					"backtrace" : 99,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/svgpp/include"
+				},
+				{
+					"backtrace" : 100,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/svgpp/third_party"
+				},
+				{
+					"backtrace" : 101,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/boost"
+				},
+				{
+					"backtrace" : 102,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/resvg/crates/c-api"
+				},
+				{
+					"backtrace" : 103,
+					"path" : "D:/Comp Sci NEA/Music_NEA_MSVC/external/mx/Sourcecode/include"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQml/6.9.1"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQml/6.9.1/QtQml"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtCore/6.9.1"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtCore/6.9.1/QtCore"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtCore"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQml"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQmlIntegration"
+				},
+				{
+					"backtrace" : 104,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtNetwork"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQuick"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQmlMeta"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQmlModels"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtQmlWorkerScript"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtSvg"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.1/msvc2022_64/include/QtXml"
+				},
+				{
+					"backtrace" : 13,
+					"isSystem" : true,
+					"path" : "C:/Program Files (x86)/lunasvg/include/lunasvg"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					59,
+					59
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				3
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 85,
+			"id" : "appMusic_NEA_MSVC_copy_res::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 87,
+			"id" : "appMusic_NEA_MSVC_copy_qml::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "appMusic_NEA_MSVC_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 94,
+			"id" : "appMusic_NEA_MSVC_qmlimportscan::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "appMusic_NEA_MSVC_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "appMusic_NEA_MSVC::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 5,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/Music_NEA_MSVC"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:windows",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "-LIBPATH:\"D:\\Comp Sci NEA\\Music_NEA_MSVC\\external\\verovio\\cmake\\build\\Release\"",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "-LIBPATH:D:\\lunasvg\\install\\lib\\lunasvg.lib",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-LIBPATH:\"D:\\Comp Sci NEA\\Music_NEA_MSVC\\external\\resvg\\target\\release\"",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "-LIBPATH:\"D:\\Comp Sci NEA\\Music_NEA_MSVC\\external\\mx\\build\\Release\"",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6Quick.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6Widgets.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6Svg.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6Xml.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "verovio.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "\"C:\\Program Files (x86)\\lunasvg\\lib\\lunasvg.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "resvg.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "ntdll.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 15,
+				"fragment" : "mx.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6QmlMeta.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6QmlWorkerScript.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6QmlModels.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6Qml.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 41,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6Network.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 51,
+				"fragment" : "ws2_32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6OpenGL.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "user32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6Gui.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 58,
+				"fragment" : "d3d11.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 58,
+				"fragment" : "dxgi.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 58,
+				"fragment" : "dxguid.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 58,
+				"fragment" : "d3d12.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 59,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6Core.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 66,
+				"fragment" : "mpr.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 66,
+				"fragment" : "userenv.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 76,
+				"fragment" : "C:\\Qt\\6.9.1\\msvc2022_64\\lib\\Qt6EntryPoint.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 41,
+				"fragment" : "shell32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 82,
+				"fragment" : "D:\\lunasvg\\install\\lib\\plutovg.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "appMusic_NEA_MSVC",
+	"nameOnDisk" : "appMusic_NEA_MSVC.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files\\Generated",
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				3,
+				4,
+				28,
+				29,
+				31,
+				33,
+				35,
+				37,
+				39,
+				41,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				1,
+				6,
+				8,
+				10,
+				12,
+				14,
+				16,
+				18,
+				20,
+				22,
+				24,
+				26,
+				27,
+				30,
+				32,
+				34,
+				36,
+				38,
+				40,
+				42
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				5,
+				7,
+				9,
+				11,
+				13,
+				15,
+				17,
+				19,
+				21,
+				23,
+				25
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "main.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 106,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 107,
+			"compileGroupIndex" : 1,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appmusic_nea_msvc_qmltyperegistrations.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 112,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 113,
+			"path" : "file_opening/file_open.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "file_opening/file_open.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "render/render_file.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "render/render_file.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "file_opening/scan_existing.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "file_opening/scan_existing.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "render/image_provider.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "render/image_provider.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "globals.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "globals.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "render/verovio_loader.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "render/verovio_loader.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "render/resvg_loader.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "render/resvg_loader.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "data_parsing/selection_handler.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "data_parsing/selection_handler.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "data_parsing/xml_parser.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "data_parsing/xml_parser.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "data_parsing/mei_parser.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "data_parsing/mei_parser.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
+			"path" : "data_parsing/parser_data.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"path" : "data_parsing/parser_data.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 114,
+			"path" : "Main.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 116,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 117,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 118,
+			"path" : "styles/FileButton.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 119,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 120,
+			"path" : "UI/Display_window.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 121,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 122,
+			"path" : "UI/C_MenuBar.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 123,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 124,
+			"path" : "styles/File_menu.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 125,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 126,
+			"path" : "styles/PreviousDirectoryButton.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 127,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 128,
+			"path" : "File_view.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 129,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 130,
+			"path" : "UI/Break_manager.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 131,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 135,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 139,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 141,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qmake_Music_NEA_MSVC.qrc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 141,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/qmldir",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 141,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0.qrc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 141,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.qrc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 141,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/styles/qmldir",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 141,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/UI/qmldir",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/timestamp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appmusic_nea_msvc_qmltyperegistrations.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/timestamp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 59,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6core_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 34,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6qml_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 34,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6network_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 10,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6quick_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 10,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6gui_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 10,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6qmlmeta_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 10,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6qmlmodels_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 10,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6qmlworkerscript_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 10,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6opengl_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 11,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6widgets_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 11,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6svg_metatypes.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 11,
+			"path" : "C:/Qt/6.9.1/msvc2022_64/metatypes/qt6xml_metatypes.json",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

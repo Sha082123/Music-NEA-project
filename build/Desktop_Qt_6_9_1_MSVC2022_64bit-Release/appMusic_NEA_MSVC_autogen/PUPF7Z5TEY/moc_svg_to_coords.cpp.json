@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "svg_to_coords",
+            "lineNumber": 8,
+            "object": true,
+            "qualifiedClassName": "svg_to_coords",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "svg_to_coords.h",
+    "outputRevision": 69
+}

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Music_NEA_MSVC">
+    <file alias="qmldir">D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Music_NEA_MSVC/qmldir</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "cmake",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceRoot}/tools"
+			},
+			"command": "cmake",
+			"args": [
+				"${workspaceRoot}/cmake"
+			]
+		},
+		{
+			"label": "make",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"--jobs=8"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/tools"
+			},
+			"dependsOn": [
+				"cmake"
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+	]
+}

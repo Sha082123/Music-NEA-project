@@ -1,0 +1,44 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 405,
+                        "errorMessage": "Cannot access value for name file_open",
+                        "functionName": "onClicked",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 124,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 56,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "",
+                        "functionName": "file_path",
+                        "line": 40
+                    }
+                ],
+                "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/Main.qml"
+            }
+        ],
+        "moduleId": "Music_NEA_MSVC(appMusic_NEA_MSVC)"
+    }
+]

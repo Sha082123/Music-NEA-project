@@ -1,0 +1,124 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 270,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 268,
+                        "errorMessage": "",
+                        "functionName": "onCompleted",
+                        "line": 24
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 108,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 32
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 73,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 39
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 46
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 16,
+                        "durationMicroseconds": 45,
+                        "errorMessage": "Cannot access value for name originalWidth",
+                        "functionName": "width",
+                        "line": 53
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 90,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 58
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 80,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 113,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 54
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 99,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 153,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 485,
+                        "errorMessage": "",
+                        "functionName": "onEntered",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 96,
+                        "errorMessage": "Cannot access value for name originalWidth",
+                        "functionName": "onExited",
+                        "line": 74
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 70,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 63
+                    }
+                ],
+                "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/styles/FileButton.qml"
+            }
+        ],
+        "moduleId": "Music_NEA_MSVC(appMusic_NEA_MSVC)"
+    }
+]

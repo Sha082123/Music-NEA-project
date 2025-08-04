@@ -1,0 +1,9 @@
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qmake_Music_NEA_MSVC.qrc
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0.qrc
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.qrc
+/qt/qml/Music_NEA_MSVC/Main.qml
+/qt/qml/Music_NEA_MSVC/styles/FileButton.qml
+/qt/qml/Music_NEA_MSVC/UI/Display_window.qml

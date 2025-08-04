@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "SvgRenderer",
+            "lineNumber": 17,
+            "object": true,
+            "qualifiedClassName": "SvgRenderer",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "svgrenderer.h",
+    "outputRevision": 69
+}

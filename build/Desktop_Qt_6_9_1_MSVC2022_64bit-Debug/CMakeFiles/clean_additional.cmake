@@ -1,0 +1,10 @@
+# Additional clean files
+cmake_minimum_required(VERSION 3.16)
+
+if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "Debug")
+  file(REMOVE_RECURSE
+  "CMakeFiles\\appMusic_NEA_MSVC_autogen.dir\\AutogenUsed.txt"
+  "CMakeFiles\\appMusic_NEA_MSVC_autogen.dir\\ParseCache.txt"
+  "appMusic_NEA_MSVC_autogen"
+  )
+endif()

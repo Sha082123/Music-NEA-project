@@ -1,0 +1,20 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 366,
+                        "errorMessage": "Cannot access value for name render",
+                        "functionName": "onWindowOpened",
+                        "line": 12
+                    }
+                ],
+                "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/UI/Display_window.qml"
+            }
+        ],
+        "moduleId": "Music_NEA_MSVC(appMusic_NEA_MSVC)"
+    }
+]

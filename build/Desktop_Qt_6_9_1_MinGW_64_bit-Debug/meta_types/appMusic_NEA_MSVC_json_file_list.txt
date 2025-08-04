@@ -1,0 +1,2 @@
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/appMusic_NEA_MSVC_autogen/include/../MBI2Q3SVGB/moc_file_open.cpp.json
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/appMusic_NEA_MSVC_autogen/include/../RZRAGMB46M/moc_render_file.cpp.json

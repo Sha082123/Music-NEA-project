@@ -1,0 +1,16 @@
+--bare
+-I
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug
+-I
+C:/Qt/6.9.1/msvc2022_64/qml
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qmake_Music_NEA_MSVC.qrc
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0.qrc
+--resource
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.qrc
+D:/Comp Sci NEA/Music_NEA_MSVC/Main.qml
+D:/Comp Sci NEA/Music_NEA_MSVC/styles/FileButton.qml
+D:/Comp Sci NEA/Music_NEA_MSVC/UI/Display_window.qml
+--json
+D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appMusic_NEA_MSVC_qmllint.json

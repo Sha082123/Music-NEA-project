@@ -1,0 +1,7 @@
+module Music_NEA_MSVC
+typeinfo appMusic_NEA_MSVC.qmltypes
+prefer :/qt/qml/Music_NEA_MSVC/
+Main 1.0 Main.qml
+FileButton 1.0 styles/FileButton.qml
+Display_window 1.0 UI/Display_window.qml
+

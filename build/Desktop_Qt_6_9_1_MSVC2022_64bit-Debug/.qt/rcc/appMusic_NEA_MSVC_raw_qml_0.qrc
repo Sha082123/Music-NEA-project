@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/qt/qml/Music_NEA_MSVC/">
+    <file alias="Main.qml">D:/Comp Sci NEA/Music_NEA_MSVC/Main.qml</file>
+    <file alias="styles/FileButton.qml">D:/Comp Sci NEA/Music_NEA_MSVC/styles/FileButton.qml</file>
+    <file alias="UI/Display_window.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Display_window.qml</file>
+  </qresource>
+</RCC>
+

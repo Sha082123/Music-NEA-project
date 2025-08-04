@@ -1,0 +1,85 @@
+[
+    {
+        "classes": [
+            {
+                "className": "file_open",
+                "lineNumber": 9,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "openFile",
+                        "returnType": "QString"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "file_open",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QWidget"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "file_open.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "render_file",
+                "lineNumber": 15,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file_path",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "openFile",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "filename",
+                        "notify": "filenameChanged",
+                        "read": "filename",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setfilename"
+                    }
+                ],
+                "qualifiedClassName": "render_file",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "filenameChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "render_file.h",
+        "outputRevision": 69
+    }
+]
