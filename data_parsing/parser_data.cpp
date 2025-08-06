@@ -13,7 +13,8 @@ parser_data::parser_data(QObject *parent, xml_parser *xml_parser, mei_parser *me
 void parser_data::parse()
 {
     parse_reh_list();
-    parse_break_list ();
+    parse_break_list();
+    parse_part_list();
 }
 
 
@@ -23,16 +24,6 @@ QVariantList parser_data::reh_y_coords() const
     return m_reh_y_coords;
 }
 
-void parser_data::setReh_y_coords(const QVariantList &newReh_y_coords)
-{
-    if (m_reh_y_coords == newReh_y_coords)
-        return;
-    m_reh_y_coords = newReh_y_coords;
-
-    // qInfo() << "Rehearsal marks Y coordinates updated:" << m_reh_y_coords;
-
-    emit reh_y_coordsChanged();
-}
 
 void parser_data::parse_reh_list()
 {
@@ -54,8 +45,7 @@ void parser_data::parse_reh_list()
         }
     }
 
-    setReh_y_coords (temp_reh_y_coords); // Emit the signal to notify that the data has changed
-    qInfo() << m_reh_y_coords.size() << "rehearsal marks parsed and Y coordinates updated.";
+    m_reh_y_coords = temp_reh_y_coords; // Emit the signal to notify that the data has changed
 }
 
 void parser_data::parse_break_list()
@@ -73,7 +63,24 @@ void parser_data::parse_break_list()
         temp_break_list << QVariant::fromValue(QVariantList{break_id, measure_number});
     }
 
-    setBreak_list(temp_break_list); // Emit the signal to notify that the data has changed
+    m_break_list = temp_break_list;
+}
+
+void parser_data::parse_part_list()
+{
+
+    QVector<mei_parser::part_element> all_parts = m_mei_parser->get_parts();
+    QVariantList temp_part_list;
+
+    for (const mei_parser::part_element &part : all_parts) {
+        QString part_id = part.id;
+        QString part_name = part.part_name;
+        int n_value = part.n_value;
+
+        temp_part_list << QVariant::fromValue(QVariantList{part_id, part_name, n_value});
+    }
+
+    m_part_list = temp_part_list;
 }
 
 void parser_data::break_list_sort()
@@ -85,7 +92,6 @@ void parser_data::break_list_sort()
     });
 
     // Emit the signal to notify that the data has changed
-    emit break_listChanged();
 }
 
 int parser_data::getNumber_of_measures() const
@@ -98,18 +104,17 @@ void parser_data::setNumber_of_measures(const int &newNumber_of_measures)
     number_of_measures = newNumber_of_measures;
 }
 
+
 QVariantList parser_data::break_list() const
 {
     return m_break_list;
 }
 
-void parser_data::setBreak_list(const QVariantList &newBreak_list)
+QVariantList parser_data::part_list() const
 {
-    if (m_break_list == newBreak_list)
-        return;
-    m_break_list = newBreak_list;
-    emit break_listChanged();
+    return m_part_list;
 }
+
 
 int parser_data::update_break_list(QString id, QString input)
 {
@@ -146,7 +151,6 @@ int parser_data::update_break_list(QString id, QString input)
             break_item[1] = input.toInt();
             m_break_list[index] = QVariant::fromValue(break_item);
             break_list_sort();
-            emit break_listChanged();
 
             //qInfo() << m_break_list;
 
@@ -162,7 +166,7 @@ int parser_data::update_break_list(QString id, QString input)
         }
     }
 
-    return false;
+    return -3;
 
     // if the break is not found, then add a new break
 
@@ -195,8 +199,6 @@ int parser_data::delete_break_item(int measure_number)
 
             // Update the measure number
             m_break_list.removeAt(index);
-            emit break_listChanged();
-
             //qInfo() << m_break_list;
 
             return 0; // No error

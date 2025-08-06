@@ -36,6 +36,7 @@ void part_object::openFile(const QString &file_path, int mode)
 
     setReh_y_coords (m_parser_data->reh_y_coords ());
     setBreak_list (m_parser_data->break_list ());
+    setpart_list(m_parser_data->part_list());
 
     // for (const QString &path : m_list_PNG_paths) {
     //     qInfo() << "PNG Path: " << path; // Debugging output to check the paths
@@ -49,6 +50,7 @@ void part_object::update()
 
     setReh_y_coords (m_parser_data->reh_y_coords ());
     setBreak_list (m_parser_data->break_list ());
+    setpart_list(m_parser_data->part_list());
 
     // for (const QString &path : m_list_PNG_paths) {
     //     qInfo() << "PNG Path: " << path; // Debugging output to check the paths
@@ -87,14 +89,31 @@ QVariantList part_object::element_from_point(const QPointF &point, const int &pa
     return m_xml_parser->element_from_point (point, page_number);
 }
 
+void part_object::update_part_name(QString new_part_name)
+{
+    m_part_name = new_part_name;
+
+    QFile file(m_file_path);
+    QFileInfo info(m_file_path);
+
+    QString new_path = info.path() + "/" + new_part_name + "." + info.suffix();
+    QFile::rename(m_file_path, new_path);
+    qInfo() << "File renamed from" << m_file_path << "to" << new_path;
+
+    setfile_path(new_path); // Update the file path after renaming
+}
+
+void part_object::delete_file()
+{
+    QFile::remove(m_file_path);
+}
+
 
 
 QString part_object::get_part_name()
 {
     return m_part_name;
 }
-
-
 
 
 
@@ -154,3 +173,17 @@ void part_object::setfile_path(const QString &newFile_path)
     m_file_path = newFile_path;
     emit file_pathChanged();
 }
+
+QVariantList part_object::part_list() const
+{
+    return m_part_list;
+}
+
+void part_object::setpart_list(const QVariantList &newPart_list)
+{
+    if (m_part_list == newPart_list)
+        return;
+    m_part_list = newPart_list;
+    emit part_listChanged();
+}
+

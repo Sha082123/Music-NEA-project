@@ -19,9 +19,14 @@ QString file_open::openNewFile(const QString &target_dir) //target_dir is the di
     return file_path;
 }
 
-QString file_open::createNewPart(const QString &source_path, const QString &target_dir)
+QString file_open::createNewPart(const QString &source_path, const QString &target_dir, const QString &file_name)
 {
-    return copy_file_to_projects(source_path, target_dir);
+    if (file_name.isEmpty()) {
+        qInfo() << "File name is empty, using base name from source path.";
+        return copy_file_to_projects(source_path, target_dir);
+    }
+
+    return copy_file_to_projects(source_path, target_dir, file_name);
 }
 
 void file_open::openNewDirectory(const QString &target_dir)
@@ -139,7 +144,7 @@ void file_open::rename_file_or_dir(const QString &old_path, const QString &new_n
     }
     else {
         QString new_path = info.path() + "/" + new_name + "." + info.suffix();
-        if (!(new_path == old_path)) {                  // do nothing if both paths are the same
+        if (new_path != old_path) {                  // do nothing if both paths are the same
             new_path = if_file_exists (new_path);       // Construct new file path with the same extension;
             QFile::rename(old_path, new_path);
             qInfo() << "File renamed from" << old_path << "to" << new_path;
@@ -148,19 +153,31 @@ void file_open::rename_file_or_dir(const QString &old_path, const QString &new_n
 }
 
 
-QString file_open::copy_file_to_projects(const QString &source_path, const QString &target_dir)
+QString file_open::copy_file_to_projects(const QString &source_path, const QString &target_dir, const QString &file_name)
 {
     qInfo() << Qt::endl << Qt::endl << Qt::endl << "target_dir : " << target_dir;
     qInfo() << "source_path : " << source_path;
 
     QFileInfo file(source_path);
-    QString file_path = target_dir + file.completeBaseName() + ".mei";
+
+    QString temp_file_name;
+
+    if (file_name.isEmpty()) {
+        temp_file_name = file.completeBaseName();
+    } else {
+        temp_file_name = file_name;
+    }
+
+
+    QString file_path = target_dir + temp_file_name + ".mei";
 
     file_path = if_file_exists (file_path); //obtain the correct file_path
 
-    qInfo() << "destination path : " << file_path;
+    //qInfo() << "destination path : " << file_path;
 
     m_verovio_loader->load (source_path);
+
+    //qInfo() << "source path loaded: " + source_path;
 
     QString mei_data = QString::fromStdString (m_verovio_loader->get_mei_data());
 

@@ -803,6 +803,11 @@ void mei_parser::delete_break(int measure_number)
     }
 }
 
+QVector<mei_parser::part_element> mei_parser::get_parts()
+{
+    return parts;
+}
+
 QVector<mei_parser::break_element> mei_parser::get_breaks()
 {
     return breaks;

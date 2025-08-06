@@ -67,6 +67,7 @@ qt_add_qml_module(appMusic_NEA_MSVC
         SOURCES part_objects/part_object.h part_objects/part_object.cpp
         SOURCES part_objects/part_manager.h part_objects/part_manager.cpp
         QML_FILES UI/Music_scroll_view.qml
+        QML_FILES UI/Part_maker.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

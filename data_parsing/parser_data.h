@@ -27,14 +27,12 @@ public:
     int getNumber_of_measures() const;
     QVariantList reh_y_coords() const;
     QVariantList break_list() const;
+    QVariantList part_list() const;
 
     void setNumber_of_measures(const int &newNumber_of_measures);
-    void setBreak_list(const QVariantList &newBreak_list);
-    void setReh_y_coords(const QVariantList &newReh_y_coords);
+
 
 signals:
-    void reh_y_coordsChanged();
-    void break_listChanged();
 
 private:
 
@@ -42,8 +40,8 @@ private:
     mei_parser* m_mei_parser;
 
     QVariantList m_reh_y_coords;
-
     QVariantList m_break_list;
+    QVariantList m_part_list;
 
     struct break_element {
         int mode; // 0 for delete, 1 for new
@@ -51,10 +49,12 @@ private:
         int measure_number;
     };
 
+
     QVector<break_element> break_action_list; // stores actions in order
 
     void parse_reh_list();
     void parse_break_list();
+    void parse_part_list();
     void break_list_sort();
 
     int number_of_measures; // total number of measures in the score, used to validate break input

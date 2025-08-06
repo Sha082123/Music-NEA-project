@@ -2,6 +2,8 @@
 #define PART_OBJECT_H
 
 #include <QObject>
+#include <QFile>
+
 #include "../data_parsing/mei_parser.h"
 #include "../data_parsing/xml_parser.h"
 #include "../data_parsing/parser_data.h"
@@ -17,6 +19,7 @@ class part_object : public QObject
     Q_PROPERTY(QString file_path READ file_path WRITE setfile_path NOTIFY file_pathChanged FINAL)
     Q_PROPERTY(QVariantList reh_y_coords READ reh_y_coords WRITE setReh_y_coords NOTIFY reh_y_coordsChanged FINAL)
     Q_PROPERTY(QVariantList break_list READ break_list WRITE setBreak_list NOTIFY break_listChanged FINAL)
+    Q_PROPERTY(QVariantList part_list READ part_list WRITE setpart_list NOTIFY part_listChanged FINAL)
 public:
     explicit part_object(QObject *parent = nullptr, QString part_name = "");
 
@@ -27,6 +30,9 @@ public:
     Q_INVOKABLE int update_break_list(QString id, QString input);
     Q_INVOKABLE void apply_breaks();
     Q_INVOKABLE QVariantList element_from_point(const QPointF &point, const int &page_number);
+
+    void update_part_name(QString new_part_name);
+    void delete_file();
 
 
     QString get_part_name();
@@ -46,6 +52,9 @@ public:
     QString file_path() const;
     void setfile_path(const QString &newFile_path);
 
+    QVariantList part_list() const;
+    void setpart_list(const QVariantList &newPart_list);
+
 signals:
 
 
@@ -57,6 +66,8 @@ signals:
     void break_listChanged();
 
     void file_pathChanged();
+
+    void part_listChanged();
 
 private:
 
@@ -77,6 +88,8 @@ private:
     QVariantList m_reh_y_coords;
     QVariantList m_break_list;
     QString m_file_path;
+    QVariantList m_part_list;
+
 };
 
 #endif // PART_OBJECT_H

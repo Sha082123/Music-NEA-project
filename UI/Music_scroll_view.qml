@@ -60,8 +60,8 @@ ScrollView{
                     console.log(element_data)
 
                     selection_view.measure_number = element_data[1]
-                    selection_view.start_beat = element_data[2]
-                    selection_view.end_beat = element_data[3]
+                    selection_view.start_beat = (element_data[2] + 32) / 32
+                    selection_view.end_beat = (element_data[3] + 32) / 32
                     selection_view.note_name = element_data[4]
                     selection_view.x_coords = element_data[5]
                     selection_view.y_coords = element_data[6]

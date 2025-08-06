@@ -5,7 +5,7 @@ import QtQuick.Layouts
 Rectangle {
     id: frame
     property string file_path: ""
-    property string part_directory: file_open.get_current_dir() + "/UserFiles/dump/" + file_open.name_from_project_files(current_part.file_path)
+    //property string part_directory: file_open.get_current_dir() + "/UserFiles/dump/" + file_open.name_from_project_files(current_part.file_path)
     property real image_scale: 1.0
 
 
@@ -190,19 +190,21 @@ Rectangle {
 
             onClicked: {
 
-                part_manager.create_new_part("test_2")
+                part_maker.visible = true
 
-                part_selection.currentIndex = part_manager.list_size() - 1 // Switch to the newly created part
-                music_stack.currentIndex = part_manager.list_size() - 1 // Switch to the newly created part
+                // part_manager.create_new_part("test_2")
 
-                part_manager.set_current_part(0) // create part relative to the root part
+                // part_selection.currentIndex = part_manager.list_size() - 1 // Switch to the newly created part
+                // music_stack.currentIndex = part_manager.list_size() - 1 // Switch to the newly created part
 
-                part_file_path = file_open.createNewPart(current_part.file_path,
-                                        file_open.get_current_dir() + "/UserFiles/dump/" +
-                                        file_open.name_from_project_files(current_part.file_path) + "/")
+                // part_manager.set_current_part(0) // create part relative to the root part
 
-                part_manager.set_current_part(part_manager.list_size() - 1) // Set the newly created part as current
-                current_part.openFile(part_file_path, 1)
+                // part_file_path = file_open.createNewPart(current_part.file_path,
+                //                         file_open.get_current_dir() + "/UserFiles/dump/" +
+                //                         file_open.name_from_project_files(current_part.file_path) + "/")
+
+                // part_manager.set_current_part(part_manager.list_size() - 1) // Set the newly created part as current
+                // current_part.openFile(part_file_path, 1)
 
 
             }
@@ -213,8 +215,8 @@ Rectangle {
             id: selection_view
 
             property int measure_number: 0
-            property int start_beat: 0
-            property int end_beat: 0
+            property real start_beat: 0
+            property real end_beat: 0
             property string note_name: ""
             property int x_coords: 0
             property int y_coords: 0
@@ -307,7 +309,7 @@ Rectangle {
         z: 999
 
         Repeater {
-            model: part_manager.part_name_list
+            model: part_manager.buffer_part_name_list
 
             TabButton {
                 text: modelData
@@ -342,7 +344,7 @@ Rectangle {
             currentIndex: part_selection.currentIndex
 
             Repeater {
-                model: part_manager.part_name_list
+                model: part_manager.buffer_part_name_list
 
                 Music_scroll_view {
                     id: scrollView
@@ -357,6 +359,12 @@ Rectangle {
         visible: false
 
     }
+
+    Part_maker {
+        id: part_maker
+        visible: false
+    }
+
 
 
 }

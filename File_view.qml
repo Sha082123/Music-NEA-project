@@ -49,7 +49,7 @@ ScrollView{
                         console.log("New file selected:", file_selector.file_path)
 
                         part_manager.clear_parts();
-                        part_manager.create_new_part("test");
+                        part_manager.create_root_part("main_score");
                         part_manager.set_current_part(0);
                         current_part.openFile(file_selector.file_path, 0)
                         scan_existing.scan_directory(file_selector.current_directory) // Scan the directory for files to update
@@ -146,7 +146,7 @@ ScrollView{
                                     file_selector.file_path = modelData
 
                                     part_manager.clear_parts();
-                                    part_manager.create_new_part("main_score");
+                                    part_manager.create_root_part("main_score");
                                     part_manager.set_current_part(0);
                                     current_part.openFile(modelData, 0)
                                     //file_selector.close()

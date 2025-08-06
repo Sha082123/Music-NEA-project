@@ -77,6 +77,7 @@ public:
     // DATA STRUCTURES --------------------------------------------------------------------------
 
     QVector<break_element> get_breaks();
+    QVector<part_element> get_parts();
 
 signals:
 private:
