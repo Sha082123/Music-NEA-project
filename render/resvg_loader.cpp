@@ -5,6 +5,7 @@
 resvg_loader::resvg_loader(QObject *parent)
     : QObject{parent}
 {
+
     QDir dir(QDir::currentPath());
     dir.cdUp();
     dir.cdUp();
@@ -73,39 +74,34 @@ QImage resvg_loader::render(const std::string &svg_string)
 
 void resvg_loader::add_to_image_provider(const std::string &data, const QString &file_name)
 {
-    QImage image = g_resvg_loader->render(data);
 
-    QImage blank_image(image.width(), image.height(), QImage::Format_ARGB32);
-    blank_image.fill(Qt::white);
+    QImage image = render(data);
 
-    g_image_provider->addImage(file_name + "/reloader", blank_image);
+    //qInfo() << "checkpoint";
+
+    //QImage blank_image(image.width(), image.height(), QImage::Format_ARGB32);
+    //blank_image.fill(Qt::white);
+    //qInfo() << "checkpoint";
+
+    //qInfo() << "file_name" << file_name;
+
+    //g_image_provider->addImage(file_name + "/reloader", blank_image);
+
+
+
+    //qInfo() << "checkpoint";
 
     //qInfo() <<  Qt::endl << Qt::endl << Qt::endl << image << Qt::endl << Qt::endl << Qt::endl;
 
+    //qInfo() << "checkpoint";
+
     g_image_provider->addImage(file_name, image); // Add the image to the global image provider
+
+    //qInfo() << "checkpoint";
+
+    // qInfo() << "checkpoint";
 }
 
-void resvg_loader::set_attribute(std::string element_id, const std::string &name, const std::string &value,
-                                 const QString &file_name, const std::string &file_data)
-{
-    document = lunasvg::Document::loadFromData(file_data.data());
-
-    auto element = document->getElementById(element_id);
-    element.setAttribute(name, value);
-
-    //qInfo() << "element has class attribute:" << element.hasAttribute("class");
-    //qInfo() << "element id : " << QString::fromStdString(element_id);
-
-    auto bitmap = document->renderToBitmap();
-
-    //document->renderToBitmap().writeToPng("C:/Users/david/Downloads/test 1/test.png");
-
-    QImage img(bitmap.data(), bitmap.width(), bitmap.height(), QImage::Format_ARGB32);
-
-    QImage image = img.copy();
-
-    g_image_provider->addImage(file_name, image);
-}
 
 void resvg_loader::add_page_height(int &height)
 {

@@ -8,6 +8,8 @@ Window {
     height: 600
 
     property string error_message: "";
+    signal break_added();
+
     //signal save_button_clicked()
 
     Text {
@@ -15,8 +17,8 @@ Window {
     }
 
     Button {
-        id: save_button
-        text: "Save"
+        id: apply_button
+        text: "Apply"
 
         width: 135
         height: 25
@@ -28,8 +30,8 @@ Window {
         }
 
         onClicked: {
-            parser_data.apply_breaks()
-            render.update()
+            current_part.apply_breaks()
+            current_part.update()
 
         }
     }
@@ -104,7 +106,7 @@ Window {
                     top: parent.top
                 }
 
-                model: parser_data.break_list
+                model: current_part.break_list
 
                 delegate: Rectangle {
 
@@ -150,7 +152,7 @@ Window {
 
                         onClicked: {
 
-                            switch(parser_data.delete_break_item(modelData[0])) {
+                            switch(current_part.delete_break_item(modelData[1])) {
                                 case 0:
                                     console.log("Break removed successfully");
                                     break_manager.error_message = "Removed from buffer: " + modelData[0];
@@ -180,7 +182,7 @@ Window {
 
                         onEditingFinished: {
 
-                            switch (parser_data.update_break_list(modelData[0], text)) {
+                            switch (current_part.update_break_list(modelData[0], text)) {
                                 case 0:
                                     console.log("Break updated successfully");
                                     break_manager.error_message = "Added to buffer: measure " + text;
@@ -260,7 +262,7 @@ Window {
 
                 console.log("run through")
 
-                switch (parser_data.new_break_item(text)) {
+                switch (current_part.new_break_item(text)) {
                     case 0:
                         console.log("Break added successfully");
                         break_manager.error_message = "Added to buffer: measure " + text;

@@ -4,13 +4,17 @@
 #include <QObject>
 #include <QDomDocument>
 #include <QDebug>
+#include "xml_parser.h"
+#include "parser_data.h"
 
 class mei_parser : public QObject
 {
     Q_OBJECT
 public:
-    explicit mei_parser(QObject *parent = nullptr);
+    explicit mei_parser(QObject *parent = nullptr, xml_parser *xml_parser = nullptr, parser_data *parser_data = nullptr);
     void parse_mei(QString mei_data);
+
+    void set_parser_data(parser_data *parser_data);
 
     // EDITING DATA -----------------------------------------------------------------------------
     // EDITING DATA -----------------------------------------------------------------------------
@@ -79,6 +83,8 @@ private:
 
     QDomDocument document; // Document to hold the parsed MEI data
 
+    xml_parser* m_xml_parser;
+    parser_data* m_parser_data;
 
 
     // PARSING DATA -----------------------------------------------------------------------------

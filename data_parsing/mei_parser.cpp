@@ -1,9 +1,13 @@
 #include "mei_parser.h"
 #include "globals.h"
 
-mei_parser::mei_parser(QObject *parent)
+mei_parser::mei_parser(QObject *parent, xml_parser *xml_parser, parser_data *parser_data)
     : QObject{parent}
-{}
+{
+    m_xml_parser = xml_parser;
+    m_parser_data = parser_data;
+
+}
 
 void mei_parser::parse_mei(QString mei_data)
 {
@@ -190,7 +194,7 @@ void mei_parser::parse_mei(QString mei_data)
                         //        << " to " << correct_beat;
                         // current_layer[index].end_beat = correct_beat;
 
-                        g_xml_parser->set_end_beat_for_note(current_layer[index].id, correct_beat);
+                        m_xml_parser->set_end_beat_for_note(current_layer[index].id, correct_beat);
 
                         index--;
                     }
@@ -199,7 +203,7 @@ void mei_parser::parse_mei(QString mei_data)
         }
     }
 
-    g_parser_data->setNumber_of_measures(notes_and_rests.size());
+    m_parser_data->setNumber_of_measures(notes_and_rests.size()); // !!!!!!!!!!!!!PROBLEM
 
     // DEBUG INFO ------------------------------------------------------------------------------------------
     // DEBUG INFO ------------------------------------------------------------------------------------------
@@ -215,20 +219,25 @@ void mei_parser::parse_mei(QString mei_data)
         }
     }
 
-    // qInfo() << Qt::endl << Qt::endl << Qt::endl;
-    // qInfo() << "Number of parts: " << parts.size();
-    // qInfo() << "Number of breaks: " << breaks.size();
-    // qInfo() << "Number of rehearsal marks: " << rehearsal_marks.size();
-    // qInfo() << "Number of tempo changes: " << tempo_changes.size();
-    // qInfo() << "Number of time signature changes: " << time_signature_changes.size();
-    // qInfo() << "Number of measures: " << notes_and_rests.size();
-    // qInfo() << "Number of notes and rests: " << note_rest_count;
-    // qInfo() << Qt::endl << Qt::endl << Qt::endl;
+    qInfo() << Qt::endl << Qt::endl << Qt::endl;
+    qInfo() << "Number of parts: " << parts.size();
+    qInfo() << "Number of breaks: " << breaks.size();
+    qInfo() << "Number of rehearsal marks: " << rehearsal_marks.size();
+    qInfo() << "Number of tempo changes: " << tempo_changes.size();
+    qInfo() << "Number of time signature changes: " << time_signature_changes.size();
+    qInfo() << "Number of measures: " << notes_and_rests.size();
+    qInfo() << "Number of notes and rests: " << note_rest_count;
+    qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
     // DEBUG INFO ------------------------------------------------------------------------------------------
     // DEBUG INFO ------------------------------------------------------------------------------------------
     // DEBUG INFO ------------------------------------------------------------------------------------------
 
+}
+
+void mei_parser::set_parser_data(parser_data *parser_data)
+{
+    m_parser_data = parser_data;
 }
 
 int mei_parser::get_beats_per_measure(int &measure_number)
@@ -268,14 +277,14 @@ QVector<mei_parser::note_rest_element> mei_parser::process_layer_tabGrp(QDomElem
         rest_info.staff_n = staff_n;
         rest_info.measure_number = measure_number;
 
-        qInfo() << Qt::endl << Qt::endl << Qt::endl;
-        qInfo() << "Tab Note ID: " << rest_info.id;
-        qInfo() << "Tab Note start beat: " << rest_info.start_beat;
-        qInfo() << "Tab Note end beat: " << rest_info.end_beat;
-        qInfo() << "Tab Note layer: " << rest_info.layer_n;
-        qInfo() << "Tab Note staff: " << rest_info.staff_n;
-        qInfo() << "Tab Note measure number: " << rest_info.measure_number;
-        qInfo() << Qt::endl << Qt::endl << Qt::endl;
+        // qInfo() << Qt::endl << Qt::endl << Qt::endl;
+        // qInfo() << "Tab Note ID: " << rest_info.id;
+        // qInfo() << "Tab Note start beat: " << rest_info.start_beat;
+        // qInfo() << "Tab Note end beat: " << rest_info.end_beat;
+        // qInfo() << "Tab Note layer: " << rest_info.layer_n;
+        // qInfo() << "Tab Note staff: " << rest_info.staff_n;
+        // qInfo() << "Tab Note measure number: " << rest_info.measure_number;
+        // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
         tabGrp_notes.append(rest_info);
     }
@@ -308,7 +317,7 @@ QVector<mei_parser::note_rest_element> mei_parser::process_layer_tabGrp(QDomElem
             // qInfo() << "Tab Note measure number: " << note_info.measure_number;
             // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-            g_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
+            m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
 
             tabGrp_notes.append(note_info);
         }
@@ -351,7 +360,7 @@ QVector<mei_parser::note_rest_element> mei_parser::process_layer_chord(QDomEleme
         // qInfo() << "Chord Note measure number: " << note_info.measure_number;
         // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-        g_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
+        m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
 
         chord_notes.append(note_info);
     }
@@ -412,7 +421,7 @@ mei_parser::note_rest_element mei_parser::process_layer_mRest(QDomElement &mRest
     // qInfo() << "Rest measure number: " << rest_info.measure_number;
     // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-    g_xml_parser->set_info_for_rest(rest_info.id, measure_number, rest_info.start_beat, rest_info.end_beat);
+    m_xml_parser->set_info_for_rest(rest_info.id, measure_number, rest_info.start_beat, rest_info.end_beat);
 
     return rest_info;
 }
@@ -445,7 +454,7 @@ mei_parser::note_rest_element mei_parser::process_layer_rest(QDomElement &rest_e
     // qInfo() << "Note measure number: " << note_info.measure_number;
     // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-    g_xml_parser->set_info_for_rest(rest_info.id, measure_number, rest_info.start_beat, rest_info.end_beat);
+    m_xml_parser->set_info_for_rest(rest_info.id, measure_number, rest_info.start_beat, rest_info.end_beat);
 
     return rest_info;
 }
@@ -477,7 +486,7 @@ mei_parser::note_rest_element mei_parser::process_layer_note(QDomElement &note_e
     // qInfo() << "Note measure number: " << note_info.measure_number;
     // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-    g_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
+    m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
 
     return note_info;
 }
@@ -598,7 +607,7 @@ mei_parser::rehearsal_mark_element mei_parser::process_rehearsal_mark(QDomElemen
     // qInfo() << "Rehearsal mark measure number: " << reh_info.measure_number;
     // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-    g_xml_parser->set_info_for_reh(reh_info.id, reh_info.measure_number, reh_info.mark_text);
+    m_xml_parser->set_info_for_reh(reh_info.id, reh_info.measure_number, reh_info.mark_text);
 
     return reh_info;
 }
@@ -689,10 +698,10 @@ mei_parser::break_element mei_parser::process_break(QDomElement &break_element)
 
     break_info.measure_number = previous_measure.attribute("n").toInt();
 
-    // qInfo() << Qt::endl << Qt::endl << Qt::endl;
-    // qInfo() << "Break id: " << break_info.id;
-    // qInfo() << "Measure number: " << break_info.measure_number;
-    // qInfo() << Qt::endl << Qt::endl << Qt::endl;
+    qInfo() << Qt::endl << Qt::endl << Qt::endl;
+    qInfo() << "Break id: " << break_info.id;
+    qInfo() << "Measure number: " << break_info.measure_number;
+    qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
     return break_info;
 }

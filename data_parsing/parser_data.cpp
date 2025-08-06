@@ -1,9 +1,14 @@
 #include "parser_data.h"
 #include "globals.h"
+#include "mei_parser.h"
 
-parser_data::parser_data(QObject *parent)
+parser_data::parser_data(QObject *parent, xml_parser *xml_parser, mei_parser *mei_parser)
     : QObject{parent}
-{}
+{
+    m_xml_parser = xml_parser;
+    m_mei_parser = mei_parser;
+
+}
 
 void parser_data::parse()
 {
@@ -31,14 +36,14 @@ void parser_data::setReh_y_coords(const QVariantList &newReh_y_coords)
 
 void parser_data::parse_reh_list()
 {
-    QVector<QVector<xml_parser::SvgElementInfo>> all_reh_list = g_xml_parser->get_all_rehearsal_marks();
+    QVector<QVector<xml_parser::SvgElementInfo>> all_reh_list = m_xml_parser->get_all_rehearsal_marks();
     QVariantList temp_reh_y_coords;
 
     for (int index = 0; index < all_reh_list.size(); ++index) {
         QVector<xml_parser::SvgElementInfo> current_page_reh = all_reh_list[index];
 
         int page_index = index; // 1 less than page number, to get combined heights of all pages before
-        //double cumulative_page_height = g_resvg_loader->get_page_height(page_number);
+        //double cumulative_page_height = m_resvg_loader->get_page_height(page_number);
 
         for (const xml_parser::SvgElementInfo &reh : current_page_reh) {
             double y_coords = reh.position.y();
@@ -55,7 +60,7 @@ void parser_data::parse_reh_list()
 
 void parser_data::parse_break_list()
 {
-    QVector<mei_parser::break_element> all_breaks = g_mei_parser->get_breaks();
+    QVector<mei_parser::break_element> all_breaks = m_mei_parser->get_breaks();
 
     QVariantList temp_break_list;
 
@@ -170,12 +175,12 @@ int parser_data::update_break_list(QString id, QString input)
 
 }
 
-int parser_data::delete_break_item(QString id)
+int parser_data::delete_break_item(int measure_number)
 {
 
     for (int index = 0; index < m_break_list.size(); ++index) {
         QVariantList break_item = m_break_list[index].toList();
-        if (break_item[0].toString() == id) {
+        if (break_item[1].toInt() == measure_number) {
 
             // add break element info for delete (!!BEFORE REMOVING THE ITEM!!)
             break_element break_struct;
@@ -241,13 +246,13 @@ void parser_data::apply_breaks()
 {
     for (const break_element &break_action : break_action_list) {
         if (break_action.mode == 0) { // delete
-            g_mei_parser->delete_break(break_action.measure_number);
+            m_mei_parser->delete_break(break_action.measure_number);
 
             qInfo() << Qt::endl << Qt::endl << Qt::endl;
             qInfo() << "Break deleted from measure " << break_action.measure_number;
         }
         else if (break_action.mode == 1) { // new
-            g_mei_parser->insert_break(break_action.id, break_action.measure_number);
+            m_mei_parser->insert_break(break_action.id, break_action.measure_number);
 
             qInfo() << Qt::endl << Qt::endl << Qt::endl;
             qInfo() << "Break inserted with ID: " << break_action.id

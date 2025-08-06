@@ -11,13 +11,6 @@ ScrollView{
 
     anchors.fill: parent
 
-    anchors {
-        top: parent.top
-        left: parent.left
-        right: parent.right
-        bottom: part_selection.top
-    }
-
 
     ListView {
         id: viewer

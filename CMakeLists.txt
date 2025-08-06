@@ -21,6 +21,8 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Xml)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 
 
@@ -61,6 +63,10 @@ qt_add_qml_module(appMusic_NEA_MSVC
         SOURCES data_parsing/mei_parser.h data_parsing/mei_parser.cpp
         SOURCES data_parsing/parser_data.h data_parsing/parser_data.cpp
         QML_FILES UI/Break_manager.qml
+        SOURCES
+        SOURCES part_objects/part_object.h part_objects/part_object.cpp
+        SOURCES part_objects/part_manager.h part_objects/part_manager.cpp
+        QML_FILES UI/Music_scroll_view.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -151,6 +157,8 @@ target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
 
 target_link_directories(appMusic_NEA_MSVC PRIVATE external/mx/build/Release)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE mx)
+target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
+target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)

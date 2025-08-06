@@ -49,6 +49,7 @@ ApplicationWindow {
                 onFileLoaded: (file_path) => {
                     loading.visible = true
                     loading.file_path = file_path
+                    display_window.refreshed()
                 }
         }
 
@@ -58,11 +59,9 @@ ApplicationWindow {
             id: display_window
             visible: true
 
-            onRefreshed: {
-                render.update()
-            }
 
-            // file_path: file_selector.file_path
+
+            //file_path: file_selector.file_path
 
             // anchors.left: file_selector.left
             // anchors.top: tab_bar.bottom

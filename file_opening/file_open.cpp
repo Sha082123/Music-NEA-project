@@ -1,8 +1,10 @@
 #include "file_open.h"
 
-file_open::file_open(QWidget *parent)
+file_open::file_open(QWidget *parent, verovio_loader *verovio_loader)
     : QWidget{parent}
-{}
+{
+    m_verovio_loader = verovio_loader;
+}
 
 QString file_open::openNewFile(const QString &target_dir) //target_dir is the directory where the file should be copied to !!ABSOLUTE PATH
 {
@@ -15,6 +17,11 @@ QString file_open::openNewFile(const QString &target_dir) //target_dir is the di
     qInfo() << "File copied to project files:" << file_path << Qt::endl;
 
     return file_path;
+}
+
+QString file_open::createNewPart(const QString &source_path, const QString &target_dir)
+{
+    return copy_file_to_projects(source_path, target_dir);
 }
 
 void file_open::openNewDirectory(const QString &target_dir)
@@ -48,7 +55,7 @@ void file_open::openNewDirectory(const QString &target_dir)
 }
 
 QString file_open::name_from_project_files(const QString &file_path) //if file_path = D:/(PROJECT PATH)/UserFiles/project_files/MyProject/file.musicxml,
-                                                                     //I want it to return MyProject/file.musicsml
+                                                                     //I want it to return MyProject/file
                                                                      //if directory is fed, then i want it to return the latest directory
 {
     QFileInfo info(file_path); //check if file_path is a directory or string
@@ -144,6 +151,7 @@ void file_open::rename_file_or_dir(const QString &old_path, const QString &new_n
 QString file_open::copy_file_to_projects(const QString &source_path, const QString &target_dir)
 {
     qInfo() << Qt::endl << Qt::endl << Qt::endl << "target_dir : " << target_dir;
+    qInfo() << "source_path : " << source_path;
 
     QFileInfo file(source_path);
     QString file_path = target_dir + file.completeBaseName() + ".mei";
@@ -152,9 +160,9 @@ QString file_open::copy_file_to_projects(const QString &source_path, const QStri
 
     qInfo() << "destination path : " << file_path;
 
-    g_verovio_loader->load (source_path);
+    m_verovio_loader->load (source_path);
 
-    QString mei_data = QString::fromStdString (g_verovio_loader->get_mei_data());
+    QString mei_data = QString::fromStdString (m_verovio_loader->get_mei_data());
 
     QFile writer(file_path);
     if (writer.open(QIODevice::WriteOnly | QIODevice::Text)) {

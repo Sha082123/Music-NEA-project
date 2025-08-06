@@ -1,9 +1,20 @@
 #include "render_file.h"
 #include "globals.h"
 
-render_file::render_file(QObject *parent)
+render_file::render_file(QObject *parent,
+                         class mei_parser *mei_parser,
+                         class xml_parser *xml_parser,
+                         class parser_data *parser_data,
+                         class verovio_loader *verovio_loader,
+                         class resvg_loader *resvg_loader)
     : QObject{parent}
 {
+    m_mei_parser = mei_parser;
+    m_xml_parser = xml_parser;
+    m_parser_data = parser_data;
+    m_verovio_loader = verovio_loader;
+    m_resvg_loader = resvg_loader;
+
     pagecount = 0;
 
     directory = QDir::currentPath() + "/UserFiles/";
@@ -19,10 +30,24 @@ render_file::render_file(QObject *parent)
 
 
 
-void render_file::openFile(const QString &file_path, QString mode)
+void render_file::openFile(const QString &file_path, int mode)
 {
 
-    g_verovio_loader->load(file_path); // file_path is QString, just to convert to std::string
+    // make a project dump folder (userfiles/dump/project_name)
+    qInfo() << "file path: " << file_path;
+
+    if (mode == 0) {
+
+        QString dir_path = directory + "dump/" + file_methods->name_from_project_files(file_path);
+
+        QDir directory(dir_path);
+        if (!directory.exists()) {
+            directory.mkpath (".");
+        }
+    }
+
+
+    m_verovio_loader->load(file_path); // file_path is QString, just to convert to std::string
 
     relative_path = file_methods->name_from_project_files(file_path); // Get the relative path of the file
     setfilename(QFileInfo(relative_path).completeBaseName ());
@@ -36,7 +61,7 @@ void render_file::openFile(const QString &file_path, QString mode)
 
 void render_file::update()
 {
-    g_verovio_loader->load_data(g_mei_parser->export_mei_data());
+    m_verovio_loader->load_data(m_mei_parser->export_mei_data());
     render_data();
 }
 
@@ -49,37 +74,48 @@ void render_file::render_data()
 
     QStringList temp_list;
 
-    g_xml_parser->clear_data();
+    m_xml_parser->clear_data();
 
-    pagecount = g_verovio_loader->get_page_count (); // Get the page count from the Verovio loader;
+    pagecount = m_verovio_loader->get_page_count (); // Get the page count from the Verovio loader;
 
     for (int current_page = 1; current_page <= pagecount; ++current_page) {
-        //qInfo() << Qt::endl << Qt::endl << Qt::endl;
-        //qInfo() << "Rendering page:" << current_page << " out of " << pagecount;
-        //qInfo() << Qt::endl << Qt::endl << Qt::endl;
+        qInfo() << Qt::endl << Qt::endl << Qt::endl;
+        qInfo() << "Rendering page:" << current_page << " out of " << pagecount;
+        qInfo() << Qt::endl << Qt::endl << Qt::endl;
+
+
 
         QString image_path_temp = relative_path + "---pg_" + QString::number(current_page) + QString::number(refresher);
 
-        std::string svg_data = g_verovio_loader->render(current_page);
+        qInfo() << "checkpoint";
 
-        svg_data = g_xml_parser->parse_xml(QString::fromStdString(svg_data));// Parse the XML for the current page
+        std::string svg_data = m_verovio_loader->render(current_page);
 
-        g_resvg_loader->add_to_image_provider(svg_data, image_path_temp); // Add the SVG to the image provider
+        qInfo() << "checkpoint";
 
-        temp_list << ("image://image_provider/"  + image_path_temp); // Add the image path to the list and set it to the property so QML sees
+        svg_data = m_xml_parser->parse_xml(QString::fromStdString(svg_data));// Parse the XML for the current page
+
+        qInfo() << "checkpoint";
+        qInfo() << "image://image_provider/"  + image_path_temp;
+
+        m_resvg_loader->add_to_image_provider(svg_data, image_path_temp); // Add the SVG to the image provider
+
+        temp_list << ("image://image_provider/"  + image_path_temp);    // Add the image path to the list and set it to the property so QML sees
         setlist_PNG_paths (temp_list);
+
+        qInfo() << "image://image_provider/"  + image_path_temp;
 
         // setoutput_path(image_path); // Set the output path for the rendered images (/rendered_PNGs/project_name)
 
         // QImage blank_image(2100, 5000, QImage::Format_ARGB32);
         // blank_image.fill(Qt::white);
 
-        // g_image_provider->addImage("reloader", blank_image);
+        //g_image_provider->addImage("reloader", blank_image);
 
     }
 
-    g_mei_parser->parse_mei(QString::fromStdString(g_verovio_loader->get_mei_data())); // get MEI elements
-    g_parser_data->parse();
+    m_mei_parser->parse_mei(QString::fromStdString(m_verovio_loader->get_mei_data())); // get MEI elements
+    m_parser_data->parse();
 
 
 
