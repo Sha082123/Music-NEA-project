@@ -23,7 +23,7 @@ part_object::part_object(QObject *parent, QString part_name)
 
     m_part_name = part_name;
 
-
+    m_saved = "(saved)";
 }
 
 
@@ -82,6 +82,7 @@ void part_object::apply_breaks()
 {
     m_parser_data->apply_breaks ();
     setBreak_list (m_parser_data->break_list ());
+    setsaved("(not saved)");
 }
 
 QVariantList part_object::element_from_point(const QPointF &point, const int &page_number)
@@ -103,9 +104,32 @@ void part_object::update_part_name(QString new_part_name)
     setfile_path(new_path); // Update the file path after renaming
 }
 
+void part_object::update_part_staves(QVector<QPair<int, bool> > &part_existence, part_object *root_ptr)
+{
+    m_mei_parser->update_part_staves (part_existence, root_ptr);
+}
+
 void part_object::delete_file()
 {
     QFile::remove(m_file_path);
+}
+
+void part_object::save_file()
+{
+    QString data = m_mei_parser->export_mei_data();
+
+    QFile file(m_file_path);
+
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&file);
+        out << data;
+        file.close();
+        qInfo() << "File saved successfully at" << m_file_path;
+
+        setsaved("(saved)");
+    } else {
+        qWarning() << "Failed to save file at" << m_file_path;
+    }
 }
 
 
@@ -113,6 +137,11 @@ void part_object::delete_file()
 QString part_object::get_part_name()
 {
     return m_part_name;
+}
+
+QDomDocument part_object::get_document() const
+{
+    return m_mei_parser->get_document();
 }
 
 
@@ -171,7 +200,6 @@ void part_object::setfile_path(const QString &newFile_path)
     if (m_file_path == newFile_path)
         return;
     m_file_path = newFile_path;
-    emit file_pathChanged();
 }
 
 QVariantList part_object::part_list() const
@@ -187,3 +215,16 @@ void part_object::setpart_list(const QVariantList &newPart_list)
     emit part_listChanged();
 }
 
+
+QString part_object::saved() const
+{
+    return m_saved;
+}
+
+void part_object::setsaved(const QString &newSaved)
+{
+    if (m_saved == newSaved)
+        return;
+    m_saved = newSaved;
+    emit savedChanged();
+}

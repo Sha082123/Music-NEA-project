@@ -47,7 +47,7 @@ void render_file::openFile(const QString &file_path, int mode)
     }
 
 
-    m_verovio_loader->load(file_path); // file_path is QString, just to convert to std::string
+    m_verovio_loader->load(file_path);
 
     relative_path = file_methods->name_from_project_files(file_path); // Get the relative path of the file
     setfilename(QFileInfo(relative_path).completeBaseName ());

@@ -3,11 +3,11 @@
 
 #include <QObject>
 #include <QFile>
+#include <QDomDocument>
 
 #include "../data_parsing/mei_parser.h"
 #include "../data_parsing/xml_parser.h"
 #include "../data_parsing/parser_data.h"
-#include "../render/image_provider.h"
 #include "../render/render_file.h"
 #include "../render/verovio_loader.h"
 #include "../render/resvg_loader.h"
@@ -16,10 +16,11 @@ class part_object : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QStringList list_PNG_paths READ list_PNG_paths WRITE setlist_PNG_paths NOTIFY list_PNG_pathsChanged FINAL)
-    Q_PROPERTY(QString file_path READ file_path WRITE setfile_path NOTIFY file_pathChanged FINAL)
     Q_PROPERTY(QVariantList reh_y_coords READ reh_y_coords WRITE setReh_y_coords NOTIFY reh_y_coordsChanged FINAL)
     Q_PROPERTY(QVariantList break_list READ break_list WRITE setBreak_list NOTIFY break_listChanged FINAL)
     Q_PROPERTY(QVariantList part_list READ part_list WRITE setpart_list NOTIFY part_listChanged FINAL)
+    Q_PROPERTY(QString saved READ saved WRITE setsaved NOTIFY savedChanged FINAL)
+
 public:
     explicit part_object(QObject *parent = nullptr, QString part_name = "");
 
@@ -31,11 +32,15 @@ public:
     Q_INVOKABLE void apply_breaks();
     Q_INVOKABLE QVariantList element_from_point(const QPointF &point, const int &page_number);
 
+    Q_INVOKABLE void save_file();
+
     void update_part_name(QString new_part_name);
+    void update_part_staves(QVector<QPair<int, bool>> &part_existence, part_object* root_ptr);
     void delete_file();
 
-
     QString get_part_name();
+
+    QDomDocument get_document() const;
 
 
     QStringList list_PNG_paths() const;
@@ -55,6 +60,9 @@ public:
     QVariantList part_list() const;
     void setpart_list(const QVariantList &newPart_list);
 
+    QString saved() const;
+    void setsaved(const QString &newSaved);
+
 signals:
 
 
@@ -65,9 +73,9 @@ signals:
 
     void break_listChanged();
 
-    void file_pathChanged();
-
     void part_listChanged();
+
+    void savedChanged();
 
 private:
 
@@ -90,6 +98,7 @@ private:
     QString m_file_path;
     QVariantList m_part_list;
 
+    QString m_saved;
 };
 
 #endif // PART_OBJECT_H

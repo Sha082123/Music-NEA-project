@@ -1,4 +1,5 @@
 #include "mei_parser.h"
+#include "../part_objects/part_object.h"
 #include "globals.h"
 
 mei_parser::mei_parser(QObject *parent, xml_parser *xml_parser, parser_data *parser_data)
@@ -61,6 +62,8 @@ void mei_parser::parse_mei(QString mei_data)
     // qInfo() << "Starting time signature denominator: " << time_signature_changes[0].denominator;
     // qInfo() << "Starting time signature measure: " << time_signature_changes[0].measure_start;
     // qInfo() << Qt::endl << Qt::endl << Qt::endl;
+
+    // PROCESSING AND FINDING ALL PARTS
 
     QDomNodeList staff_group = root.elementsByTagName("staffDef");
     for (int i = 0; i < staff_group.count(); ++i) {
@@ -238,6 +241,11 @@ void mei_parser::parse_mei(QString mei_data)
 void mei_parser::set_parser_data(parser_data *parser_data)
 {
     m_parser_data = parser_data;
+}
+
+QDomDocument mei_parser::get_document() const
+{
+    return document;
 }
 
 int mei_parser::get_beats_per_measure(int &measure_number)
@@ -698,10 +706,10 @@ mei_parser::break_element mei_parser::process_break(QDomElement &break_element)
 
     break_info.measure_number = previous_measure.attribute("n").toInt();
 
-    qInfo() << Qt::endl << Qt::endl << Qt::endl;
-    qInfo() << "Break id: " << break_info.id;
-    qInfo() << "Measure number: " << break_info.measure_number;
-    qInfo() << Qt::endl << Qt::endl << Qt::endl;
+    // qInfo() << Qt::endl << Qt::endl << Qt::endl;
+    // qInfo() << "Break id: " << break_info.id;
+    // qInfo() << "Measure number: " << break_info.measure_number;
+    // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
     return break_info;
 }
@@ -801,6 +809,174 @@ void mei_parser::delete_break(int measure_number)
             return;
         }
     }
+}
+
+void mei_parser::update_part_staves(QVector<QPair<int, bool> > &part_existence, part_object *root_ptr)
+{
+    QVector<part_element> &current_parts = parts;
+    QVector<int> add_list;
+    QVector<int> delete_list;
+
+    QVector<int> header_delete_list; // for the header, copy the original then delete the non existing ones
+
+    for (int index = 0; index < part_existence.size(); index++) {
+        if (part_existence[index].second == true) {
+            // If the part should exist, check if it is already in the parts list
+            bool found = false;
+            for (const auto &part : current_parts) {
+                if (part.n_value == part_existence[index].first) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found == false) {
+                // If not found, add to add list
+                add_list.append(part_existence[index].first);
+
+            }
+        } else { // if the part should not exist
+            header_delete_list.append(part_existence[index].first);
+            // check if it exists
+            for (const auto &part : current_parts) {
+                if (part.n_value == part_existence[index].first) {
+                    // If found, add to action list to remove
+                    delete_list.append(part_existence[index].first);
+                    break;
+                } // If not found, do nothing
+            }
+        }
+    }
+
+    for (auto &id : add_list) {
+        qInfo() << "Add part with n: " << id;
+    }
+
+    for (auto &id : delete_list) {
+        qInfo() << "Delete part with n: " << id;
+    }
+
+    // Now perform the actions in the action list
+
+    // First, replace current part header with main score header
+
+    QDomDocument main_score = root_ptr->get_document();
+    QDomNodeList main_score_score_def = main_score.elementsByTagName("scoreDef");
+
+    QDomNodeList current_part_score_def = document.elementsByTagName("scoreDef");
+
+    QDomNode staffGrp_element = main_score_score_def.at(0).firstChildElement("staffGrp").cloneNode(true);
+
+    current_part_score_def.at(0).replaceChild(staffGrp_element, current_part_score_def.at(0).firstChildElement("staffGrp"));
+
+    // now delete the headers that should not exist
+
+
+    QDomNodeList current_part_staff_list = document.elementsByTagName("staffDef"); // current part
+
+    for (int &n_value : header_delete_list) {
+        for (int index = 0; index < current_part_staff_list.count(); ++index) {
+            QDomElement staff_element = current_part_staff_list.at(index).toElement();
+            if (staff_element.attribute("n").toInt() == n_value) {
+
+                // Remove the staff element from the document
+                QDomNode parent_node = staff_element.parentNode();
+                QDomNode node_to_remove = staff_element;
+
+                parent_node.removeChild(node_to_remove);
+                qInfo() << "Removed staff with n: " << n_value;
+
+                if (parent_node.toElement().tagName() == "staffGrp") {
+
+                    int number_of_staves_in_group = parent_node.toElement().elementsByTagName("staffDef").count();
+
+                    if (number_of_staves_in_group == 0) {
+                        // If the group has no staves left, remove the group, if staffGrp exists it has to have at least 1 staffDef
+                        while((parent_node.parentNode().toElement().tagName() == "staffGrp") &&
+                              (parent_node.toElement().elementsByTagName("staffDef").count() == 0)) {
+                            // Loop until we find outermost staffGrp or current parent has at least 1 staffDef
+                            node_to_remove = parent_node;
+                            parent_node = parent_node.parentNode();
+                        }
+
+                        qInfo() << "Removing staff group with xml:id: " << node_to_remove.toElement().attribute("xml:id");
+
+                        parent_node.removeChild(node_to_remove);
+
+                    }
+
+                }
+
+                break;
+            }
+        }
+    }
+
+
+    QDomNodeList main_score_measures = main_score.elementsByTagName("measure");
+    QDomNodeList current_part_measures = document.elementsByTagName("measure");
+
+    for (int index = 0; index < current_part_measures.count(); ++index) {
+        QDomNode current_part_current_measure = current_part_measures.at(index);
+        QDomNodeList measure_staves = current_part_current_measure.toElement().elementsByTagName("staff");
+
+        QDomNode main_score_current_measure = main_score_measures.at(index);
+        QDomNodeList main_score_measure_staves = main_score_current_measure.toElement().elementsByTagName("staff");
+
+        for (int &n_value : add_list) {
+            // find the staff to add
+
+            QDomElement new_staff_element;
+
+            for (int staff_index = 0; staff_index < main_score_measure_staves.count(); ++staff_index) {
+                QDomElement staff_element = main_score_measure_staves.at(staff_index).toElement();
+                if (staff_element.attribute("n").toInt() == n_value) {
+
+                    new_staff_element = staff_element.cloneNode(true).toElement();
+                }
+            }
+
+            // find the position to add
+
+            QDomElement staff_element;
+
+            for (int staff_index = 0; staff_index < measure_staves.count(); ++staff_index) {
+                staff_element = measure_staves.at(staff_index).toElement();
+                if (staff_element.attribute("n").toInt() > n_value) {
+                    // Insert the new staff before the first staff with a higher n value
+                    QDomNode parent_node = staff_element.parentNode();
+                    parent_node.insertBefore(new_staff_element, staff_element);
+                    //qInfo() << "Added staff with n: " << n_value << " to measure " << current_part_current_measure.toElement().attribute("n");
+                    break;
+                }
+
+            }
+
+            QDomNode parent_node = staff_element.parentNode();
+            parent_node.insertAfter(new_staff_element, staff_element);
+
+            //qInfo() << "Added staff with n: " << n_value << " to measure " << current_part_current_measure.toElement().attribute("n");
+
+        }
+
+        for (int &n_value : delete_list) {
+
+            for (int staff_index = 0; staff_index < measure_staves.count(); ++staff_index) {
+                QDomElement staff_element = measure_staves.at(staff_index).toElement();
+                if (staff_element.attribute("n").toInt() == n_value) {
+                    // Remove the staff element from the measure
+                    QDomNode parent_node = staff_element.parentNode();
+                    parent_node.removeChild(staff_element);
+                    // qInfo() << "Removed staff with n: " << n_value << " from measure " << current_part_current_measure.toElement().attribute("n");
+                    // qInfo() << measure_staves.count() << " staves left in measure " << current_part_current_measure.toElement().attribute("n");
+                    break;
+                }
+            }
+
+        }
+
+    }
+
+
 }
 
 QVector<mei_parser::part_element> mei_parser::get_parts()

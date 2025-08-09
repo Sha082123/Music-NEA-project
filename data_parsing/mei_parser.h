@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QDomDocument>
 #include <QDebug>
+
+class part_object; // forward declaration to resolve circular dependency
 #include "xml_parser.h"
 #include "parser_data.h"
 
@@ -16,6 +18,8 @@ public:
 
     void set_parser_data(parser_data *parser_data);
 
+    QDomDocument get_document() const;
+
     // EDITING DATA -----------------------------------------------------------------------------
     // EDITING DATA -----------------------------------------------------------------------------
     // EDITING DATA -----------------------------------------------------------------------------
@@ -24,6 +28,7 @@ public:
 
     Q_INVOKABLE void insert_break(QString id, int measure_number);
     Q_INVOKABLE void delete_break(int measure_number);
+    void update_part_staves(QVector<QPair<int, bool>> &part_existence, part_object *root_ptr);
 
     // EDITING DATA -----------------------------------------------------------------------------
     // EDITING DATA -----------------------------------------------------------------------------

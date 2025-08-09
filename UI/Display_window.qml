@@ -58,7 +58,7 @@ Rectangle {
                 console.log("refreshing...")
 
                 music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(selection_view.page_number - 1, ListView.Beginning)
-                music_stack.itemAt(music_stack.currentIndex).viewer.contentY += (selection_view.y_coords * viewer.scale_factor) // add y offset
+                music_stack.itemAt(music_stack.currentIndex).viewer.contentY += (selection_view.y_coords * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor) // add y offset
             }
         }
 
@@ -120,23 +120,24 @@ Rectangle {
 
                 console.log("deleting...")
                 music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(selection_view.page_number - 1, ListView.Beginning)
-                music_stack.itemAt(music_stack.currentIndex).viewer.contentY += (selection_view.y_coords * viewer.scale_factor) // add y offset
+                music_stack.itemAt(music_stack.currentIndex).viewer.contentY += (selection_view.y_coords * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor) // add y offset
 
             }
         }
 
         Button {
-            id: refresh_button
+            id: save_part_button
+
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            anchors.left: delete_break.right
-            width: parent.height
-            height: parent.height
-            text: "refresh"
+            anchors.top: parent.top
+
+            width: 80
+
+            text: current_part.saved
 
             onClicked: {
-                refreshed()
-
+                current_part.save_file()
             }
         }
     }
@@ -186,7 +187,7 @@ Rectangle {
 
             height: 60
 
-            text: "Create part"
+            text: "Edit parts"
 
             onClicked: {
 
@@ -309,15 +310,18 @@ Rectangle {
         z: 999
 
         Repeater {
+            id: tab_repeater
             model: part_manager.buffer_part_name_list
 
+
+
             TabButton {
+                id: part_tab_button
+
                 text: modelData
                 onPressed: {
                     part_manager.set_current_part(index)
                     console.log("Current part set to:", modelData, index)
-                    console.log("file path", current_part.file_path)
-
                     console.log("number of parts", part_manager.list_size())
 
                     //music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(0, ListView.Beginning) // Reset view to the beginning

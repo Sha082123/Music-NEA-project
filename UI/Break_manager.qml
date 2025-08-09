@@ -12,9 +12,9 @@ Window {
 
     //signal save_button_clicked()
 
-    Text {
-        text: "Message: " + error_message
-    }
+    // Text {
+    //     text: "Message: " + error_message
+    // }
 
     Button {
         id: apply_button

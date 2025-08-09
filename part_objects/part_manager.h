@@ -4,6 +4,9 @@
 #include <QObject>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QDirIterator>
+#include <QFile>
+#include <QDir>
 #include "part_object.h"
 #include "../file_opening/file_open.h"
 
@@ -21,14 +24,22 @@ public:
 
     Q_INVOKABLE int create_new_part(QString part_name); // 0 = success, -1 = invalid input, -2 = exists already
     Q_INVOKABLE int delete_part(int index); // 0 = success, -1 = index out of range
-    Q_INVOKABLE int update_part(int index, QString new_name); // 0 = success, -1 = invalid input,
+    Q_INVOKABLE int update_part(int index, QString new_name, QString old_name); // 0 = success, -1 = invalid input,
                                                               // -2 = name already exists,
                                                               // -3 = index out of range
+    Q_INVOKABLE int update_part_staves(QVariantList part_existence, int index); // 0 success, -1 invalid input,
+                                                                                 // -3 = index out of range
+
     Q_INVOKABLE void apply_part_actions();
 
     Q_INVOKABLE void set_current_part(int index);
     //Q_INVOKABLE void set_current_part(QString part_name); // Sets the current part by name
     Q_INVOKABLE int list_size();
+
+    Q_INVOKABLE bool staff_exists_in_part(int staff_n_value, QString part_name);
+
+    Q_INVOKABLE void scan_part_directory(QString source_path); // input is the full path to source file
+    Q_INVOKABLE void save_all();
 
     part_object* get_current_part();
 
@@ -54,6 +65,7 @@ private:
         int mode; // 0 for delete, 1 for new, 2 for update
         QString name;
         int index;
+        QVector<QPair<int, bool>> parts_active = {}; // n-value, active status
     };
 
     QVector<part_element> part_action_list;
