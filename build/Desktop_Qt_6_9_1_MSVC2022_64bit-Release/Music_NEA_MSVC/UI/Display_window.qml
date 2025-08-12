@@ -1,11 +1,12 @@
 import QtQuick 2.15
-import QtQuick.VectorImage
 import QtQuick.Controls
+import QtQuick.Layouts
+
 
 Rectangle {
     id: frame
     property string file_path: ""
-    property string pngDirectory: ""
+    //property string part_directory: file_open.get_current_dir() + "/UserFiles/dump/" + file_open.name_from_project_files(current_part.file_path)
     property real image_scale: 1.0
 
 
@@ -17,22 +18,19 @@ Rectangle {
     signal windowOpened()
     signal refreshed()
 
+    onRefreshed: {
+        part_selection.currentIndex = 0 // Switch to the newly created part
+        music_stack.currentIndex = 0 // Switch to the newly created part
+        media_player.refresh_media_player()
+        mixer.refresh_mixer()
+    }
+
     border.width: 10
 
     border.color: focus ? "red" : "black"
 
     clip: true
 
-    onWindowOpened: {
-        console.log("Display window loaded with file path:", frame.file_path)
-        frame.pngDirectory = render.output_path
-        console.log("Music saved to:", frame.pngDirectory)
-        console.log(render.list_PNG_paths)
-    }
-
-    onRefreshed: {
-        clicker.clicked() // Trigger the click event to refresh the image source
-    }
 
     Rectangle {
         id: toolbar
@@ -47,25 +45,29 @@ Rectangle {
             top: parent.top
         }
 
-        Button {
-            id: refresh
-            anchors.left: parent.left
-            anchors.bottom: parent.bottom
-            width: parent.height
-            height: parent.height
-            text: "R"
 
-            onClicked: {
-                mei_parser.insert_break("break_test", 1)
+        CMediaPlayer {
 
-                console.log("refreshing...")
-                refreshed() // Trigger the click event to refresh the image source
+            id: media_player
+
+            visible: track_manager.music_loaded? true : false
+            anchors.centerIn: parent
+
+            signal refresh_media_player
+
+            onRefresh_media_player: {
+                reset_values()
             }
+
         }
+
+
+
+
 
         Button {
             id: zoom_in
-            anchors.left: refresh.right
+            anchors.left: parent.left
             anchors.bottom: parent.bottom
             width: parent.height
             height: parent.height
@@ -94,32 +96,134 @@ Rectangle {
         }
 
         Button {
-            id: break_manager
+            id: refresh
             anchors.left: zoom_out.right
             anchors.bottom: parent.bottom
-            width: 80
+            width: 100
             height: parent.height
-            text: "Breaks"
+            text: "+ break"
 
             onClicked: {
-                break_window.visible = true
+                current_part.new_break_item(selection_view.measure_number)
+                current_part.apply_breaks()
+                current_part.update()
+
+                console.log("refreshing...")
+
+                music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(selection_view.page_number - 1, ListView.Beginning)
+                music_stack.itemAt(music_stack.currentIndex).viewer.contentY += (selection_view.y_coords * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor) // add y offset
             }
         }
 
+
+
         Button {
             id: delete_break
-            anchors.left: break_manager.left
+            anchors.left: refresh.right
             anchors.bottom: parent.bottom
-            width: parent.height
+            width: 100
             height: parent.height
-            text: "X"
+            text: "X break"
 
             onClicked: {
-                mei_parser.delete_break(1)
+                current_part.delete_break_item(selection_view.measure_number)
+                current_part.apply_breaks()
+                current_part.update()
 
                 console.log("deleting...")
-                refreshed() // Trigger the click event to refresh the image source
+                music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(selection_view.page_number - 1, ListView.Beginning)
+                music_stack.itemAt(music_stack.currentIndex).viewer.contentY += (selection_view.y_coords * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor) // add y offset
+
             }
+        }
+
+
+
+        Rectangle {
+            id: audiometer
+
+            property real level: 100 + audio_player.decibels
+
+            anchors.left: delete_break.right
+            anchors.top: parent.top
+            anchors.topMargin: 5
+
+            height: 10
+            width: Math.max((level/100) * 200, 10)
+
+            color: audio_player.decibels > -9 ? "red" : "green"
+
+        }
+
+        Slider {
+            id: master_volume
+
+            anchors.left: audiometer.left
+            anchors.bottom: parent.bottom
+            width: 200
+
+            from: 0.0
+            to: 1.0
+            stepSize: 0.01
+
+            value: 1.0
+
+            onMoved: {
+                audio_player.set_master_volume(value)
+            }
+        }
+
+
+
+
+        Button {
+            id: save_part_button
+
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            anchors.top: parent.top
+
+            width: 80
+
+            text: current_part.saved
+
+            onClicked: {
+                current_part.save_file()
+            }
+        }
+
+        Rectangle {
+            id: jump_to_measure_frame
+
+            width: 50
+
+            anchors.right: save_part_button.left
+            anchors.bottom: parent.bottom
+            anchors.top: parent.top
+
+            color: "lightgray"
+
+            TextInput {
+                anchors.centerIn: parent
+
+                text: "-"
+
+                onEditingFinished: {
+                    var measure_number = parseInt(text);
+                    if (!isNaN(measure_number)) {
+                        console.log("Jumping to measure:", measure_number);
+                        var result = current_part.coordinates_from_measure(measure_number);
+
+                        console.log(result);
+
+                        music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(result[0], ListView.Beginning)
+                        music_stack.itemAt(music_stack.currentIndex).viewer.contentY += result[1] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor; // add y offset
+                    } else {
+                        console.log("Invalid measure number:", text);
+                    }
+                }
+            }
+
         }
     }
 
@@ -139,33 +243,73 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             displayText: "Rehearsal marks"
+            height: 60
 
-            model: parser_data.reh_y_coords
+            model: current_part.reh_y_coords
 
             delegate: ItemDelegate {
                 text: modelData[1]
                 width: parent.width
                 onClicked: {
-                    console.log("original contentY: ", viewer.contentY)
+                    console.log("original contentY: ", music_stack.itemAt(music_stack.currentIndex).viewer.contentY)
+                    console.log("Scale factor: ", music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
 
-                    viewer.positionViewAtIndex(modelData[3], ListView.beginning)
+                    music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(modelData[3], ListView.beginning) // jump to page
 
-                    viewer.contentY += (modelData[2] * viewer.scale_factor)
-
-                    //viewer.contentY = (modelData[2] + viewer.originY) * viewer.scale_factor
-
-                    console.log("changed contentY: ", viewer.contentY)
-                    console.log("originY: ", viewer.originY)
-                    // console.log(viewer.scale_factor)
-                    // console.log(modelData[2])
-                    // console.log(viewer.contentY)
-                    // console.log(viewer.originY)
-                    // jump to rehearsal mark
-
-                    // LOGIC PROBLEM HERE!!! ORIGIN Y IS BEING ANNOYING
-                    // RESIZING MAKES JUMPING NOT WORK
+                    music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
+                            (modelData[2] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor) // add y offset
                 }
             }
+        }
+
+        Button {
+            id: break_manager
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: rehearsal_marks.bottom
+            height: 60
+            text: "Edit breaks"
+
+            onClicked: {
+                break_window.visible = true
+            }
+        }
+
+        Button {
+            id: part_maker_button
+            property string part_file_path: ""
+
+            anchors {
+                top: break_manager.bottom
+                left: parent.left
+                right: parent.right
+            }
+
+            height: 60
+
+            text: "Edit parts"
+
+            onClicked: {
+
+                part_maker.visible = true
+
+            }
+        }
+
+        Mixer {
+            id: mixer
+            signal refresh_mixer()
+
+            onRefresh_mixer: {
+                reset_values()
+            }
+
+            visible: track_manager.music_loaded? true : false
+
+            anchors.top: part_maker_button.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: selection_view.top
         }
 
 
@@ -173,9 +317,12 @@ Rectangle {
             id: selection_view
 
             property int measure_number: 0
-            property int start_beat: 0
-            property int end_beat: 0
-            property string note_name: "g4"
+            property real start_beat: 0
+            property real end_beat: 0
+            property string note_name: ""
+            property int x_coords: 0
+            property int y_coords: 0
+            property int page_number: 0
 
             anchors {
                 bottom: parent.bottom
@@ -185,11 +332,13 @@ Rectangle {
                 margins: 10
             }
 
-            height: 50
+            height: 80
 
             Text {
+                anchors.verticalCenter: parent.verticalCenter
                 text: "Measure: " + selection_view.measure_number +
                       "\n" + "Beats: " + selection_view.start_beat + "-" + selection_view.end_beat +
+                      "\n" + "Duration: " + (selection_view.end_beat - selection_view.start_beat) +
                       "\n" + "Note: " + selection_view.note_name
             }
         }
@@ -218,8 +367,8 @@ Rectangle {
                 dragging = true
                 x_original = mouseX
 
-                border.old_scale_factor = viewer.scale_factor
-                border.old_contentY = viewer.contentY
+                border.old_scale_factor = music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor
+                border.old_contentY = music_stack.itemAt(music_stack.currentIndex).viewer.contentY
             }
 
             onPositionChanged: {
@@ -239,8 +388,8 @@ Rectangle {
 
                 //viewer.contentY += viewer.originY
 
-                console.log("contentY: ", viewer.contentY)
-                console.log("originY: ", viewer.originY)
+                console.log("contentY: ", music_stack.itemAt(music_stack.currentIndex).viewer.contentY)
+                console.log("originY: ", music_stack.itemAt(music_stack.currentIndex).viewer.originY)
             }
 
             onReleased: {
@@ -251,136 +400,61 @@ Rectangle {
         }
     }
 
+
+
+    TabBar {
+        id: part_selection
+        anchors {
+            bottom: parent.bottom
+            left: border.right
+            right: parent.right
+        }
+
+        z: 999
+
+        Repeater {
+            id: tab_repeater
+            model: part_manager.buffer_part_name_list
+
+
+
+            TabButton {
+                id: part_tab_button
+
+                text: modelData
+                onPressed: {
+                    part_manager.set_current_part(index)
+                    console.log("Current part set to:", modelData, index)
+                    console.log("number of parts", part_manager.list_size())
+
+                    //music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(0, ListView.Beginning) // Reset view to the beginning
+                }
+            }
+        }
+    }
+
+
     Rectangle {
         id: right_panel
 
         anchors.right: frame.right
-        anchors.bottom: frame.bottom
+        anchors.bottom: part_selection.top
         anchors.top: toolbar.bottom
         anchors.left: border.right
 
-        property double old_scale_factor: 0
 
-        // onWidthChanged: {
-        //     old_scale_factor = viewer.scale_factor
-        //     console.log("Right panel width changed to:", right_panel.width)
-        //     console.log(viewer.contentY)
-        //     if (viewer.contentY === undefined || viewer.contentY === null) {
-        //         console.log("is null")
-        //     } else {
-
-        //         console.log("olde scale factor: " + old_scale_factor)
-        //         console.log("current scale factor: "+viewer.scale_factor)
-        //         viewer.contentY = viewer.contentY * (viewer.scale_factor/old_scale_factor)
-        //     }
-        // }
-
-        Rectangle {
-            id: key_logger
-            focus: true
-            Component.onCompleted: focus = true
-
-            anchors.fill: parent
-            color: "#00000000"
-        }
-
-        ScrollView{
-
-            id: scrollView
-
-            clip: true
-
+        StackLayout {
             anchors.fill: parent
 
+            id: music_stack
 
-            ListView {
-                id: viewer
-                width: parent.width
-                height: parent.height
-                anchors.top: parent.top
-                anchors.left: parent.left
-                anchors.topMargin: 100
-                visible: true
-                model: render.list_PNG_paths
+            currentIndex: part_selection.currentIndex
 
-                onContentYChanged: {
-                    console.log("contentY changed to:", contentY)
-                    console.log("originY changed to:", originY)
-                }
+            Repeater {
+                model: part_manager.buffer_part_name_list
 
-
-                property real scale_factor: (viewer.width/3000) * frame.image_scale // 3000 is width
-
-                delegate: Image {
-                    id: music
-                    width: parent.width * image_scale
-                    source: modelData
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    fillMode: Image.PreserveAspectFit
-                    antialiasing: true
-
-
-
-
-                    MouseArea {
-                        id: clicker
-
-                        property real x_coords: 0
-                        property real y_coords: 0
-
-                        property var element_data: []
-
-                        focus: true
-
-                        anchors.fill: parent
-                        onClicked: {
-                            clicker.focus = true
-
-                            clicker.forceActiveFocus()
-
-                            x_coords = (mouse.x/viewer.scale_factor) - 50
-                            y_coords = mouse.y/viewer.scale_factor
-
-                            //var point = music.mapToItem(viewer, 0, 0)
-                            //console.log("Image top-left relative to ListView:", x_coords, y_coords)
-                            //console.log("Image clicked: ", modelData)
-                            // console.log(selection_handler.get_element_at_coords(1, clicker.x_coords, clicker.y_coords))
-                            element_data = xml_parser.element_from_point(Qt.point(x_coords, y_coords), index + 1)
-                            console.log(x_coords, y_coords)
-
-                            music.source = modelData + "/reloader"
-                            music.source = modelData
-
-                            // property int measure_number: 0
-                            // property int start_beat: 0
-                            // property int end_beat: 0
-                            // property string note_name: "g4"
-
-                            console.log(element_data)
-
-                            selection_view.measure_number = element_data[1]
-                            selection_view.start_beat = element_data[2]
-                            selection_view.end_beat = element_data[3]
-                            selection_view.note_name = element_data[4]
-
-                        }
-
-                        Keys.onPressed: (event) => {
-                            if (event.key === Qt.Key_W) {
-                                key_logger.forceActiveFocus()
-                                console.log("Return pressed, making break")
-                                parser_data.new_break_item(selection_view.measure_number)
-                                parser_data.apply_breaks()
-                                render.update()
-                            }
-                        }
-                    }
-                }
-
-                footer: Rectangle {
-                    width: parent.width
-                    height: frame.height/1.5
-                    color: "white"
+                Music_scroll_view {
+                    id: scrollView
                 }
             }
         }
@@ -390,7 +464,14 @@ Rectangle {
     Break_manager {
         id: break_window
         visible: false
+
     }
+
+    Part_maker {
+        id: part_maker
+        visible: false
+    }
+
 
 
 }

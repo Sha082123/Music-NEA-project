@@ -1,0 +1,202 @@
+{
+    "classes": [
+        {
+            "className": "part_manager",
+            "lineNumber": 14,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "part_name",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "create_root_part",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "part_name",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "create_new_part",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "delete_part",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "new_name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "old_name",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "update_part",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "part_existence",
+                            "type": "QVariantList"
+                        },
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "update_part_staves",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "apply_part_actions",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "set_current_part",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 9,
+                    "name": "list_size",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "staff_n_value",
+                            "type": "int"
+                        },
+                        {
+                            "name": "part_name",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "staff_exists_in_part",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "source_path",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "scan_part_directory",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 12,
+                    "name": "save_all",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 13,
+                    "name": "clear_parts",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "part_name_list",
+                    "notify": "part_name_listChanged",
+                    "read": "part_name_list",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false,
+                    "write": "setpart_name_list"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 1,
+                    "name": "buffer_part_name_list",
+                    "notify": "buffer_part_name_listChanged",
+                    "read": "buffer_part_name_list",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false,
+                    "write": "setbuffer_part_name_list"
+                }
+            ],
+            "qualifiedClassName": "part_manager",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "part_name_listChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "buffer_part_name_listChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "part_manager.h",
+    "outputRevision": 69
+}

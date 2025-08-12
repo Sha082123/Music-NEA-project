@@ -1,0 +1,57 @@
+{
+    "classes": [
+        {
+            "className": "track_object",
+            "lineNumber": 12,
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "track_name",
+                    "notify": "track_nameChanged",
+                    "read": "track_name",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "settrack_name"
+                }
+            ],
+            "qualifiedClassName": "track_object",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "track_nameChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "pcm_data",
+                            "type": "QList<qint16>"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "handle_audio_parsing_finished",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "track_object.h",
+    "outputRevision": 69
+}

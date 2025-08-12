@@ -15,6 +15,7 @@ public:
     std::string parse_xml(const QString &svg_data);
 
     Q_INVOKABLE QVariantList element_from_point(const QPointF &point, const int &page_number);
+    QVector<int> coordinates_from_measure(int measure_number);
 
     void set_info_for_note(QString &id, int &measure_number, int &start_beat, int &end_beat, QString note_name);
     void set_info_for_rest(QString &id, int &measure_number, int &start_beat, int &end_beat);

@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "audio_options",
+            "lineNumber": 9,
+            "object": true,
+            "qualifiedClassName": "audio_options",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "audio_options.h",
+    "outputRevision": 69
+}

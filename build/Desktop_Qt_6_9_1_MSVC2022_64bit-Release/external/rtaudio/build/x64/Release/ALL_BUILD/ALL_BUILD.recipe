@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\Comp Sci NEA\Music_NEA_MSVC\build\Desktop_Qt_6_9_1_MSVC2022_64bit-Release\external\rtaudio\build\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\Comp Sci NEA\Music_NEA_MSVC\build\Desktop_Qt_6_9_1_MSVC2022_64bit-Release\external\rtaudio\build\Release\rtaudio.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\Comp Sci NEA\Music_NEA_MSVC\build\Desktop_Qt_6_9_1_MSVC2022_64bit-Release\external\rtaudio\build\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

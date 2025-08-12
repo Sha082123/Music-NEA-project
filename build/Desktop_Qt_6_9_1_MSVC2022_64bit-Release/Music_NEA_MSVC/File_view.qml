@@ -47,11 +47,17 @@ ScrollView{
                     onClicked: {
                         file_selector.file_path = file_open.openNewFile(file_selector.current_directory)
                         console.log("New file selected:", file_selector.file_path)
-                        render.openFile(file_selector.file_path, "new")
+
+                        part_manager.clear_parts();
+                        track_manager.clear()
+                        part_manager.create_root_part("main_score");
+                        part_manager.set_current_part(0);
+                        current_part.openFile(file_selector.file_path, 0)
                         scan_existing.scan_directory(file_selector.current_directory) // Scan the directory for files to update
                         //file_selector.close()
                         //display_window.show()
                         display_window.windowOpened();
+                        fileLoaded(file_selector.file_path)
                     }
                 }
             }
@@ -139,11 +145,16 @@ ScrollView{
 
                                 } else {
                                     file_selector.file_path = modelData
-                                    render.openFile(modelData, "existing")
+
+                                    part_manager.clear_parts();
+                                    track_manager.clear()
+                                    part_manager.create_root_part("main_score")
+                                    part_manager.scan_part_directory(modelData)
+                                    part_manager.set_current_part(0);
+                                    current_part.openFile(modelData, 0)
                                     //file_selector.close()
                                     //display_window.show()
                                     file_selector.fileLoaded(modelData)
-                                    display_window.windowOpened();
                                 }
                             }
                         }

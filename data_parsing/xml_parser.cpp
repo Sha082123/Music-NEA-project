@@ -137,6 +137,45 @@ QVariantList xml_parser::element_from_point(const QPointF &point, const int &pag
     return QVariantList{}; // No element found at the given point
 }
 
+QVector<int> xml_parser::coordinates_from_measure(int measure_number)
+{
+    QVector<int> output;
+
+    SvgElementInfo last_element = all_notes[all_notes.count()-1][all_notes[all_notes.count()-1].count()-1];
+
+    if (measure_number <= 0) {
+        qWarning() << "Measure number must be greater than 0.";
+        output.append(0);
+        output.append(0);
+        return output; // Return position of start if less than 1
+    }
+
+    else if (measure_number > last_element.measure_number) {
+        qWarning() << "Measure number exceeds number of measures in the score";
+        output.append(all_notes.count()-1);
+        output.append(last_element.position.y());
+        return output; // Return position of end if too big
+    }
+
+    for (int page_index = 0; page_index < all_notes.count(); page_index++) {
+        QVector<SvgElementInfo> &page_notes = all_notes[page_index];
+        if (page_notes[page_notes.count()-1].measure_number >= measure_number) {
+
+            for (SvgElementInfo &note : page_notes) {
+                if (note.measure_number == measure_number) {
+                    // qInfo() << "Found note at measure: " << measure_number << " with id: " << note.id;
+                    output.append(page_index);
+                    output.append(note.position.y());
+
+                    return output;
+                }
+            }
+        }
+    }
+
+    return output;
+}
+
 void xml_parser::set_info_for_note(QString &id, int &measure_number, int &start_beat, int &end_beat, QString note_name)
 {
     for (int page_index = 0; page_index < all_notes.size(); ++page_index) {

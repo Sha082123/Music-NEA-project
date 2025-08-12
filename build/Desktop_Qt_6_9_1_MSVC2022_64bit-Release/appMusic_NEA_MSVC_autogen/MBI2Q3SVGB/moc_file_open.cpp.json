@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "file_open",
-            "lineNumber": 11,
+            "lineNumber": 12,
             "methods": [
                 {
                     "access": "public",
@@ -20,11 +20,48 @@
                     "access": "public",
                     "arguments": [
                         {
+                            "name": "source_path",
+                            "type": "QString"
+                        },
+                        {
                             "name": "target_dir",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "file_name",
                             "type": "QString"
                         }
                     ],
                     "index": 1,
+                    "name": "createNewPart",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "source_path",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "target_dir",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "isCloned": true,
+                    "name": "createNewPart",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "target_dir",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
                     "name": "openNewDirectory",
                     "returnType": "void"
                 },
@@ -36,7 +73,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 2,
+                    "index": 4,
                     "name": "name_from_project_files",
                     "returnType": "QString"
                 },
@@ -48,13 +85,13 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 3,
+                    "index": 5,
                     "name": "get_base_name",
                     "returnType": "QString"
                 },
                 {
                     "access": "public",
-                    "index": 4,
+                    "index": 6,
                     "name": "get_current_dir",
                     "returnType": "QString"
                 },
@@ -66,7 +103,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 5,
+                    "index": 7,
                     "name": "isDir",
                     "returnType": "bool"
                 },
@@ -78,7 +115,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 6,
+                    "index": 8,
                     "name": "delete_file_or_dir",
                     "returnType": "void"
                 },
@@ -94,7 +131,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 7,
+                    "index": 9,
                     "name": "rename_file_or_dir",
                     "returnType": "void"
                 }

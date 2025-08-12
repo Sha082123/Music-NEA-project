@@ -23,6 +23,7 @@ Rectangle {
             text: "Delete"
             onTriggered: {
                 file_open.delete_file_or_dir(file_path)
+                file_open.delete_file_or_dir(file_open.get_current_dir() + "/UserFiles/dump/" + file_open.name_from_project_files(file_path))
                 scan_existing.scan_directory(current_directory)
             }
         }
@@ -54,6 +55,7 @@ Rectangle {
                     // Only rename after user confirms
                     if (dialogInput.text.length > 0) {
                         file_open.rename_file_or_dir(file_path, dialogInput.text)
+                        file_open.rename_file_or_dir(file_open.get_current_dir() + "/UserFiles/dump/" + file_open.name_from_project_files(file_path), dialogInput.text)
                         scan_existing.scan_directory(current_directory)
                         myDialog.close()
                     } else {

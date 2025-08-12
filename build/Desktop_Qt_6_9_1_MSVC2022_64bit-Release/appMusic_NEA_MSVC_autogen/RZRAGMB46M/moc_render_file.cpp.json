@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "render_file",
-            "lineNumber": 18,
+            "lineNumber": 24,
             "methods": [
                 {
                     "access": "public",
@@ -13,7 +13,7 @@
                         },
                         {
                             "name": "mode",
-                            "type": "QString"
+                            "type": "int"
                         }
                     ],
                     "index": 3,

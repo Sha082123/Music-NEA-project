@@ -42,6 +42,9 @@ template <> constexpr inline auto file_open::qt_create_metaobjectdata<qt_meta_ta
         "openNewFile",
         "",
         "target_dir",
+        "createNewPart",
+        "source_path",
+        "file_name",
         "openNewDirectory",
         "name_from_project_files",
         "file_path",
@@ -59,31 +62,39 @@ template <> constexpr inline auto file_open::qt_create_metaobjectdata<qt_meta_ta
         QtMocHelpers::MethodData<QString(const QString &)>(1, 2, QMC::AccessPublic, QMetaType::QString, {{
             { QMetaType::QString, 3 },
         }}),
+        // Method 'createNewPart'
+        QtMocHelpers::MethodData<QString(const QString &, const QString &, const QString &)>(4, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 5 }, { QMetaType::QString, 3 }, { QMetaType::QString, 6 },
+        }}),
+        // Method 'createNewPart'
+        QtMocHelpers::MethodData<QString(const QString &, const QString &)>(4, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
+            { QMetaType::QString, 5 }, { QMetaType::QString, 3 },
+        }}),
         // Method 'openNewDirectory'
-        QtMocHelpers::MethodData<void(const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+        QtMocHelpers::MethodData<void(const QString &)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 3 },
         }}),
         // Method 'name_from_project_files'
-        QtMocHelpers::MethodData<QString(const QString &)>(5, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QString, 6 },
+        QtMocHelpers::MethodData<QString(const QString &)>(8, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 9 },
         }}),
         // Method 'get_base_name'
-        QtMocHelpers::MethodData<QString(const QString &)>(7, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QString, 6 },
+        QtMocHelpers::MethodData<QString(const QString &)>(10, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 9 },
         }}),
         // Method 'get_current_dir'
-        QtMocHelpers::MethodData<QString()>(8, 2, QMC::AccessPublic, QMetaType::QString),
+        QtMocHelpers::MethodData<QString()>(11, 2, QMC::AccessPublic, QMetaType::QString),
         // Method 'isDir'
-        QtMocHelpers::MethodData<bool(QString)>(9, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 10 },
+        QtMocHelpers::MethodData<bool(QString)>(12, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 13 },
         }}),
         // Method 'delete_file_or_dir'
-        QtMocHelpers::MethodData<void(const QString &)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 6 },
+        QtMocHelpers::MethodData<void(const QString &)>(14, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 9 },
         }}),
         // Method 'rename_file_or_dir'
-        QtMocHelpers::MethodData<void(const QString &, const QString &)>(12, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 6 }, { QMetaType::QString, 13 },
+        QtMocHelpers::MethodData<void(const QString &, const QString &)>(15, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 9 }, { QMetaType::QString, 16 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -110,17 +121,21 @@ void file_open::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: { QString _r = _t->openNewFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 1: _t->openNewDirectory((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: { QString _r = _t->name_from_project_files((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 1: { QString _r = _t->createNewPart((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 3: { QString _r = _t->get_base_name((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 2: { QString _r = _t->createNewPart((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 4: { QString _r = _t->get_current_dir();
+        case 3: _t->openNewDirectory((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: { QString _r = _t->name_from_project_files((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 5: { bool _r = _t->isDir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 5: { QString _r = _t->get_base_name((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 6: { QString _r = _t->get_current_dir();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 7: { bool _r = _t->isDir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 6: _t->delete_file_or_dir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 7: _t->rename_file_or_dir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 8: _t->delete_file_or_dir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 9: _t->rename_file_or_dir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }
@@ -145,14 +160,14 @@ int file_open::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 10;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 10)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 8;
+        _id -= 10;
     }
     return _id;
 }

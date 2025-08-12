@@ -10,7 +10,7 @@ verovio_loader::verovio_loader(QObject *parent)
     QDir dir(QDir::currentPath());
     dir.cdUp();
     dir.cdUp();
-    verovio_resource_path = dir.path() + "/external/verovio/data";
+    verovio_resource_path = dir.path() + "/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/data";
 
     options = R"({
         "pageHeight": 5000,

@@ -1,6 +1,8 @@
 D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/PUPF7Z5TEY/moc_parser_data.cpp: D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/parser_data.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDebug \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPointF \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QRegularExpression \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVariant \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
@@ -67,8 +69,10 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qobjectdefs_impl.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qoverload.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qpair.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qpoint.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qprocessordetection.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qrefcount.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qregularexpression.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qset.h \
@@ -118,4 +122,10 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxptype_traits.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtXml/QDomDocument \
+  C:/Qt/6.9.1/msvc2022_64/include/QtXml/qdom.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxml-config.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlexports.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlglobal.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/xml_parser.h

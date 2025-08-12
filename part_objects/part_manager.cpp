@@ -1,10 +1,14 @@
 #include "part_manager.h"
+#include "../track_objects/track_manager.h"
 
-part_manager::part_manager(QObject *parent, QQmlApplicationEngine *engine)
+part_manager::part_manager(QObject *parent, QQmlApplicationEngine *engine, track_manager *track_manager)
     : QObject{parent}
 {
+
     m_engine = engine;
+    m_track_manager = track_manager;
     m_file_open = new file_open(nullptr, g_verovio_loader);
+
 }
 
 QVector<part_object*> part_manager::get_part_object_list()
@@ -28,7 +32,7 @@ void part_manager::create_root_part(QString part_name)
 
 int part_manager::create_new_part(QString part_name)
 {
-    if (part_name.isEmpty() || part_name.contains(".") || part_name.contains("/") || part_name.contains("\\") || part_name.contains(" ")) {
+    if (part_name.isEmpty() || part_name.contains(".") || part_name.contains("/") || part_name.contains("\\")) {
         return -1; // Invalid part name
     }
 
@@ -79,7 +83,7 @@ int part_manager::delete_part(int index)
 
 int part_manager::update_part(int index, QString new_name, QString old_name)
 {
-    if (new_name.isEmpty() || new_name.contains(".") || new_name.contains("/") || new_name.contains("\\") || new_name.contains(" ")) {
+    if (new_name.isEmpty() || new_name.contains(".") || new_name.contains("/") || new_name.contains("\\")) {
         return -1; // Invalid part name
     }
 
@@ -310,6 +314,8 @@ void part_manager::scan_part_directory(QString source_path)
             part_object_list.append(new_part_object);
 
             m_part_name_list.append(next_info.completeBaseName());
+        } else if (next_info.isDir()) { // only directory will be music files
+            m_track_manager->scan_audio_directory(next_file); // Scan the directory for tracks
         }
     }
 

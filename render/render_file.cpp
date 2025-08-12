@@ -39,10 +39,23 @@ void render_file::openFile(const QString &file_path, int mode)
     if (mode == 0) {
 
         QString dir_path = directory + "dump/" + file_methods->name_from_project_files(file_path);
+        QString track_path = dir_path + "/tracks";
+        QString options_path = track_path + "/options";
 
         QDir directory(dir_path);
+        QDir track_dir(track_path);
+        QDir options_dir(options_path);
+
         if (!directory.exists()) {
             directory.mkpath (".");
+        }
+
+        if (!track_dir.exists()) {
+            track_dir.mkpath(".");
+        }
+
+        if (!options_dir.exists()) {
+            options_dir.mkpath(".");
         }
     }
 
@@ -79,31 +92,31 @@ void render_file::render_data()
     pagecount = m_verovio_loader->get_page_count (); // Get the page count from the Verovio loader;
 
     for (int current_page = 1; current_page <= pagecount; ++current_page) {
-        qInfo() << Qt::endl << Qt::endl << Qt::endl;
-        qInfo() << "Rendering page:" << current_page << " out of " << pagecount;
-        qInfo() << Qt::endl << Qt::endl << Qt::endl;
+        // qInfo() << Qt::endl << Qt::endl << Qt::endl;
+        // qInfo() << "Rendering page:" << current_page << " out of " << pagecount;
+        // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
 
 
         QString image_path_temp = relative_path + "---pg_" + QString::number(current_page) + QString::number(refresher);
 
-        qInfo() << "checkpoint";
+        //qInfo() << "checkpoint";
 
         std::string svg_data = m_verovio_loader->render(current_page);
 
-        qInfo() << "checkpoint";
+        //qInfo() << "checkpoint";
 
         svg_data = m_xml_parser->parse_xml(QString::fromStdString(svg_data));// Parse the XML for the current page
 
-        qInfo() << "checkpoint";
-        qInfo() << "image://image_provider/"  + image_path_temp;
+        //qInfo() << "checkpoint";
+        //qInfo() << "image://image_provider/"  + image_path_temp;
 
         m_resvg_loader->add_to_image_provider(svg_data, image_path_temp); // Add the SVG to the image provider
 
         temp_list << ("image://image_provider/"  + image_path_temp);    // Add the image path to the list and set it to the property so QML sees
         setlist_PNG_paths (temp_list);
 
-        qInfo() << "image://image_provider/"  + image_path_temp;
+        //qInfo() << "image://image_provider/"  + image_path_temp;
 
         // setoutput_path(image_path); // Set the output path for the rendered images (/rendered_PNGs/project_name)
 

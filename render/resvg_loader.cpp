@@ -10,7 +10,7 @@ resvg_loader::resvg_loader(QObject *parent)
     dir.cdUp();
     dir.cdUp();
     root = dir.path();
-    font_path = dir.path() + "/external/verovio/fonts/"; // Path to the Verovio fonts directory
+    font_path = dir.path() + "/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/fonts/"; // Path to the Verovio fonts directory
 
     // renderer = new ResvgRenderer(); // Initialize the Resvg loader instance
     // options = new ResvgOptions();

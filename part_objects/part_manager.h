@@ -9,6 +9,7 @@
 #include <QDir>
 #include "part_object.h"
 #include "../file_opening/file_open.h"
+class track_manager; // Forward declaration of track_manager
 
 class part_manager : public QObject
 {
@@ -16,7 +17,7 @@ class part_manager : public QObject
     Q_PROPERTY(QStringList part_name_list READ part_name_list WRITE setpart_name_list NOTIFY part_name_listChanged FINAL)
     Q_PROPERTY(QStringList buffer_part_name_list READ buffer_part_name_list WRITE setbuffer_part_name_list NOTIFY buffer_part_name_listChanged FINAL)
 public:
-    explicit part_manager(QObject *parent = nullptr, QQmlApplicationEngine *engine = nullptr);
+    explicit part_manager(QObject *parent = nullptr, QQmlApplicationEngine *engine = nullptr, track_manager* track_manager = nullptr);
 
     QVector<part_object*> get_part_object_list();
 
@@ -75,6 +76,8 @@ private:
 
 
     QQmlApplicationEngine* m_engine = nullptr; // Pointer to the QML engine, needed for context properties
+    track_manager* m_track_manager = nullptr; // Pointer to the track manager
+
     file_open *m_file_open;
 
     QStringList m_part_name_list;

@@ -82,7 +82,7 @@ QString file_open::name_from_project_files(const QString &file_path) //if file_p
         if (relative_directory == "." || relative_directory.isEmpty()) {
             result = file_info.completeBaseName (); // Just "file"
         } else {
-            result = relative_directory + "/" + file_info.completeBaseName (); // "directory/file"
+            result = relative_directory + "/" + file_info.completeBaseName (); // "directory/file" (NO SLASH)
         }
 
         return result; //return file
@@ -112,6 +112,7 @@ bool file_open::isDir(QString path)
 
 void file_open::delete_file_or_dir(const QString &file_path)
 {
+    qInfo() << file_path << "will be deleted";
     QFileInfo info(file_path);
     if (info.isDir()) {
         QDir dir(file_path);
@@ -199,11 +200,11 @@ QString file_open::if_file_exists(const QString file_path) //checks with project
     QString file_dir = info.path();
     QStringList existing_files = QDir(file_dir).entryList(QStringList() << baseName + ".*", QDir::Files);
 
-    qInfo() << "Base name:" << baseName;
-    qInfo() << "Extension:" << extension;
-    qInfo() << "File directory:" << file_dir;
-    qInfo() << "File path var : " << file_path;
-    qInfo() << "Existing files matching pattern:" << existing_files;
+    // qInfo() << "Base name:" << baseName;
+    // qInfo() << "Extension:" << extension;
+    // qInfo() << "File directory:" << file_dir;
+    // qInfo() << "File path var : " << file_path;
+    // qInfo() << "Existing files matching pattern:" << existing_files;
 
     if (existing_files.isEmpty()) {
         qInfo() << "file did not exist so new file created";

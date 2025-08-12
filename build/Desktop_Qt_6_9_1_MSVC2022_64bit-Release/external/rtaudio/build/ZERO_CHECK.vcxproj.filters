@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Comp Sci NEA\Music_NEA_MSVC\build\Desktop_Qt_6_9_1_MSVC2022_64bit-Release\external\rtaudio\build\CMakeFiles\e9b5991193efb13de56204ef6ec88114\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D5854D92-4D8D-3F3E-A719-9B8D6A6A2D4C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

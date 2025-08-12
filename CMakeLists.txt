@@ -23,6 +23,12 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Multimedia)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 
 
@@ -68,6 +74,13 @@ qt_add_qml_module(appMusic_NEA_MSVC
         SOURCES part_objects/part_manager.h part_objects/part_manager.cpp
         QML_FILES UI/Music_scroll_view.qml
         QML_FILES UI/Part_maker.qml
+        SOURCES track_objects/track_object.h track_objects/track_object.cpp
+        SOURCES track_objects/track_manager.h track_objects/track_manager.cpp
+        SOURCES data_parsing/audio_parser.h data_parsing/audio_parser.cpp
+        SOURCES render/audio_player.h render/audio_player.cpp
+        QML_FILES UI/CMediaPlayer.qml
+        QML_FILES UI/Mixer.qml
+        SOURCES file_opening/audio_options.h file_opening/audio_options.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -84,7 +97,7 @@ set_target_properties(appMusic_NEA_MSVC PROPERTIES
 target_link_libraries(appMusic_NEA_MSVC
     PRIVATE Qt6::Quick
 )
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core PRIVATE Qt6::Widgets PRIVATE Qt6::Svg PRIVATE Qt6::Xml)
+target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core PRIVATE Qt6::Widgets PRIVATE Qt6::Svg PRIVATE Qt6::Xml PRIVATE Qt6::Multimedia)
 
 include(GNUInstallDirs)
 install(TARGETS appMusic_NEA_MSVC
@@ -94,9 +107,10 @@ install(TARGETS appMusic_NEA_MSVC
 )
 
 
+
 #LINKING VEROVIO
 
-set(VEROVIO_DIR "external/verovio")
+set(VEROVIO_DIR "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio")
 include_directories(
     ${VEROVIO_DIR}/include/vrv
     ${VEROVIO_DIR}/include/crc
@@ -114,56 +128,31 @@ include_directories(
 
 target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
 link_directories(${VEROVIO_DIR}/tools/build-library/Release)
-target_link_directories(appMusic_NEA_MSVC PRIVATE "external/verovio/cmake/build/Release/")
+target_link_directories(appMusic_NEA_MSVC PRIVATE ${VEROVIO_DIR}/cmake/build/Release/)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE verovio)
 
 
 
 #LINKING LUNASVG
-set(plutovg_DIR "D:/lunasvg/install/lib/cmake/plutovg")
+set(plutovg_DIR "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/lib/cmake/plutovg")
 find_package(plutovg REQUIRED)
 
-set(LUNASVG_DIR "D:/lunasvg/install")
+set(LUNASVG_DIR "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install")
 find_package(lunasvg REQUIRED)
 target_include_directories(appMusic_NEA_MSVC PRIVATE ${LUNASVG_DIR}/include/lunasvg/)
 target_link_directories(appMusic_NEA_MSVC PRIVATE ${LUNASVG_DIR}/lib/lunasvg.lib)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE lunasvg::lunasvg)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
 
 
-
-#LINKING SVG++
-
-include_directories(external/svgpp/include/)
-include_directories(external/svgpp/third_party/)
-
-
-#LINKING BOOST (SVG++ requires boost as a header only library)
-
-include_directories(external/boost)
-
-
-
-#LINKING RESVG
-
-include_directories(external/resvg/crates/c-api)
-link_directories(external/resvg/target/release)
-target_link_directories(appMusic_NEA_MSVC PRIVATE external/resvg/target/release)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE resvg ntdll)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-
-
-#LINKING MX
-
-target_link_directories(appMusic_NEA_MSVC PRIVATE external/mx/build/Release)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE mx)
+#LINKING RTAUDIO
+#target_include_directories(appMusic_NEA_MSVC PRIVATE build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/rtaudio/include)
+target_include_directories(appMusic_NEA_MSVC PRIVATE build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/rtaudio)
+target_link_directories(appMusic_NEA_MSVC PRIVATE build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/rtaudio/build/Release/)
+target_link_libraries(appMusic_NEA_MSVC PRIVATE rtaudio)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_include_directories(appMusic_NEA_MSVC PRIVATE external/mx/Sourcecode/include)
+
+
+
+

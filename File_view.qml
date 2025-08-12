@@ -49,6 +49,7 @@ ScrollView{
                         console.log("New file selected:", file_selector.file_path)
 
                         part_manager.clear_parts();
+                        track_manager.clear()
                         part_manager.create_root_part("main_score");
                         part_manager.set_current_part(0);
                         current_part.openFile(file_selector.file_path, 0)
@@ -146,6 +147,7 @@ ScrollView{
                                     file_selector.file_path = modelData
 
                                     part_manager.clear_parts();
+                                    track_manager.clear()
                                     part_manager.create_root_part("main_score")
                                     part_manager.scan_part_directory(modelData)
                                     part_manager.set_current_part(0);

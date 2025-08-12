@@ -1,0 +1,32 @@
+{
+    "classes": [
+        {
+            "className": "audio_parser",
+            "lineNumber": 12,
+            "object": true,
+            "qualifiedClassName": "audio_parser",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "pcm_data",
+                            "type": "QList<qint16>"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "audio_parsing_finished",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "audio_parser.h",
+    "outputRevision": 69
+}

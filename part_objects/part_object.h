@@ -20,6 +20,7 @@ class part_object : public QObject
     Q_PROPERTY(QVariantList break_list READ break_list WRITE setBreak_list NOTIFY break_listChanged FINAL)
     Q_PROPERTY(QVariantList part_list READ part_list WRITE setpart_list NOTIFY part_listChanged FINAL)
     Q_PROPERTY(QString saved READ saved WRITE setsaved NOTIFY savedChanged FINAL)
+    Q_PROPERTY(QString file_path READ file_path WRITE setfile_path NOTIFY file_pathChanged FINAL)
 
 public:
     explicit part_object(QObject *parent = nullptr, QString part_name = "");
@@ -31,6 +32,7 @@ public:
     Q_INVOKABLE int update_break_list(QString id, QString input);
     Q_INVOKABLE void apply_breaks();
     Q_INVOKABLE QVariantList element_from_point(const QPointF &point, const int &page_number);
+    Q_INVOKABLE QVariantList coordinates_from_measure(int measure_number);
 
     Q_INVOKABLE void save_file();
 
@@ -76,6 +78,8 @@ signals:
     void part_listChanged();
 
     void savedChanged();
+
+    void file_pathChanged();
 
 private:
 

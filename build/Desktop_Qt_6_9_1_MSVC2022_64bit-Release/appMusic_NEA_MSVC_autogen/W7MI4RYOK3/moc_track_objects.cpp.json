@@ -1,0 +1,43 @@
+{
+    "classes": [
+        {
+            "className": "track_objects",
+            "lineNumber": 8,
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "track_name",
+                    "notify": "track_nameChanged",
+                    "read": "track_name",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "settrack_name"
+                }
+            ],
+            "qualifiedClassName": "track_objects",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "track_nameChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "track_objects.h",
+    "outputRevision": 69
+}

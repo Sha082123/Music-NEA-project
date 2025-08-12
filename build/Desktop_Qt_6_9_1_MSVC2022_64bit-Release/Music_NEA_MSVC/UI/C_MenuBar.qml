@@ -6,21 +6,30 @@ MenuBar {
 
     Menu {
        title: qsTr("&File")
-       Action { text: qsTr("&New...") }
-       Action { text: qsTr("&Open...") }
-       Action { text: qsTr("&Save") }
-       Action { text: qsTr("Save &As...") }
+       Action {
+              text: qsTr("&Save")
+
+              onTriggered: {
+                     if (current_part != null) {
+                            current_part.save_file()
+                     }
+              }
+
+       }
+       Action {
+              text: qsTr("Save &All")
+
+              onTriggered: {
+                     part_manager.save_all()
+              }
+       }
        MenuSeparator { }
-       Action { text: qsTr("&Quit") }
+       Action {
+              text: qsTr("&Quit")
+
+              onTriggered: {
+                     Qt.quit()
+              }
+       }
     }
-   Menu {
-       title: qsTr("&Edit")
-       Action { text: qsTr("Cu&t") }
-       Action { text: qsTr("&Copy") }
-       Action { text: qsTr("&Paste") }
-   }
-   Menu {
-       title: qsTr("&Help")
-       Action { text: qsTr("&About") }
-   }
 }

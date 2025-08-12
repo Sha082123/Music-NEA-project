@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls
 import QtQuick.Layouts
 
+
 Rectangle {
     id: frame
     property string file_path: ""
@@ -20,6 +21,8 @@ Rectangle {
     onRefreshed: {
         part_selection.currentIndex = 0 // Switch to the newly created part
         music_stack.currentIndex = 0 // Switch to the newly created part
+        media_player.refresh_media_player()
+        mixer.refresh_mixer()
     }
 
     border.width: 10
@@ -42,29 +45,29 @@ Rectangle {
             top: parent.top
         }
 
-        Button {
-            id: refresh
-            anchors.left: parent.left
-            anchors.bottom: parent.bottom
-            width: parent.height
-            height: parent.height
-            text: "R"
 
-            onClicked: {
-                current_part.new_break_item(selection_view.measure_number)
-                current_part.apply_breaks()
-                current_part.update()
+        CMediaPlayer {
 
-                console.log("refreshing...")
+            id: media_player
 
-                music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(selection_view.page_number - 1, ListView.Beginning)
-                music_stack.itemAt(music_stack.currentIndex).viewer.contentY += (selection_view.y_coords * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor) // add y offset
+            visible: track_manager.music_loaded? true : false
+            anchors.centerIn: parent
+
+            signal refresh_media_player
+
+            onRefresh_media_player: {
+                reset_values()
             }
+
         }
+
+
+
+
 
         Button {
             id: zoom_in
-            anchors.left: refresh.right
+            anchors.left: parent.left
             anchors.bottom: parent.bottom
             width: parent.height
             height: parent.height
@@ -93,25 +96,34 @@ Rectangle {
         }
 
         Button {
-            id: break_manager
+            id: refresh
             anchors.left: zoom_out.right
             anchors.bottom: parent.bottom
-            width: 80
+            width: 100
             height: parent.height
-            text: "Breaks"
+            text: "+ break"
 
             onClicked: {
-                break_window.visible = true
+                current_part.new_break_item(selection_view.measure_number)
+                current_part.apply_breaks()
+                current_part.update()
+
+                console.log("refreshing...")
+
+                music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(selection_view.page_number - 1, ListView.Beginning)
+                music_stack.itemAt(music_stack.currentIndex).viewer.contentY += (selection_view.y_coords * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor) // add y offset
             }
         }
 
+
+
         Button {
             id: delete_break
-            anchors.left: break_manager.right
+            anchors.left: refresh.right
             anchors.bottom: parent.bottom
-            width: parent.height
+            width: 100
             height: parent.height
-            text: "X"
+            text: "X break"
 
             onClicked: {
                 current_part.delete_break_item(selection_view.measure_number)
@@ -124,6 +136,45 @@ Rectangle {
 
             }
         }
+
+
+
+        Rectangle {
+            id: audiometer
+
+            property real level: 100 + audio_player.decibels
+
+            anchors.left: delete_break.right
+            anchors.top: parent.top
+            anchors.topMargin: 5
+
+            height: 10
+            width: Math.max((level/100) * 200, 10)
+
+            color: audio_player.decibels > -9 ? "red" : "green"
+
+        }
+
+        Slider {
+            id: master_volume
+
+            anchors.left: audiometer.left
+            anchors.bottom: parent.bottom
+            width: 200
+
+            from: 0.0
+            to: 1.0
+            stepSize: 0.01
+
+            value: 1.0
+
+            onMoved: {
+                audio_player.set_master_volume(value)
+            }
+        }
+
+
+
 
         Button {
             id: save_part_button
@@ -139,6 +190,40 @@ Rectangle {
             onClicked: {
                 current_part.save_file()
             }
+        }
+
+        Rectangle {
+            id: jump_to_measure_frame
+
+            width: 50
+
+            anchors.right: save_part_button.left
+            anchors.bottom: parent.bottom
+            anchors.top: parent.top
+
+            color: "lightgray"
+
+            TextInput {
+                anchors.centerIn: parent
+
+                text: "-"
+
+                onEditingFinished: {
+                    var measure_number = parseInt(text);
+                    if (!isNaN(measure_number)) {
+                        console.log("Jumping to measure:", measure_number);
+                        var result = current_part.coordinates_from_measure(measure_number);
+
+                        console.log(result);
+
+                        music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(result[0], ListView.Beginning)
+                        music_stack.itemAt(music_stack.currentIndex).viewer.contentY += result[1] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor; // add y offset
+                    } else {
+                        console.log("Invalid measure number:", text);
+                    }
+                }
+            }
+
         }
     }
 
@@ -158,6 +243,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             displayText: "Rehearsal marks"
+            height: 60
 
             model: current_part.reh_y_coords
 
@@ -177,10 +263,24 @@ Rectangle {
         }
 
         Button {
+            id: break_manager
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: rehearsal_marks.bottom
+            height: 60
+            text: "Edit breaks"
+
+            onClicked: {
+                break_window.visible = true
+            }
+        }
+
+        Button {
+            id: part_maker_button
             property string part_file_path: ""
 
             anchors {
-                top: rehearsal_marks.bottom
+                top: break_manager.bottom
                 left: parent.left
                 right: parent.right
             }
@@ -193,22 +293,23 @@ Rectangle {
 
                 part_maker.visible = true
 
-                // part_manager.create_new_part("test_2")
-
-                // part_selection.currentIndex = part_manager.list_size() - 1 // Switch to the newly created part
-                // music_stack.currentIndex = part_manager.list_size() - 1 // Switch to the newly created part
-
-                // part_manager.set_current_part(0) // create part relative to the root part
-
-                // part_file_path = file_open.createNewPart(current_part.file_path,
-                //                         file_open.get_current_dir() + "/UserFiles/dump/" +
-                //                         file_open.name_from_project_files(current_part.file_path) + "/")
-
-                // part_manager.set_current_part(part_manager.list_size() - 1) // Set the newly created part as current
-                // current_part.openFile(part_file_path, 1)
-
-
             }
+        }
+
+        Mixer {
+            id: mixer
+            signal refresh_mixer()
+
+            onRefresh_mixer: {
+                reset_values()
+            }
+
+            visible: track_manager.music_loaded? true : false
+
+            anchors.top: part_maker_button.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: selection_view.top
         }
 
 
@@ -231,11 +332,13 @@ Rectangle {
                 margins: 10
             }
 
-            height: 50
+            height: 80
 
             Text {
+                anchors.verticalCenter: parent.verticalCenter
                 text: "Measure: " + selection_view.measure_number +
                       "\n" + "Beats: " + selection_view.start_beat + "-" + selection_view.end_beat +
+                      "\n" + "Duration: " + (selection_view.end_beat - selection_view.start_beat) +
                       "\n" + "Note: " + selection_view.note_name
             }
         }

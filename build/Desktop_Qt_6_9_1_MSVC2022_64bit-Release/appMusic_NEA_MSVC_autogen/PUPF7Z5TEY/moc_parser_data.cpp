@@ -38,46 +38,12 @@ template <> constexpr inline auto parser_data::qt_create_metaobjectdata<qt_meta_
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "parser_data",
-        "reh_y_coordsChanged",
-        "",
-        "break_listChanged",
-        "update_break_list",
-        "id",
-        "input",
-        "delete_break_item",
-        "new_break_item",
-        "apply_breaks",
-        "reh_y_coords",
-        "QVariantList",
-        "break_list"
+        "parser_data"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'reh_y_coordsChanged'
-        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
-        // Signal 'break_listChanged'
-        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
-        // Method 'update_break_list'
-        QtMocHelpers::MethodData<int(QString, QString)>(4, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::QString, 5 }, { QMetaType::QString, 6 },
-        }}),
-        // Method 'delete_break_item'
-        QtMocHelpers::MethodData<int(QString)>(7, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::QString, 5 },
-        }}),
-        // Method 'new_break_item'
-        QtMocHelpers::MethodData<int(QString)>(8, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::QString, 6 },
-        }}),
-        // Method 'apply_breaks'
-        QtMocHelpers::MethodData<void()>(9, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
-        // property 'reh_y_coords'
-        QtMocHelpers::PropertyData<QVariantList>(10, 0x80000000 | 11, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 0),
-        // property 'break_list'
-        QtMocHelpers::PropertyData<QVariantList>(12, 0x80000000 | 11, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 1),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -97,42 +63,10 @@ Q_CONSTINIT const QMetaObject parser_data::staticMetaObject = { {
 void parser_data::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<parser_data *>(_o);
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        switch (_id) {
-        case 0: _t->reh_y_coordsChanged(); break;
-        case 1: _t->break_listChanged(); break;
-        case 2: { int _r = _t->update_break_list((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
-            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 3: { int _r = _t->delete_break_item((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
-            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 4: { int _r = _t->new_break_item((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
-            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 5: _t->apply_breaks(); break;
-        default: ;
-        }
-    }
-    if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (parser_data::*)()>(_a, &parser_data::reh_y_coordsChanged, 0))
-            return;
-        if (QtMocHelpers::indexOfMethod<void (parser_data::*)()>(_a, &parser_data::break_listChanged, 1))
-            return;
-    }
-    if (_c == QMetaObject::ReadProperty) {
-        void *_v = _a[0];
-        switch (_id) {
-        case 0: *reinterpret_cast<QVariantList*>(_v) = _t->reh_y_coords(); break;
-        case 1: *reinterpret_cast<QVariantList*>(_v) = _t->break_list(); break;
-        default: break;
-        }
-    }
-    if (_c == QMetaObject::WriteProperty) {
-        void *_v = _a[0];
-        switch (_id) {
-        case 0: _t->setReh_y_coords(*reinterpret_cast<QVariantList*>(_v)); break;
-        case 1: _t->setBreak_list(*reinterpret_cast<QVariantList*>(_v)); break;
-        default: break;
-        }
-    }
+    (void)_t;
+    (void)_c;
+    (void)_id;
+    (void)_a;
 }
 
 const QMetaObject *parser_data::metaObject() const
@@ -151,36 +85,6 @@ void *parser_data::qt_metacast(const char *_clname)
 int parser_data::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QObject::qt_metacall(_c, _id, _a);
-    if (_id < 0)
-        return _id;
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
-    }
-    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
-    }
-    if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
-            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
-            || _c == QMetaObject::RegisterPropertyMetaType) {
-        qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
-    }
     return _id;
-}
-
-// SIGNAL 0
-void parser_data::reh_y_coordsChanged()
-{
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
-}
-
-// SIGNAL 1
-void parser_data::break_listChanged()
-{
-    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 QT_WARNING_POP

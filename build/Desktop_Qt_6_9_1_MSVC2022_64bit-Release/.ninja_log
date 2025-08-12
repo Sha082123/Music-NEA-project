@@ -1,990 +1,279 @@
 # ninja log v6
-60275	63810	7754000669577806	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WordFont.cpp.obj	2671ae3adbcf9111
-204	256	7760469594465669	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-6240	6305	7760469654370928	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-204	256	7760469594465669	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-76766	76816	7757672067269474	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp	a51d8d9da9524dba
-5258	27601	7760471366152434	CMakeFiles/appMusic_NEA_MSVC.dir/render/render_file.cpp.obj	95a763282afc9ba9
-52280	56540	7754000589631456	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StrongAccent.cpp.obj	ded4733be479fbf0
-7503	10454	7754000141854235	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Bend.cpp.obj	c8e06e36fd11f6da
-3996	4999	7760471363016243	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	3ed321c2e16a5b2
+6636	7752	7767362937917855	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	93e36c6b4e978fd4
+266	386	7767362875155465	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
 120	167	7748320494082190	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_res.txt	adb8d97252ea3e42
-7485	9880	7754000141683918	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Beats.cpp.obj	a0d68d4d46ac8b07
+3176	4011	7767370534331098	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	3ed321c2e16a5b2
+266	386	7767362875155465	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+1158	1204	7766983002826271	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp	a51d8d9da9524dba
+4215	15303	7767212064016829	CMakeFiles/appMusic_NEA_MSVC.dir/render/render_file.cpp.obj	b39514425d9f9254
+515	3668	7766353026776288	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/audio_parser.cpp.obj	34455df71b835631
 120	167	7748320494082190	.qt/appMusic_NEA_MSVC_res.txt	adb8d97252ea3e42
-3873	7484	7754000105558418	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ArpeggiateAttributes.cpp.obj	9837687592c4489e
-5218	22561	7760471365753974	CMakeFiles/appMusic_NEA_MSVC.dir/appmusic_nea_msvc_qmltyperegistrations.cpp.obj	9a941bd64eae1970
-216	6054	7760469652414178	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-44770	47503	7754000514526083	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RelationAttributes.cpp.obj	c6fc1ea00c9fcce7
-38019	41123	7754000447028160	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherPercussion.cpp.obj	4844c8ef1465dba7
-216	6054	7760469652414178	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-302	2980	7760471339453214	appMusic_NEA_MSVC_autogen/timestamp	d9a452f3a796e9e8
-4047	4985	7760471361752143	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-42930	47462	7754000496139207	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PrefixAttributes.cpp.obj	5d1626dd0882f462
-236	22276	7760472939087380	build.ninja	99f6f48f9ee34ecc
-58764	62088	7754000654469139	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TypeAttributes.cpp.obj	9fcbf9e47f29cc14
-21424	24567	7754000281070544	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupNameDisplay.cpp.obj	e368271b11e521bb
-302	2980	7760471339453214	appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	d9a452f3a796e9e8
-16544	19176	7754000232279009	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Falloff.cpp.obj	2ade81a43f31fe
-4097	4969	7760471360250732	.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp	56c63d867e8c4c5d
-2984	3159	7760471344756035	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	d74deb8163407f51
-302	2980	7760471339453214	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/timestamp	d9a452f3a796e9e8
-5522	23303	7760471368802894	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.obj	56b6c143f1865403
-3996	4999	7760471363016243	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	3ed321c2e16a5b2
-302	2980	7760471339453214	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	d9a452f3a796e9e8
-24524	32244	7754000312065462	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InstrumentSound.cpp.obj	6dd9316f5fe88b52
-27291	30917	7754000339741619	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LeftMargin.cpp.obj	a7446b1b17ca0cdf
-4127	4974	7760471360250732	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp	cd3d608344c4e32f
-13049	16444	7754000197331644	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DisplayTextOrAccidentalText.cpp.obj	b7d4497ba9d57a66
-76766	76816	7757672067269474	.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp	a51d8d9da9524dba
-2984	3159	7760471344756035	meta_types/appMusic_NEA_MSVC_json_file_list.txt	d74deb8163407f51
-10665	14737	7754000173479626	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DegreeAlterAttributes.cpp.obj	b0e70147db5a6800
-2984	3159	7760471344756035	meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	d74deb8163407f51
-35679	40417	7754000423614835	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NoteheadTextChoice.cpp.obj	e60760869b6fcda0
-42052	45563	7754000487348149	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PerMinuteOrBeatUnitChoice.cpp.obj	2d50c1c0a52c8f77
-20419	24416	7754000271025477	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupAbbreviationAttributes.cpp.obj	31e10eee84afcc63
-3465	3995	7760471350694623	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	d13ff1c2fdbf6690
-27435	30984	7754000341172341	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LinkAttributes.cpp.obj	9d58c5a8ac349cd9
-2984	3159	7760471344756035	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt	d74deb8163407f51
-76772	76850	7757672067442900	.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp	2da79a5a8c4dd280
-54383	57805	7754000610657377	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ThumbPosition.cpp.obj	4ed84b8b03ddddda
-3996	4999	7760471363016243	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	3ed321c2e16a5b2
-3465	3995	7760471350694623	appmusic_nea_msvc_qmltyperegistrations.cpp	d13ff1c2fdbf6690
-18087	21557	7754000247695707	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Fingering.cpp.obj	8b7286bb9311a5a
-5483	24697	7760471368414226	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
+4050	12956	7767370535581769	CMakeFiles/appMusic_NEA_MSVC.dir/appmusic_nea_msvc_qmltyperegistrations.cpp.obj	720f6f9ed014da41
+290	2347	7767362894406688	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+290	2347	7767362894406688	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+186	662	7767373544297804	appMusic_NEA_MSVC_autogen/timestamp	d9a452f3a796e9e8
+3204	3918	7767370533367081	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
+73	3856	7767206727288032	build.ninja	99f6f48f9ee34ecc
+186	662	7767373544297804	appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	d9a452f3a796e9e8
+186	662	7767373544297804	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/timestamp	d9a452f3a796e9e8
+663	739	7767373549752764	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	d74deb8163407f51
+3243	3742	7767370531251866	.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp	56c63d867e8c4c5d
+4156	13055	7767370536639619	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.obj	35beb28fc3b40b77
+3176	4011	7767370534331098	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	3ed321c2e16a5b2
+186	662	7767373544297804	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	d9a452f3a796e9e8
+3262	3741	7767370531271869	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp	cd3d608344c4e32f
+1158	1204	7766983002826271	.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp	a51d8d9da9524dba
+663	739	7767373549752764	meta_types/appMusic_NEA_MSVC_json_file_list.txt	d74deb8163407f51
+663	739	7767373549752764	meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	d74deb8163407f51
+2751	3176	7767370524499316	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	d13ff1c2fdbf6690
+663	739	7767373549752764	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt	d74deb8163407f51
+3313	3873	7767370532742807	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp.aotstats	1d27a471af9296ca
+1163	1330	7766983003182616	.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp	2da79a5a8c4dd280
+2751	3176	7767370524499316	appmusic_nea_msvc_qmltyperegistrations.cpp	d13ff1c2fdbf6690
+3176	4011	7767370534331098	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	3ed321c2e16a5b2
+4130	13515	7767370536381867	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	4f704bd8ae52956
 604	648	7748320498882905	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp	9b2a1d041e4390ea
-52351	56608	7754000590336798	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SuffixAttributes.cpp.obj	8352040a006bc416
-1632	3872	7754000083149126	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/EnumsBuiltin.cpp.obj	81988ec7b5e2d36b
-4047	4985	7760471361752143	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-3465	3995	7760471350694623	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appmusic_nea_msvc_qmltyperegistrations.cpp	d13ff1c2fdbf6690
+2751	3176	7767370524499316	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appmusic_nea_msvc_qmltyperegistrations.cpp	d13ff1c2fdbf6690
+3204	3918	7767370533367081	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
 604	648	7748320498882905	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp	9b2a1d041e4390ea
-24359	27434	7754000310421902	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Image.cpp.obj	91f0d352776695ee
-3839	4186	7754853476854226	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp.obj	71387b90ef6efca7
-13233	16544	7754000199162417	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Divisions.cpp.obj	27907fb2b5ccae6f
-5441	22967	7760471367984734	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.obj	a3e0b69c3e0b89e
-10412	13305	7754000170956787	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Cue.cpp.obj	e7f0273abcadbcc4
-43411	46563	7754000500945274	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Print.cpp.obj	5381380382b5ff4a
-35220	38619	7754000419036809	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NoteSize.cpp.obj	149f3519448f9fa6
-52988	56874	7754000596705820	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SyllabicTextGroup.cpp.obj	80b6672bfb2d528c
-6061	6102	7760469652946055	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-38595	41536	7754000452774016	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherPlayAttributes.cpp.obj	cbac5f562d6812bc
-6061	6102	7760469652946055	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-23618	27354	7754000303019125	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HoleClosedAttributes.cpp.obj	90cc072b6328e179
-61355	65341	7754000680378746	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WorkTitle.cpp.obj	30706e4d96b19c52
-3465	3995	7760471350694623	Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	d13ff1c2fdbf6690
-21628	23946	7754000283105904	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupingAttributes.cpp.obj	a350abf48ea52cb6
-49408	53091	7754000560917685	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SoundAttributes.cpp.obj	dfe15e0c4fa8a03
-3160	3465	7760471347232966	meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen	3b40162a819bef60
-38448	38767	7760471698054124	appMusic_NEA_MSVC.exe	72df750c5224d31c
-1484	3120	7754000081668784	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/DurationData.cpp.obj	41b249beab991966
-10760	13049	7754000174434929	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DegreeType.cpp.obj	71b929a3b75f388a
-3160	3465	7760471347232966	meta_types/qt6appmusic_nea_msvc_release_metatypes.json	3b40162a819bef60
-5463	23784	7760471368212737	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.obj	b03538b5a64e4751
-3160	3465	7760471347232966	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen	3b40162a819bef60
-3160	3465	7760471347232966	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json	3b40162a819bef60
-76772	76850	7757672067442900	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp	2da79a5a8c4dd280
-32990	36458	7754000396735099	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Mode.cpp.obj	39163d0915abd021
-42853	46789	7754000495358774	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PluckAttributes.cpp.obj	3dcc74455b8c1e29
-3996	4999	7760471363016243	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	3ed321c2e16a5b2
-21501	24434	7754000281845149	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupSymbol.cpp.obj	ae54efa1c83c1998
-4047	4985	7760471361752143	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-23564	26626	7754000302473171	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Hole.cpp.obj	40e2fe5e24867912
-4023	4979	7760471359710923	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	e1064c0dbbc23d22
-30635	34327	7754000373186563	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeRelationGroup.cpp.obj	7e1b7b10b6ed642f
-34283	37286	7754000409659430	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NormalNoteGroup.cpp.obj	969536bfd3a992ae
-42093	46541	7754000487768179	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Percussion.cpp.obj	f5eb9fe7e5fbe1c5
-5235	27799	7760471365925402	CMakeFiles/appMusic_NEA_MSVC.dir/file_opening/file_open.cpp.obj	971f69941de4d216
-30147	33710	7754000368301583	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureStyleAttributes.cpp.obj	f6afd8b81fcbe2ff
-4023	4979	7760471359710923	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	e1064c0dbbc23d22
-19154	21778	7754000258363022	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FretAttributes.cpp.obj	767610851f3a4dd6
-4023	4979	7760471359710923	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	e1064c0dbbc23d22
-6059	6540	7757673201046103	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp.obj	7bbb360cbce5a6bd
-8334	10777	7754000150171331	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Caesura.cpp.obj	c249b8167975d1c6
-34051	37175	7754000407338724	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NonTraditionalKey.cpp.obj	e7b255255b814bcb
-4023	4979	7760471359710923	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	e1064c0dbbc23d22
-27454	32177	7754000341372354	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Lyric.cpp.obj	365167186eb4123d
-4047	4985	7760471361752143	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6063	9704	7757673201086169	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp.obj	c6dc520c8e7ce5a
-17675	21423	7754000243585638	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FiguredBass.cpp.obj	19a8cd53159e0a30
-58326	62002	7754000650095534	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletNumber.cpp.obj	961e6deb6a28f06b
-5186	28850	7760471365437583	CMakeFiles/appMusic_NEA_MSVC.dir/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp.obj	7236589e0b02ae11
-52944	55880	7754000596272044	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SupportsAttributes.cpp.obj	b8f3c3831e595ae5
-5204	38447	7760471365610196	CMakeFiles/appMusic_NEA_MSVC.dir/main.cpp.obj	4842ea17668f6254
+8580	10893	7766095070607986	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0_extra_qmldirs.cpp.obj	4a4de61e745c9922
+4108	13026	7767370536171828	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.obj	1b524a8b4b875b42
+4735	4906	7767362919899089	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+4735	4906	7767362919899089	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+739	862	7767373549822766	meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen	3b40162a819bef60
+2751	3176	7767370524499316	Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	d13ff1c2fdbf6690
+739	862	7767373549822766	meta_types/qt6appmusic_nea_msvc_release_metatypes.json	3b40162a819bef60
+6815	7161	7767373610578179	appMusic_NEA_MSVC.exe	995a09709b7799d
+739	862	7767373549822766	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen	3b40162a819bef60
+4119	13217	7767370536271745	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.obj	6db90809ae2dd1fb
+739	862	7767373549822766	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json	3b40162a819bef60
+1163	1330	7766983003182616	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp	2da79a5a8c4dd280
+3176	4011	7767370534331098	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	3ed321c2e16a5b2
+3189	3743	7767370531477210	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	e1064c0dbbc23d22
+4060	16209	7767370535681830	CMakeFiles/appMusic_NEA_MSVC.dir/part_objects/part_manager.cpp.obj	dab0ed01b72898c5
+3204	3918	7767370533367081	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
+3189	3743	7767370531477210	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	e1064c0dbbc23d22
+2019	6825	7766973116544788	CMakeFiles/appMusic_NEA_MSVC.dir/file_opening/file_open.cpp.obj	f33c834496b18302
+3189	3743	7767370531477210	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	e1064c0dbbc23d22
+3189	3743	7767370531477210	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	e1064c0dbbc23d22
+1586	2070	7766983006725511	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_qmake_Music_NEA_MSVC.cpp.obj	8128429f6a91fa60
+3204	3918	7767370533367081	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
+1589	5936	7766983006755515	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_qmlcache_loader.cpp.obj	4c79c034a25811a3
+4013	17227	7767370535216453	CMakeFiles/appMusic_NEA_MSVC.dir/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp.obj	a0b8ae97cbb833cd
+4024	16289	7767370535316446	CMakeFiles/appMusic_NEA_MSVC.dir/main.cpp.obj	c36a4ea6faf861ca
 1656	7649	7751767888779847	CMakeFiles/appMusic_NEA_MSVC.dir/render/svgrenderer.cpp.obj	2e4d5d65bea7d09a
-19212	21718	7754000258956962	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Function.cpp.obj	d7b7824f7d9fe48d
-5274	27521	7760471366314075	CMakeFiles/appMusic_NEA_MSVC.dir/file_opening/scan_existing.cpp.obj	fac8e2971d1a6b31
-24550	27290	7754000312335590	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Instruments.cpp.obj	5d1ba42b826dc951
-45649	48972	7754000523318253	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Root.cpp.obj	b1f7a5a1ee280d4f
-4072	4963	7760471360432431	.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp	6d999dff4835e8a7
-18774	21739	7754000254570571	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FrameNote.cpp.obj	1923ba228f1a4563
-4072	4963	7760471360432431	.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.aotstats	6d999dff4835e8a7
-4072	4963	7760471360432431	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp	6d999dff4835e8a7
-24435	27373	7754000311176808	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Instrument.cpp.obj	be5a8cca9bae5cc2
-4072	4963	7760471360432431	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.aotstats	6d999dff4835e8a7
-18732	21758	7754000254150564	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FrameAttributes.cpp.obj	9eabdd3528e66889
-33812	37115	7754000404952494	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Natural.cpp.obj	bcb51653f14a707f
-5292	27492	7760471366502290	CMakeFiles/appMusic_NEA_MSVC.dir/render/image_provider.cpp.obj	2483f189decae11d
-5502	22925	7760471368600945	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.obj	91c52acc8fc3a0e5
-58102	61954	7754000647854453	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletDotAttributes.cpp.obj	e94f6efd8cc50ae5
-5311	27005	7760471366684975	CMakeFiles/appMusic_NEA_MSVC.dir/globals.cpp.obj	7516927033702648
-268	1451	7754000079241379	external/mx/mx_autogen/timestamp	9b4d0e7b89c94835
-18253	21627	7754000249357575	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FingeringAttributes.cpp.obj	7f1d571f3db6a1fe
+1288	1554	7766463471326002	.rcc/qmlcache/appMusic_NEA_MSVC_UI/MediaPlayer_qml.cpp.aotstats	5c29315af18ada04
+7978	39643	7766095064595582	CMakeFiles/appMusic_NEA_MSVC.dir/file_opening/scan_existing.cpp.obj	5a5ff76e9063c60c
+3223	3745	7767370531271869	.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp	6d999dff4835e8a7
+3223	3745	7767370531271869	.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.aotstats	6d999dff4835e8a7
+3223	3745	7767370531271869	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp	6d999dff4835e8a7
+3223	3745	7767370531271869	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.aotstats	6d999dff4835e8a7
+8004	39471	7766095064857738	CMakeFiles/appMusic_NEA_MSVC.dir/render/image_provider.cpp.obj	e48c670c0c4199d2
+4142	12997	7767370536509637	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.obj	abb9792673259791
+8027	40025	7766095065086214	CMakeFiles/appMusic_NEA_MSVC.dir/globals.cpp.obj	c41a49630af23929
 4048	4291	7750762721209561	.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_menu_qml.cpp	549ecc4973819340
 4048	4291	7750762721209561	.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_menu_qml.cpp.aotstats	549ecc4973819340
-46141	49512	7754000528246602	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Schleifer.cpp.obj	ed8dfbf833997ea9
-5332	27555	7760471366888619	CMakeFiles/appMusic_NEA_MSVC.dir/render/resvg_loader.cpp.obj	491ac069af408ee3
-6197	8439	7754000128803754	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BassStepAttributes.cpp.obj	61fcc4eaeb1e5756
-37137	40374	7754000438201729	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherAppearance.cpp.obj	3fbca0021008e598
+8075	39421	7766095065565085	CMakeFiles/appMusic_NEA_MSVC.dir/render/resvg_loader.cpp.obj	bb0efeffaed3854c
 4048	4291	7750762721209561	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_menu_qml.cpp	549ecc4973819340
-30939	33691	7754000376222780	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeTupletAttributes.cpp.obj	e8fde072549e640f
-59781	64552	7754000664644508	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WedgeAttributes.cpp.obj	862dc2e12fd08f35
 4048	4291	7750762721209561	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_menu_qml.cpp.aotstats	549ecc4973819340
-46094	49532	7754000527771143	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RootStepAttributes.cpp.obj	b5813841448525b4
-6452	8242	7754000131356480	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeatUnitDot.cpp.obj	770c7bb36772fe86
 4346	7018	7750762722224595	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_menu_qml.cpp.obj	b7ebc3cababb46ac
-3901	6503	7754000105848611	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ArrowAttributes.cpp.obj	cf423da553cfa7fc
-20399	23638	7754000270825357	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupAbbreviation.cpp.obj	6e3f9b5d1d738fcb
-26646	30576	7754000333294935	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/KeyOctave.cpp.obj	97bea65b3f7dc3b6
-4097	4969	7760471360250732	.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.aotstats	56c63d867e8c4c5d
-10430	13268	7754000171132095	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CueNoteGroup.cpp.obj	c4e3a27b860ebedf
-4097	4969	7760471360250732	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp	56c63d867e8c4c5d
-37116	42091	7754000437986324	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OrnamentsChoice.cpp.obj	94bc7b12c115d46d
-4097	4969	7760471360250732	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.aotstats	56c63d867e8c4c5d
-9487	13030	7754000161696571	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreditImageAttributes.cpp.obj	e98d3accc39ffe92
-4127	4974	7760471360250732	.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp	cd3d608344c4e32f
-47503	51139	7754000541861475	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Shake.cpp.obj	5547fd049d62d3a5
-4127	4974	7760471360250732	.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.aotstats	cd3d608344c4e32f
-27170	31035	7754000338535812	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Kind.cpp.obj	be29c167c6d5c419
-35659	39565	7754000423414789	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NoteheadText.cpp.obj	71a23e41c93816ca
-4127	4974	7760471360250732	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.aotstats	cd3d608344c4e32f
-62025	70116	7754000687079437	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/DynamicsReader.cpp.obj	3c751d508405d883
-5544	23747	7760471369024822	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.obj	b7eb2c0244e67181
-24833	28536	7754000315155583	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InversionAttributes.cpp.obj	195193641d965677
+3243	3742	7767370531251866	.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.aotstats	56c63d867e8c4c5d
+3243	3742	7767370531251866	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp	56c63d867e8c4c5d
+3243	3742	7767370531251866	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.aotstats	56c63d867e8c4c5d
+3262	3741	7767370531271869	.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp	cd3d608344c4e32f
+3262	3741	7767370531271869	.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.aotstats	cd3d608344c4e32f
+3262	3741	7767370531271869	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.aotstats	cd3d608344c4e32f
+4167	13168	7767370536759596	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.obj	d685fa7c4bc31dc4
 4743	4900	7751492811523529	.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_view_qml.cpp	c783e5e9851c0208
-12927	15439	7754000196103351	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DisplayStepOctaveGroup.cpp.obj	f0d90a99d1c7b483
-58697	63303	7754000653793766	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Turn.cpp.obj	37d57b63943678d8
 4743	4900	7751492811523529	.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_view_qml.cpp.aotstats	c783e5e9851c0208
-87408	88893	7754000940920504	mx.lib	979e97302777a3e
 4743	4900	7751492811523529	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_view_qml.cpp	c783e5e9851c0208
-10884	15307	7754000175670286	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DelayedInvertedTurnAttributes.cpp.obj	956360626395610c
-5420	28353	7760471367776820	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/parser_data.cpp.obj	c8d0ac617816a9b
-18675	21700	7754000253585235	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FootnoteAttributes.cpp.obj	e08745469c81a0fb
-1627	6008	7754000083099129	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/Enums.cpp.obj	41b24047db75e0ab
-53603	56583	7754000602865325	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Tap.cpp.obj	a92c9a8ef7171e39
+8145	41456	7766095066265879	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/parser_data.cpp.obj	e6a41f7bbded7909
 4743	4900	7751492811523529	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_view_qml.cpp.aotstats	c783e5e9851c0208
-3078	6041	7754000097608836	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/XsToken.cpp.obj	a284ab3b0487a4
 4901	7025	7751492811653436	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/File_view_qml.cpp.obj	4aa6e4837815d868
-32533	35658	7754000392162639	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MiscellaneousField.cpp.obj	c624c89b99d6a4c2
-42901	46475	7754000495838751	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Prefix.cpp.obj	ea8360afe33af4df
-13448	17450	7754000201313055	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EditorialGroup.cpp.obj	a41013e73df7e49
-20438	23998	7754000271210651	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupAbbreviationDisplay.cpp.obj	b32442655e5b9322
-4153	5183	7760471363396730	.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp	4cd51e39a358d4ed
-30598	34981	7754000372804174	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeNote.cpp.obj	c9ce11889e177b40
-4153	5183	7760471363396730	.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.aotstats	4cd51e39a358d4ed
-4153	5183	7760471363396730	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp	4cd51e39a358d4ed
-4153	5183	7760471363396730	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.aotstats	4cd51e39a358d4ed
-49431	52236	7754000561143013	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SoundingPitch.cpp.obj	dd32e3cda6ae716f
-42832	46116	7754000495153485	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Pluck.cpp.obj	17fc2c175623f46
-5570	23818	7760471369277785	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.obj	a8c3b16ae9ed8d9c
-6406	8906	7754000130894468	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeatRepeatAttributes.cpp.obj	37d525dbbf23d6e
-8894	12420	7757842772535323	CMakeFiles/appMusic_NEA_MSVC.dir/render/verovio_loader.cpp.obj	a65da84552653b37
-268	1451	7754000079241379	external/mx/mx_autogen/mocs_compilation.cpp	9b4d0e7b89c94835
-3814	6090	7754000104968417	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ActualNotes.cpp.obj	934a83532d0b9597
-16076	18751	7754000227592052	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EndLine.cpp.obj	961660f73d88a68d
-23583	28232	7754000302653185	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HoleAttributes.cpp.obj	af1da5aed4bb68a4
-268	1451	7754000079241379	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/mx/mx_autogen/timestamp	9b4d0e7b89c94835
-268	1451	7754000079241379	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/mx/mx_autogen/mocs_compilation.cpp	9b4d0e7b89c94835
-1462	2203	7754000081451545	external/mx/CMakeFiles/mx.dir/mx_autogen/mocs_compilation.cpp.obj	d59486b1c36cf60a
-10393	13991	7754000170766678	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreditWordsGroup.cpp.obj	d867dc3e3c3e2fa6
-1540	3063	7754000082233978	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/AttributesInterface.cpp.obj	25b5fc90d90ae343
-1605	3078	7754000082884003	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/DocumentHeader.cpp.obj	c8fc09458fe863ea
+3281	3871	7767370532602827	.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp	4cd51e39a358d4ed
+3281	3871	7767370532602827	.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.aotstats	4cd51e39a358d4ed
+3281	3871	7767370532602827	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp	4cd51e39a358d4ed
+3281	3871	7767370532602827	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.aotstats	4cd51e39a358d4ed
+4180	13334	7767370536879652	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.obj	f9adaf8ffce4578f
+8053	35372	7766095065339399	CMakeFiles/appMusic_NEA_MSVC.dir/render/verovio_loader.cpp.obj	711c7e958c343878
 5353	26951	7760471367095094	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/selection_handler.cpp.obj	7c42cc354a71532a
-1490	3098	7754000081738795	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/EncodingData.cpp.obj	f7e18de3d5cee33a
-49469	52943	7754000561519250	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Spiccato.cpp.obj	398fbd10ecd93d05
-1515	3136	7754000081983960	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/PitchData.cpp.obj	72b361b0ebe3dfc8
-22161	25944	7754000288440094	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HarmonicTypeChoice.cpp.obj	de96e2f1ceda78c0
-1467	3152	7754000081501583	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/AppearanceData.cpp.obj	ce6d2c33cb974bc5
-1568	3323	7754000082513958	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/Date.cpp.obj	d37858c3174bbb82
-29735	33057	7754000364176208	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureNumberingAttributes.cpp.obj	df88e882b9edca25
-1617	3339	7754000082999155	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/ElementInterface.cpp.obj	e089829707548cc4
-39544	42878	7754000462271380	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PageMarginsAttributes.cpp.obj	8714f71ce365c90b
-12855	16462	7754000195377963	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DisplayOctave.cpp.obj	74a4f07a95db7e89
-37175	40436	7754000438581721	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherArticulation.cpp.obj	fea7428a95a195c7
-1471	3353	7754000081545448	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/ChordData.cpp.obj	1b82abb627af4b64
-1657	3368	7754000083399132	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/NumberOrNormal.cpp.obj	c05e615d9b6ebe2c
-32220	34913	7754000389031198	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiInstrumentAttributes.cpp.obj	d32cfd9e99c944ed
-40567	45189	7754000472502653	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartwisePart.cpp.obj	835d0ec9f12e8a2c
-6112	8880	7754000127956232	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Bass.cpp.obj	a1a817ef9aabfcc8
-1535	3708	7754000082173955	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/Version.cpp.obj	1fd13bd109c8fd9
-27250	31016	7754000339331611	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LayoutGroup.cpp.obj	ca6adf2ebb3c75a1
-24503	27267	7754000311860235	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InstrumentName.cpp.obj	ca1b47771df6b65
-1508	3720	7754000081908859	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/NoteData.cpp.obj	2097f5f1e75f2ce0
-28556	32219	7754000352386052	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureAttributes.cpp.obj	f538e97fd0f64e25
-1610	3730	7754000082939144	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/DocumentSpec.cpp.obj	2cb0e43cc2bd0145
-24416	27141	7754000310996668	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ImageAttributes.cpp.obj	ca35bcf10aaf435d
-1560	3744	7754000082433967	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/CommaSeparatedText.cpp.obj	2e88b65547dfe8ed
-1671	3759	7754000083539128	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/ProcessingInstruction.cpp.obj	fb539b1775cba2c6
-1651	3775	7754000083339130	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/Integers.cpp.obj	e0595b6bfad1b4a2
-1546	3791	7754000082283976	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/Color.cpp.obj	b53b6f76862ae9bf
-1663	3813	7754000083459129	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/PositiveIntegerOrEmpty.cpp.obj	9b340cb4adb802db
-8424	10610	7754000151066686	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Chord.cpp.obj	7f9e4a879c017986
-21458	24623	7754000281419299	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupNameDisplayAttributes.cpp.obj	325d5b18b971e963
-52259	55560	7754000589421247	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StringMuteAttributes.cpp.obj	aa7ef48ce037a1e6
-1475	3825	7754000081578344	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/ClefData.cpp.obj	ca74698c89887ded
-36628	40566	7754000433109419	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OpenString.cpp.obj	ed3922e1e266a96f
-53625	56852	7754000603085334	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TapAttributes.cpp.obj	963481dcd5b3265e
-1574	3841	7754000082563957	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/Decimals.cpp.obj	f0416a9dbf576634
-21701	24550	7754000283841700	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Handbell.cpp.obj	17b8093e6c53334a
-1640	3858	7754000083229127	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/FontSize.cpp.obj	5153c8bc1faba17b
-50739	54361	7754000574226271	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Stem.cpp.obj	1491b8159e10ebca
-1622	3886	7754000083049143	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/EmptyPrintObjectStyleAlignAttributes.cpp.obj	43c3908a7e541f9b
-1551	3901	7754000082343970	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/CommaSeparatedPositiveIntegers.cpp.obj	9a1b6244ab893341
-17576	20856	7754000242590270	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FigureNumber.cpp.obj	74e7fc05e9930788
-55518	58380	7754000622012503	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TimewiseMeasure.cpp.obj	342f0db0646eb38b
-3137	6112	7754000098204170	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Accidental.cpp.obj	4e456507ccfbd23f
-2203	3918	7754000088862631	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/XsID.cpp.obj	7839778b5af55834
-6074	8297	7754000127571020	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BarreAttributes.cpp.obj	4ed565df5351abb6
-1678	4894	7754000083619128	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/ScoreConversions.cpp.obj	6b728c9de6cd4375
-1646	4933	7754000083289130	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/FromXElement.cpp.obj	dfce63295aee4df2
-3731	6074	7754000104143184	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccordionHigh.cpp.obj	51b831fd4ed6e8c1
-3063	5173	7754000097468863	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/XsString.cpp.obj	85ed4c1ef38662d4
-3099	5761	7754000097818953	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/YesNoNumber.cpp.obj	3eed608631d785b7
-1521	5778	7754000082033959	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/ScoreData.cpp.obj	3901b0a054f37057
-16483	19779	7754000231663680	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Extend.cpp.obj	1d4e45b3d54b2bc
-3842	6476	7754000105248407	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Appearance.cpp.obj	72ade13f2e50b202
-18305	21253	7754000249877649	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Fingernails.cpp.obj	9a09ecf3532e7f38
-3324	5797	7754000100064809	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccidentalMark.cpp.obj	21d0d32d5ff62a23
-1502	5993	7754000081848857	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/MeasureLocation.cpp.obj	a89c744ddb4b7bcb
-33751	37156	7754000404342503	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MusicFont.cpp.obj	55aafced8664650
-41124	44769	7754000478065837	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PedalStep.cpp.obj	e725ec48a50b24ad
-3152	6025	7754000098354164	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccidentalAttributes.cpp.obj	66435c1d64d6ee33
-41062	44007	7754000477445747	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Pedal.cpp.obj	3863b5b1b7bec6dc
-3825	6057	7754000105078445	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Alter.cpp.obj	57da47b8c62ca3a6
-3339	6127	7754000100224810	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccidentalMarkAttributes.cpp.obj	d93eff4d823b762c
-3121	6148	7754000098044180	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Accent.cpp.obj	7bd2efc7ea7c35e5
-3369	6175	7754000100514815	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccidentalTextAttributes.cpp.obj	e825e3b11e24abe
-13087	16075	7754000197701654	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DistanceAttributes.cpp.obj	68b7a7a5a8c40d66
-59302	62466	7754000659859206	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Voice.cpp.obj	5394623685cc9bfc
-3760	6197	7754000104433152	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccordionMiddle.cpp.obj	f56d0576baf0376d
-3776	6214	7754000104593131	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccordionRegistration.cpp.obj	ae86bf0c97df536f
-33058	37216	7754000397408752	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MordentAttributes.cpp.obj	69e8f5a00b7ca4bf
-3354	6375	7754000100364789	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccidentalText.cpp.obj	bd49840fec74ff66
-7979	10866	7754000146618940	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BendAttributes.cpp.obj	f1f64ee7b8b78665
-16779	19816	7754000234621264	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FeatureAttributes.cpp.obj	e49fa40ebc114aba
-3720	6389	7754000104033118	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccordAttributes.cpp.obj	5da1f88a05eb3fe9
-21740	25192	7754000284232318	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Harmonic.cpp.obj	c02358cf344538fb
-32305	35604	7754000389876456	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Millimeters.cpp.obj	26a1904eff15b168
-3744	6406	7754000104273156	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccordionLow.cpp.obj	add3f6ef5b8d8207
-35000	39585	7754000416830154	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NoteAttributes.cpp.obj	b96a3a2248d35a5f
-3859	6424	7754000105418449	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Arpeggiate.cpp.obj	21a52bf28047c3fb
-61955	65392	7754000686379469	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/Cursor.cpp.obj	778592bf33b7b650
-1496	6437	7754000081788878	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/MarkData.cpp.obj	22f8b1cc35918b23
-55497	58831	7754000621802536	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TimeSignatureGroup.cpp.obj	c99234f64b746a6
-3709	6452	7754000103917989	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Accord.cpp.obj	4fa7ba041b7eb54a
-10376	13429	7754000170596658	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreditWordsAttributes.cpp.obj	ca7a8c5912424a2d
-14737	18086	7754000214208293	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ElisionSyllabicGroup.cpp.obj	c567dbfd93227ad0
-3919	6464	7754000106013838	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ArrowDirection.cpp.obj	9b4b6b5826ba4231
-16565	19134	7754000232489023	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Feature.cpp.obj	c2a7d515af8ccd7a
-3791	6492	7754000104743120	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/AccordionRegistrationAttributes.cpp.obj	7f6b2ab7c389231a
-56563	58852	7754000632453068	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TransposeAttributes.cpp.obj	b6cc69878929e176
-3887	7086	7754000105698424	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Arrow.cpp.obj	780a0d311399709d
-4894	7502	7754000115772737	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ArrowGroup.cpp.obj	c96f4e8a6a97f089
-10719	12854	7754000174014941	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DegreeAttributes.cpp.obj	fa3fb13891de9e98
-5780	7948	7754000124624966	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Artificial.cpp.obj	1f72386ef6722176
-25945	30597	7754000326285386	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Key.cpp.obj	4092e0067b1a6a7f
-4934	7978	7754000116178057	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ArrowStyle.cpp.obj	6b4479ee130a9969
-36649	40353	7754000433314641	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Opus.cpp.obj	3746261f47e2f63c
-37098	41102	7754000437806298	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Ornaments.cpp.obj	bb06c03f5cb469d
-6008	7994	7754000126915758	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BarStyleAttributes.cpp.obj	67e8266ffeb07322
-34303	36648	7754000409869406	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NormalNotes.cpp.obj	4ec7ebb4f26bd95d
-5993	8176	7754000126765639	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BarStyle.cpp.obj	b834f53b01279c8b
-8297	10759	7754000149806069	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BreathMark.cpp.obj	9103227246ad5381
-21386	24482	7754000280687086	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupNameAttributes.cpp.obj	95ab55297e474d3d
-10516	13233	7754000171987233	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DashesAttributes.cpp.obj	2f6a5e6ab1883236
-6090	8192	7754000127731027	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BasePitch.cpp.obj	839dbea19c563fb0
-21557	24832	7754000282410573	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupSymbolAttributes.cpp.obj	76dc11495da43353
-24454	27394	7754000311375500	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InstrumentAbbreviation.cpp.obj	47563afe908d97c1
-45210	48484	7754000518928449	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Rest.cpp.obj	12f87afe1a7b17e8
-5174	8260	7754000118570099	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Articulations.cpp.obj	d058f3b66ffca60
-61981	73336	7754000686639439	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/DirectionReader.cpp.obj	7e746051a1563809
-6376	8277	7754000130584350	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeamAttributes.cpp.obj	d970a8d22f7e8ad5
-6425	8317	7754000131079721	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeatType.cpp.obj	57d95a11e7dd4e3c
-28264	30965	7754000349465882	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LyricFont.cpp.obj	57958a041d916364
-5797	8333	7754000124805082	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Backup.cpp.obj	8d0f05c119cf2f01
-6464	8372	7754000131477955	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeatUnitGroup.cpp.obj	cf12e7a132db91de
-27229	30616	7754000339121673	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Laughing.cpp.obj	e7fc3023618ead25
-55539	60737	7754000622222680	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TimewisePart.cpp.obj	34159d140bec6acf
-6176	8389	7754000128593412	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BassStep.cpp.obj	51eb32f0d31b4a51
-29801	32989	7754000364846204	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureRepeatAttributes.cpp.obj	b6e40f66f2c185b9
-6128	8406	7754000128106346	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BassAlter.cpp.obj	aca26e8d2f49ec3b
-21779	25925	7754000284622042	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HarmonicInfoChoice.cpp.obj	8ffbded7ad689b8b
-6042	8423	7754000127251001	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BarlineAttributes.cpp.obj	f086fa5061471673
-56584	59780	7754000632673035	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Tremolo.cpp.obj	6ffb87f61709a066
-6504	8456	7754000131868000	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Beater.cpp.obj	1134d638355cece
-6438	8471	7754000131209739	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeatUnit.cpp.obj	39b1086e7a75e5c
-24063	28263	7754000307452081	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Identification.cpp.obj	b5633f21afc7fbe7
-6058	8490	7754000127411011	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Barre.cpp.obj	a891c3a9ecd2d067
-38959	42794	7754000456426028	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PageHeight.cpp.obj	982df617af479fe7
-6215	8513	7754000128979027	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Beam.cpp.obj	6b78e686f12d9423
-6149	8531	7754000128316394	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BassAlterAttributes.cpp.obj	860187f4d278b82d
-6477	8560	7754000131597936	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeatUnitPer.cpp.obj	7c8eea32ff8fd21d
-13069	16017	7754000197521669	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Distance.cpp.obj	13f4018335b4aa91
-6492	8894	7754000131747960	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeatUnitPerOrNoteRelationNoteChoice.cpp.obj	27311a3956113ec0
-6026	8922	7754000127091020	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Barline.cpp.obj	5470826338758b0e
-29114	32552	7754000357968542	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureNumbering.cpp.obj	578208bcfa61277f
-37312	42029	7754000439957126	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherOrnament.cpp.obj	a44274eb6749229b
-70392	76496	7754000770746746	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/pugixml.cpp.obj	674221c23bae344c
-6389	8934	7754000130724399	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeatRepeat.cpp.obj	9870c12333b36b16
-5762	9486	7754000124444961	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ArticulationsChoice.cpp.obj	10593857ca0b0543
-7086	9505	7754000137692236	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BeaterAttributes.cpp.obj	87957e4a6807952e
-34982	40482	7754000416654227	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Note.cpp.obj	3c1958f26abe8ca2
-49558	53624	7754000562405435	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffDetails.cpp.obj	5fbaa0071e270902
-8407	10376	7754000150901455	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Capo.cpp.obj	ab64168c91fe37d8
-7995	10393	7754000146779985	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BendChoice.cpp.obj	fe2c9baea398baf9
-25193	29073	7754000318757745	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InvertedMordentAttributes.cpp.obj	b0386c23e435e8a8
-57806	61307	7754000644888117	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Tuplet.cpp.obj	24ed9807a245330f
-7949	10412	7754000146317514	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BendAlter.cpp.obj	4015ddf5c7c6f3be
-31056	35219	7754000377388163	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiDeviceAttributes.cpp.obj	1b2054de7ee5960e
-8456	10429	7754000151396743	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CircularArrow.cpp.obj	db97cf916128d9a4
-27142	30147	7754000338245794	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/KeyStep.cpp.obj	d161b04272c97acd
-27268	30549	7754000339511635	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LeftDivider.cpp.obj	6fa3bc1f5126372e
-46542	49557	7754000532253039	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScoreInstrumentAttributes.cpp.obj	b83001c50434f250
-8277	10474	7754000149606053	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BracketAttributes.cpp.obj	8ab6402637953a14
-8440	10491	7754000151226722	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Chromatic.cpp.obj	bedfc02e1eb57a16
-47444	50223	7754000541271493	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Segno.cpp.obj	75e8fb8b97bce789
-8243	10515	7754000149256054	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BottomMargin.cpp.obj	a9e36b55d8aca279
-33836	36600	7754000405187921	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NonArpeggiate.cpp.obj	73f9a6e4457b0121
-56609	60230	7754000632924582	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TremoloAttributes.cpp.obj	f797ac5ea10f3260
-8260	10534	7754000149436059	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Bracket.cpp.obj	22a3c9d5696b0780
-19897	22896	7754000265799824	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Group.cpp.obj	1adb5f89cf148fcc
-39586	42594	7754000462691404	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Pan.cpp.obj	a3ddf68126fc411e
-53686	56905	7754000603690709	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Tenths.cpp.obj	132840f0240432f3
-8176	10558	7754000148590782	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Bookmark.cpp.obj	5f668042308abf2d
-1528	10664	7754000082113963	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/SoundID.cpp.obj	308595d823c14007
-36459	40460	7754000431423145	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OctaveShiftAttributes.cpp.obj	ae871908e2eb54ce
-8373	10718	7754000150561357	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Cancel.cpp.obj	e3a6025e988e4d3b
-16520	19897	7754000232038990	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Eyeglasses.cpp.obj	8d8a275a48678ae5
-8560	10816	7754000152432668	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Creator.cpp.obj	7f4079e9b2e52159
-37264	40545	7754000439477137	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherNotation.cpp.obj	a2bb58b30313def0
-8514	10843	7754000151966467	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ClefOctaveChange.cpp.obj	410ef7e2741de3ad
-8907	10883	7754000155899248	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreditAttributes.cpp.obj	cffe88c277b50b1a
-56541	59755	7754000632247810	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Transpose.cpp.obj	4ca6fe5f97033165
-8193	11166	7754000148760751	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BookmarkAttributes.cpp.obj	d30798bdd1a77f31
-8390	11184	7754000150731345	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CancelAttributes.cpp.obj	83ba8dcac8470467
-27374	30167	7754000340577010	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LineWidth.cpp.obj	ae397a84793b3571
-27213	31055	7754000338956358	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/KindAttributes.cpp.obj	583b045f350923a6
-30985	34050	7754000376682778	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiBank.cpp.obj	da767b958781484d
-47565	50716	7754000542486931	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SlashAttributes.cpp.obj	6430f6e558be82a6
-41083	45209	7754000477665752	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PedalAlter.cpp.obj	fcb1513fec5e978e
-8472	11207	7754000151546745	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Clef.cpp.obj	41282b35712179d3
-40394	44902	7754000470771753	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartList.cpp.obj	4e62ef2e917856c1
-28518	33036	7754000352010791	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LyricLanguageAttributes.cpp.obj	d038b06d2fdce60b
-51160	54405	7754000578428736	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StickAttributes.cpp.obj	a63a73f964c1f5cf
-8491	11231	7754000151791139	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ClefAttributes.cpp.obj	7fcd7d3d05a5bdcc
-57829	62568	7754000645118102	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletActual.cpp.obj	9cce29bd9cfc9e74
-38981	42900	7754000456636027	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PageLayout.cpp.obj	803bef80df000db2
-8317	11255	7754000150001336	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/BreathMarkAttributes.cpp.obj	cce5b9a3eac6d0fe
-22192	26997	7754000288750092	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Harmony.cpp.obj	610bc545d8f8718d
-8531	12031	7754000152146589	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Coda.cpp.obj	8b0b08520d139573
-26997	29779	7754000336809230	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/KeyOctaveAttributes.cpp.obj	f3d5fd5d65f8a07d
-8923	12051	7754000156054427	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreditChoice.cpp.obj	c0929294a9e66191
-12805	16426	7754000194882687	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DirectiveAttributes.cpp.obj	c69d0ea3e1d2bcf8
-15739	19153	7754000224222255	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EmptyPlacementAttributes.cpp.obj	a4ef5835d0f54ad3
-8880	12577	7754000155629184	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreatorAttributes.cpp.obj	4b77579cc0d50982
-10455	12804	7754000171382088	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Damp.cpp.obj	7a84417406dd15cf
-15780	18252	7754000224632245	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Encoder.cpp.obj	89070efa145b23a8
-9506	12890	7754000161886685	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreditType.cpp.obj	265d28cd8d5b842d
-8935	12927	7754000156174384	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreditImage.cpp.obj	d36f0d8d97654e46
-10866	13341	7754000175500305	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DelayedInvertedTurn.cpp.obj	bfeaadf00eb08104
-8894	12988	7754000155769176	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Credit.cpp.obj	2e0469cfd53ce76d
-18067	22160	7754000247505755	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FiguredBassAttributes.cpp.obj	e8a9203fb040be96
-10559	13068	7754000172413685	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Degree.cpp.obj	c50b83d7d2d73158
-45586	48156	7754000522692819	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RightMargin.cpp.obj	d3e4afc18b03c1ea
-10475	13087	7754000171582086	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DampAll.cpp.obj	df5974edf6eea0c2
-10492	13250	7754000171742068	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Dashes.cpp.obj	ad5a515c0153dc5e
-27311	29833	7754000339941731	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Level.cpp.obj	c6bb5693d4ce70d
-58832	62542	7754000655149233	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/UpBow.cpp.obj	68c1dbda0e84b5ed
-10611	13286	7754000172944372	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DegreeAlter.cpp.obj	ca5d1976ff1eb9f4
-15755	19211	7754000224382240	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EmptyTrillSoundAttributes.cpp.obj	4c97756fac1c1206
-63367	74821	7754000700496855	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/PageTextFunctions.cpp.obj	80785c0e486f5598
-55382	58696	7754000620657101	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TimeAttributes.cpp.obj	80082fe58fed8bda
-44008	47544	7754000506908391	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Relation.cpp.obj	43c6d37869eb4aed
-9881	13322	7754000165640327	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/CreditWords.cpp.obj	a27415cba59505c8
-21339	24502	7754000280222016	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupName.cpp.obj	a89c06870696de89
-45326	48098	7754000520093984	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RestAttributes.cpp.obj	228deb9eb581c628
-1600	13399	7754000082834008	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/Document.cpp.obj	794e414dce7b4b49
-15308	19798	7754000219915538	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ElisionSyllabicTextGroup.cpp.obj	28f2b8d6ca37fedb
-10843	13448	7754000175260328	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DegreeValueAttributes.cpp.obj	aacb18db5a5953e
-10777	13971	7754000174604938	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DegreeTypeAttributes.cpp.obj	7753844e21c1f786
-34350	37263	7754000410333863	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NormalTypeNormalDotGroup.cpp.obj	8db65768a21f01fe
-11208	14010	7754000178906343	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DetachedLegato.cpp.obj	6d359147e5db2756
-10817	14658	7754000175000282	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DegreeValue.cpp.obj	3c6d1f5aec9e2bf
-30488	33857	7754000371713754	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Metronome.cpp.obj	4bf7cbbb4628badd
-10535	14678	7754000172176099	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Defaults.cpp.obj	fccfef2538a3f5f0
-19135	21673	7754000258182988	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Fret.cpp.obj	40daa12fcfc8d29c
-11231	14701	7754000179141485	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Diatonic.cpp.obj	838617c97084d2ae
-11167	15721	7754000178496219	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DelayedTurn.cpp.obj	7c1b3754657ed688
-23998	27169	7754000306815865	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Humming.cpp.obj	c20cbed82ada518e
-13342	15738	7754000200247752	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Duration.cpp.obj	e28601761bb2ce77
-32178	35199	7754000388621110	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiDeviceInstrumentGroup.cpp.obj	8366e0f618d247c7
-11184	15754	7754000178676216	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DelayedTurnAttributes.cpp.obj	620f0baa835c3113
-13287	15779	7754000199702422	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Double.cpp.obj	dc9872b1165e2835
-24483	27328	7754000311660232	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InstrumentAttributes.cpp.obj	fe62c85abdb11c16
-13305	15800	7754000199882538	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DoubleTongue.cpp.obj	c9257e0d574b579c
-19177	22816	7754000258596808	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FullNoteGroup.cpp.obj	e4332b890793fb11
-55404	58785	7754000620877143	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TimeChoice.cpp.obj	7bbe66bceab9dbee
-48485	52350	7754000551688589	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SlurAttributes.cpp.obj	fa0c5e3d999afcb0
-12891	15822	7754000195737954	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DisplayStep.cpp.obj	6393bfc03c66c15b
-58381	61980	7754000650640953	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletType.cpp.obj	20ae269bfb38aea0
-12032	16034	7754000187149579	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DirectionAttributes.cpp.obj	32a3273d5ae7ca78
-16175	19115	7754000228577470	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EndParagraph.cpp.obj	1e79b417d336eece
-21316	24358	7754000279996772	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupBarlineAttributes.cpp.obj	ccfe2a13e05a8c83
-13323	16052	7754000200057748	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DownBow.cpp.obj	2fee2118ca7d64b
-13406	16174	7754000200887872	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Dynamics.cpp.obj	a1e89e200263fedc
-36601	40394	7754000432839335	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OffsetAttributes.cpp.obj	be09386e844341d7
-63256	75443	7754000699391338	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/NotationsWriter.cpp.obj	8b1bd8c2efaa4686
-13251	16482	7754000199342423	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Doit.cpp.obj	9619dae1c884e0b7
-14011	16797	7754000206937520	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Effect.cpp.obj	57b618de870cd440
-12989	16501	7754000196719553	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DisplayText.cpp.obj	ca67b04c7c4dfa52
-11256	17575	7754000179391501	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Direction.cpp.obj	a801097296120752
-18711	22191	7754000253945365	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Frame.cpp.obj	c044014d6ca99988
-13269	16520	7754000199522401	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Dot.cpp.obj	df12399458ab8bcf
-13030	16565	7754000197131660	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DisplayTextAttributes.cpp.obj	6521cd081b5b95d3
-13992	16779	7754000206748051	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EditorialVoiceGroup.cpp.obj	e6c44702691d87d6
-12578	16976	7754000192616102	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Directive.cpp.obj	3a5ffa5a5e2e299b
-59274	62439	7754000659569154	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/VirtualName.cpp.obj	2e4134e47de96d8b
-13429	17109	7754000201123055	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DynamicsAttributes.cpp.obj	6f36c37362a2261a
-13972	17654	7754000206548029	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EditorialVoiceDirectionGroup.cpp.obj	398e8e040cd8387f
-16502	19229	7754000231853697	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ExtendAttributes.cpp.obj	bd553fa017cc271b
-12051	17675	7754000187349588	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/DirectionType.cpp.obj	bc0d29a528a94440
-14659	18066	7754000213422930	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Elevation.cpp.obj	af5a52b2c7e57d18
-14702	18304	7754000213853067	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ElisionAttributes.cpp.obj	9ccc4289f45c220c
-1479	18608	7754000081626557	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/api/DocumentManager.cpp.obj	a11de19ddefd6f10
-14679	18638	7754000213622945	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Elision.cpp.obj	bfcb6febcf79d1fe
-17109	20418	7754000237927437	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Fifths.cpp.obj	eae851a2325787d7
-61863	70390	7754000685465155	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/ArpeggiateFunctions.cpp.obj	c776ac509b587bb8
-55447	58763	7754000621302522	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TimeModificationNormalTypeNormalDot.cpp.obj	19871962f82e44f3
-15800	18655	7754000224832239	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EncoderAttributes.cpp.obj	9f31738e42a69e94
-15722	18674	7754000224052247	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EmptyLineAttributes.cpp.obj	9b98028a76c96af4
-15439	18693	7754000221226135	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EmptyFontAttributes.cpp.obj	2f44d60acac1d384
-16463	18711	7754000231453674	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Ensemble.cpp.obj	218e369d71a4a0b2
-16053	18731	7754000227362017	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EncodingDescription.cpp.obj	34b47e897263c422
-15823	18773	7754000225057622	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Encoding.cpp.obj	f6f7cf839298c58f
-16035	19194	7754000227182042	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EncodingDate.cpp.obj	2ae276064904c638
-16018	19842	7754000227012025	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EncodingChoice.cpp.obj	9c14d4302174b63a
-16445	19862	7754000231283717	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/EndingAttributes.cpp.obj	25787303b76c76d0
-4182	4990	7760471362665254	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
-16798	19879	7754000234811250	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Fermata.cpp.obj	3f6cccf74d5a6fbb
-46770	50462	7754000534532844	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScorePartwiseAttributes.cpp.obj	f3bf933be5496c68
-16427	20398	7754000231093675	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Ending.cpp.obj	eda9a01dc94e0231
-31036	34368	7754000377188179	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiDevice.cpp.obj	8fdbf09b075298b1
-17451	20437	7754000241338674	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Figure.cpp.obj	2313811fd959e4cb
-35180	38594	7754000418631138	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NoteChoice.cpp.obj	63cc4a3cf215c71b
-17655	21316	7754000243375619	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FigureNumberAttributes.cpp.obj	db90b889af1d30ed
-22836	27310	7754000295198108	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HarmonyChordGroup.cpp.obj	b2fbb41c16cb85d7
-48204	52328	7754000548872880	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SlideAttributes.cpp.obj	bbf3ffc6c95b57a0
-18638	21338	7754000253215241	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FirstFretAttributes.cpp.obj	2b52e25ff3785d2b
-25169	28555	7754000318527704	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InvertedMordent.cpp.obj	327c483dcf87c7e9
-18609	21385	7754000252919969	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FirstFret.cpp.obj	a60242d83638d20d
-18752	21458	7754000254350571	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FrameFrets.cpp.obj	1c5b72d52a1b289f
-16976	21501	7754000236591951	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FermataAttributes.cpp.obj	e3b4315d787840ac
-30168	34282	7754000368514940	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureStyleChoice.cpp.obj	8e24901c90acd64c
-43953	47564	7754000506358410	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Rehearsal.cpp.obj	b0749adad9ab38a9
-19115	21583	7754000257987810	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FrameStrings.cpp.obj	ee7bf75324cc65bb
-45564	48203	7754000522472822	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RightDivider.cpp.obj	5179598a3ec46e03
-18655	21608	7754000253385226	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Footnote.cpp.obj	4e8054378663b110
-29073	32304	7754000357568491	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureDistance.cpp.obj	3be07d761752dd3
-18694	21652	7754000253775247	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Forward.cpp.obj	80cb7482d2d9cdb0
-35605	38937	7754000422879378	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Notehead.cpp.obj	c6cc63fe7c376b16
-19194	22835	7754000258776863	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FullNoteTypeChoice.cpp.obj	aac1a8c9b6d6d359
-19779	22853	7754000264620748	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Glass.cpp.obj	5dcefe3fe2a7247
-19817	22874	7754000265000923	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GlissandoAttributes.cpp.obj	b1d5babd507cf3ee
-21584	24523	7754000282670574	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupTime.cpp.obj	4b8b4e93f8802b1f
-37157	39638	7754000438401730	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherAppearanceAttributes.cpp.obj	c5bb0dd974f5ac2f
-19843	22916	7754000265266185	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Grace.cpp.obj	f3330b280291d108
-21609	24595	7754000282920681	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Grouping.cpp.obj	2e079c51b4e23ba5
-19799	23564	7754000264820803	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Glissando.cpp.obj	50a4c1119da6e977
-22874	27416	7754000295582909	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HarpPedalsAttributes.cpp.obj	21debe63545adc30
-4182	4990	7760471362665254	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
-19863	23582	7754000265456165	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GraceAttributes.cpp.obj	16be65878a6bf9aa
-19229	23599	7754000259122184	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/FunctionAttributes.cpp.obj	db54b2fc54354b04
-19880	23618	7754000265629840	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GraceNoteGroup.cpp.obj	85180f83094b88cd
-21253	24062	7754000279369089	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupBarline.cpp.obj	4e665d80356b1dea
-21653	24453	7754000283353441	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HammerOn.cpp.obj	61ee86eb71c101b7
-20856	25169	7754000275393828	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/GroupAbbreviationDisplayAttributes.cpp.obj	936b67a07a63d24a
-5595	23845	7760471369531145	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.obj	1f5d4e6177b83983
-35239	38573	7754000419222065	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NoteSizeAttributes.cpp.obj	4a372471b2a2d85a
-21673	25229	7754000283563091	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HammerOnAttributes.cpp.obj	ce4ee543f31de007
-21719	25249	7754000284021807	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HandbellAttributes.cpp.obj	fb65e68d5603434e
-22817	26035	7754000295002831	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HarmonyAttributes.cpp.obj	e75e107e6b967a7a
-32265	34999	7754000389476467	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiProgram.cpp.obj	dc7528c081771203
-21759	26585	7754000284422051	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HarmonicAttributes.cpp.obj	d414880d48f2534d
-23947	26605	7754000306306002	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HoleType.cpp.obj	f2d74b668018e895
-48567	52279	7754000552503986	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SnapPizzicato.cpp.obj	1d700141bc9fbde9
-24568	28517	7754000312509387	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Interchangeable.cpp.obj	f7c7c77cbebe7e2e
-23638	26645	7754000303212391	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HoleShape.cpp.obj	d39b86ea1db63105
-46476	49491	7754000531597593	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Scordatura.cpp.obj	2c1f7ed38a01c10
-23600	27212	7754000302835682	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HoleClosed.cpp.obj	14195ff1186a586c
-40418	42929	7754000471011768	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartName.cpp.obj	4297d3dead233ff4
-22916	27229	7754000295997156	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HeelAttributes.cpp.obj	93399f945ff58c07
-22896	27249	7754000295793014	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Heel.cpp.obj	1ec5e0151d0f1048
-68192	72117	7754000748757909	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/PugiElementIterImpl.cpp.obj	68616cd7cfd368bd
-22854	27453	7754000295368430	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/HarpPedals.cpp.obj	c895c8281a98df28
-24597	28477	7754000312799374	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InterchangeableAttributes.cpp.obj	a582c0f3d284c693
-24623	28497	7754000313059474	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Inversion.cpp.obj	9c5b92e7c387c337
-48180	51602	7754000548632868	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Slide.cpp.obj	6d7e90cf45a2ad7b
-25230	29093	7754000319123044	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InvertedTurn.cpp.obj	e54434f8db50b245
-25925	29113	7754000326085334	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Ipa.cpp.obj	ffb1aaa1dabc352a
-38620	42273	7754000453034111	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherTechnical.cpp.obj	d4de64cbbb02b827
-27355	29734	7754000340387006	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Line.cpp.obj	d1b56d66475e039b
-58718	62111	7754000654013745	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TurnAttributes.cpp.obj	8c928630586cd27
-34368	39723	7754000410514660	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Notations.cpp.obj	d14777f02eddf08f
-27328	29801	7754000340117001	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LevelAttributes.cpp.obj	b743d22c14dbfc93
-27394	30190	7754000340776999	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LineWidthAttributes.cpp.obj	f7d217f49d910e4e
-26586	30253	7754000332689484	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/KeyAlter.cpp.obj	79cc0382d46e6cbd
-42007	46093	7754000486902739	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PerMinute.cpp.obj	ae26240ce987a8ae
-26036	30488	7754000327190745	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/KeyAccidental.cpp.obj	f7d3fb2ab5055dd8
-26606	30509	7754000332889488	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/KeyAttributes.cpp.obj	9451e83ead5168bf
-25250	30528	7754000319333036	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/InvertedTurnAttributes.cpp.obj	7ebdacdb7890c25b
-26626	30634	7754000333094962	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/KeyChoice.cpp.obj	6af0ca7dbb35c2f1
-27416	30938	7754000340997094	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Link.cpp.obj	e7d33a28cc4b6bad
-38938	42831	7754000456216025	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherTechnicalAttributes.cpp.obj	62a92a7c56de40bd
-28498	32199	7754000351810654	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LyricLanguage.cpp.obj	3adde9566cc3bde7
-28233	32264	7754000349155882	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LyricAttributes.cpp.obj	ca3147923acc0787
-34327	37196	7754000410109556	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NormalType.cpp.obj	3c99d02df951676c
-29094	32284	7754000357768480	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureLayout.cpp.obj	48fd3864ea4aa94a
-29780	32482	7754000364626218	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureRepeat.cpp.obj	d192a7c3704cf08a
-51627	55381	7754000583100592	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Stopped.cpp.obj	2316b04819676782
-28537	32532	7754000352196089	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LyricTextChoice.cpp.obj	cb1c658f63c2812
-28477	33083	7754000351610648	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/LyricFontAttributes.cpp.obj	a29a84245ea731c9
-30550	33651	7754000372329170	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeBeamAttributes.cpp.obj	1863753eb6dacc40
-30254	33671	7754000369370487	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Metal.cpp.obj	eaab5deb38c11539
-31017	33733	7754000377002916	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiChannel.cpp.obj	95d77c227c256a33
-30529	33750	7754000372119205	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeBeam.cpp.obj	fd0c1d1eb304a28e
-30617	33776	7754000373001360	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeRelation.cpp.obj	eb8692992fecc72e
-30191	33812	7754000368745103	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Membrane.cpp.obj	97c2a39fad4a8c26
-30577	33835	7754000372599180	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeDot.cpp.obj	d1c66c46de86a3c5
-29834	34260	7754000365171427	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MeasureStyle.cpp.obj	a2302342fd15cb0a
-30918	34302	7754000376017520	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeTuplet.cpp.obj	318de28bac134d5
-30509	34349	7754000371923731	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeAttributes.cpp.obj	52e732e6374ddfcd
-30966	34604	7754000376482774	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MetronomeType.cpp.obj	645699819538cfd
-32284	35179	7754000389676496	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiUnpitched.cpp.obj	1e78d6208c0dc18d
-50765	54656	7754000574481442	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StemAttributes.cpp.obj	4f20438312902486
-32245	35239	7754000389276471	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiName.cpp.obj	9df8cc1ad1e78da1
-55802	58717	7754000624848703	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Toe.cpp.obj	9aaf274aaf16da2
-32482	35625	7754000391657318	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Miscellaneous.cpp.obj	9af6f77a369aef83
-34914	38958	7754000415978765	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NotationsChoice.cpp.obj	f44295f7b82d050c
-39661	43234	7754000463443840	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartAbbreviationDisplay.cpp.obj	e1937386045f1d51
-32553	35678	7754000392362611	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MiscellaneousFieldAttributes.cpp.obj	78381b5f711dea7f
-32200	36248	7754000388831042	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MidiInstrument.cpp.obj	2efd64a451b51e31
-55901	58874	7754000625837808	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TouchingPitch.cpp.obj	2b1232ad31509c44
-33691	36413	7754000403747095	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MultipleRestAttributes.cpp.obj	cac7c3e4f94c0a62
-40375	43437	7754000470581742	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartGroupOrScorePart.cpp.obj	6b3311af03aa38fc
-33037	36439	7754000397200480	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Mordent.cpp.obj	86155fbad9299b19
-34261	37097	7754000409439381	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NormalDot.cpp.obj	c3da6e750cb57338
-33651	36485	7754000403347071	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MovementTitle.cpp.obj	c4cea265ee4e2296
-33084	36627	7754000397668743	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MovementNumber.cpp.obj	e0b77a787288471e
-33858	37081	7754000405407884	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NonArpeggiateAttributes.cpp.obj	ff6b117397c996d6
-37242	40502	7754000439257150	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherDirectionAttributes.cpp.obj	9d3fff3a257114fe
-33777	37136	7754000404602496	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Mute.cpp.obj	ca4f32b7a4c95acb
-33672	37241	7754000403547101	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MultipleRest.cpp.obj	2afe0c93e1c78326
-34605	37311	7754000412875756	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NotationsAttributes.cpp.obj	85c001f8cf77db7f
-33734	37333	7754000404172503	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MusicDataGroup.cpp.obj	7dc44efd866d3a45
-33711	38019	7754000403937074	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/MusicDataChoice.cpp.obj	e830b6492f65bd34
-35200	38980	7754000418836665	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NoteRelationNote.cpp.obj	225e8d428af8a7a8
-35625	38999	7754000423089508	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/NoteheadAttributes.cpp.obj	8eafc2f18b0a0d59
-36486	39543	7754000431693193	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Offset.cpp.obj	a259bcc438db6fc0
-37217	41061	7754000439001716	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherDirection.cpp.obj	35251b50426b1c41
-36440	39614	7754000431233151	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OctaveShift.cpp.obj	348f3cff8e986e25
-39639	42748	7754000463223839	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartAbbreviationAttributes.cpp.obj	203b34b8c59c19fc
-36249	39660	7754000429322369	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Octave.cpp.obj	ce5970b84a7b6d1d
-36414	39680	7754000430967732	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OctaveChange.cpp.obj	4f7ce21fe1bb12b0
-37082	39699	7754000437646383	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OpusAttributes.cpp.obj	80c47682266f630d
-37197	40523	7754000438801697	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherArticulationAttributes.cpp.obj	ffad1cba4378faf9
-37287	41082	7754000439697154	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherNotationAttributes.cpp.obj	6c6df51e811c1d53
-37334	42006	7754000440172513	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherOrnamentAttributes.cpp.obj	7fe018a3d36a6c41
-38574	42051	7754000452563992	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/OtherPlay.cpp.obj	2c99c9a386943419
-39566	42529	7754000462491388	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PageWidth.cpp.obj	544f40d72f60ce74
-39000	42773	7754000456916317	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PageMargins.cpp.obj	7e695bb4fcb76a3c
-39699	42813	7754000463823851	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartAttributes.cpp.obj	6379f2e44e9ead7d
-39615	42851	7754000462977226	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartAbbreviation.cpp.obj	9713a2d4aaaca469
-40354	43389	7754000470371764	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartGroupAttributes.cpp.obj	4d65979e0079a943
-40460	43410	7754000471437208	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartNameDisplay.cpp.obj	e71d89f215a24f18
-39681	43877	7754000463633836	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartAbbreviationDisplayAttributes.cpp.obj	96cc7bf7012d8c55
-40502	43909	7754000471857182	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartSymbol.cpp.obj	915fe2baed6a61f3
-45629	48222	7754000523122951	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RightsAttributes.cpp.obj	7e2be1a59e394788
-62003	75365	7754000686859431	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/DirectionWriter.cpp.obj	387067b53623fd49
-40524	43930	7754000472067284	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartSymbolAttributes.cpp.obj	b403a8a8546e47d5
-40437	43952	7754000471207155	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartNameAttributes.cpp.obj	994612ceda26f354
-42594	45585	7754000492774337	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Pitch.cpp.obj	3cc911e0577fed06
-39723	43985	7754000464063983	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartGroup.cpp.obj	6b5117c8605bcd40
-40483	44880	7754000471657166	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartNameDisplayAttributes.cpp.obj	e338aa27cd781975
-41537	45325	7754000482206391	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PedalTuning.cpp.obj	ef448b3562243c02
-41103	45607	7754000477855764	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PedalAttributes.cpp.obj	2657f4194252d97a
-42749	45628	7754000494324687	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Pitched.cpp.obj	d6522650622f49c
-53666	59273	7754000603490739	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TechnicalChoice.cpp.obj	c419f9bdc271fccc
-42813	45648	7754000494963371	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Plop.cpp.obj	fd6c5fa2395feb92
-40545	45671	7754000472282601	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PartwiseMeasure.cpp.obj	8452a3327243c02d
-42879	45690	7754000495618762	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PreBend.cpp.obj	66dbbe9f708e7b9c
-42795	46072	7754000494784645	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PlayAttributes.cpp.obj	aa400907e21a648f
-52209	55538	7754000588925876	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StringAttributes.cpp.obj	a150c47d5e0cd859
-42530	46140	7754000492138934	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PercussionChoice.cpp.obj	b247ce8b82491b29
-42774	46162	7754000494574663	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Play.cpp.obj	78b104a0a29bf467
-42282	46497	7754000489657958	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PercussionAttributes.cpp.obj	63e32c70235ed023
-42030	46521	7754000487132909	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PerMinuteAttributes.cpp.obj	7b9f2bc5a948faa8
-48973	52258	7754000556557606	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SoloOrEnsembleChoice.cpp.obj	276d30164dbaab79
-43910	46586	7754000505932971	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PullOff.cpp.obj	a2073d6f54382235
-43931	46746	7754000506143172	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PullOffAttributes.cpp.obj	4973949a2a38d2a9
-43235	46770	7754000499175516	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PrincipalVoice.cpp.obj	2925e04170a0e450
-55476	58325	7754000621592551	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TimeRelation.cpp.obj	1927282dbbd5fc21
-43390	47391	7754000500735320	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PrincipalVoiceAttributes.cpp.obj	a3b657c052bb5602
-43438	47444	7754000501210737	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/PrintAttributes.cpp.obj	be864fdd2c167c9f
-44881	47483	7754000515641452	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Release.cpp.obj	6403a0139ec8f72b
-44903	47523	7754000515861433	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Repeat.cpp.obj	2ede8a7252d4efb8
-43985	48179	7754000506688408	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RehearsalAttributes.cpp.obj	d73ba4d7cc754d34
-45190	48566	7754000518728448	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RepeatAttributes.cpp.obj	20393dce6282cc12
-50676	53685	7754000573586196	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffTuningAttributes.cpp.obj	478a28bdd96c1690
-45672	48591	7754000523558266	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RootAlter.cpp.obj	4798ca1757b11897
-45608	48937	7754000522902851	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Rights.cpp.obj	b9e2feb7184ef9d7
-45691	48995	7754000523738224	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RootAlterAttributes.cpp.obj	b651ff85a564dd91
-43878	49406	7754000505612960	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Properties.cpp.obj	8235783c64305dfd
-48996	53117	7754000556787592	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Sound.cpp.obj	f7722c640f617124
-46073	49430	7754000527561140	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/RootStep.cpp.obj	bd0889718d98646c
-46587	49450	7754000532703204	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScorePartAttributes.cpp.obj	f2d5526503a07de8
-46117	49468	7754000528001152	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Scaling.cpp.obj	7b0626929459888f
-47392	50129	7754000540755597	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScoreTimewiseAttributes.cpp.obj	6aa6b1167524f43d
-46163	50150	7754000528456588	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Scoop.cpp.obj	905c5e528215e643
-46498	50171	7754000531817613	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScoreHeaderGroup.cpp.obj	1e82c3c3129539ba
-56875	60274	7754000635580835	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TuningAlter.cpp.obj	4ef03c574b941f2d
-65393	68987	7754000720755819	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/PugiAttributeIterImpl.cpp.obj	bfd9ad6ef2e2b721
-46747	50192	7754000534292854	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScorePartwise.cpp.obj	16ce600b538368da
-50193	53665	7754000568768906	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffLayoutAttributes.cpp.obj	d44fa10471c0be73
-46522	50436	7754000532047649	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScoreInstrument.cpp.obj	d10cefbef970bfde
-47463	50674	7754000541461510	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SemiPitched.cpp.obj	b2555428b3e3c8d1
-47483	50694	7754000541671467	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SenzaMisura.cpp.obj	a1610caef2d26b79
-46790	50738	7754000534722847	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScoreTimewise.cpp.obj	5a06e601d168823d
-48099	50764	7754000547822240	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SlashDot.cpp.obj	48328f5908833ee5
-48157	51118	7754000548402885	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SlashType.cpp.obj	2d8a138bbabb0e9f
-47524	51159	7754000542071627	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Sign.cpp.obj	8bc2d033c329b44
-46564	51181	7754000532463016	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ScorePart.cpp.obj	6c84cf2c776dd4
-59687	63841	7754000663699059	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Volume.cpp.obj	49b5d00999a01c5c
-47545	51200	7754000542276901	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Slash.cpp.obj	93d3eb5e96c09ff1
-48592	51626	7754000552753947	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Software.cpp.obj	4447f0a6d6279a0a
-48938	52154	7754000556212283	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Solo.cpp.obj	8784a864611f82be
-48223	52176	7754000549062848	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Slur.cpp.obj	a1ba15b50dd644d2
-49451	52208	7754000561338391	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Source.cpp.obj	c2ef74124be06237
-49492	52300	7754000561749984	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Staccatissimo.cpp.obj	5b34520b5f922acb
-49533	52389	7754000562170142	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Staff.cpp.obj	ca2dab81110d1c7a
-49513	52966	7754000561960046	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Staccato.cpp.obj	aead434f6baa7b33
-50172	52987	7754000568557920	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffLayout.cpp.obj	9bce17e539ee845
+4215	13533	7767370537239596	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp.obj	5100b4380dfe9a0a
+4203	13244	7767370537109665	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp.obj	838b6c03d9d07f9d
+3296	3753	7767370532097383	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
+3296	3753	7767370532097383	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
+4192	13319	7767370537009676	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.obj	95e87295dfbc9215
+3313	3873	7767370532742807	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp.aotstats	1d27a471af9296ca
 3590	13096	7754853474369729	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/svg_to_coords.cpp.obj	5909813f5bd7b429
-50130	53012	7754000568132697	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffDetailsAttributes.cpp.obj	446d69a9836f35ae
-50151	53070	7754000568347922	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffDistance.cpp.obj	f218b69fdf3cf36b
-50437	53602	7754000571200057	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffSize.cpp.obj	97dcfdcd666f91af
-50224	53645	7754000569073636	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffLines.cpp.obj	f70cc3b1373a92e7
-50717	53706	7754000573996136	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Staves.cpp.obj	1247bdb05c095091
-51119	54339	7754000578023149	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Step.cpp.obj	c307a62167bcbb0
-50463	54382	7754000571465342	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffTuning.cpp.obj	cec30dc2aa13f987
-50695	54425	7754000573786162	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StaffType.cpp.obj	900d34f5e029f3e7
-51182	55328	7754000578648726	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StickLocation.cpp.obj	a4fd082dd7c1ecb4
-51603	55357	7754000582860453	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StickType.cpp.obj	4a842b61a129e815
-51139	55403	7754000578223463	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Stick.cpp.obj	fa341d2e43d642f4
-63811	77393	7754000704938507	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/PartReader.cpp.obj	dcb67c59a634720e
-52237	55425	7754000589196005	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StringMute.cpp.obj	b183e3631fed9e8b
-60738	65278	7754000674215005	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WordsAttributes.cpp.obj	37a642babe394837
-52177	55446	7754000588600182	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/String.cpp.obj	965b217359644883
-63304	74441	7754000699871357	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/NoteReader.cpp.obj	51abc614af8cee97
-51200	55475	7754000578838740	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StickMaterial.cpp.obj	3cf9d0fe28d8bc39
-70117	73463	7754000768011028	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/XFactory.cpp.obj	fcf435f3162516e7
-52391	55496	7754000590736784	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Supports.cpp.obj	d8107ade886bc8e5
-52155	55517	7754000588380113	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Stress.cpp.obj	5f2b0993a0d6796c
-52329	55801	7754000590121404	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Suffix.cpp.obj	e98aaa6908b9ccfe
-52301	55828	7754000589841258	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/StrongAccentAttributes.cpp.obj	397690e910f9e226
-53013	55861	7754000596955821	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SystemDistance.cpp.obj	b95bad103627342b
-52967	55900	7754000596495665	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Syllabic.cpp.obj	72a49f60a7c25ff2
-53119	56517	7754000598015938	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SystemMargins.cpp.obj	99d50fc20bee360
-53092	56562	7754000597755948	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SystemLayout.cpp.obj	868c329a1eb6288d
-53071	56815	7754000597541269	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/SystemDividers.cpp.obj	ce23ea633211b948
-53707	57449	7754000603900745	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Tenuto.cpp.obj	e368410f1297305b
-54340	57828	7754000610231854	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Text.cpp.obj	935e9719322ba728
-54362	57898	7754000610447364	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TextAttributes.cpp.obj	d8ad35dbdf2a3dc7
-54426	57921	7754000611085033	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TieAttributes.cpp.obj	39b7af96982a62c4
-54406	58101	7754000610895040	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Tie.cpp.obj	b84500fffda35f49
-54657	58123	7754000613404239	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Tied.cpp.obj	44b9b34e7f7e989c
-55561	58354	7754000622437868	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Timpani.cpp.obj	b96f1fa130f38ff
-55426	58403	7754000621087088	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TimeModification.cpp.obj	92edc710045e942f
-55881	58739	7754000625637792	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TopSystemDistance.cpp.obj	3e461a9e479e60ca
-56853	60200	7754000635360813	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TripleTongue.cpp.obj	e6d97421451d0d86
-55358	58809	7754000620413335	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Time.cpp.obj	753e8f58e8fc6829
-55329	59239	7754000620128047	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TiedAttributes.cpp.obj	28aced1104539ab4
-53646	59301	7754000603290781	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Technical.cpp.obj	f611bb0992b3b995
-56518	59685	7754000632012195	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TraditionalKey.cpp.obj	1d71f8b6c8232ace
-55829	59711	7754000625122452	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/ToeAttributes.cpp.obj	e0eb77bf09ba4057
-55862	59734	7754000625447800	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TopMargin.cpp.obj	b25ee1df426a3ee4
-56816	60253	7754000634995325	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TrillMark.cpp.obj	40fae817264a57f
-56906	60306	7754000635890817	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TuningOctave.cpp.obj	a679f3df6b2de5f4
-57922	61333	7754000646043606	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletDot.cpp.obj	c38ec3b5eb0c3929
-57450	61354	7754000641331617	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TuningStep.cpp.obj	fb4f49cd6ad0ea1a
-58355	62045	7754000650390968	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletNumberAttributes.cpp.obj	8b18ae4ad724123c
-58124	61680	7754000648074422	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletNormal.cpp.obj	3eb7b083d1d90444
-58404	61862	7754000650870977	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletTypeAttributes.cpp.obj	58413a3d09636df6
-58740	61883	7754000654223940	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Type.cpp.obj	ba364768c8b1f787
-57899	61913	7754000645823597	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/TupletAttributes.cpp.obj	5271860a69894ecf
-58853	62024	7754000655364544	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/VerticalTurn.cpp.obj	60a2bed9a6d09af2
-58786	62066	7754000654689154	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Unpitched.cpp.obj	692bca917a0b9b3f
-58875	62487	7754000655574544	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/VirtualInstrument.cpp.obj	a69cbe57b5974603
-58810	62519	7754000654939179	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Unstress.cpp.obj	3e7da85241b1d6ae
-59240	63255	7754000659223963	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/VirtualLibrary.cpp.obj	f4ed0a210f73786c
-59712	63277	7754000663949050	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WavyLine.cpp.obj	d76f0d5da238da6d
-59755	63326	7754000664384542	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Wedge.cpp.obj	4126f3bf005f0801
-59735	63345	7754000664189188	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WavyLineAttributes.cpp.obj	413970a4c979d54d
-60254	63366	7754000669367816	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Wood.cpp.obj	ddf2ca6f4fcbd8fd
-60232	64481	7754000669152321	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WithBarAttributes.cpp.obj	571dd46a24a5fcdb
-60307	64505	7754000669907823	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Words.cpp.obj	f477a943386a1ec4
-60202	64528	7754000668852265	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WithBar.cpp.obj	4fa39c91c11dc95b
-61308	65302	7754000679913324	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/Work.cpp.obj	74c0a847b577140e
-64553	73984	7754000712365183	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/SlideFunctions.cpp.obj	94d192b7280b4d7f
-62440	65320	7754000691236123	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/LcmGcd.cpp.obj	cd5a025c8adc75b2
-61334	65369	7754000680163286	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/core/elements/WorkNumber.cpp.obj	1ccbbe428f8dd785
-62467	65413	7754000691501408	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/LyricType.cpp.obj	44ffc9880f04cfe3
-62067	67206	7754000687504921	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/EncodingFunctions.cpp.obj	c4611938f5ceb8fe
-65370	68191	7754000720525748	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/PugiAttribute.cpp.obj	d337f31cb906719f
-65414	69557	7754000720965806	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/PugiDoc.cpp.obj	9e405727eeed0340
-67207	70733	7754000738898581	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/PugiElement.cpp.obj	cb44c80bce136d69
-61885	70748	7754000685753724	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/ArticulationsFunctions.cpp.obj	465ed1c3596e2ac
-65279	70919	7754000719620409	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/StaffFunctions.cpp.obj	dbe69f00f5da7c51
-62569	71081	7754000692524357	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/NonArpeggiateFunctions.cpp.obj	c2f1fc3ff9a495be
-62112	71153	7754000687954906	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/LayoutFunctions.cpp.obj	c363640d72797862
-61681	71391	7754000683644257	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/AccidentalMarkFunctions.cpp.obj	3d76c0643135ae40
-62089	71576	7754000687724954	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/FermataFunctions.cpp.obj	94d934a02675ec19
-68988	71695	7754000756712201	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/XAttributeIterator.cpp.obj	fbb3fcc38ae6865e
-65321	71833	7754000720050387	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/TimeReader.cpp.obj	7dfa25b146757b10
-62543	72013	7754000692261562	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/MetronomeReader.cpp.obj	57a3027d8350b27
-69558	72107	7754000762409182	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/ezxml/src/private/private/XElementIterator.cpp.obj	79cd59eeb354e654
-62046	72132	7754000687289612	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/DynamicsWriter.cpp.obj	303516a9e0f001a2
-63346	74014	7754000700291502	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/OrnamentsFunctions.cpp.obj	3c1b36b5c94c1876
-63278	74465	7754000699611322	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/NoteFunctions.cpp.obj	e50e1457f15668a8
-65342	74802	7754000720250538	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/TupletReader.cpp.obj	9d6360fd14668021
-63327	75639	7754000700101325	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/NoteWriter.cpp.obj	78bf0372b80569ee
-65303	76034	7754000719860393	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/TechnicalFunctions.cpp.obj	1c71a521960bae61
-63842	76893	7754000705258688	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/PartWriter.cpp.obj	9dc7760e45b712d8
-62520	77074	7754000692031470	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/MeasureWriter.cpp.obj	944818e5831b42f4
-64506	77115	7754000711889885	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/ScoreReader.cpp.obj	4d288e3cac3aa66
-62488	77543	7754000691711464	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/MeasureReader.cpp.obj	94d469fb97c3a668
-64529	77978	7754000712119874	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/ScoreWriter.cpp.obj	d2cb41e2dd9a1839
-64482	82004	7754000711649901	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/PropertiesWriter.cpp.obj	1fcb09dd716cbe93
-61914	87407	7754000685969003	external/mx/CMakeFiles/mx.dir/Sourcecode/private/mx/impl/Converter.cpp.obj	2e3d6739143b233b
-8787	25272	7760460788736600	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/xml_parser.cpp.obj	f66c10ff536de7de
-5373	28975	7760471367311041	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/mei_parser.cpp.obj	1f09fc938b3b0dc7
-4182	4990	7760471362665254	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
-4182	4990	7760471362665254	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
-692	3229	7760472996087714	appMusic_NEA_MSVC_autogen/timestamp	d9a452f3a796e9e8
-692	3229	7760472996087714	appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	d9a452f3a796e9e8
-692	3229	7760472996087714	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/timestamp	d9a452f3a796e9e8
-692	3229	7760472996087714	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	d9a452f3a796e9e8
-3234	3602	7760473002375053	meta_types/appMusic_NEA_MSVC_json_file_list.txt	d74deb8163407f51
-3234	3602	7760473002375053	meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	d74deb8163407f51
-3234	3602	7760473002375053	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt	d74deb8163407f51
-3234	3602	7760473002375053	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	d74deb8163407f51
-3602	3995	7760473006425332	meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen	3b40162a819bef60
-3602	3995	7760473006425332	meta_types/qt6appmusic_nea_msvc_release_metatypes.json	3b40162a819bef60
-3602	3995	7760473006425332	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen	3b40162a819bef60
-3602	3995	7760473006425332	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json	3b40162a819bef60
-3996	4707	7760473011724939	appmusic_nea_msvc_qmltyperegistrations.cpp	d13ff1c2fdbf6690
-3996	4707	7760473011724939	Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	d13ff1c2fdbf6690
-3996	4707	7760473011724939	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appmusic_nea_msvc_qmltyperegistrations.cpp	d13ff1c2fdbf6690
-3996	4707	7760473011724939	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	d13ff1c2fdbf6690
-4840	5605	7760473024199814	.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp	56c63d867e8c4c5d
-4840	5605	7760473024199814	.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.aotstats	56c63d867e8c4c5d
-4840	5605	7760473024199814	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp	56c63d867e8c4c5d
-4840	5605	7760473024199814	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.aotstats	56c63d867e8c4c5d
-4875	5795	7760473024321920	.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp	cd3d608344c4e32f
-4875	5795	7760473024321920	.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.aotstats	cd3d608344c4e32f
-4875	5795	7760473024321920	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp	cd3d608344c4e32f
-4875	5795	7760473024321920	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.aotstats	cd3d608344c4e32f
-4801	5826	7760473024842703	.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp	6d999dff4835e8a7
-4801	5826	7760473024842703	.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.aotstats	6d999dff4835e8a7
-4801	5826	7760473024842703	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp	6d999dff4835e8a7
-4801	5826	7760473024842703	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.aotstats	6d999dff4835e8a7
-4769	5836	7760473026143833	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-4769	5836	7760473026143833	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-4769	5836	7760473026143833	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-4769	5836	7760473026143833	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-4738	5841	7760473024797115	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	e1064c0dbbc23d22
-4738	5841	7760473024797115	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	e1064c0dbbc23d22
-4738	5841	7760473024797115	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	e1064c0dbbc23d22
-4738	5841	7760473024797115	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	e1064c0dbbc23d22
-4948	5846	7760473025767292	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
-4948	5846	7760473025767292	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
-4948	5846	7760473025767292	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
-4948	5846	7760473025767292	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
-4912	5851	7760473026168989	.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp	4cd51e39a358d4ed
-4912	5851	7760473026168989	.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.aotstats	4cd51e39a358d4ed
-4912	5851	7760473026168989	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp	4cd51e39a358d4ed
-4912	5851	7760473026168989	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.aotstats	4cd51e39a358d4ed
-4708	6030	7760473028496016	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	3ed321c2e16a5b2
-4708	6030	7760473028496016	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	3ed321c2e16a5b2
-4708	6030	7760473028496016	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	3ed321c2e16a5b2
-4708	6030	7760473028496016	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	3ed321c2e16a5b2
-6263	29713	7760473031379701	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.obj	a3e0b69c3e0b89e
-6078	29773	7760473029526242	CMakeFiles/appMusic_NEA_MSVC.dir/appmusic_nea_msvc_qmltyperegistrations.cpp.obj	9a941bd64eae1970
-6366	30955	7760473032403460	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.obj	56b6c143f1865403
-6341	31296	7760473032152443	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.obj	91c52acc8fc3a0e5
-6292	31374	7760473031654067	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.obj	b03538b5a64e4751
-6399	31622	7760473032732412	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.obj	b7eb2c0244e67181
-6450	31786	7760473033251128	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.obj	1f5d4e6177b83983
-6424	32266	7760473032980695	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.obj	a8c3b16ae9ed8d9c
-6314	33087	7760473031886564	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-6179	39171	7760473030532733	CMakeFiles/appMusic_NEA_MSVC.dir/globals.cpp.obj	7516927033702648
-6201	39540	7760473030753067	CMakeFiles/appMusic_NEA_MSVC.dir/render/resvg_loader.cpp.obj	491ac069af408ee3
-6139	39715	7760473030135845	CMakeFiles/appMusic_NEA_MSVC.dir/file_opening/scan_existing.cpp.obj	fac8e2971d1a6b31
-6158	40036	7760473030331074	CMakeFiles/appMusic_NEA_MSVC.dir/render/image_provider.cpp.obj	2483f189decae11d
-6099	40329	7760473029733024	CMakeFiles/appMusic_NEA_MSVC.dir/file_opening/file_open.cpp.obj	971f69941de4d216
-6119	40391	7760473029934418	CMakeFiles/appMusic_NEA_MSVC.dir/render/render_file.cpp.obj	95a763282afc9ba9
-6242	41274	7760473031168219	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/parser_data.cpp.obj	c8d0ac617816a9b
-6034	42109	7760473029087314	CMakeFiles/appMusic_NEA_MSVC.dir/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp.obj	7236589e0b02ae11
-6221	42350	7760473030954880	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/mei_parser.cpp.obj	1f09fc938b3b0dc7
-6056	57561	7760473029311848	CMakeFiles/appMusic_NEA_MSVC.dir/main.cpp.obj	4842ea17668f6254
-57563	58004	7760473544367587	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-182	240	7760475350396896	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-182	240	7760475350396896	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-195	6322	7760475411222310	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-195	6322	7760475411222310	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6330	6376	7760475411767917	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6330	6376	7760475411767917	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6323	6523	7760475413169474	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6323	6523	7760475413169474	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6323	6523	7760475413169474	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6323	6523	7760475413169474	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6529	6598	7760475413378683	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6524	9355	7760475413338664	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-9355	9626	7760475441640828	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-234	290	7760477910744440	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-234	290	7760477910744440	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-248	6351	7760477971114818	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-248	6351	7760477971114818	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6358	6399	7760477971851517	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6358	6399	7760477971851517	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6351	6548	7760477973113259	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6351	6548	7760477973113259	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6351	6548	7760477973113259	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6351	6548	7760477973113259	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6552	6619	7760477973444432	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6549	9331	7760477973409268	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-9331	9610	7760478001232719	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-187	240	7760479094461739	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-187	240	7760479094461739	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-201	6175	7760479153787685	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-201	6175	7760479153787685	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6183	6240	7760479154315800	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6183	6240	7760479154315800	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6176	6354	7760479155554395	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6176	6354	7760479155554395	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6176	6354	7760479155554395	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6176	6354	7760479155554395	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6359	6441	7760479155730450	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6355	9142	7760479155679654	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-9142	9448	7760479183555972	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-197	249	7760479392729386	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-197	249	7760479392729386	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-210	6523	7760479455270129	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-210	6523	7760479455270129	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6531	6581	7760479456002457	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6531	6581	7760479456002457	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6523	6724	7760479457402484	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6523	6724	7760479457402484	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6523	6724	7760479457402484	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6523	6724	7760479457402484	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6731	6809	7760479457599925	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6725	9616	7760479457549883	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-9617	9933	7760479486465683	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-217	269	7760479755183252	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-217	269	7760479755183252	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-229	6213	7760479814601998	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-229	6213	7760479814601998	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6220	6268	7760479815194312	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6220	6268	7760479815194312	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6213	6411	7760479816542230	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6213	6411	7760479816542230	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6213	6411	7760479816542230	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6213	6411	7760479816542230	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6416	6493	7760479816752166	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6412	9228	7760479816714271	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-9228	9541	7760479844872379	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-221	275	7760480231975361	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-221	275	7760480231975361	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-233	6771	7760480296691318	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-233	6771	7760480296691318	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6784	6830	7760480297514142	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6784	6830	7760480297514142	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6772	6987	7760480298801282	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6772	6987	7760480298801282	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6772	6987	7760480298801282	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6772	6987	7760480298801282	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6993	7091	7760480299211303	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6988	10050	7760480299166062	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-10050	10417	7760480329789755	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-194	259	7760481794123357	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-194	259	7760481794123357	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-205	6041	7760481852072782	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-205	6041	7760481852072782	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6049	6113	7760481852606128	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6049	6113	7760481852606128	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6042	6233	7760481853972050	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6042	6233	7760481853972050	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6042	6233	7760481853972050	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6042	6233	7760481853972050	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6238	6329	7760481854136323	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6234	9137	7760481854090251	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-9137	9407	7760481883132056	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-205	267	7760482398974628	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-205	267	7760482398974628	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-219	6143	7760482457780188	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-219	6143	7760482457780188	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6151	6191	7760482458291344	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6151	6191	7760482458291344	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6144	6323	7760482459584908	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6144	6323	7760482459584908	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6144	6323	7760482459584908	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6144	6323	7760482459584908	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6328	6416	7760482459751488	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6324	9114	7760482459711485	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-9114	9364	7760482487613541	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-203	267	7760482651032615	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-203	267	7760482651032615	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-215	6041	7760482708793686	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-215	6041	7760482708793686	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6049	6093	7760482709443757	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6049	6093	7760482709443757	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6042	6219	7760482710651647	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6042	6219	7760482710651647	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6042	6219	7760482710651647	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-6042	6219	7760482710651647	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6224	6286	7760482710807527	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6220	9011	7760482710772105	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-9011	9278	7760482738687142	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-215	269	7760485179968251	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-215	269	7760485179968251	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-227	5996	7760485237007681	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-227	5996	7760485237007681	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6003	6049	7760485237726075	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6003	6049	7760485237726075	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-5997	6192	7760485238963142	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-5997	6192	7760485238963142	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-5997	6192	7760485238963142	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
-5997	6192	7760485238963142	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
-6196	6257	7760485239306494	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6193	8933	7760485239266438	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	30e0b8bae6ab0a33
-8934	9268	7760485266677724	appMusic_NEA_MSVC.exe	9f999357ce788d0a
-204	265	7760486041183570	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-204	265	7760486041183570	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
-215	6053	7760486099154051	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-215	6053	7760486099154051	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
-6061	6119	7760486099661325	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6061	6119	7760486099661325	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
-6054	6214	7760486100736077	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
-6054	6214	7760486100736077	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
-6054	6214	7760486100736077	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
-6054	6214	7760486100736077	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
-6219	6281	7760486100896992	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	57dc1bccdee78009
-6215	8650	7760486100856844	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.obj	1f5d4e6177b83983
-8650	8934	7760486125214052	appMusic_NEA_MSVC.exe	9f999357ce788d0a
+3330	3915	7767370533262781	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp.aotstats	363da8beca2fe647
+8099	32914	7766095065797617	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/xml_parser.cpp.obj	baa704a6654adaa0
+8122	42268	7766095066038136	CMakeFiles/appMusic_NEA_MSVC.dir/data_parsing/mei_parser.cpp.obj	14cac4c8b89aa493
+4225	13082	7767370537339797	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp.obj	f829a860dec4398c
+3296	3753	7767370532097383	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
+3296	3753	7767370532097383	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
+953	6297	7766122041248931	CMakeFiles/appMusic_NEA_MSVC.dir/part_objects/part_object.cpp.obj	7cfcac159df64a8
+3313	3873	7767370532742807	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp	1d27a471af9296ca
+3313	3873	7767370532742807	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp	1d27a471af9296ca
+3330	3915	7767370533262781	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp	363da8beca2fe647
+3330	3915	7767370533262781	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp.aotstats	363da8beca2fe647
+3330	3915	7767370533262781	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp	363da8beca2fe647
+2056	31571	7764759846535076	CMakeFiles/appMusic_NEA_MSVC.dir/track_objects/track_objects.cpp.obj	aab0b890dbf9e3ab
+867	6815	7767373551101331	CMakeFiles/appMusic_NEA_MSVC.dir/track_objects/track_manager.cpp.obj	845669e7755f250d
+4072	16088	7767370535801713	CMakeFiles/appMusic_NEA_MSVC.dir/track_objects/track_object.cpp.obj	2041212e09dca5a4
+873	6795	7767373551161340	CMakeFiles/appMusic_NEA_MSVC.dir/render/audio_player.cpp.obj	c91dfeddb29bb989
+3367	3871	7767370533002796	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1288	1554	7766463471326002	.rcc/qmlcache/appMusic_NEA_MSVC_UI/MediaPlayer_qml.cpp	5c29315af18ada04
+1288	1554	7766463471326002	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/MediaPlayer_qml.cpp	5c29315af18ada04
+1288	1554	7766463471326002	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/MediaPlayer_qml.cpp.aotstats	5c29315af18ada04
+1635	4583	7766463472284036	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/MediaPlayer_qml.cpp.obj	85bcff4da68d3f5e
+3347	3872	7767370532522854	.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp	17f1fdb6d367c3bd
+3347	3872	7767370532522854	.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp.aotstats	17f1fdb6d367c3bd
+3347	3872	7767370532522854	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp	17f1fdb6d367c3bd
+3347	3872	7767370532522854	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp.aotstats	17f1fdb6d367c3bd
+3367	3871	7767370533002796	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+3367	3871	7767370533002796	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+3367	3871	7767370533002796	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+4235	13303	7767370537439833	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.obj	724397c48fd328a4
+4550	14141	7767345767074626	CMakeFiles/appMusic_NEA_MSVC.dir/file_opening/audio_options.cpp.obj	2691f5b3f78f7960
+145	212	7767376731540188	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+145	212	7767376731540188	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+158	1107	7767376740405564	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+158	1107	7767376740405564	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+1115	1170	7767376741112951	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+1115	1170	7767376741112951	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+1108	1285	7767376742224069	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+1108	1285	7767376742224069	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1108	1285	7767376742224069	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+1108	1285	7767376742224069	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1290	1570	7767376742395496	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	93e36c6b4e978fd4
+1286	3936	7767376742354094	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.obj	724397c48fd328a4
+3936	4273	7767376768854619	appMusic_NEA_MSVC.exe	995a09709b7799d
+135	189	7767377420017142	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+135	189	7767377420017142	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+147	1118	7767377429281900	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+147	1118	7767377429281900	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+1126	1169	7767377429846941	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+1126	1169	7767377429846941	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+1119	1311	7767377431033932	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+1119	1311	7767377431033932	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1119	1311	7767377431033932	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+1119	1311	7767377431033932	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1316	1677	7767377431388935	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	93e36c6b4e978fd4
+1312	4096	7767377431344062	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.obj	724397c48fd328a4
+4096	4426	7767377459187073	appMusic_NEA_MSVC.exe	995a09709b7799d
+142	196	7767377956036632	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+142	196	7767377956036632	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+156	1105	7767377965029713	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+156	1105	7767377965029713	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+1114	1159	7767377965669053	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+1114	1159	7767377965669053	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+1106	1300	7767377966993802	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+1106	1300	7767377966993802	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1106	1300	7767377966993802	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+1106	1300	7767377966993802	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1307	1616	7767377967216396	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	93e36c6b4e978fd4
+1302	4115	7767377967163891	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.obj	724397c48fd328a4
+4115	4364	7767377995295696	appMusic_NEA_MSVC.exe	995a09709b7799d
+242	358	7767388308455471	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+242	358	7767388308455471	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+264	2041	7767388325443438	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+264	2041	7767388325443438	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+2042	3633	7767388339306171	appMusic_NEA_MSVC_autogen/timestamp	d9a452f3a796e9e8
+2042	3633	7767388339306171	appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	d9a452f3a796e9e8
+2042	3633	7767388339306171	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/timestamp	d9a452f3a796e9e8
+2042	3633	7767388339306171	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp	d9a452f3a796e9e8
+3636	3833	7767388342503659	meta_types/appMusic_NEA_MSVC_json_file_list.txt	d74deb8163407f51
+3636	3833	7767388342503659	meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	d74deb8163407f51
+3636	3833	7767388342503659	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt	d74deb8163407f51
+3636	3833	7767388342503659	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/appMusic_NEA_MSVC_json_file_list.txt.timestamp	d74deb8163407f51
+3648	3846	7767388342588897	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+3648	3846	7767388342588897	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+3833	3931	7767388344431284	meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen	3b40162a819bef60
+3833	3931	7767388344431284	meta_types/qt6appmusic_nea_msvc_release_metatypes.json	3b40162a819bef60
+3833	3931	7767388344431284	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json.gen	3b40162a819bef60
+3833	3931	7767388344431284	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/meta_types/qt6appmusic_nea_msvc_release_metatypes.json	3b40162a819bef60
+3932	4241	7767388346317737	appmusic_nea_msvc_qmltyperegistrations.cpp	d13ff1c2fdbf6690
+3932	4241	7767388346317737	Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	d13ff1c2fdbf6690
+3932	4241	7767388346317737	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/appmusic_nea_msvc_qmltyperegistrations.cpp	d13ff1c2fdbf6690
+3932	4241	7767388346317737	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/appMusic_NEA_MSVC.qmltypes	d13ff1c2fdbf6690
+4255	4599	7767388350745064	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	e1064c0dbbc23d22
+4255	4599	7767388350745064	.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	e1064c0dbbc23d22
+4255	4599	7767388350745064	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp	e1064c0dbbc23d22
+4255	4599	7767388350745064	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.aotstats	e1064c0dbbc23d22
+4314	4658	7767388351108126	.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp	cd3d608344c4e32f
+4314	4658	7767388351108126	.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.aotstats	cd3d608344c4e32f
+4314	4658	7767388351108126	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp	cd3d608344c4e32f
+4314	4658	7767388351108126	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.aotstats	cd3d608344c4e32f
+4297	4664	7767388351268135	.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp	56c63d867e8c4c5d
+4297	4664	7767388351268135	.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.aotstats	56c63d867e8c4c5d
+4297	4664	7767388351268135	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp	56c63d867e8c4c5d
+4297	4664	7767388351268135	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.aotstats	56c63d867e8c4c5d
+4283	4664	7767388351228105	.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp	6d999dff4835e8a7
+4283	4664	7767388351228105	.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.aotstats	6d999dff4835e8a7
+4283	4664	7767388351228105	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp	6d999dff4835e8a7
+4283	4664	7767388351228105	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.aotstats	6d999dff4835e8a7
+4331	4815	7767388352463494	.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp	4cd51e39a358d4ed
+4331	4815	7767388352463494	.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.aotstats	4cd51e39a358d4ed
+4331	4815	7767388352463494	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp	4cd51e39a358d4ed
+4331	4815	7767388352463494	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.aotstats	4cd51e39a358d4ed
+4381	4858	7767388352582801	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp	363da8beca2fe647
+4381	4858	7767388352582801	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp.aotstats	363da8beca2fe647
+4381	4858	7767388352582801	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp	363da8beca2fe647
+4381	4858	7767388352582801	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp.aotstats	363da8beca2fe647
+4349	4862	7767388352893736	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
+4349	4862	7767388352893736	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
+4349	4862	7767388352893736	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp	344dc09f95fb91e8
+4349	4862	7767388352893736	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.aotstats	344dc09f95fb91e8
+4394	4864	7767388352582801	.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp	17f1fdb6d367c3bd
+4394	4864	7767388352582801	.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp.aotstats	17f1fdb6d367c3bd
+4394	4864	7767388352582801	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp	17f1fdb6d367c3bd
+4394	4864	7767388352582801	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp.aotstats	17f1fdb6d367c3bd
+4269	4865	7767388352823698	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
+4269	4865	7767388352823698	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
+4269	4865	7767388352823698	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp	b885772f8a68258c
+4269	4865	7767388352823698	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.aotstats	b885772f8a68258c
+4412	4867	7767388353063709	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+4412	4867	7767388353063709	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+4412	4867	7767388353063709	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+4412	4867	7767388353063709	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+4365	4868	7767388352743710	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp	1d27a471af9296ca
+4365	4868	7767388352743710	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp.aotstats	1d27a471af9296ca
+4365	4868	7767388352743710	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp	1d27a471af9296ca
+4365	4868	7767388352743710	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp.aotstats	1d27a471af9296ca
+4242	4871	7767388353413752	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	3ed321c2e16a5b2
+4242	4871	7767388353413752	.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	3ed321c2e16a5b2
+4242	4871	7767388353413752	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp	3ed321c2e16a5b2
+4242	4871	7767388353413752	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.aotstats	3ed321c2e16a5b2
+5058	5915	7767388355789751	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	93e36c6b4e978fd4
+4891	12407	7767388354123811	CMakeFiles/appMusic_NEA_MSVC.dir/appmusic_nea_msvc_qmltyperegistrations.cpp.obj	720f6f9ed014da41
+4952	12436	7767388354738236	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/C_MenuBar_qml.cpp.obj	abb9792673259791
+4960	12462	7767388354818527	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/File_menu_qml.cpp.obj	35beb28fc3b40b77
+5034	12487	7767388355549281	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/CMediaPlayer_qml.cpp.obj	f829a860dec4398c
+4928	12506	7767388354493015	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_Main_qml.cpp.obj	1b524a8b4b875b42
+5014	12522	7767388355359296	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Music_scroll_view_qml.cpp.obj	838b6c03d9d07f9d
+4936	12540	7767388354573069	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/FileButton_qml.cpp.obj	6db90809ae2dd1fb
+5047	12553	7767388355684418	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.obj	724397c48fd328a4
+5006	12691	7767388355279196	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Break_manager_qml.cpp.obj	95e87295dfbc9215
+4970	12709	7767388354908240	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_styles/PreviousDirectoryButton_qml.cpp.obj	d685fa7c4bc31dc4
+4978	12729	7767388354993469	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_File_view_qml.cpp.obj	f9adaf8ffce4578f
+5023	12798	7767388355439252	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Part_maker_qml.cpp.obj	5100b4380dfe9a0a
+4945	13117	7767388354668144	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Display_window_qml.cpp.obj	4f704bd8ae52956
+4906	15621	7767388354273089	CMakeFiles/appMusic_NEA_MSVC.dir/track_objects/track_object.cpp.obj	2041212e09dca5a4
+4920	15645	7767388354412999	CMakeFiles/appMusic_NEA_MSVC.dir/render/audio_player.cpp.obj	c91dfeddb29bb989
+4899	15730	7767388354203027	CMakeFiles/appMusic_NEA_MSVC.dir/part_objects/part_manager.cpp.obj	dab0ed01b72898c5
+4880	15797	7767388354013004	CMakeFiles/appMusic_NEA_MSVC.dir/main.cpp.obj	c36a4ea6faf861ca
+4912	15816	7767388354343003	CMakeFiles/appMusic_NEA_MSVC.dir/track_objects/track_manager.cpp.obj	845669e7755f250d
+4872	16628	7767388353933027	CMakeFiles/appMusic_NEA_MSVC.dir/appMusic_NEA_MSVC_autogen/mocs_compilation.cpp.obj	a0b8ae97cbb833cd
+16629	16919	7767388471500745	appMusic_NEA_MSVC.exe	995a09709b7799d
+163	222	7767389282626810	.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+163	222	7767389282626810	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt	8748f2bdce24fcd3
+176	1184	7767389292019340	.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+176	1184	7767389292019340	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/qml_imports/appMusic_NEA_MSVC_build.cmake	3529be1a8a598574
+1193	1241	7767389292818380	.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+1193	1241	7767389292818380	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp	342dfc627fba8ab9
+1186	1443	7767389294779817	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+1186	1443	7767389294779817	.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1186	1443	7767389294779817	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp	b739a6ae4a229466
+1186	1443	7767389294779817	D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.aotstats	b739a6ae4a229466
+1448	1794	7767389294961356	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/rcc/qrc_appMusic_NEA_MSVC_raw_qml_0.cpp.obj	93e36c6b4e978fd4
+1444	4281	7767389294921332	CMakeFiles/appMusic_NEA_MSVC.dir/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.rcc/qmlcache/appMusic_NEA_MSVC_UI/Mixer_qml.cpp.obj	724397c48fd328a4
+4282	4546	7767389323301285	appMusic_NEA_MSVC.exe	995a09709b7799d

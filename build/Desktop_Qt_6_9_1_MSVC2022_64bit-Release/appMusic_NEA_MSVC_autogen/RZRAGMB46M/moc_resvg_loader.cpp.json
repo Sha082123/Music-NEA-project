@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "resvg_loader",
-            "lineNumber": 10,
+            "lineNumber": 11,
             "object": true,
             "qualifiedClassName": "resvg_loader",
             "superClasses": [

@@ -12,3 +12,7 @@ D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt
 /qt/qml/Music_NEA_MSVC/styles/PreviousDirectoryButton.qml
 /qt/qml/Music_NEA_MSVC/File_view.qml
 /qt/qml/Music_NEA_MSVC/UI/Break_manager.qml
+/qt/qml/Music_NEA_MSVC/UI/Music_scroll_view.qml
+/qt/qml/Music_NEA_MSVC/UI/Part_maker.qml
+/qt/qml/Music_NEA_MSVC/UI/CMediaPlayer.qml
+/qt/qml/Music_NEA_MSVC/UI/Mixer.qml

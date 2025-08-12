@@ -17,7 +17,9 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/QStringList \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/QTextStream \
+	C:/Qt/6.9.1/msvc2022_64/include/QtCore/QUrl \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVariant \
+	C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVector \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/QXmlStreamReader \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
@@ -157,6 +159,7 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/qutf8stringview.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvariant.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvarlengtharray.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvector.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversionnumber.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxmlstream.h \
@@ -193,9 +196,21 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtransform.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs_win.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/QAudioBuffer \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/QAudioDecoder \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudio.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudiobuffer.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudiodecoder.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudioformat.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtaudio.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimedia-config.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimediaexports.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimediaglobal.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetwork-config.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetworkexports.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetworkglobal.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtQml/QQmlApplicationEngine \
+	C:/Qt/6.9.1/msvc2022_64/include/QtQml/QQmlContext \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qjsengine.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qjsmanagedvalue.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qjsnumbercoercion.h \
@@ -203,6 +218,8 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qjsvalue.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqml.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlabstracturlinterceptor.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlapplicationengine.h \
+	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlcontext.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmldebug.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlengine.h \
 	C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlerror.h \
@@ -414,6 +431,34 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
 	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
 	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaMacros.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-debug.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-relwithdebinfo.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-debug.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-relwithdebinfo.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginAdditionalTargetInfo.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginConfig.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets-debug.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets-relwithdebinfo.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateAdditionalTargetInfo.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfig.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersion.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersionImpl.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateDependencies.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateTargets.cmake \
+	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateVersionlessAliasTargets.cmake \
 	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Network/Qt6NetworkAdditionalTargetInfo.cmake \
 	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake \
 	C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake \
@@ -1060,64 +1105,74 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/CMakeFiles/3.30.5/CMakeSystem.cmake \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/include/lunasvg/lunasvg.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/lib/cmake/plutovg/plutovgConfig.cmake \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/lib/cmake/plutovg/plutovgConfigVersion.cmake \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/lib/cmake/plutovg/plutovgTargets-release.cmake \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/lib/cmake/plutovg/plutovgTargets.cmake \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/rtaudio/RtAudio.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/json/jsonxx.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/pugi/pugiconfig.hpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/pugi/pugixml.hpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/boundingbox.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/clef.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/devicecontextbase.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/doc.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/docselection.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/drawinginterface.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/expansionmap.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/facsimile.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/facsimileinterface.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/filereader.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/fraction.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/glyph.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/interface.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/keysig.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/layerelement.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/linkinginterface.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/mensur.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/metersig.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/metersiggrp.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/object.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/options.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/proport.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/resources.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/scoredef.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/scoredefinterface.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/smufl.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/textelement.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/toolkit.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/toolkitdef.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/view.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/vrv.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/vrv/vrvdef.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/addons/att.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/addons/attalternates.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/addons/attdef.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/attclasses.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/attconverter.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/attmodule.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_analytical.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_cmn.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_externalsymbols.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_facsimile.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_gestural.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_mei.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_mensural.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_midi.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_shared.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_visual.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atttypes.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/audio_parser.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/audio_parser.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/mei_parser.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/mei_parser.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/parser_data.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/parser_data.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/xml_parser.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/xml_parser.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/json/jsonxx.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/pugi/pugiconfig.hpp \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/pugi/pugixml.hpp \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/boundingbox.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/clef.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/devicecontextbase.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/doc.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/docselection.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/drawinginterface.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/expansionmap.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/facsimile.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/facsimileinterface.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/filereader.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/fraction.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/glyph.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/interface.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/keysig.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/layerelement.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/linkinginterface.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/mensur.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/metersig.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/metersiggrp.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/object.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/options.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/proport.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/resources.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/scoredef.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/scoredefinterface.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/smufl.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/textelement.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/toolkit.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/toolkitdef.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/view.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/vrv.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/include/vrv/vrvdef.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/addons/att.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/addons/attalternates.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/addons/attdef.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/attclasses.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/attconverter.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/attmodule.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_analytical.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_cmn.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_externalsymbols.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_facsimile.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_gestural.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_mei.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_mensural.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_midi.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_shared.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atts_visual.h \
-	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/external/verovio/libmei/dist/atttypes.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/audio_options.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/audio_options.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/file_open.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/file_open.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/scan_existing.cpp \
@@ -1125,6 +1180,12 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/globals.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/globals.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/main.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/part_objects/part_manager.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/part_objects/part_manager.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/part_objects/part_object.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/part_objects/part_object.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/audio_player.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/audio_player.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/image_provider.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/image_provider.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/render_file.cpp \
@@ -1134,9 +1195,8 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/svgrenderer.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/verovio_loader.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/verovio_loader.h \
-	D:/lunasvg/install/include/lunasvg/lunasvg.h \
-	D:/lunasvg/install/lib/cmake/plutovg/plutovgConfig.cmake \
-	D:/lunasvg/install/lib/cmake/plutovg/plutovgConfigVersion.cmake \
-	D:/lunasvg/install/lib/cmake/plutovg/plutovgTargets-release.cmake \
-	D:/lunasvg/install/lib/cmake/plutovg/plutovgTargets.cmake \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/track_objects/track_manager.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/track_objects/track_manager.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/track_objects/track_object.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/track_objects/track_object.h \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

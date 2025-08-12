@@ -1,2 +1,0 @@
-UTF-16BE file ./recsuite/MozaChloSample.xml
-UTF-16LE file ./recsuite/MozaVeilSample.xml

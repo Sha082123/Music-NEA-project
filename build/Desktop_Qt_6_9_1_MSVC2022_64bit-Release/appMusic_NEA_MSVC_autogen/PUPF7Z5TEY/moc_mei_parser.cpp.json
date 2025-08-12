@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "mei_parser",
-            "lineNumber": 8,
+            "lineNumber": 12,
             "methods": [
                 {
                     "access": "public",

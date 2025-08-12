@@ -13,12 +13,12 @@ part_object::part_object(QObject *parent, QString part_name)
 
     m_mei_parser->set_parser_data(m_parser_data); // set the parser data for use
 
-    qInfo() << "checkpoint1";
+    //qInfo() << "checkpoint1";
 
     m_render_file = new render_file(this, m_mei_parser, m_xml_parser,
                                     m_parser_data, m_verovio_loader, m_resvg_loader);
 
-    qInfo() << "checkpoint2";
+    //qInfo() << "checkpoint2";
 
 
     m_part_name = part_name;
@@ -88,6 +88,20 @@ void part_object::apply_breaks()
 QVariantList part_object::element_from_point(const QPointF &point, const int &page_number)
 {
     return m_xml_parser->element_from_point (point, page_number);
+}
+
+QVariantList part_object::coordinates_from_measure(int measure_number)
+{
+    QVector<int> result = m_xml_parser->coordinates_from_measure(measure_number);
+    QVariantList output;
+
+    for (int integer : result) {
+        output.append(integer);
+    }
+
+    qInfo() << "Coordinates for measure" << measure_number << ":" << output;
+
+    return output;
 }
 
 void part_object::update_part_name(QString new_part_name)
@@ -200,6 +214,7 @@ void part_object::setfile_path(const QString &newFile_path)
     if (m_file_path == newFile_path)
         return;
     m_file_path = newFile_path;
+    emit file_pathChanged();
 }
 
 QVariantList part_object::part_list() const

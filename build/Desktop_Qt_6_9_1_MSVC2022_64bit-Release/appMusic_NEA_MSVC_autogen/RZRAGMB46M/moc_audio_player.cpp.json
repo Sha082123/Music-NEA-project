@@ -1,0 +1,205 @@
+{
+    "classes": [
+        {
+            "className": "audio_player",
+            "lineNumber": 10,
+            "methods": [
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "play_audio",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "pause_audio",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "name": "refresh",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "back_10s",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 8,
+                    "name": "forward_10s",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 9,
+                    "name": "skip_to_start",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 10,
+                    "name": "skip_to_end",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "position",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "set_position",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "track_index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "volume",
+                            "type": "float"
+                        }
+                    ],
+                    "index": 12,
+                    "name": "set_volume",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "volume",
+                            "type": "float"
+                        }
+                    ],
+                    "index": 13,
+                    "name": "set_master_volume",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "mute",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 15,
+                    "name": "unmute",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "qml_position",
+                    "notify": "qml_positionChanged",
+                    "read": "qml_position",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "size_t",
+                    "user": false,
+                    "write": "setqml_position"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 1,
+                    "name": "total_ms",
+                    "notify": "total_msChanged",
+                    "read": "total_ms",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "size_t",
+                    "user": false,
+                    "write": "settotal_ms"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 2,
+                    "name": "decibels",
+                    "notify": "decibelsChanged",
+                    "read": "decibels",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "float",
+                    "user": false,
+                    "write": "setdecibels"
+                }
+            ],
+            "qualifiedClassName": "audio_player",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "qml_positionChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "current_position",
+                            "type": "size_t"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "sample_position_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "total_msChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "name": "decibelsChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "audio_player.h",
+    "outputRevision": 69
+}

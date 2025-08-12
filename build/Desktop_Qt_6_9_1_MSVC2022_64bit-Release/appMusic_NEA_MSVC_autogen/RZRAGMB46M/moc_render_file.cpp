@@ -60,8 +60,8 @@ template <> constexpr inline auto render_file::qt_create_metaobjectdata<qt_meta_
         // Signal 'list_PNG_pathsChanged'
         QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'openFile'
-        QtMocHelpers::MethodData<void(const QString &, QString)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 6 }, { QMetaType::QString, 7 },
+        QtMocHelpers::MethodData<void(const QString &, int)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 6 }, { QMetaType::Int, 7 },
         }}),
         // Method 'update'
         QtMocHelpers::MethodData<void()>(8, 2, QMC::AccessPublic, QMetaType::Void),
@@ -97,7 +97,7 @@ void render_file::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->filenameChanged(); break;
         case 1: _t->output_pathChanged(); break;
         case 2: _t->list_PNG_pathsChanged(); break;
-        case 3: _t->openFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 3: _t->openFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         case 4: _t->update(); break;
         default: ;
         }

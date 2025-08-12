@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 1010,
+                        "durationMicroseconds": 379,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 9
@@ -30,34 +30,34 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 773,
+                        "durationMicroseconds": 299,
                         "errorMessage": "",
                         "functionName": "acceptedButtons",
-                        "line": 33
+                        "line": 34
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 948,
+                        "durationMicroseconds": 374,
                         "errorMessage": "Cannot access value for name mouse",
                         "functionName": "onPressed",
-                        "line": 34
+                        "line": 35
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 299,
+                        "durationMicroseconds": 119,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 32
+                        "line": 33
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 2811,
+                        "durationMicroseconds": 988,
                         "errorMessage": "Cannot access value for name TextInput",
                         "functionName": "wrapMode",
-                        "line": 49
+                        "line": 50
                     },
                     {
                         "codegenSuccessful": false,
@@ -65,7 +65,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 53
+                        "line": 54
                     }
                 ],
                 "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/styles/File_menu.qml"

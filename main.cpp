@@ -9,10 +9,13 @@
 #include "file_opening/scan_existing.h"
 #include "part_objects/part_object.h"
 #include "part_objects/part_manager.h"
+#include "track_objects/track_manager.h"
+#include "RtAudio.h"
 
 
 int main(int argc, char *argv[])
 {
+
     QApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
@@ -21,7 +24,9 @@ int main(int argc, char *argv[])
     g_verovio_loader = new verovio_loader(&engine); // Initialize the global Verovio loader
 
     //part_object *main_score_part = new part_object(&engine, "main_score");
-    part_manager *part_manager_instance = new part_manager(&engine, &engine);
+    track_manager *track_manager_instance = new track_manager(&engine, &engine);
+    part_manager *part_manager_instance = new part_manager(&engine, &engine, track_manager_instance);
+
 
     engine.addImageProvider("image_provider", g_image_provider);
     engine.load(QUrl::fromLocalFile("main.qml"));
@@ -31,6 +36,7 @@ int main(int argc, char *argv[])
 
 
     engine.rootContext()->setContextProperty("part_manager", part_manager_instance);
+    engine.rootContext()->setContextProperty("track_manager", track_manager_instance);
     //engine.rootContext()->setContextProperty("main_score", main_score_part);
 
 
