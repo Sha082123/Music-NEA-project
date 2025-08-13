@@ -29,6 +29,36 @@ QString file_open::createNewPart(const QString &source_path, const QString &targ
     return copy_file_to_projects(source_path, target_dir, file_name);
 }
 
+QString file_open::createNewTrack(const QString &target_dir)
+{
+    QString source_path = QFileDialog::getOpenFileName(this, "Open file", "C://", "Audio Files (*.wav *.mp3 *.ogg)");
+
+    qInfo() << "File opened:" << source_path << Qt::endl;
+
+    // copy that file to the target directory
+
+    qInfo() << Qt::endl << Qt::endl << Qt::endl << "target_dir : " << target_dir;
+    qInfo() << "source_path : " << source_path;
+
+    QFileInfo file(source_path);
+    QString temp_file_name = file.completeBaseName();
+
+    QString destination_path = target_dir + temp_file_name + "." + file.suffix();
+
+    destination_path = if_file_exists (destination_path); //obtain the correct file_path
+
+    //qInfo() << "destination path : " << file_path;
+
+    if (QFile::copy(source_path, destination_path)) {
+        qInfo() << "File copied successfully!";
+    } else {
+        qWarning() << "Failed to copy file!";
+    }
+
+    return destination_path;
+
+}
+
 void file_open::openNewDirectory(const QString &target_dir)
 {
     // QString correct_dir; // target_dir is constant, so we cannot remove the trailing slash directly from it.

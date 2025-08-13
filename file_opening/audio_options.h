@@ -24,7 +24,10 @@ public:
     explicit audio_options(QObject *parent = nullptr);
 
     options initialise_file(const QString &file_path);
-    void write_options_file();
+
+    void update_options(options &new_options);
+
+    void delete_options();
 
 
 
@@ -33,6 +36,7 @@ signals:
 private:
 
     options read_options_file();
+    void write_options_file();
 
     QString m_file_path;
 

@@ -51,6 +51,12 @@ public:
 
     Q_INVOKABLE void toggle_mute(int index);
     Q_INVOKABLE void toggle_solo(int index);
+    Q_INVOKABLE void set_volume(int index, float volume);
+
+    Q_INVOKABLE void save_playback_states();
+
+    Q_INVOKABLE void open_new_track(QString root_path); // path of main score
+    Q_INVOKABLE void delete_track(int index);
 
 
     QVariantList qml_track_list() const;

@@ -53,13 +53,29 @@ Rectangle {
                     id: track_name_text
 
                     text: modelData
-                    width: parent.width - 30
+                    width: parent.width - 50
                     height: 20
                     elide: Text.ElideRight
 
                     anchors.left: parent.left
                     anchors.top: parent.top
                     anchors.margins: 10
+                }
+
+                Button {
+                    id: remove_button
+
+                    text: "X"
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.margins: 10
+                    width: 30
+                    height: 30
+
+                    onClicked: {
+                        console.log(index)
+                        track_manager.delete_track(index)
+                    }
                 }
 
                 Rectangle {
@@ -149,13 +165,13 @@ Rectangle {
                     anchors.left: parent.left
                     anchors.margins: 10
                     from: 0
-                    value: 1
+                    value: track_manager.volume_list[index]
                     to: 1
                     stepSize: 0.01
                     width: parent.width - 20
 
                     onMoved: {
-                        audio_player.set_volume(index, value)
+                        track_manager.set_volume(index, value)
                     }
                 }
             }

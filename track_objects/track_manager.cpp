@@ -222,7 +222,7 @@ void track_manager::toggle_solo(int index)
         }
     }
 
-    if (!solo_exists) {
+    if (!solo_exists) { // if no solo, unmute everything
         setprevent_mute (false);
         for (int index = 0; index < m_solo_list.size(); index++) {
             m_audio_player->unmute(index);
@@ -232,6 +232,141 @@ void track_manager::toggle_solo(int index)
             emit mute_listChanged();
         }
     }
+}
+
+void track_manager::set_volume(int index, float volume)
+{
+    m_volume_list[index] = volume;
+    m_playback_states.volume_list[index] = volume;
+    m_audio_player->set_volume (index, volume);
+    emit volume_listChanged();
+}
+
+void track_manager::save_playback_states()
+{
+    for (int index = 0; index < m_mute_list.size(); index++) {
+        audio_options::options current_track_options;
+        current_track_options.mute = m_mute_list[index].toBool();
+        current_track_options.solo = m_solo_list[index].toBool();
+        current_track_options.volume = m_volume_list[index].toFloat();
+        current_track_options.start_ms = m_start_ms_list[index].toInt();
+        current_track_options.end_ms = m_end_ms_list[index].toInt();
+        current_track_options.duration = m_duration_list[index].toInt();
+        current_track_options.time_before_start = m_time_before_start_list[index].toInt();
+
+        track_object_list.at(index)->save_options(current_track_options);
+    }
+}
+
+void track_manager::open_new_track(QString root_path)
+{
+    QString target_dir = QDir::currentPath() + "/UserFiles/dump/" +
+                         m_file_open->name_from_project_files(root_path) + "/tracks/";
+    QString file_path = m_file_open->createNewTrack(target_dir);
+
+    setmusic_loaded (false);
+
+    m_audio_player->close_stream ();
+
+    m_playback_states = playback_states(); // Reset playback states
+
+    m_mute_list.clear();
+    m_solo_list.clear();
+    m_volume_list.clear();
+    m_start_ms_list.clear();
+    m_end_ms_list.clear();
+    m_duration_list.clear();
+    m_time_before_start_list.clear();
+
+    add_audio_track(file_path);
+}
+
+void track_manager::delete_track(int index)
+{
+    m_audio_player->close_stream ();
+
+    track_object *track_to_delete = track_object_list[index];
+
+    // Remove the track from the QML list
+    QVariantList temp_list = qml_track_list();
+    temp_list.removeAt(index);
+    setqml_track_list(temp_list);
+
+    // Remove the track from the playback states
+    // m_playback_states.mute_list.removeAt(index);
+    // m_playback_states.solo_list.removeAt(index);
+    // m_playback_states.volume_list.removeAt(index);
+    // m_playback_states.start_ms_list.removeAt(index);
+    // m_playback_states.end_ms_list.removeAt(index);
+    // m_playback_states.duration_list.removeAt(index);
+    // m_playback_states.time_before_start_list.removeAt(index);
+
+    m_playback_states = playback_states(); // Reset playback states
+
+    // m_mute_list.removeAt(index);
+    // m_solo_list.removeAt(index);
+    // m_volume_list.removeAt(index);
+    // m_start_ms_list.removeAt(index);
+    // m_end_ms_list.removeAt(index);
+    // m_duration_list.removeAt(index);
+    // m_time_before_start_list.removeAt(index);
+
+    m_mute_list.clear();
+    m_solo_list.clear();
+    m_volume_list.clear();
+    m_start_ms_list.clear();
+    m_end_ms_list.clear();
+    m_duration_list.clear();
+    m_time_before_start_list.clear();
+
+    emit mute_listChanged();
+    emit solo_listChanged();
+    emit volume_listChanged();
+    emit start_ms_listChanged();
+    emit end_ms_listChanged();
+    emit duration_listChanged();
+    emit time_before_start_listChanged();
+
+    emit qml_track_listChanged();
+
+    qInfo() << Qt::endl << Qt::endl << Qt::endl;
+    qInfo() << "mute list: " << m_mute_list;
+    qInfo() << "solo list: " << m_solo_list;
+    qInfo() << "volume list: " << m_volume_list;
+    qInfo() << "start ms list: " << m_start_ms_list;
+    qInfo() << "end ms list: " << m_end_ms_list;
+    qInfo() << "duration list: " << m_duration_list;
+    qInfo() << "time before start list: " << m_time_before_start_list;
+    qInfo() << m_qml_track_list;
+    qInfo() << Qt::endl << Qt::endl << Qt::endl;
+
+    // Delete the track object
+    track_to_delete->delete_file();
+    delete track_to_delete;
+    track_object_list.removeAt(index);
+
+    tracks_loaded--;
+
+    if (tracks_loaded != 0) {
+        load_tracks();
+    } else {
+        setmusic_loaded (false);
+
+        m_engine->rootContext()->setContextProperty("audio_player", nullptr);
+        delete m_audio_player;
+
+        m_audio_player = new audio_player(this); // Recreate the audio player
+        m_engine->rootContext()->setContextProperty("audio_player", m_audio_player);
+    }
+
+    for (QVariant solo : m_solo_list) {
+        if (solo.toBool()) {
+            setprevent_mute(true);
+            return;
+        }
+    }
+    setprevent_mute(false); // if a soloed track is deleted remove the prevent mute
+
 }
 
 

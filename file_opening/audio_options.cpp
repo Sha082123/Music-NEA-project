@@ -7,6 +7,27 @@ audio_options::audio_options(QObject *parent)
     m_options = new options();
 }
 
+void audio_options::update_options(options &new_options)
+{
+    m_options = &new_options;
+    write_options_file();
+}
+
+void audio_options::delete_options()
+{
+    QFile file(m_file_path);
+    if (file.exists()) {
+        if (file.remove()) {
+            qInfo() << "Options file deleted successfully: " << m_file_path;
+            m_file_path.clear(); // Clear the file path after deletion
+        } else {
+            qWarning() << "Failed to delete options file: " << m_file_path;
+        }
+    } else {
+        qWarning() << "Options file does not exist: " << m_file_path;
+    }
+}
+
 audio_options::options audio_options::initialise_file(const QString &file_path)
 {
 

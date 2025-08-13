@@ -48,6 +48,7 @@ void audio_player::load_audio(QVector<QVector<qint16>> &pcm_buffer, track_manage
     m_playback_data->current_position = 0;
     m_playback_data->self = this;
     m_playback_data->master_volume = 1.0f;
+    m_playback_data->total_samples = 0;
 
     struct track_manager::playback_states m_playback_states = track_manager->get_playback_states();
 
@@ -59,7 +60,7 @@ void audio_player::load_audio(QVector<QVector<qint16>> &pcm_buffer, track_manage
 
         m_playback_data->mute.append(m_playback_states.mute_list[index] ? 0.0f : 1.0f);
 
-        m_playback_data->volumes.append(1.0f);
+        m_playback_data->volumes.append(m_playback_states.volume_list[index]);
         //m_playback_data->mute.append(1.0f);
     }
 

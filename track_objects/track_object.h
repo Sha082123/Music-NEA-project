@@ -19,6 +19,10 @@ public:
     void open_file(QString &file_path);
     audio_options::options get_track_options();
 
+    void save_options(audio_options::options &new_options);
+
+    void delete_file();
+
     QVector<qint16> pcm_buffer();
 
     QString track_name() const;
@@ -42,6 +46,7 @@ private:
 
     QString m_track_name;
     QString m_directory;
+    QString m_file_path;
 
     QVector<qint16> m_pcm_buffer;
 };

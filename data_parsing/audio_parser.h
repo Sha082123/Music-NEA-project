@@ -16,6 +16,7 @@ public:
     explicit audio_parser(QObject *parent = nullptr);
 
     void parse_audio_file(const QString &file_path); // Parses the audio file and returns PCM data
+    void clear_parser();
 
 signals:
 

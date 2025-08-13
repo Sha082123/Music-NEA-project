@@ -46,9 +46,21 @@ void audio_parser::parse_audio_file(const QString &file_path)
 
     QObject::connect(m_audio_decoder, &QAudioDecoder::finished, this, [this]() {
         qInfo() << "Decoding finished. PCM data size:" << pcm_data.size();
+        //m_audio_decoder->stop();
+        //m_audio_decoder->setSource(QUrl());
         emit audio_parsing_finished(pcm_data); // <-- emit your own signal!
     });
 
     m_audio_decoder->start();
 
+}
+
+void audio_parser::clear_parser()
+{
+    // m_audio_decoder->stop();
+    // m_audio_decoder->setSource(QUrl());
+    delete m_audio_decoder;
+    m_audio_decoder = nullptr;
+    pcm_data.clear();
+    qInfo() << "Audio parser cleared.";
 }

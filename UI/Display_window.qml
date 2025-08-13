@@ -151,7 +151,7 @@ Rectangle {
             height: 10
             width: Math.max((level/100) * 200, 10)
 
-            color: audio_player.decibels > -9 ? "red" : "green"
+            color: audio_player.decibels > -8.5 ? "red" : "green"
 
         }
 
@@ -189,6 +189,7 @@ Rectangle {
 
             onClicked: {
                 current_part.save_file()
+                track_manager.save_playback_states()
             }
         }
 
@@ -296,6 +297,24 @@ Rectangle {
             }
         }
 
+        Button {
+            id: add_new_track
+            anchors {
+                top: part_maker_button.bottom
+                left: parent.left
+                right: parent.right
+            }
+
+            height: 30
+
+            text: "Add new track"
+
+            onClicked: {
+                console.log(root_part.file_path)
+                track_manager.open_new_track(root_part.file_path)
+            }
+        }
+
         Mixer {
             id: mixer
             signal refresh_mixer()
@@ -306,7 +325,7 @@ Rectangle {
 
             visible: track_manager.music_loaded? true : false
 
-            anchors.top: part_maker_button.bottom
+            anchors.top: add_new_track.bottom
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: selection_view.top
