@@ -10,9 +10,10 @@ class track_manager; // Forward declaration of track_manager
 class audio_player : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(size_t qml_position READ qml_position WRITE setqml_position NOTIFY qml_positionChanged FINAL)
+    Q_PROPERTY(size_t qml_position READ qml_position WRITE setqml_position NOTIFY qml_positionChanged FINAL) // in milliseconds
     Q_PROPERTY(size_t total_ms READ total_ms WRITE settotal_ms NOTIFY total_msChanged FINAL)
     Q_PROPERTY(float decibels READ decibels WRITE setdecibels NOTIFY decibelsChanged FINAL)
+
 public:
     explicit audio_player(QObject *parent = nullptr);
 

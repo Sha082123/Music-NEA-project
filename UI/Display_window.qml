@@ -61,6 +61,22 @@ Rectangle {
 
         }
 
+        Button {
+            id: sync_points_manager
+
+            anchors.left: media_player.right
+            anchors.top: parent.top
+            anchors.leftMargin: 50
+            width: 100
+            height: parent.height
+            text: "Edit sync points"
+
+            onClicked: {
+                sync_manager.visible = true
+                console.log(track_manager.qml_sync_points)
+            }
+        }
+
 
 
 
@@ -310,8 +326,7 @@ Rectangle {
             text: "Add new track"
 
             onClicked: {
-                console.log(root_part.file_path)
-                track_manager.open_new_track(root_part.file_path)
+                track_manager.open_new_track()
             }
         }
 
@@ -488,6 +503,11 @@ Rectangle {
 
     Part_maker {
         id: part_maker
+        visible: false
+    }
+
+    Sync_manager {
+        id: sync_manager
         visible: false
     }
 

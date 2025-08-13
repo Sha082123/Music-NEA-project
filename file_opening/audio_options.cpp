@@ -40,9 +40,9 @@ audio_options::options audio_options::initialise_file(const QString &file_path)
     QFile file(options_path);
     if (!file.exists()) {
         qInfo() << "options file is being created";
-        options default_options;
+        m_options = new options();
         write_options_file ();
-        return default_options;
+        return *m_options;
     } else {
         qInfo() << "options file is being read";
         return read_options_file();

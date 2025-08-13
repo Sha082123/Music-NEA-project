@@ -41,10 +41,12 @@ void render_file::openFile(const QString &file_path, int mode)
         QString dir_path = directory + "dump/" + file_methods->name_from_project_files(file_path);
         QString track_path = dir_path + "/tracks";
         QString options_path = track_path + "/options";
+        QString main_options_path = track_path + "/options.txt";
 
         QDir directory(dir_path);
         QDir track_dir(track_path);
         QDir options_dir(options_path);
+        QFile main_options_file(main_options_path);
 
         if (!directory.exists()) {
             directory.mkpath (".");
@@ -56,6 +58,13 @@ void render_file::openFile(const QString &file_path, int mode)
 
         if (!options_dir.exists()) {
             options_dir.mkpath(".");
+        }
+
+        if (!main_options_file.exists()) {
+            main_options_file.open(QIODevice::WriteOnly | QIODevice::Text);
+            QTextStream out(&main_options_file);
+            out << "0=1:1\n"; // Write default options to the file
+            main_options_file.close();
         }
     }
 

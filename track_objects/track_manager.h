@@ -8,6 +8,7 @@
 #include <QFile>
 #include "../globals.h"
 #include "../file_opening/file_open.h"
+#include "../file_opening/main_options.h"
 #include "track_object.h"
 #include "../render/audio_player.h"
 
@@ -27,6 +28,8 @@ class track_manager : public QObject
 
     Q_PROPERTY(bool prevent_mute READ prevent_mute WRITE setprevent_mute NOTIFY prevent_muteChanged FINAL)
 
+    Q_PROPERTY(QVariantList qml_sync_points READ qml_sync_points WRITE setqml_sync_points NOTIFY qml_sync_pointsChanged FINAL)
+
 public:
     explicit track_manager(QObject *parent = nullptr, QQmlApplicationEngine *engine = nullptr);
 
@@ -37,7 +40,7 @@ public:
     void load_tracks();
 
     void add_audio_track(QString &file_path);
-    void scan_audio_directory(QString &directory); // input is the full path to target directory
+    Q_INVOKABLE void scan_audio_directory(QString directory); // input is the full path to target directory
 
     bool music_loaded() const;
     void setmusic_loaded(bool newMusic_loaded);
@@ -55,7 +58,7 @@ public:
 
     Q_INVOKABLE void save_playback_states();
 
-    Q_INVOKABLE void open_new_track(QString root_path); // path of main score
+    Q_INVOKABLE void open_new_track(); // path of main score
     Q_INVOKABLE void delete_track(int index);
 
 
@@ -99,6 +102,9 @@ public:
     bool prevent_mute() const;
     void setprevent_mute(bool newPrevent_mute);
 
+    QVariantList qml_sync_points() const;
+    void setqml_sync_points(QVariantList &new_qml_sync_points);
+
 signals:
 
     void music_loadedChanged();
@@ -121,18 +127,26 @@ signals:
 
     void prevent_muteChanged();
 
+
+    void qml_sync_pointsChanged();
+
 private:
     QQmlApplicationEngine *m_engine; // Pointer to the QML engine
     QVector<track_object*> track_object_list; // List of track objects
 
     file_open* m_file_open = nullptr;
     audio_player* m_audio_player = nullptr;
+    main_options* m_main_options = nullptr;
+
     bool m_music_loaded;
 
     int tracks_loaded;
     QVariantList m_qml_track_list;
 
+    QString m_directory; // Directory where audio files are stored
+    QString m_options_path; // Path to the main_options file
 
+    QVector<main_options::sync_point> m_sync_points;
 
     playback_states m_playback_states; // store playback states to save the options of the tracks
 
@@ -144,6 +158,9 @@ private:
     QVariantList m_duration_list;
     QVariantList m_time_before_start_list;
     bool m_prevent_mute;
+    QVariantList m_qml_sync_points;
+
+    QVariantList convert_sync_points_to_qml(const QVector<main_options::sync_point> &sync_points);
 };
 
 #endif // TRACK_MANAGER_H

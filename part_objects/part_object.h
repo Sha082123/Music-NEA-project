@@ -11,6 +11,7 @@
 #include "../render/render_file.h"
 #include "../render/verovio_loader.h"
 #include "../render/resvg_loader.h"
+#include "../track_objects/track_manager.h"
 
 class part_object : public QObject
 {
@@ -91,6 +92,9 @@ private:
     render_file *m_render_file;
     verovio_loader *m_verovio_loader;
     resvg_loader *m_resvg_loader;
+
+
+    void calculate_sync_coordinates(QVector<main_options::sync_point> &sync_points);
 
 
     QString m_part_name;

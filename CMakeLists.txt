@@ -10,25 +10,11 @@ find_package(Qt6 REQUIRED COMPONENTS Quick)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Svg)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
+
 find_package(Qt6 REQUIRED COMPONENTS Xml)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
+
 find_package(Qt6 REQUIRED COMPONENTS Multimedia)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
+
 
 
 
@@ -81,6 +67,8 @@ qt_add_qml_module(appMusic_NEA_MSVC
         QML_FILES UI/CMediaPlayer.qml
         QML_FILES UI/Mixer.qml
         SOURCES file_opening/audio_options.h file_opening/audio_options.cpp
+        SOURCES file_opening/main_options.h file_opening/main_options.cpp
+        QML_FILES UI/Sync_manager.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -150,8 +138,7 @@ target_include_directories(appMusic_NEA_MSVC PRIVATE build/Desktop_Qt_6_9_1_MSVC
 target_link_directories(appMusic_NEA_MSVC PRIVATE build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/rtaudio/build/Release/)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE rtaudio)
 target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
-target_link_libraries(appMusic_NEA_MSVC PRIVATE Qt6::Core)
+
 
 
 

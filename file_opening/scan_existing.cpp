@@ -59,7 +59,8 @@ void scan_existing::create_preview_images(const QStringList &file_list)
     QDir dir(QDir::currentPath());
     dir.cdUp();
     dir.cdUp();
-    QString verovio_resource_path = dir.path() + "/external/verovio/data";
+    QString verovio_resource_path = dir.path() + "/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/data";
+    qInfo() << "Verovio resource path: " << verovio_resource_path;
 
     tk.SetResourcePath (verovio_resource_path.toStdString());
 
@@ -103,13 +104,25 @@ void scan_existing::create_preview_images(const QStringList &file_list)
             qInfo() << "relative directory : " << relative_directory;
             qInfo() << "relative name : " << relative_name;
 
+            qInfo() << "preview_directory: " << preview_directory;
+
             QDir preview_dir(preview_directory);
             if (!preview_dir.exists(relative_name + ".png")) {
+                //qInfo() << "checkpoint";
                 tk.LoadFile (file_path.toStdString ()); //file path is the original file value passed into here, which should be UserFiles/project_files
+                //qInfo() << "checkpoint";
                 std::string svg_string = tk.RenderToSVG (1);
+
+                //qInfo() << "checkpoint";
                 auto buffer = Document::loadFromData(svg_string.data());
+
+                //qInfo() << "checkpoint";
                 auto bitmap = buffer->renderToBitmap();
+
+                //qInfo() << "checkpoint";
                 bitmap.writeToPng ((preview_directory + relative_name + ".png").toStdString ());
+
+                //qInfo() << "checkpoint";
                 qInfo() << "Preview saved to : " << preview_directory + relative_name + ".png";
             }
         }

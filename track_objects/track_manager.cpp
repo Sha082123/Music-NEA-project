@@ -9,11 +9,18 @@ track_manager::track_manager(QObject *parent, QQmlApplicationEngine *engine)
     m_music_loaded = false;
 
     m_engine = engine;
+
+    m_directory = "";
+    m_options_path = "";
+
+    m_main_options = new main_options(this);
+    m_sync_points = {};
 }
 
 void track_manager::clear()
 {
     setmusic_loaded(false);
+    m_directory = "";
     tracks_loaded = 0;
     setqml_track_list ({});
     for (track_object* track : track_object_list) {
@@ -94,6 +101,17 @@ void track_manager::load_tracks()
     emit duration_listChanged ();
     emit time_before_start_listChanged ();
 
+    bool solo_exists = false;
+
+    for (auto solo : m_solo_list) {
+        if (solo.toBool()) {
+            solo_exists = true;
+            break;
+        }
+    }
+
+    setprevent_mute(solo_exists); // If any track is soloed, prevent mute
+
     qInfo() << Qt::endl << Qt::endl << Qt::endl;
     qInfo() << "mute list: " << m_mute_list;
     qInfo() << "solo list: " << m_solo_list;
@@ -102,12 +120,15 @@ void track_manager::load_tracks()
     qInfo() << "end ms list: " << m_end_ms_list;
     qInfo() << "duration list: " << m_duration_list;
     qInfo() << "time before start list: " << m_time_before_start_list;
+    qInfo() << "prevent mute: " << prevent_mute();
     qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
 
     // for (auto sample : pcm_buffer_2d[0]) {
     //     qInfo() << sample; // Log the first sample of the first track
     // }
+
+
 
     m_audio_player->load_audio(pcm_buffer_2d, this);
 
@@ -131,8 +152,25 @@ void track_manager::add_audio_track(QString &file_path)
     setqml_track_list(temp_list);
 }
 
-void track_manager::scan_audio_directory(QString &directory)
+void track_manager::scan_audio_directory(QString directory)
 {
+    m_directory = directory + "/";
+    m_options_path = m_directory + "options.txt";
+
+    m_sync_points = m_main_options->initialise_options(m_options_path);
+
+    qInfo() << m_sync_points.size();
+
+    QVariantList qml_list = convert_sync_points_to_qml(m_sync_points);
+    setqml_sync_points (qml_list);
+
+    qInfo() << Qt::endl << Qt::endl << Qt::endl;
+    for (auto point : m_sync_points) {
+        qInfo() << "Sync point time:" << point.time << "Measure:" << point.measure << "Beat:" << point.beat;
+    }
+    qInfo() << Qt::endl << Qt::endl << Qt::endl;
+
+    qInfo() << "Scanning directory:" << m_directory;
     m_music_loaded = false;
     tracks_loaded = 0;
 
@@ -141,7 +179,7 @@ void track_manager::scan_audio_directory(QString &directory)
     while (file.hasNext()) {
         QString next_file = file.next();
         QFileInfo next_info(next_file);
-        if (next_info.isFile()) {
+        if (next_info.isFile() && (next_info.suffix() != "txt")) {
             add_audio_track(next_file); // Add the audio track to the manager
         }
     }
@@ -256,12 +294,16 @@ void track_manager::save_playback_states()
 
         track_object_list.at(index)->save_options(current_track_options);
     }
+
+    m_main_options->update_options(m_sync_points);
 }
 
-void track_manager::open_new_track(QString root_path)
+void track_manager::open_new_track()
 {
-    QString target_dir = QDir::currentPath() + "/UserFiles/dump/" +
-                         m_file_open->name_from_project_files(root_path) + "/tracks/";
+    // QString target_dir = QDir::currentPath() + "/UserFiles/dump/" +
+    //                      m_file_open->name_from_project_files(root_path) + "/tracks/";
+
+    QString target_dir = m_directory;
     QString file_path = m_file_open->createNewTrack(target_dir);
 
     setmusic_loaded (false);
@@ -490,4 +532,31 @@ void track_manager::setprevent_mute(bool newPrevent_mute)
         return;
     m_prevent_mute = newPrevent_mute;
     emit prevent_muteChanged();
+}
+
+
+QVariantList track_manager::qml_sync_points() const
+{
+    return m_qml_sync_points;
+}
+
+void track_manager::setqml_sync_points(QVariantList &new_qml_sync_points)
+{
+    if (m_qml_sync_points == new_qml_sync_points)
+        return;
+    m_qml_sync_points = new_qml_sync_points;
+    emit qml_sync_pointsChanged();
+}
+
+QVariantList track_manager::convert_sync_points_to_qml(const QVector<main_options::sync_point> &sync_points)
+{
+    QVariantList new_list;
+
+    for (auto &point : sync_points) {
+        new_list.append(QVariant::fromValue(QVariantList{point.time, point.measure, point.beat}));
+    }
+
+    qInfo() << "QMLed list: " << new_list;
+
+    return new_list;
 }

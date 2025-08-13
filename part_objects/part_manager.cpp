@@ -314,10 +314,14 @@ void part_manager::scan_part_directory(QString source_path)
             part_object_list.append(new_part_object);
 
             m_part_name_list.append(next_info.completeBaseName());
-        } else if (next_info.isDir()) { // only directory will be music files
-            m_track_manager->scan_audio_directory(next_file); // Scan the directory for tracks
         }
     }
+
+    // QString audio_directory = target_dir + "/tracks";
+    // if (QDir(audio_directory).exists()) {
+    //     qInfo() << "Scanning audio directory: " << audio_directory;
+    //     m_track_manager->scan_audio_directory(audio_directory); // Scan the directory for audio tracks
+    // }
 
     emit part_name_listChanged ();
 

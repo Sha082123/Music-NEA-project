@@ -39,7 +39,7 @@ verovio_loader::verovio_loader(QObject *parent)
 
 void verovio_loader::load(const QString &target_path)
 {
-    //tk->SetOptions (options.toStdString ());
+    tk->SetOptions (options.toStdString ());
     tk->LoadFile(target_path.toStdString());
 }
 
