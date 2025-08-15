@@ -24,6 +24,8 @@ part_object::part_object(QObject *parent, QString part_name)
     m_part_name = part_name;
 
     m_saved = "(saved)";
+
+    m_sync_coordinates = {};
 }
 
 
@@ -146,6 +148,294 @@ void part_object::save_file()
     }
 }
 
+void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &sync_points)
+{
+    m_sync_coordinates.clear();
+
+    QVector<QVector<xml_parser::SvgElementInfo>> all_elements = m_xml_parser->get_all_elements();
+
+    // sort the list to ensure elements are in order //
+
+    for (auto &page : all_elements) {
+        std::sort(page.begin(), page.end(), [](const xml_parser::SvgElementInfo &a, const xml_parser::SvgElementInfo &b) {
+            return a.measure_number < b.measure_number || (a.measure_number == b.measure_number && a.start_beat < b.start_beat);
+        });
+    }
+
+    // calculate the y coordinates for each line, by finding the average y position of each element in the line
+
+    QVector<mei_parser::break_element> all_breaks = m_mei_parser->get_breaks();
+
+    QVector<QPair<float, float>> y_list; // top y coordinates, height of bar
+    QVector<float> y_list_no_offset;
+    int current_break_index = 0;
+    int current_break_measure = all_breaks[current_break_index].measure_number;
+    QVector<float> sum_list;
+
+    for (auto break_obj : all_breaks) {
+        qInfo() << "Break ID: " << break_obj.id
+                << ", Measure Number: " << break_obj.measure_number;
+    }
+
+    // for (auto page : all_elements) {
+    //     for (auto element : page) {
+    //         qInfo() << "Element ID: " << element.id
+    //                 << ", Measure Number: " << element.measure_number
+    //                 << ", Start Beat: " << element.start_beat
+    //                 << ", Position Y: " << element.position.y();
+    //     }
+    // }
+
+    for (int page_index = 0; page_index < all_elements.size(); page_index++) {
+
+        int page_offset = m_resvg_loader->get_page_height(page_index);
+
+        for (int element_index = 0; element_index < all_elements[page_index].size(); element_index ++) {
+
+            auto element = all_elements[page_index][element_index];
+            xml_parser::SvgElementInfo next_element;
+
+            if (element_index == all_elements[page_index].size() - 1) {
+                if (page_index < all_elements.size() - 1) {
+                    next_element = all_elements[page_index + 1][0];
+                } else {
+                    next_element = xml_parser::SvgElementInfo(); // empty element if last element last page
+                }
+            } else {
+                next_element = all_elements[page_index][element_index + 1];
+            }
+
+            if (element.staff_number != 0) {
+                sum_list.append(element.position.y());
+            }
+
+
+
+
+            if ((next_element.measure_number > current_break_measure) || (element.id == all_elements.last().last().id)) {
+                // save the sum and get next break measure number, or if last then save the sum
+                // y_list.append(sum/count);
+
+                float max = std::ranges::max(sum_list);
+                float min = std::ranges::min(sum_list);
+
+                qInfo() << max << min;
+
+                y_list.append(qMakePair (min + page_offset, max - min));
+                y_list_no_offset.append(min);
+
+                sum_list.clear();
+
+                if (current_break_index < all_breaks.size() - 1) {
+                    current_break_index++;
+                    current_break_measure = all_breaks[current_break_index].measure_number;
+                } else {
+                    current_break_measure = std::numeric_limits<int>::max(); // set to max if no more breaks
+                }
+            }
+        }
+    }
+
+    qInfo() << "list of y coordinates: " << y_list;
+    qInfo() << "Number of y coordinates: " << y_list.size();
+
+    //----------------------------------------------------------------------------------//
+
+    QVector<mei_parser::tempo_element> tempo_elements = m_mei_parser->get_tempo_changes();
+    QVector<mei_parser::time_signature_element> time_signature_elements = m_mei_parser->get_time_signature_changes();
+
+    int current_tempo = 100; // Default tempo
+    int current_time_signature = 128; // Default time signature (128 = 4 x 32 = 4 crotchets)
+    int tempo_element_index = 0;
+    int time_signature_element_index = 0;
+    mei_parser::tempo_element current_tempo_element = tempo_elements[tempo_element_index];
+    mei_parser::time_signature_element current_time_signature_element = time_signature_elements[time_signature_element_index];
+    xml_parser::SvgElementInfo previous_element;
+    previous_element.measure_number = 1;
+
+    int current_page_index = 0;
+    int current_element_index = 0;
+
+    int previous_element_measure = 0;
+    int previous_element_start_beat = 0;
+
+    current_break_index = 0;
+    current_break_measure = all_breaks[current_break_index].measure_number;
+
+    float ms_per_beat = 0;
+    float ms_per_measure = 0;
+
+    xml_parser::SvgElementInfo current_element;
+
+    for (int index = 0; index < sync_points.size(); ++index) {
+
+        if (index >= sync_points.size() - 1) { // check if at end
+            //extrapolate according to tempo and time signatures
+
+            int time_difference = 0;
+
+            for (int page_index = current_page_index; page_index < all_elements.size(); page_index++) {
+
+                for (int element_index = current_element_index; element_index < all_elements[page_index].size(); element_index++) {
+                    current_element = all_elements[page_index][element_index];
+
+                    // qInfo() << "current element: " << current_element.start_beat << current_element.measure_number;
+                    // qInfo() << "previous element: " << previous_element_start_beat << previous_element_measure;
+
+                    if ((current_element.measure_number != previous_element_measure) || (current_element.start_beat != previous_element_start_beat)) {
+                        // Skip elements that are at the same beat as the last element
+
+
+                        sync_coordinate new_sync_coordinate;
+
+                        int measure_difference = current_element.measure_number - previous_element.measure_number;
+                        float beat_difference = float(current_element.start_beat + 32)/float(32.0f) - float(previous_element.start_beat + 32)/float(32.0f);
+
+                        ms_per_beat = 60000.0f / float(current_tempo); // milliseconds per beat
+                        ms_per_measure = float(ms_per_beat) * float(current_time_signature)/32.0f; // milliseconds per measure
+
+                        time_difference += (measure_difference * ms_per_measure) + (beat_difference * ms_per_beat);
+
+
+                        if (current_break_index < all_breaks.size()) { // no -1 because y coordinates can be more than breaks
+                            if (current_element.measure_number > current_break_measure) {
+                                sync_coordinate new_break_coordinate;
+                                new_break_coordinate.time = time_difference;
+                                new_break_coordinate.coordinates.setX(previous_element.position.x() + 50);
+                                new_break_coordinate.coordinates.setY(y_list[current_break_index].first);
+                                new_break_coordinate.height = y_list[current_break_index].second;
+                                new_break_coordinate.page_index = page_index;
+                                new_break_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                                m_sync_coordinates.append(new_break_coordinate);
+
+                                current_break_index ++;
+                                current_break_measure = all_breaks[current_break_index].measure_number;
+                                // qInfo() << "all breaks: " << all_breaks.size();
+                                // qInfo() << "Current break index: " << current_break_index;
+
+                            }
+                        }
+
+                        current_tempo = current_tempo_element.tempo;
+                        current_time_signature = (128 / current_time_signature_element.denominator) * current_time_signature_element.numerator;
+
+
+
+                        if (tempo_element_index < tempo_elements.size() - 1) {
+                            if (current_element.measure_number == tempo_elements[tempo_element_index + 1].measure_start) {
+                                tempo_element_index ++;
+                                current_tempo_element = tempo_elements[tempo_element_index];
+                                qInfo() << "Tempo element index: " << tempo_element_index;
+                                qInfo() << "current tempo: " << current_tempo_element.tempo;
+                            }
+                        }
+
+                        if (time_signature_element_index < time_signature_elements.size() - 1) {
+                            if (current_element.measure_number == time_signature_elements[time_signature_element_index + 1].measure_start) {
+                                time_signature_element_index ++;
+                                current_time_signature_element = time_signature_elements[time_signature_element_index];
+                                qInfo() << "Time signature element index: " << time_signature_element_index;
+                                qInfo() << "current time signature: " << current_time_signature_element.numerator << "/" << current_time_signature_element.denominator;
+                            }
+                        }
+
+                        new_sync_coordinate.time = time_difference;
+                        new_sync_coordinate.coordinates.setX(current_element.position.x());
+                        new_sync_coordinate.coordinates.setY(y_list[current_break_index].first);
+                        new_sync_coordinate.height = y_list[current_break_index].second;
+                        new_sync_coordinate.page_index = page_index;
+                        new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                        m_sync_coordinates.append(new_sync_coordinate);
+
+                        previous_element_measure = current_element.measure_number;
+                        previous_element_start_beat = current_element.start_beat;
+                        previous_element = current_element;
+
+                        if ((page_index == all_elements.size() - 1) && (element_index == all_elements[page_index].size() - 1)) {
+                            // If we are at the last element of the last page, add a final sync coordinate
+
+
+                            qInfo() << "final element processed";
+
+                        }
+                    }
+                }
+            }
+
+            sync_coordinate final_coordinate;
+            int extra_time = ms_per_beat * (float(current_element.end_beat - current_element.start_beat)/32.0f);
+
+            final_coordinate.time = time_difference + extra_time;
+            final_coordinate.coordinates.setX(current_element.position.x() + 50);
+            final_coordinate.coordinates.setY(y_list.last().first);
+            final_coordinate.height = y_list.last().second;
+            final_coordinate.page_index = all_elements.size() - 1;
+            final_coordinate.y_no_offset = y_list_no_offset.last();
+            m_sync_coordinates.append(final_coordinate);
+        }
+
+        else {
+
+        }
+    }
+
+    // for (auto sync_coordinate : m_sync_coordinates) {
+    //     qInfo() << "Sync Coordinate: " << sync_coordinate.coordinates << ", Time: " << sync_coordinate.time;
+    // }
+}
+
+void part_object::set_coordinates_from_time(int time)
+{
+    //qInfo() << m_sync_coordinates.size();
+    QVariantList tracker_info;
+    for (int index = 0; index < m_sync_coordinates.size(); ++index) {
+        sync_coordinate previous_element = m_sync_coordinates[index - 1];
+        sync_coordinate current_element = m_sync_coordinates[index];
+
+        if (m_sync_coordinates[index].time == time) {
+            tracker_info = QVariantList({current_element.coordinates, current_element.height,
+                                         current_element.page_index, current_element.y_no_offset,
+                                         previous_element.coordinates.y()});
+            settracker_info (tracker_info);
+            return;
+
+        } else if (m_sync_coordinates[index].time > time) {
+            if (index > 0) {
+
+                sync_coordinate more_previous_element = m_sync_coordinates[index - 2];
+
+                float x_coordinate = previous_element.coordinates.x() +
+                                    (float(time - previous_element.time) / float(current_element.time - previous_element.time))
+                                    * (current_element.coordinates.x() - previous_element.coordinates.x());
+
+                QPointF coordinates = previous_element.coordinates;
+                coordinates.setX(x_coordinate);
+
+
+                tracker_info = QVariantList({coordinates, previous_element.height,
+                                             previous_element.page_index, previous_element.y_no_offset,
+                                             more_previous_element.coordinates.y()});
+                settracker_info (tracker_info);
+                return;
+            } else {
+                tracker_info = QVariantList({current_element.coordinates, current_element.height,
+                                             current_element.page_index, current_element.y_no_offset,
+                                             previous_element.coordinates.y()});
+                settracker_info (tracker_info);
+                return;
+            }
+
+        } else if (index == m_sync_coordinates.size() - 1) {
+            // if we reach the end of the list, then return the last element
+            tracker_info = QVariantList({m_sync_coordinates[index].coordinates, m_sync_coordinates[index].height,
+                                         m_sync_coordinates[index].page_index, m_sync_coordinates[index].y_no_offset});
+            settracker_info (tracker_info);
+            return;
+        }
+
+    }
+}
+
 
 
 QString part_object::get_part_name()
@@ -242,4 +532,18 @@ void part_object::setsaved(const QString &newSaved)
         return;
     m_saved = newSaved;
     emit savedChanged();
+}
+
+QVariantList part_object::tracker_info() const
+{
+    return m_tracker_info;
+}
+
+void part_object::settracker_info(const QVariantList &newTracker_info)
+{
+    //qInfo() << "Setting tracker info: " << newTracker_info;
+    if (m_tracker_info == newTracker_info)
+        return;
+    m_tracker_info = newTracker_info;
+    emit tracker_infoChanged();
 }

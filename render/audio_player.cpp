@@ -1,14 +1,16 @@
 #include "audio_player.h"
 #include "../track_objects/track_manager.h"
+#include "../part_objects/part_manager.h"
 
 audio_player::audio_player(QObject *parent)
     : QObject{parent}
 {
     m_rtaudio = new RtAudio();
     m_playback_data = new audio_playback_data();
+    m_part_manager = nullptr;
 
     sample_rate = 44100;
-    buffer_frames = 2048;
+    buffer_frames = 512;
 
     parameters.deviceId = m_rtaudio->getDefaultOutputDevice();
     parameters.nChannels = 2;
@@ -17,6 +19,12 @@ audio_player::audio_player(QObject *parent)
     settotal_ms (1000);
     setdecibels(-1000.0f);
     setqml_position (0);
+
+}
+
+void audio_player::set_part_manager(part_manager *part_manager)
+{
+    m_part_manager = part_manager;
 }
 
 void audio_player::load_audio(QVector<QVector<qint16>> &pcm_buffer, track_manager *track_manager)
@@ -24,6 +32,9 @@ void audio_player::load_audio(QVector<QVector<qint16>> &pcm_buffer, track_manage
     //qInfo() << pcm_buffer.size();
 
     // Determine the number of devices available
+
+    //qInfo() << m_part_manager;
+
     int devices = m_rtaudio->getDeviceCount();
 
     std::vector<unsigned int> deviceIds = m_rtaudio->getDeviceIds();
@@ -49,6 +60,8 @@ void audio_player::load_audio(QVector<QVector<qint16>> &pcm_buffer, track_manage
     m_playback_data->self = this;
     m_playback_data->master_volume = 1.0f;
     m_playback_data->total_samples = 0;
+
+    setqml_position (0);
 
     struct track_manager::playback_states m_playback_states = track_manager->get_playback_states();
 
@@ -193,7 +206,7 @@ int audio_player::pcm_callback(void *output_buffer, void *input_buffer, unsigned
     audio_playback_data *data = static_cast<audio_playback_data*>(user_data);
     qint16 *output = static_cast<qint16*>(output_buffer);
 
-    //qInfo() << data->total_samples;
+    //qInfo() << data->self;
 
     unsigned int channels = 2;
     unsigned int samples_needed = n_buffer_frames * channels;
@@ -204,6 +217,8 @@ int audio_player::pcm_callback(void *output_buffer, void *input_buffer, unsigned
     //qInfo() << data->pcm_buffer.size();
 
     QVector<qint16> decibel_samples;
+
+    //qInfo() << samples_to_copy;
 
 
     for (int index = 0; index < samples_to_copy; ++index) {
@@ -250,6 +265,10 @@ int audio_player::pcm_callback(void *output_buffer, void *input_buffer, unsigned
     }
 
     data->current_position += samples_to_copy;
+    //qInfo() << data->current_position;
+
+    //qInfo() << stream_time;
+    // data->self->setqml_position (stream_time * 1000);
 
     // if (samples_to_copy > 0) {
     //     memcpy(output, &(pcm_to_play), samples_to_copy * sizeof(qint16));
@@ -261,8 +280,18 @@ int audio_player::pcm_callback(void *output_buffer, void *input_buffer, unsigned
 
     if (data->current_position >= data->total_samples) {
         data->self->setqml_position(data->total_samples - 1); // Prevent going out of bounds
+        //qInfo() << data->self->qml_position();
+        data->self->m_part_manager->set_tracker_time(data->self->qml_position());
+
     } else {
         data->self->setqml_position(data->current_position);
+        //qInfo() << data->self->qml_position();
+        data->self->m_part_manager->set_tracker_time(data->self->qml_position());
+
+        // for (int index = 0; index < 5; ++index) {
+        //     qInfo() << index;
+        // }
+
     }
 
 
@@ -276,7 +305,8 @@ size_t audio_player::qml_position() const
 
 void audio_player::setqml_position(size_t newQml_position)
 {
-    newQml_position = (newQml_position / (sample_rate * parameters.nChannels)) * 1000;
+
+    newQml_position = (float(newQml_position) / float(sample_rate * parameters.nChannels)) * 1000;
 
     if (m_qml_position == newQml_position)
         return;

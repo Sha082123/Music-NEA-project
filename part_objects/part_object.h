@@ -22,6 +22,7 @@ class part_object : public QObject
     Q_PROPERTY(QVariantList part_list READ part_list WRITE setpart_list NOTIFY part_listChanged FINAL)
     Q_PROPERTY(QString saved READ saved WRITE setsaved NOTIFY savedChanged FINAL)
     Q_PROPERTY(QString file_path READ file_path WRITE setfile_path NOTIFY file_pathChanged FINAL)
+    Q_PROPERTY(QVariantList tracker_info READ tracker_info WRITE settracker_info NOTIFY tracker_infoChanged FINAL)
 
 public:
     explicit part_object(QObject *parent = nullptr, QString part_name = "");
@@ -36,6 +37,9 @@ public:
     Q_INVOKABLE QVariantList coordinates_from_measure(int measure_number);
 
     Q_INVOKABLE void save_file();
+
+    void calculate_sync_coordinates(QVector<main_options::sync_point> &sync_points);
+    void set_coordinates_from_time(int time);
 
     void update_part_name(QString new_part_name);
     void update_part_staves(QVector<QPair<int, bool>> &part_existence, part_object* root_ptr);
@@ -66,6 +70,9 @@ public:
     QString saved() const;
     void setsaved(const QString &newSaved);
 
+    QVariantList tracker_info() const;
+    void settracker_info(const QVariantList &newTracker_info);
+
 signals:
 
 
@@ -82,7 +89,17 @@ signals:
 
     void file_pathChanged();
 
+    void tracker_infoChanged();
+
 private:
+
+    struct sync_coordinate {
+        int time;
+        QPointF coordinates;
+        int height;
+        int page_index;
+        float y_no_offset;
+    };
 
     // Add all renderers and parsers
     mei_parser *m_mei_parser;
@@ -92,10 +109,6 @@ private:
     render_file *m_render_file;
     verovio_loader *m_verovio_loader;
     resvg_loader *m_resvg_loader;
-
-
-    void calculate_sync_coordinates(QVector<main_options::sync_point> &sync_points);
-
 
     QString m_part_name;
 
@@ -107,6 +120,9 @@ private:
     QVariantList m_part_list;
 
     QString m_saved;
+
+    QVector<sync_coordinate> m_sync_coordinates;
+    QVariantList m_tracker_info;
 };
 
 #endif // PART_OBJECT_H

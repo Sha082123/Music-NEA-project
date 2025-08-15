@@ -61,6 +61,15 @@ int part_manager::create_new_part(QString part_name)
     return 0;
 }
 
+void part_manager::create_sync_coordinates()
+{
+    QVector<main_options::sync_point> sync_points = m_track_manager->sync_points();
+
+    for (int index = 0; index < part_object_list.size(); ++index) {
+        part_object_list.at(index)->calculate_sync_coordinates(sync_points);
+    }
+}
+
 int part_manager::delete_part(int index)
 {
     if (index < 1 || index >= m_part_name_list.size()) { // cant delete the root main_score
@@ -346,6 +355,15 @@ void part_manager::clear_parts()
     part_object_list.clear();
     m_part_name_list.clear();
     emit part_name_listChanged();
+}
+
+void part_manager::set_tracker_time(int time)
+{
+    //qInfo() << part_object_list.size();
+    for (int index = 0; index < 2; ++index) {
+        //qInfo() << "hello";
+        part_object_list.at(index)->set_coordinates_from_time(time);
+    }
 }
 
 QStringList part_manager::part_name_list() const

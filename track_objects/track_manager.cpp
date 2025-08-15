@@ -1,10 +1,13 @@
 #include "track_manager.h"
+#include "../part_objects/part_manager.h"
 
 track_manager::track_manager(QObject *parent, QQmlApplicationEngine *engine)
     : QObject{parent}
 {
     m_file_open = new file_open(nullptr, g_verovio_loader);
+    qInfo() << "checkpoint";
     m_audio_player = new audio_player(this);
+    m_part_manager = nullptr;
 
     m_music_loaded = false;
 
@@ -15,6 +18,12 @@ track_manager::track_manager(QObject *parent, QQmlApplicationEngine *engine)
 
     m_main_options = new main_options(this);
     m_sync_points = {};
+}
+
+void track_manager::set_part_manager(part_manager *part_manager)
+{
+    m_part_manager = part_manager;
+    m_audio_player->set_part_manager(m_part_manager);
 }
 
 void track_manager::clear()
@@ -35,6 +44,7 @@ void track_manager::clear()
 
     m_audio_player = new audio_player(this); // Recreate the audio player
     m_engine->rootContext()->setContextProperty("audio_player", m_audio_player);
+    m_audio_player->set_part_manager(m_part_manager);
 
     m_playback_states = playback_states(); // Reset playback states
     m_mute_list.clear();
@@ -546,6 +556,11 @@ void track_manager::setqml_sync_points(QVariantList &new_qml_sync_points)
         return;
     m_qml_sync_points = new_qml_sync_points;
     emit qml_sync_pointsChanged();
+}
+
+QVector<main_options::sync_point> track_manager::sync_points() const
+{
+    return m_sync_points;
 }
 
 QVariantList track_manager::convert_sync_points_to_qml(const QVector<main_options::sync_point> &sync_points)

@@ -9,6 +9,7 @@ Rectangle {
     color: "#00000000"
 
     signal reset_values()
+    signal snap_to_time(int time)
 
     onReset_values: {
         playback.state = true
@@ -155,6 +156,7 @@ Rectangle {
             onMoved: {
                 console.log("Slider value:", value)
                 audio_player.set_position(value)
+                snap_to_time(value)
             }
         }
 

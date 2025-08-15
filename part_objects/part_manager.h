@@ -24,6 +24,7 @@ public:
     Q_INVOKABLE void create_root_part(QString part_name);
 
     Q_INVOKABLE int create_new_part(QString part_name); // 0 = success, -1 = invalid input, -2 = exists already
+    Q_INVOKABLE void create_sync_coordinates();
     Q_INVOKABLE int delete_part(int index); // 0 = success, -1 = index out of range
     Q_INVOKABLE int update_part(int index, QString new_name, QString old_name); // 0 = success, -1 = invalid input,
                                                               // -2 = name already exists,
@@ -45,6 +46,8 @@ public:
     part_object* get_current_part();
 
     Q_INVOKABLE void clear_parts();
+
+    Q_INVOKABLE void set_tracker_time(int time);
 
     QStringList part_name_list() const;
     void setpart_name_list(const QStringList &newPart_name_list);
@@ -84,7 +87,6 @@ private:
 
 
     //int get_index_for_part_name(QString &part_name);
-    int m_part_object_list_size;
     QStringList m_buffer_part_name_list;
 };
 

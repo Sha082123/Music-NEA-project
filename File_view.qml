@@ -59,6 +59,7 @@ ScrollView{
                         track_manager.scan_audio_directory(file_open.get_current_dir() + "/UserFiles/dump/" +
                                                            file_open.name_from_project_files(file_selector.file_path) + "/tracks")
 
+                        part_manager.create_sync_coordinates()
 
                         // Scan the directory for files to update
                         //file_selector.close()
@@ -163,6 +164,8 @@ ScrollView{
                                     track_manager.scan_audio_directory(file_open.get_current_dir() + "/UserFiles/dump/" +
                                                                        file_open.name_from_project_files(modelData) + "/tracks")
                                     console.log("File clicked:", file_open.get_current_dir() + "/UserFiles/dump/" + file_open.name_from_project_files(modelData) + "/tracks")
+
+                                    part_manager.create_sync_coordinates()
 
                                     //file_selector.close()
                                     //display_window.show()

@@ -11,6 +11,7 @@
 #include "../file_opening/main_options.h"
 #include "track_object.h"
 #include "../render/audio_player.h"
+class part_manager; // Forward declaration of part_manager
 
 class track_manager : public QObject
 {
@@ -32,6 +33,7 @@ class track_manager : public QObject
 
 public:
     explicit track_manager(QObject *parent = nullptr, QQmlApplicationEngine *engine = nullptr);
+    void set_part_manager(part_manager *part_manager);
 
     Q_INVOKABLE void clear();
 
@@ -105,6 +107,8 @@ public:
     QVariantList qml_sync_points() const;
     void setqml_sync_points(QVariantList &new_qml_sync_points);
 
+    QVector<main_options::sync_point> sync_points() const;
+
 signals:
 
     void music_loadedChanged();
@@ -137,6 +141,7 @@ private:
     file_open* m_file_open = nullptr;
     audio_player* m_audio_player = nullptr;
     main_options* m_main_options = nullptr;
+    part_manager* m_part_manager = nullptr;
 
     bool m_music_loaded;
 

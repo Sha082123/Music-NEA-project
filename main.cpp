@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QDir>
+#include <QDebug>
 #include <QQuickView>
 #include "file_opening/file_open.h"
 #include "render/render_file.h"
@@ -23,9 +24,14 @@ int main(int argc, char *argv[])
     g_image_provider = new image_provider(); // Initialize the global image provider
     g_verovio_loader = new verovio_loader(&engine); // Initialize the global Verovio loader
 
+
     //part_object *main_score_part = new part_object(&engine, "main_score");
+    qInfo() << "checkpoint";
     track_manager *track_manager_instance = new track_manager(&engine, &engine);
     part_manager *part_manager_instance = new part_manager(&engine, &engine, track_manager_instance);
+    track_manager_instance->set_part_manager(part_manager_instance);
+
+
 
 
     engine.addImageProvider("image_provider", g_image_provider);

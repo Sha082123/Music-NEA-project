@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QDebug>
 #include "RtAudio.h"
+class part_manager; // Forward declaration of part_manager
 
 class track_manager; // Forward declaration of track_manager
 
@@ -16,6 +17,7 @@ class audio_player : public QObject
 
 public:
     explicit audio_player(QObject *parent = nullptr);
+    void set_part_manager(part_manager *part_manager);
 
     void load_audio(QVector<QVector<qint16>> &pcm_buffer, track_manager* track_manager); // returns total milliseconds
     void close_stream();
@@ -75,6 +77,7 @@ private:
     audio_playback_data* m_playback_data = nullptr;
 
     RtAudio *m_rtaudio = nullptr;
+    part_manager *m_part_manager = nullptr;
 
     RtAudio::StreamParameters parameters;
     unsigned int sample_rate;

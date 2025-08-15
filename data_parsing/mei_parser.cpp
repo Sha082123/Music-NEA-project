@@ -12,7 +12,7 @@ mei_parser::mei_parser(QObject *parent, xml_parser *xml_parser, parser_data *par
 
 void mei_parser::parse_mei(QString mei_data)
 {
-    clear_data (); // Clear previous data
+    clear_data(); // Clear previous data
 
     document.setContent(mei_data);
 
@@ -84,12 +84,37 @@ void mei_parser::parse_mei(QString mei_data)
     if (!section_element_list.isEmpty ()) {
         QDomElement section_element = section_element_list.at(0).toElement();
         QDomNodeList break_list = section_element.elementsByTagName("sb");
+        QDomNodeList page_break_list = section_element.elementsByTagName("pb");
 
         for (int i = 0; i < break_list.count(); ++i) {
             QDomElement break_element = break_list.at(i).toElement();
             if (!break_element.isNull()) {
                 //add function to process the break element (DONE!)
                 breaks.append(process_break(break_element));
+            }
+        }
+
+        for (int i = 1; i < page_break_list.count(); ++i) { // skip the first page break (always at 0)
+            QDomElement page_break_element = page_break_list.at(i).toElement();
+            if (!page_break_element.isNull()) {
+                //add function to process the break element (DONE!)
+                breaks.append(process_break(page_break_element));
+            }
+        }
+
+        std::sort(breaks.begin(), breaks.end(), [](const break_element &a, const break_element &b) {
+            return a.measure_number < b.measure_number; // Sort ascending by age
+        });
+
+        int previous_measure_number = 0;
+        for (int index = 0; index < breaks.size(); ++index) {
+            if (breaks[index].measure_number == previous_measure_number) {
+                delete_break(previous_measure_number);
+                breaks.removeAt(index);
+
+                index--; // Adjust index after removal
+            } else {
+                previous_measure_number = breaks[index].measure_number;
             }
         }
 
@@ -264,6 +289,20 @@ int mei_parser::get_beats_per_measure(int &measure_number)
     return 128; // Default to 128 if no time signature found, which is a whole note
 }
 
+int mei_parser::get_tempo_for_measure(int &measure_number)
+{
+    for (int bar = measure_number; bar > 0; --bar) {
+        for (const auto &tempo : tempo_changes) {
+            if (tempo.measure_start == bar) {
+                //qInfo() << "Beats per measure for measure " << bar << ": " << beats_per_measure;
+                return tempo.tempo;
+            }
+        }
+    }
+
+    return 100; // Default tempo if no tempo found, which is 100 BPM
+}
+
 
 QVector<mei_parser::note_rest_element> mei_parser::process_layer_tabGrp(QDomElement &tabGrp_element, int &layer_n, int &staff_n, int &measure_number, int &current_beat)
 {
@@ -325,7 +364,7 @@ QVector<mei_parser::note_rest_element> mei_parser::process_layer_tabGrp(QDomElem
             // qInfo() << "Tab Note measure number: " << note_info.measure_number;
             // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-            m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
+            m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name, note_info.staff_n);
 
             tabGrp_notes.append(note_info);
         }
@@ -368,7 +407,7 @@ QVector<mei_parser::note_rest_element> mei_parser::process_layer_chord(QDomEleme
         // qInfo() << "Chord Note measure number: " << note_info.measure_number;
         // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-        m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
+        m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name, note_info.staff_n);
 
         chord_notes.append(note_info);
     }
@@ -429,7 +468,7 @@ mei_parser::note_rest_element mei_parser::process_layer_mRest(QDomElement &mRest
     // qInfo() << "Rest measure number: " << rest_info.measure_number;
     // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-    m_xml_parser->set_info_for_rest(rest_info.id, measure_number, rest_info.start_beat, rest_info.end_beat);
+    m_xml_parser->set_info_for_rest(rest_info.id, measure_number, rest_info.start_beat, rest_info.end_beat, rest_info.staff_n);
 
     return rest_info;
 }
@@ -462,7 +501,7 @@ mei_parser::note_rest_element mei_parser::process_layer_rest(QDomElement &rest_e
     // qInfo() << "Note measure number: " << note_info.measure_number;
     // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-    m_xml_parser->set_info_for_rest(rest_info.id, measure_number, rest_info.start_beat, rest_info.end_beat);
+    m_xml_parser->set_info_for_rest(rest_info.id, measure_number, rest_info.start_beat, rest_info.end_beat, rest_info.staff_n);
 
     return rest_info;
 }
@@ -494,7 +533,7 @@ mei_parser::note_rest_element mei_parser::process_layer_note(QDomElement &note_e
     // qInfo() << "Note measure number: " << note_info.measure_number;
     // qInfo() << Qt::endl << Qt::endl << Qt::endl;
 
-    m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name);
+    m_xml_parser->set_info_for_note(note_info.id, measure_number, note_info.start_beat, note_info.end_beat, note_info.note_name, note_info.staff_n);
 
     return note_info;
 }
@@ -977,6 +1016,16 @@ void mei_parser::update_part_staves(QVector<QPair<int, bool> > &part_existence, 
     }
 
 
+}
+
+QVector<mei_parser::time_signature_element> mei_parser::get_time_signature_changes()
+{
+    return time_signature_changes;
+}
+
+QVector<mei_parser::tempo_element> mei_parser::get_tempo_changes()
+{
+    return tempo_changes;
 }
 
 QVector<mei_parser::part_element> mei_parser::get_parts()

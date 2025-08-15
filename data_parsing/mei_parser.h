@@ -83,6 +83,11 @@ public:
 
     QVector<break_element> get_breaks();
     QVector<part_element> get_parts();
+    QVector<tempo_element> get_tempo_changes();
+    QVector<time_signature_element> get_time_signature_changes();
+
+    int get_beats_per_measure(int &measure_number);
+    int get_tempo_for_measure(int &measure_number);
 
 signals:
 private:
@@ -136,7 +141,7 @@ private:
                                             int &layer_n, int &staff_n,
                                             int &measure_number, int &current_beat);
 
-    int get_beats_per_measure(int &measure_number);
+
 
     void clear_data();
 

@@ -11,6 +11,8 @@ xml_parser::xml_parser(QObject *parent)
     all_rests = QVector<QVector<SvgElementInfo>>();
     all_rehearsal_marks = QVector<QVector<SvgElementInfo>>();
 
+    all_elements = QVector<QVector<SvgElementInfo>>();
+
     tab_dur_sym_list = {};
 
     target_classes = {"note", "rest", "mRest", "reh"};
@@ -24,6 +26,8 @@ std::string xml_parser::parse_xml(const QString &svg_data)
     notes.clear();
     rests.clear();
     rehearsal_marks.clear();
+
+    QVector<SvgElementInfo> temp_elements;
 
     //qInfo() << "xml parser called";
 
@@ -39,16 +43,32 @@ std::string xml_parser::parse_xml(const QString &svg_data)
         if (current_element.hasAttribute("class")) {
             QString class_name = current_element.attribute("class");
 
-            if (class_name == "note") {notes.append(process_note(current_element));}
+            if (class_name == "note") {
+                SvgElementInfo element = process_note(current_element);
+                temp_elements.append(element);
+                notes.append(element);
+            }
 
 
-            else if (class_name == "rest") {rests.append(process_rest(current_element));}
+            else if (class_name == "rest") {
+                SvgElementInfo element = process_rest(current_element);
+                temp_elements.append(element);
+                rests.append(element);
+            }
 
 
-            else if (class_name == "mRest") {rests.append(process_mRest(current_element));}
+            else if (class_name == "mRest") {
+                SvgElementInfo element = process_mRest(current_element);
+                temp_elements.append(element);
+                rests.append(element);
+            }
 
 
-            else if (class_name == "reh") {rehearsal_marks.append(process_reh(current_element));}
+            else if (class_name == "reh") {
+                SvgElementInfo element = process_reh(current_element);
+                temp_elements.append(element);
+                rehearsal_marks.append(element);
+            }
 
 
             else if (class_name == "tabDurSym") {
@@ -64,6 +84,8 @@ std::string xml_parser::parse_xml(const QString &svg_data)
     all_rests.append(rests);
     all_notes.append(notes);
     all_rehearsal_marks.append(rehearsal_marks);
+
+    all_elements.append(temp_elements);
 
     QString xml_data = document.toString();
     return xml_data.toStdString ();
@@ -107,7 +129,7 @@ QVariantList xml_parser::element_from_point(const QPointF &point, const int &pag
                     << " at measure: " << note.measure_number << " start beat: " << note.start_beat
                     << " end beat: " << note.end_beat << " note name: " << note.note_name;
             return QVariantList{note.id, note.measure_number, note.start_beat, note.end_beat, note.note_name,
-                                note.position.x(), note.position.y(), page_number};
+                                note.position.x(), note.position.y(), page_number, note.staff_number};
         }
     }
 
@@ -119,7 +141,7 @@ QVariantList xml_parser::element_from_point(const QPointF &point, const int &pag
                     << " at measure: " << rest.measure_number << " start beat: " << rest.start_beat
                     << " end beat: " << rest.end_beat;
             return QVariantList{rest.id, rest.measure_number, rest.start_beat, rest.end_beat, rest.note_name,
-                                rest.position.x(), rest.position.y(), page_number};
+                                rest.position.x(), rest.position.y(), page_number, rest.staff_number};
         }
     }
 
@@ -130,7 +152,7 @@ QVariantList xml_parser::element_from_point(const QPointF &point, const int &pag
             qInfo() << "Found rehearsal mark id: " << reh.id << " at position: " << reh.position << Qt::endl
                     << " at measure: " << reh.measure_number;
             return QVariantList{reh.id, reh.measure_number, reh.start_beat, reh.end_beat, reh.note_name,
-                                reh.position.x(), reh.position.y(), page_number};
+                                reh.position.x(), reh.position.y(), page_number, reh.staff_number};
         }
     }
 
@@ -157,15 +179,17 @@ QVector<int> xml_parser::coordinates_from_measure(int measure_number)
         return output; // Return position of end if too big
     }
 
-    for (int page_index = 0; page_index < all_notes.count(); page_index++) {
-        QVector<SvgElementInfo> &page_notes = all_notes[page_index];
-        if (page_notes[page_notes.count()-1].measure_number >= measure_number) {
+    for (int page_index = 0; page_index < all_elements.count(); page_index++) {
+        QVector<SvgElementInfo> &page_elements = all_elements[page_index];
 
-            for (SvgElementInfo &note : page_notes) {
-                if (note.measure_number == measure_number) {
+        qInfo() << page_elements[page_elements.count()-1].measure_number << " is the last measure number on page: " << page_index;
+        if (page_elements[page_elements.count()-1].measure_number >= measure_number) {
+
+            for (SvgElementInfo &element : page_elements) {
+                if (element.measure_number == measure_number) {
                     // qInfo() << "Found note at measure: " << measure_number << " with id: " << note.id;
                     output.append(page_index);
-                    output.append(note.position.y());
+                    output.append(element.position.y());
 
                     return output;
                 }
@@ -173,21 +197,44 @@ QVector<int> xml_parser::coordinates_from_measure(int measure_number)
         }
     }
 
+    output.append(-1);
+
     return output;
 }
 
-void xml_parser::set_info_for_note(QString &id, int &measure_number, int &start_beat, int &end_beat, QString note_name)
+void xml_parser::set_info_for_note(QString &id, int &measure_number, int &start_beat, int &end_beat, QString note_name, int staff_number)
 {
-    for (int page_index = 0; page_index < all_notes.size(); ++page_index) {
+    bool found = false;
+    for (int page_index = 0; page_index < all_notes.size() && !found; ++page_index) {
         QVector<SvgElementInfo> &current_page_notes = all_notes[page_index];
         for (SvgElementInfo &note : current_page_notes) {
             if (note.id == id) {
+                found = true;
+
                 note.measure_number = measure_number;
                 note.start_beat = start_beat;
                 note.end_beat = end_beat;
                 note.note_name = note_name;
+                note.staff_number = staff_number;
 
                 // qInfo() << "Updated note with id: " << id << " to measure number: " << measure_number
+                //         << " start beat: " << start_beat << " end beat: " << end_beat;
+
+                break; // Exit after finding and updating the note
+            }
+        }
+    }
+
+    for (auto &page : all_elements) {
+        for (auto &element : page) {
+            if (element.id == id) {
+                element.measure_number = measure_number;
+                element.start_beat = start_beat;
+                element.end_beat = end_beat;
+                element.note_name = note_name;
+                element.staff_number = staff_number;
+
+                // qInfo() << "Updated element with id: " << id << " to measure number: " << measure_number
                 //         << " start beat: " << start_beat << " end beat: " << end_beat;
 
                 return; // Exit after finding and updating the note
@@ -196,17 +243,38 @@ void xml_parser::set_info_for_note(QString &id, int &measure_number, int &start_
     }
 }
 
-void xml_parser::set_info_for_rest(QString &id, int &measure_number, int &start_beat, int &end_beat)
+void xml_parser::set_info_for_rest(QString &id, int &measure_number, int &start_beat, int &end_beat, int staff_number)
 {
-    for (int page_index = 0; page_index < all_rests.size(); ++page_index) {
+    bool found = false;
+
+    for (int page_index = 0; page_index < all_rests.size() && !found; ++page_index) {
         QVector<SvgElementInfo> &current_page_rests = all_rests[page_index];
         for (SvgElementInfo &rest : current_page_rests) {
             if (rest.id == id) {
+                found = true;
+
                 rest.measure_number = measure_number;
                 rest.start_beat = start_beat;
                 rest.end_beat = end_beat;
+                rest.staff_number = staff_number;
 
                 // qInfo() << "Updated rest with id: " << id << " to measure number: " << measure_number
+                //         << " start beat: " << start_beat << " end beat: " << end_beat;
+
+                break; // Exit after finding and updating the note
+            }
+        }
+    }
+
+    for (auto &page : all_elements) {
+        for (auto &element : page) {
+            if (element.id == id) {
+                element.measure_number = measure_number;
+                element.start_beat = start_beat;
+                element.end_beat = end_beat;
+                element.staff_number = staff_number;
+
+                // qInfo() << "Updated element with id: " << id << " to measure number: " << measure_number
                 //         << " start beat: " << start_beat << " end beat: " << end_beat;
 
                 return; // Exit after finding and updating the note
@@ -217,14 +285,35 @@ void xml_parser::set_info_for_rest(QString &id, int &measure_number, int &start_
 
 void xml_parser::set_info_for_reh(QString &id, int &measure_number, QString &mark_text)
 {
-    for (int page_index = 0; page_index < all_rehearsal_marks.size(); ++page_index) {
+    bool found = false;
+
+    for (int page_index = 0; page_index < all_rehearsal_marks.size() && !found; ++page_index) {
         QVector<SvgElementInfo> &current_page_reh = all_rehearsal_marks[page_index];
         for (SvgElementInfo &reh : current_page_reh) {
             if (reh.id == id) {
+                found = true;
+
                 reh.measure_number = measure_number;
                 reh.note_name = mark_text; // Using note_name to store the rehearsal mark text
+                reh.staff_number = 0;
 
                 // qInfo() << "Updated reh with id: " << id << " to measure number: " << measure_number
+
+                break; // Exit after finding and updating the note
+            }
+        }
+    }
+
+    for (auto &page : all_elements) {
+        for (auto &element : page) {
+            if (element.id == id) {
+                element.measure_number = measure_number;
+                element.start_beat = 0;
+                element.note_name = mark_text;
+                element.staff_number = 0;
+
+                // qInfo() << "Updated element with id: " << id << " to measure number: " << measure_number
+                //         << " start beat: " << start_beat << " end beat: " << end_beat;
 
                 return; // Exit after finding and updating the note
             }
@@ -263,6 +352,11 @@ void xml_parser::set_end_beat_for_rest(QString &id, int &end_beat)
             }
         }
     }
+}
+
+QVector<QVector<xml_parser::SvgElementInfo>> xml_parser::get_all_elements()
+{
+    return all_elements;
 }
 
 QVector<QVector<xml_parser::SvgElementInfo> > xml_parser::get_all_rehearsal_marks()

@@ -59,6 +59,10 @@ Rectangle {
                 reset_values()
             }
 
+            onSnap_to_time: (value) => {
+                part_manager.set_tracker_time(value)
+            }
+
         }
 
         Button {
@@ -242,6 +246,33 @@ Rectangle {
             }
 
         }
+
+        Rectangle {
+            id: snap_to_tracker
+
+            property bool active: true
+
+            anchors {
+                right: jump_to_measure_frame.left
+                top: parent.top
+                bottom: parent.bottom
+            }
+
+            width: 30
+
+            color: active? "lightgreen" : "lightgray"
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(current_part.tracker_info[2], ListView.Beginning) // Reset view to the beginning
+
+                    music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
+                            (current_part.tracker_info[3] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
+
+                }
+            }
+        }
     }
 
     Rectangle {
@@ -357,6 +388,7 @@ Rectangle {
             property int x_coords: 0
             property int y_coords: 0
             property int page_number: 0
+            property int staff_number: 0
 
             anchors {
                 bottom: parent.bottom
@@ -366,14 +398,18 @@ Rectangle {
                 margins: 10
             }
 
-            height: 80
+            height: 120
 
             Text {
                 anchors.verticalCenter: parent.verticalCenter
                 text: "Measure: " + selection_view.measure_number +
                       "\n" + "Beats: " + selection_view.start_beat + "-" + selection_view.end_beat +
                       "\n" + "Duration: " + (selection_view.end_beat - selection_view.start_beat) +
-                      "\n" + "Note: " + selection_view.note_name
+                      "\n" + "Note: " + selection_view.note_name +
+                      "\n" + "X: " + selection_view.x_coords +
+                      "\n" + "Y: " + selection_view.y_coords +
+                      "\n" + "Page: " + selection_view.page_number +
+                      "\n" + "Staff: " + selection_view.staff_number
             }
         }
     }
@@ -486,6 +522,7 @@ Rectangle {
 
             Repeater {
                 model: part_manager.buffer_part_name_list
+
 
                 Music_scroll_view {
                     id: scrollView
