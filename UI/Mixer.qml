@@ -107,6 +107,7 @@ Rectangle {
 
                         onClicked: {
                             track_manager.toggle_mute(index)
+                            part_manager.set_unsaved()
                         }
                     }
                 }
@@ -139,6 +140,7 @@ Rectangle {
                         onClicked: {
 
                             track_manager.toggle_solo(index)
+                            part_manager.set_unsaved()
 
                             // if (solo_button.active === false) {
                             //     mixer_list_view.solo_list.push(index)
@@ -172,6 +174,7 @@ Rectangle {
 
                     onMoved: {
                         track_manager.set_volume(index, value)
+                        part_manager.set_unsaved()
                     }
                 }
             }

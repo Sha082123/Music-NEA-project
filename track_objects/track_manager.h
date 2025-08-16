@@ -63,6 +63,12 @@ public:
     Q_INVOKABLE void open_new_track(); // path of main score
     Q_INVOKABLE void delete_track(int index);
 
+    Q_INVOKABLE int delete_sync_point(int index); // 0 = success, 1 = out of range
+    Q_INVOKABLE void add_sync_point(int time, int measure, float beat);
+    Q_INVOKABLE void apply_sync_points();
+
+    Q_INVOKABLE QString ms_to_time(int ms);
+
 
     QVariantList qml_track_list() const;
     void setqml_track_list(const QVariantList &newQml_track_list);
@@ -166,6 +172,16 @@ private:
     QVariantList m_qml_sync_points;
 
     QVariantList convert_sync_points_to_qml(const QVector<main_options::sync_point> &sync_points);
+
+    struct sync_point_action {
+        int time;
+        int measure;
+        float beat;
+        int index;
+        int action; // 0 for delete, 1 for add
+    };
+
+    QVector<sync_point_action> m_sync_point_actions;
 };
 
 #endif // TRACK_MANAGER_H

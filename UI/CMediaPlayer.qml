@@ -11,6 +11,8 @@ Rectangle {
     signal reset_values()
     signal snap_to_time(int time)
 
+    property alias slider: slider
+
     onReset_values: {
         playback.state = true
         play_button.text = ">"
@@ -66,6 +68,7 @@ Rectangle {
 
             onClicked: {
                 audio_player.back_10s()
+                snap_to_time(slider.value)
             }
         }
 
@@ -82,6 +85,7 @@ Rectangle {
 
             onClicked: {
                 audio_player.forward_10s()
+                snap_to_time(slider.value)
             }
         }
 
@@ -99,6 +103,7 @@ Rectangle {
 
             onClicked: {
                 audio_player.skip_to_start()
+                snap_to_time(0)
             }
         }
 
@@ -117,6 +122,7 @@ Rectangle {
                 audio_player.skip_to_end()
                 playback.state = !playback.state
                 play_button.text = ">"
+                snap_to_time(audio_player.total_ms)
             }
         }
 

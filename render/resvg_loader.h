@@ -19,6 +19,8 @@ public:
     void add_page_height(int &height);
     int get_page_height(int &page_number);
 
+    void clear_page_heights();
+
 signals:
 
 private:

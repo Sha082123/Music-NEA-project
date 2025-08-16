@@ -65,10 +65,27 @@ Rectangle {
 
         }
 
+        Text {
+            id: time_text
+
+            anchors {
+                left: media_player.right
+                top: parent.top
+                verticalCenter: parent.verticalCenter
+                margins: 10
+            }
+
+            horizontalAlignment: Text.AlignHCenter
+
+            width: 100
+            height: parent.height
+            text: track_manager.ms_to_time(media_player.slider.value)
+        }
+
         Button {
             id: sync_points_manager
 
-            anchors.left: media_player.right
+            anchors.left: time_text.right
             anchors.top: parent.top
             anchors.leftMargin: 50
             width: 100
@@ -126,7 +143,6 @@ Rectangle {
             onClicked: {
                 current_part.new_break_item(selection_view.measure_number)
                 current_part.apply_breaks()
-                current_part.update()
 
                 console.log("refreshing...")
 
@@ -148,7 +164,6 @@ Rectangle {
             onClicked: {
                 current_part.delete_break_item(selection_view.measure_number)
                 current_part.apply_breaks()
-                current_part.update()
 
                 console.log("deleting...")
                 music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(selection_view.page_number - 1, ListView.Beginning)
@@ -239,6 +254,12 @@ Rectangle {
 
                         music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(result[0], ListView.Beginning)
                         music_stack.itemAt(music_stack.currentIndex).viewer.contentY += result[1] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor; // add y offset
+
+                        if (snap_to_tracker.active) {
+                            part_manager.set_tracker_time(current_part.time_from_measure(measure_number))
+                            audio_player.set_position(current_part.time_from_measure(measure_number))
+                        }
+
                     } else {
                         console.log("Invalid measure number:", text);
                     }
@@ -250,26 +271,37 @@ Rectangle {
         Rectangle {
             id: snap_to_tracker
 
-            property bool active: true
+            property bool active: false
 
             anchors {
                 right: jump_to_measure_frame.left
                 top: parent.top
                 bottom: parent.bottom
+                rightMargin: 10
             }
 
             width: 30
 
             color: active? "lightgreen" : "lightgray"
 
+            Text {
+                anchors.centerIn: parent
+                text: "Follow"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(current_part.tracker_info[2], ListView.Beginning) // Reset view to the beginning
+                    snap_to_tracker.active = !snap_to_tracker.active
 
-                    music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
-                            (current_part.tracker_info[3] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
+                    if (snap_to_tracker.active) {
+                        music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(current_part.tracker_info[2], ListView.Beginning) // Reset view to the beginning
 
+                        music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
+                                (current_part.tracker_info[3] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
+                    } else {
+                        console.log("Snap to tracker disabled")
+                    }
                 }
             }
         }
@@ -291,7 +323,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             displayText: "Rehearsal marks"
-            height: 60
+            height: 40
 
             model: current_part.reh_y_coords
 
@@ -315,7 +347,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.top: rehearsal_marks.bottom
-            height: 60
+            height: 40
             text: "Edit breaks"
 
             onClicked: {
@@ -333,7 +365,7 @@ Rectangle {
                 right: parent.right
             }
 
-            height: 60
+            height: 40
 
             text: "Edit parts"
 
@@ -352,7 +384,7 @@ Rectangle {
                 right: parent.right
             }
 
-            height: 30
+            height: 40
 
             text: "Add new track"
 
@@ -390,6 +422,8 @@ Rectangle {
             property int page_number: 0
             property int staff_number: 0
 
+            property bool selected: false
+
             anchors {
                 bottom: parent.bottom
                 left: parent.left
@@ -411,6 +445,27 @@ Rectangle {
                       "\n" + "Page: " + selection_view.page_number +
                       "\n" + "Staff: " + selection_view.staff_number
             }
+        }
+
+        Button {
+            id: new_sync_point
+
+            anchors {
+                right: parent.right
+                bottom: parent.bottom
+                margins: 10
+            }
+
+            width: 30
+
+            text: "+"
+            visible: selection_view.selected && track_manager.music_loaded ? true : false
+
+            onClicked: {
+                track_manager.add_sync_point(media_player.slider.value, selection_view.measure_number, selection_view.start_beat)
+                track_manager.apply_sync_points()
+            }
+
         }
     }
 

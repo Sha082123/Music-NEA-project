@@ -12,6 +12,7 @@
 #include "../render/verovio_loader.h"
 #include "../render/resvg_loader.h"
 #include "../track_objects/track_manager.h"
+class part_manager;
 
 class part_object : public QObject
 {
@@ -25,7 +26,7 @@ class part_object : public QObject
     Q_PROPERTY(QVariantList tracker_info READ tracker_info WRITE settracker_info NOTIFY tracker_infoChanged FINAL)
 
 public:
-    explicit part_object(QObject *parent = nullptr, QString part_name = "");
+    explicit part_object(QObject *parent = nullptr, QString part_name = "", part_manager *part_manager = nullptr);
 
     Q_INVOKABLE void openFile(const QString &file_path, int mode); // mode: new for new files, existing for existing files
     Q_INVOKABLE void update();
@@ -35,6 +36,7 @@ public:
     Q_INVOKABLE void apply_breaks();
     Q_INVOKABLE QVariantList element_from_point(const QPointF &point, const int &page_number);
     Q_INVOKABLE QVariantList coordinates_from_measure(int measure_number);
+    Q_INVOKABLE int time_from_measure(int measure_number);
 
     Q_INVOKABLE void save_file();
 
@@ -44,6 +46,8 @@ public:
     void update_part_name(QString new_part_name);
     void update_part_staves(QVector<QPair<int, bool>> &part_existence, part_object* root_ptr);
     void delete_file();
+
+    void set_unsaved();
 
     QString get_part_name();
 
@@ -99,6 +103,7 @@ private:
         int height;
         int page_index;
         float y_no_offset;
+        int measure;
     };
 
     // Add all renderers and parsers
@@ -109,6 +114,8 @@ private:
     render_file *m_render_file;
     verovio_loader *m_verovio_loader;
     resvg_loader *m_resvg_loader;
+
+    part_manager *m_part_manager;
 
     QString m_part_name;
 

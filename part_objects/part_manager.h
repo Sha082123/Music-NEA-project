@@ -42,6 +42,7 @@ public:
 
     Q_INVOKABLE void scan_part_directory(QString source_path); // input is the full path to source file
     Q_INVOKABLE void save_all();
+    Q_INVOKABLE void set_unsaved();
 
     part_object* get_current_part();
 

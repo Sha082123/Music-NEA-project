@@ -62,6 +62,7 @@ void audio_player::load_audio(QVector<QVector<qint16>> &pcm_buffer, track_manage
     m_playback_data->total_samples = 0;
 
     setqml_position (0);
+    m_part_manager->set_tracker_time(0);
 
     struct track_manager::playback_states m_playback_states = track_manager->get_playback_states();
 

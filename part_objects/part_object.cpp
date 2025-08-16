@@ -1,7 +1,8 @@
 #include "part_object.h"
 #include <QDebug>
+#include "part_manager.h"
 
-part_object::part_object(QObject *parent, QString part_name)
+part_object::part_object(QObject *parent, QString part_name, part_manager *part_manager)
     : QObject{parent}
 {
     //m_image_provider = new image_provider(); // Initialize the global image provider
@@ -12,6 +13,8 @@ part_object::part_object(QObject *parent, QString part_name)
     m_parser_data = new parser_data(this, m_xml_parser, m_mei_parser); // Initialize the global parser data
 
     m_mei_parser->set_parser_data(m_parser_data); // set the parser data for use
+
+    m_part_manager = part_manager; // Set the part manager
 
     //qInfo() << "checkpoint1";
 
@@ -33,6 +36,8 @@ void part_object::openFile(const QString &file_path, int mode)
 {
     setfile_path(file_path);
 
+    m_resvg_loader->clear_page_heights(); // Clear the page heights before opening a new file
+
     m_render_file->openFile(file_path, mode); // Open the file using the render file object
     setlist_PNG_paths (m_render_file->list_PNG_paths ());
 
@@ -47,6 +52,7 @@ void part_object::openFile(const QString &file_path, int mode)
 
 void part_object::update()
 {
+    m_resvg_loader->clear_page_heights(); // Clear the page heights before opening a new file
     m_render_file->update(); // Update the render file object
     setlist_PNG_paths (m_render_file->list_PNG_paths ());
 
@@ -57,6 +63,7 @@ void part_object::update()
     // for (const QString &path : m_list_PNG_paths) {
     //     qInfo() << "PNG Path: " << path; // Debugging output to check the paths
     // }
+
 }
 
 int part_object::new_break_item(QString input)
@@ -85,6 +92,9 @@ void part_object::apply_breaks()
     m_parser_data->apply_breaks ();
     setBreak_list (m_parser_data->break_list ());
     setsaved("(not saved)");
+
+    update();
+    m_part_manager->create_sync_coordinates();
 }
 
 QVariantList part_object::element_from_point(const QPointF &point, const int &page_number)
@@ -104,6 +114,29 @@ QVariantList part_object::coordinates_from_measure(int measure_number)
     qInfo() << "Coordinates for measure" << measure_number << ":" << output;
 
     return output;
+}
+
+int part_object::time_from_measure(int measure_number)
+{
+    if (measure_number < 1) {
+        return 0; // start
+    }
+
+    if (measure_number > m_sync_coordinates.last().measure) {
+        // for (auto point : m_sync_coordinates) {
+        //     qInfo() << point.measure;
+        // }
+        // qInfo() << m_sync_coordinates.last().measure << "is the last measure, returning end time";
+        return m_sync_coordinates.last().time; // end
+    }
+
+    for (auto &element : m_sync_coordinates) {
+        if (element.measure == measure_number) {
+            return element.time;
+        }
+    }
+
+    return -1; // not found
 }
 
 void part_object::update_part_name(QString new_part_name)
@@ -128,6 +161,11 @@ void part_object::update_part_staves(QVector<QPair<int, bool> > &part_existence,
 void part_object::delete_file()
 {
     QFile::remove(m_file_path);
+}
+
+void part_object::set_unsaved()
+{
+    setsaved("(not saved)");
 }
 
 void part_object::save_file()
@@ -172,10 +210,10 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
     int current_break_measure = all_breaks[current_break_index].measure_number;
     QVector<float> sum_list;
 
-    for (auto break_obj : all_breaks) {
-        qInfo() << "Break ID: " << break_obj.id
-                << ", Measure Number: " << break_obj.measure_number;
-    }
+    // for (auto break_obj : all_breaks) {
+    //     qInfo() << "Break ID: " << break_obj.id
+    //             << ", Measure Number: " << break_obj.measure_number;
+    // }
 
     // for (auto page : all_elements) {
     //     for (auto element : page) {
@@ -219,7 +257,7 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                 float max = std::ranges::max(sum_list);
                 float min = std::ranges::min(sum_list);
 
-                qInfo() << max << min;
+                //qInfo() << max << min;
 
                 y_list.append(qMakePair (min + page_offset, max - min));
                 y_list_no_offset.append(min);
@@ -236,8 +274,8 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
         }
     }
 
-    qInfo() << "list of y coordinates: " << y_list;
-    qInfo() << "Number of y coordinates: " << y_list.size();
+    // qInfo() << "list of y coordinates: " << y_list;
+    // qInfo() << "Number of y coordinates: " << y_list.size();
 
     //----------------------------------------------------------------------------------//
 
@@ -265,6 +303,9 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
     float ms_per_beat = 0;
     float ms_per_measure = 0;
 
+    int time_difference = 0;
+    int time_to_add = 0;
+
     xml_parser::SvgElementInfo current_element;
 
     for (int index = 0; index < sync_points.size(); ++index) {
@@ -272,40 +313,73 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
         if (index >= sync_points.size() - 1) { // check if at end
             //extrapolate according to tempo and time signatures
 
-            int time_difference = 0;
+            qInfo() << "current page index: " << current_page_index;
+            qInfo() << "current element index: " << current_element_index;
+            qInfo() << "current measure: " << all_elements[current_page_index][current_element_index].measure_number;
+            qInfo() << "current beat: " << all_elements[current_page_index][current_element_index].start_beat;
+
 
             for (int page_index = current_page_index; page_index < all_elements.size(); page_index++) {
 
-                for (int element_index = current_element_index; element_index < all_elements[page_index].size(); element_index++) {
+                for (int element_index = 0; element_index < all_elements[page_index].size(); element_index++) {
                     current_element = all_elements[page_index][element_index];
 
-                    // qInfo() << "current element: " << current_element.start_beat << current_element.measure_number;
-                    // qInfo() << "previous element: " << previous_element_start_beat << previous_element_measure;
+                    qInfo() << "current element: " << current_element.start_beat << current_element.measure_number;
+                    qInfo() << "previous element: " << previous_element_start_beat << previous_element_measure;
 
-                    if ((current_element.measure_number != previous_element_measure) || (current_element.start_beat != previous_element_start_beat)) {
+                    if ((current_element.measure_number > previous_element_measure) || (current_element.start_beat > previous_element_start_beat)) {
                         // Skip elements that are at the same beat as the last element
 
 
                         sync_coordinate new_sync_coordinate;
 
+                        current_tempo = current_tempo_element.tempo;
+                        current_time_signature = (128 / current_time_signature_element.denominator) * current_time_signature_element.numerator;
+
+                        if (tempo_element_index < tempo_elements.size() - 1) {
+                            if (current_element.measure_number == tempo_elements[tempo_element_index + 1].measure_start) {
+                                tempo_element_index ++;
+                                current_tempo_element = tempo_elements[tempo_element_index];
+                                // qInfo() << "Tempo element index: " << tempo_element_index;
+                                // qInfo() << "current tempo: " << current_tempo_element.tempo;
+                            }
+                        }
+
+                        if (time_signature_element_index < time_signature_elements.size() - 1) {
+                            if (current_element.measure_number == time_signature_elements[time_signature_element_index + 1].measure_start) {
+                                time_signature_element_index ++;
+                                current_time_signature_element = time_signature_elements[time_signature_element_index];
+                                // qInfo() << "Time signature element index: " << time_signature_element_index;
+                                // qInfo() << "current time signature: " << current_time_signature_element.numerator << "/" << current_time_signature_element.denominator;
+                            }
+                        }
+
+
                         int measure_difference = current_element.measure_number - previous_element.measure_number;
                         float beat_difference = float(current_element.start_beat + 32)/float(32.0f) - float(previous_element.start_beat + 32)/float(32.0f);
+
+                        qInfo() << "current measure: " << current_element.measure_number;
+                        qInfo() << "previous measure: " << previous_element.measure_number;
+                        qInfo() << Qt::endl;
 
                         ms_per_beat = 60000.0f / float(current_tempo); // milliseconds per beat
                         ms_per_measure = float(ms_per_beat) * float(current_time_signature)/32.0f; // milliseconds per measure
 
-                        time_difference += (measure_difference * ms_per_measure) + (beat_difference * ms_per_beat);
-
+                        time_to_add = (measure_difference * ms_per_measure) + (beat_difference * ms_per_beat);
+                        time_difference += time_to_add;
 
                         if (current_break_index < all_breaks.size()) { // no -1 because y coordinates can be more than breaks
-                            if (current_element.measure_number > current_break_measure) {
+                            if (current_element.measure_number > current_break_measure) { // add extra break coordinates
                                 sync_coordinate new_break_coordinate;
-                                new_break_coordinate.time = time_difference;
+                                // qInfo() << "time difference: " << time_difference;
+                                new_break_coordinate.time = time_difference - (0.6 * time_to_add) ;  // leave some time to transition to next Y
+                                // qInfo() << "Adding break coordinate at time: " << new_break_coordinate.time;
                                 new_break_coordinate.coordinates.setX(previous_element.position.x() + 50);
                                 new_break_coordinate.coordinates.setY(y_list[current_break_index].first);
                                 new_break_coordinate.height = y_list[current_break_index].second;
                                 new_break_coordinate.page_index = page_index;
                                 new_break_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                                new_break_coordinate.measure = previous_element.measure_number;
                                 m_sync_coordinates.append(new_break_coordinate);
 
                                 current_break_index ++;
@@ -316,28 +390,11 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                             }
                         }
 
-                        current_tempo = current_tempo_element.tempo;
-                        current_time_signature = (128 / current_time_signature_element.denominator) * current_time_signature_element.numerator;
 
 
 
-                        if (tempo_element_index < tempo_elements.size() - 1) {
-                            if (current_element.measure_number == tempo_elements[tempo_element_index + 1].measure_start) {
-                                tempo_element_index ++;
-                                current_tempo_element = tempo_elements[tempo_element_index];
-                                qInfo() << "Tempo element index: " << tempo_element_index;
-                                qInfo() << "current tempo: " << current_tempo_element.tempo;
-                            }
-                        }
 
-                        if (time_signature_element_index < time_signature_elements.size() - 1) {
-                            if (current_element.measure_number == time_signature_elements[time_signature_element_index + 1].measure_start) {
-                                time_signature_element_index ++;
-                                current_time_signature_element = time_signature_elements[time_signature_element_index];
-                                qInfo() << "Time signature element index: " << time_signature_element_index;
-                                qInfo() << "current time signature: " << current_time_signature_element.numerator << "/" << current_time_signature_element.denominator;
-                            }
-                        }
+
 
                         new_sync_coordinate.time = time_difference;
                         new_sync_coordinate.coordinates.setX(current_element.position.x());
@@ -345,19 +402,24 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                         new_sync_coordinate.height = y_list[current_break_index].second;
                         new_sync_coordinate.page_index = page_index;
                         new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                        new_sync_coordinate.measure = current_element.measure_number;
+
+                        if ((current_element.position.x() < previous_element.position.x()) && (new_sync_coordinate.coordinates.y() == m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.y())) {
+                            m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.setX(current_element.position.x() - 20);
+                        }
                         m_sync_coordinates.append(new_sync_coordinate);
 
                         previous_element_measure = current_element.measure_number;
                         previous_element_start_beat = current_element.start_beat;
                         previous_element = current_element;
 
-                        if ((page_index == all_elements.size() - 1) && (element_index == all_elements[page_index].size() - 1)) {
-                            // If we are at the last element of the last page, add a final sync coordinate
+                        // if ((page_index == all_elements.size() - 1) && (element_index == all_elements[page_index].size() - 1)) {
+                        //     // If we are at the last element of the last page, add a final sync coordinate
 
 
-                            qInfo() << "final element processed";
+                        //     // qInfo() << "final element processed";
 
-                        }
+                        // }
                     }
                 }
             }
@@ -376,23 +438,211 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
 
         else {
 
+            // append normal times not justified to sync point first, then iterate through and times by a scale factor
+
+            main_options::sync_point current_sync_point = sync_points[index];
+            main_options::sync_point next_sync_point = sync_points[index + 1];
+
+            int end_measure = next_sync_point.measure;
+            int end_beat = next_sync_point.beat;
+
+            int start_sync_index = m_sync_coordinates.size();
+            float scale_factor;
+            int sync_time_difference = next_sync_point.time - current_sync_point.time;
+
+            int time_from_sync = 0;
+
+            bool end = false;
+
+            for (int page_index = current_page_index; page_index < all_elements.size() && end == false; page_index++) {
+
+                for (int element_index = 0; element_index < all_elements[page_index].size(); element_index++) {
+                    current_element = all_elements[page_index][element_index];
+
+                    // qInfo() << "current element: " << current_element.start_beat << current_element.measure_number;
+                    // qInfo() << "previous element: " << previous_element_start_beat << previous_element_measure;
+
+                    if ((current_element.measure_number > previous_element_measure) || (current_element.start_beat > previous_element_start_beat)) {
+                        // Skip elements that are at the same beat as the last element
+
+                        current_element_index = element_index;
+                        current_page_index = page_index;
+
+
+
+                        float current_beat = float(current_element.start_beat + 32) / 32.0f;
+
+                        qInfo() << "Current data: " << current_beat << current_element.measure_number;
+                        qInfo() << "End data: " << end_beat << end_measure;
+
+
+
+
+
+                        sync_coordinate new_sync_coordinate;
+
+                        current_tempo = current_tempo_element.tempo;
+                        current_time_signature = (128 / current_time_signature_element.denominator) * current_time_signature_element.numerator;
+
+
+
+                        if (tempo_element_index < tempo_elements.size() - 1) {
+                            if (current_element.measure_number == tempo_elements[tempo_element_index + 1].measure_start) {
+                                tempo_element_index ++;
+                                current_tempo_element = tempo_elements[tempo_element_index];
+                                // qInfo() << "Tempo element index: " << tempo_element_index;
+                                // qInfo() << "current tempo: " << current_tempo_element.tempo;
+                            }
+                        }
+
+                        if (time_signature_element_index < time_signature_elements.size() - 1) {
+                            if (current_element.measure_number == time_signature_elements[time_signature_element_index + 1].measure_start) {
+                                time_signature_element_index ++;
+                                current_time_signature_element = time_signature_elements[time_signature_element_index];
+                                // qInfo() << "Time signature element index: " << time_signature_element_index;
+                                // qInfo() << "current time signature: " << current_time_signature_element.numerator << "/" << current_time_signature_element.denominator;
+                            }
+                        }
+
+                        int measure_difference = current_element.measure_number - previous_element.measure_number;
+                        float beat_difference = float(current_element.start_beat + 32)/float(32.0f) - float(previous_element.start_beat + 32)/float(32.0f);
+
+                        ms_per_beat = 60000.0f / float(current_tempo); // milliseconds per beat
+                        ms_per_measure = float(ms_per_beat) * float(current_time_signature)/32.0f; // milliseconds per measure
+
+                        time_to_add = (measure_difference * ms_per_measure) + (beat_difference * ms_per_beat);
+                        time_from_sync += time_to_add;
+
+                        if ((current_beat >= end_beat) && (current_element.measure_number >= end_measure)) {
+                            // if we reach the end of the sync point, then we can stop
+                            end = true;
+                            previous_element = current_element;
+                            previous_element_measure = current_element.measure_number;
+                            previous_element_start_beat = current_element.start_beat;
+
+                            break;
+                        }
+
+                        if (current_break_index < all_breaks.size()) { // no -1 because y coordinates can be more than breaks
+                            if (current_element.measure_number > current_break_measure) { // add extra break coordinates
+                                sync_coordinate new_break_coordinate;
+                                // qInfo() << "time difference: " << time_difference;
+                                new_break_coordinate.time = (time_from_sync) - (0.6 * time_to_add) ;  // leave some time to transition to next Y
+                                // qInfo() << "Adding break coordinate at time: " << new_break_coordinate.time;
+                                new_break_coordinate.coordinates.setX(previous_element.position.x() + 50);
+                                new_break_coordinate.coordinates.setY(y_list[current_break_index].first);
+                                new_break_coordinate.height = y_list[current_break_index].second;
+                                new_break_coordinate.page_index = page_index;
+                                new_break_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                                new_break_coordinate.measure = previous_element.measure_number;
+                                m_sync_coordinates.append(new_break_coordinate);
+
+                                current_break_index ++;
+                                current_break_measure = all_breaks[current_break_index].measure_number;
+                                // qInfo() << "all breaks: " << all_breaks.size();
+                                // qInfo() << "Current break index: " << current_break_index;
+
+                            }
+                        }
+
+
+                        qInfo() << time_from_sync << time_difference << time_to_add;
+
+                        new_sync_coordinate.time = time_from_sync;
+                        new_sync_coordinate.coordinates.setX(current_element.position.x());
+                        new_sync_coordinate.coordinates.setY(y_list[current_break_index].first);
+                        new_sync_coordinate.height = y_list[current_break_index].second;
+                        new_sync_coordinate.page_index = page_index;
+                        new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                        new_sync_coordinate.measure = current_element.measure_number;
+
+                        if ((current_element.position.x() < previous_element.position.x()) && (new_sync_coordinate.coordinates.y() == m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.y())) {
+                            m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.setX(current_element.position.x() - 20);
+                        }
+                        m_sync_coordinates.append(new_sync_coordinate);
+
+                        previous_element_measure = current_element.measure_number;
+                        previous_element_start_beat = current_element.start_beat;
+                        previous_element = current_element;
+
+                        // xml_parser::SvgElementInfo next_element;
+                        // if (element_index == all_elements[page_index].size() - 1) {
+                        //     if (page_index < all_elements.size() - 1) {
+                        //         next_element = all_elements[page_index + 1][0];
+                        //     } else {
+                        //         next_element = xml_parser::SvgElementInfo(); // empty element if last element last page
+                        //     }
+                        // } else {
+                        //     next_element = all_elements[page_index][element_index + 1];
+                        // }
+
+
+
+
+
+                    }
+                }
+            }
+
+            scale_factor = float(sync_time_difference) / float(time_from_sync);
+            qInfo() << sync_time_difference << " / " << time_from_sync;
+
+            for (int i = start_sync_index; i < m_sync_coordinates.size(); ++i) {
+                m_sync_coordinates[i].time = int(m_sync_coordinates[i].time * scale_factor) + time_difference;
+            }
+
+            time_difference += time_from_sync * scale_factor;
+
+            qInfo() << time_difference << " : " << next_sync_point.time;
+
+            sync_coordinate new_sync_coordinate;
+
+            new_sync_coordinate.time = time_difference;
+            new_sync_coordinate.coordinates.setX(current_element.position.x());
+            new_sync_coordinate.coordinates.setY(y_list[current_break_index].first);
+            new_sync_coordinate.height = y_list[current_break_index].second;
+            new_sync_coordinate.page_index = current_page_index;
+            new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+            new_sync_coordinate.measure = current_element.measure_number;
+
         }
     }
 
     // for (auto sync_coordinate : m_sync_coordinates) {
     //     qInfo() << "Sync Coordinate: " << sync_coordinate.coordinates << ", Time: " << sync_coordinate.time;
+    //     if (sync_coordinate.measure== 20) {
+    //             return;
+    //         }
     // }
 }
 
 void part_object::set_coordinates_from_time(int time)
 {
     //qInfo() << m_sync_coordinates.size();
+
+
     QVariantList tracker_info;
     for (int index = 0; index < m_sync_coordinates.size(); ++index) {
-        sync_coordinate previous_element = m_sync_coordinates[index - 1];
+
+        sync_coordinate previous_element;
+
+        if (index != 0) {
+            previous_element = m_sync_coordinates[index - 1];
+        } else {
+            previous_element = m_sync_coordinates[index];
+        }
+
         sync_coordinate current_element = m_sync_coordinates[index];
 
         if (m_sync_coordinates[index].time == time) {
+            if (index == 0) {
+                // if we are at the first element, return it
+                qInfo() << "checkpoint";
+                tracker_info = QVariantList({current_element.coordinates, current_element.height,
+                                             current_element.page_index, current_element.y_no_offset, 0.0f});
+                settracker_info (tracker_info);
+                return;
+            }
             tracker_info = QVariantList({current_element.coordinates, current_element.height,
                                          current_element.page_index, current_element.y_no_offset,
                                          previous_element.coordinates.y()});
@@ -407,9 +657,13 @@ void part_object::set_coordinates_from_time(int time)
                 float x_coordinate = previous_element.coordinates.x() +
                                     (float(time - previous_element.time) / float(current_element.time - previous_element.time))
                                     * (current_element.coordinates.x() - previous_element.coordinates.x());
+                float y_coordinate = previous_element.coordinates.y() +
+                                    (float(time - previous_element.time) / float(current_element.time - previous_element.time))
+                                    * (current_element.coordinates.y() - previous_element.coordinates.y());
 
                 QPointF coordinates = previous_element.coordinates;
                 coordinates.setX(x_coordinate);
+                coordinates.setY(y_coordinate);
 
 
                 tracker_info = QVariantList({coordinates, previous_element.height,
@@ -420,7 +674,7 @@ void part_object::set_coordinates_from_time(int time)
             } else {
                 tracker_info = QVariantList({current_element.coordinates, current_element.height,
                                              current_element.page_index, current_element.y_no_offset,
-                                             previous_element.coordinates.y()});
+                                             0.0f});
                 settracker_info (tracker_info);
                 return;
             }

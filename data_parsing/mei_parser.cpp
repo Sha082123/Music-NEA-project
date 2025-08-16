@@ -1016,6 +1016,8 @@ void mei_parser::update_part_staves(QVector<QPair<int, bool> > &part_existence, 
     }
 
 
+
+
 }
 
 QVector<mei_parser::time_signature_element> mei_parser::get_time_signature_changes()

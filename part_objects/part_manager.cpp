@@ -23,7 +23,7 @@ void part_manager::create_root_part(QString part_name)
 
     setbuffer_part_name_list(m_part_name_list);
 
-    part_object *root_part = new part_object(this, part_name);
+    part_object *root_part = new part_object(this, part_name, this);
     part_object_list.append(root_part);
 
     m_engine->rootContext()->setContextProperty("root_part", root_part);
@@ -68,6 +68,7 @@ void part_manager::create_sync_coordinates()
     for (int index = 0; index < part_object_list.size(); ++index) {
         part_object_list.at(index)->calculate_sync_coordinates(sync_points);
     }
+
 }
 
 int part_manager::delete_part(int index)
@@ -200,7 +201,7 @@ void part_manager::apply_part_actions()
                         << " because it is out of range of the part_object_list size: " << part_object_list.size();
             }
         } else if (part_action.mode == 1) { // New
-            part_object *new_part = new part_object(this, part_action.name);
+            part_object *new_part = new part_object(this, part_action.name, this);
             part_object_list.append(new_part);
 
             QString part_file_path = m_file_open->createNewPart(part_object_list[0]->file_path(),
@@ -227,6 +228,9 @@ void part_manager::apply_part_actions()
     }
     part_action_list.clear(); // Clear the action list after applying actions
     setbuffer_part_name_list(m_part_name_list);
+
+    save_all();
+    create_sync_coordinates ();
 }
 
 
@@ -317,7 +321,7 @@ void part_manager::scan_part_directory(QString source_path)
         QString next_file = file.next();
         QFileInfo next_info(next_file);
         if (next_info.isFile()) {
-            part_object* new_part_object = new part_object(this, next_info.completeBaseName ());
+            part_object* new_part_object = new part_object(this, next_info.completeBaseName (), this);
             new_part_object->openFile(next_file, 1); // Open the file for the new part
 
             part_object_list.append(new_part_object);
@@ -342,6 +346,15 @@ void part_manager::save_all()
     for (int index = 0; index < part_object_list.size(); ++index) {
         part_object_list.at(index)->save_file();
     }
+
+    create_sync_coordinates ();
+}
+
+void part_manager::set_unsaved()
+{
+    for (int index = 0; index < part_object_list.size(); ++index) {
+        part_object_list.at(index)->set_unsaved();
+    }
 }
 
 
@@ -360,7 +373,7 @@ void part_manager::clear_parts()
 void part_manager::set_tracker_time(int time)
 {
     //qInfo() << part_object_list.size();
-    for (int index = 0; index < 2; ++index) {
+    for (int index = 0; index < part_object_list.size(); ++index) {
         //qInfo() << "hello";
         part_object_list.at(index)->set_coordinates_from_time(time);
     }

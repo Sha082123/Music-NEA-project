@@ -121,3 +121,8 @@ int resvg_loader::get_page_height(int &page_number)
     }
     return page_heights[page_number - 1];
 }
+
+void resvg_loader::clear_page_heights()
+{
+    page_heights.clear(); // Clear the page heights
+}

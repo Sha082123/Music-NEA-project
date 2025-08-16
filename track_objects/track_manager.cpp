@@ -18,6 +18,7 @@ track_manager::track_manager(QObject *parent, QQmlApplicationEngine *engine)
 
     m_main_options = new main_options(this);
     m_sync_points = {};
+    m_sync_point_actions = {};
 }
 
 void track_manager::set_part_manager(part_manager *part_manager)
@@ -143,6 +144,8 @@ void track_manager::load_tracks()
     m_audio_player->load_audio(pcm_buffer_2d, this);
 
     m_engine->rootContext()->setContextProperty("audio_player", m_audio_player);
+
+    m_part_manager->set_tracker_time(0);
 }
 
 
@@ -419,6 +422,80 @@ void track_manager::delete_track(int index)
     }
     setprevent_mute(false); // if a soloed track is deleted remove the prevent mute
 
+}
+
+int track_manager::delete_sync_point(int index)
+{
+    if (index >= m_qml_sync_points.size() || index < 0) {
+        qInfo() << "Index out of bounds for sync points.";
+        return 1; // Error: index out of range
+    }
+
+    m_qml_sync_points.removeAt(index);
+    emit qml_sync_pointsChanged ();
+
+    sync_point_action delete_action;
+    delete_action.action = 0; // 0 for delete
+    delete_action.index = index;
+
+    m_sync_point_actions.append(delete_action);
+
+    return 0;
+}
+
+void track_manager::add_sync_point(int time, int measure, float beat)
+{
+    main_options::sync_point new_sync_point;
+    new_sync_point.time = time;
+    new_sync_point.measure = measure;
+    new_sync_point.beat = beat;
+
+    // sync_point_action new_action;
+    // new_action.time = time;
+    // new_action.measure = measure;
+    // new_action.beat = beat;
+    // new_action.action = 1; // 1 for add
+
+    // m_sync_point_actions.append(new_action);
+
+    m_sync_points.append(new_sync_point);
+
+    std::sort(m_sync_points.begin(), m_sync_points.end(), [](const main_options::sync_point &a, const main_options::sync_point &b) {
+        return a.measure < b.measure || (a.measure == b.measure && a.beat < b.beat);
+    });
+
+    m_qml_sync_points = convert_sync_points_to_qml(m_sync_points);
+    emit qml_sync_pointsChanged();
+}
+
+void track_manager::apply_sync_points()
+{
+    for (auto &action : m_sync_point_actions) {
+        if (action.action == 1) {
+            main_options::sync_point new_sync_point;
+            new_sync_point.time = action.time;
+            new_sync_point.measure = action.measure;
+            new_sync_point.beat = action.beat;
+            m_sync_points.append(new_sync_point);
+        } else if (action.action == 0) {
+            m_sync_points.removeAt(action.index);
+        }
+    }
+
+    m_part_manager->create_sync_coordinates ();
+    m_sync_point_actions.clear();
+}
+
+QString track_manager::ms_to_time(int ms)
+{
+    int seconds = ms / 1000;
+    int minutes = seconds / 60;
+    seconds %= 60;
+    ms %= 1000;
+
+    return QString("%1:%2:%3").arg(minutes, 2, 10, QChar('0'))
+                               .arg(seconds, 2, 10, QChar('0'))
+                               .arg(ms, 3, 10, QChar('0'));
 }
 
 
