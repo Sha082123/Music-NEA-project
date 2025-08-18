@@ -5,35 +5,115 @@
                 "entries": [
                     {
                         "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 1263,
-                        "errorMessage": "Cannot access value for name file_open",
-                        "functionName": "onClicked",
-                        "line": 26
+                        "column": 16,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"width\".",
+                        "functionName": "width",
+                        "line": 23
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 22,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"top\".",
+                        "functionName": "top",
+                        "line": 24
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"pressed\".",
+                        "functionName": "onPressed",
+                        "line": 30
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 165,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: bar",
+                        "functionName": "currentIndex",
+                        "line": 44
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 22,
+                        "durationMicroseconds": 38,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: bar",
+                        "functionName": "top",
+                        "line": 39
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 19,
-                        "durationMicroseconds": 2011,
+                        "column": 23,
+                        "durationMicroseconds": 318,
                         "errorMessage": "",
                         "functionName": "left",
-                        "line": 21
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 18,
-                        "durationMicroseconds": 85,
-                        "errorMessage": "",
-                        "functionName": "top",
-                        "line": 22
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 80,
-                        "errorMessage": "",
-                        "functionName": "file_path",
                         "line": 40
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 41
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 109,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 123,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: loading",
+                        "functionName": "onFileLoaded",
+                        "line": 49
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 84,
+                        "errorMessage": "",
+                        "functionName": "onFileLoaded",
+                        "line": 49
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"centerIn\".",
+                        "functionName": "centerIn",
+                        "line": 81
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 20,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "centerIn",
+                        "line": 83
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 12,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "centerIn",
+                        "line": 88
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 447,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "wrapMode",
+                        "line": 97
                     }
                 ],
                 "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/Main.qml"

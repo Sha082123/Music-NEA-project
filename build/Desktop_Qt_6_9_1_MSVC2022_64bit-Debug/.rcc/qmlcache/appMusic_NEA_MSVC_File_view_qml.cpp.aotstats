@@ -1,0 +1,292 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 12,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"width\".",
+                        "functionName": "width",
+                        "line": 8
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 213,
+                        "errorMessage": "Cannot access value for name file_open",
+                        "functionName": "current_directory",
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 388,
+                        "errorMessage": "",
+                        "functionName": "onCurrent_directoryChanged",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 201,
+                        "errorMessage": "Cannot access value for name scan_existing",
+                        "functionName": "onCompleted",
+                        "line": 15
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 194,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 27
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 122,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 152,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 6135,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: file_selector",
+                        "functionName": "onClicked",
+                        "line": 47
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 1112,
+                        "errorMessage": "Cannot access value for name file_open",
+                        "functionName": "onClicked",
+                        "line": 75
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 145,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: file_selector",
+                        "functionName": "width",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 195,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 92
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"fill\".",
+                        "functionName": "fill",
+                        "line": 97
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 1491,
+                        "errorMessage": "Cannot access value for name scan_existing",
+                        "functionName": "model",
+                        "line": 113
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 34,
+                        "durationMicroseconds": 162,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 102
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 122,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 103
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 104
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "Cannot access value for name existing_grid",
+                        "functionName": "width",
+                        "line": 116
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 46,
+                        "errorMessage": "Cannot access value for name existing_grid",
+                        "functionName": "height",
+                        "line": 117
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 511,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "file_path",
+                        "line": 120
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 48,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "Cannot access value for name file_selector",
+                        "functionName": "current_directory",
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 879,
+                        "errorMessage": "Cannot access value for name file_open",
+                        "functionName": "text",
+                        "line": 122
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 7561,
+                        "errorMessage": "Cannot access value for name file_open",
+                        "functionName": "onClicked",
+                        "line": 139
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 140,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 125
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 60,
+                        "durationMicroseconds": 1131,
+                        "errorMessage": "Cannot access value for name file_open",
+                        "functionName": "file_name",
+                        "line": 131
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 41,
+                        "durationMicroseconds": 784,
+                        "errorMessage": "Cannot access value for name file_open",
+                        "functionName": "source",
+                        "line": 133
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 182,
+                        "errorMessage": "",
+                        "functionName": "fillMode",
+                        "line": 136
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 179,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 132
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 123,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 167
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 695,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: file_selector",
+                        "functionName": "text",
+                        "line": 173
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 1219,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: file_selector",
+                        "functionName": "onClicked",
+                        "line": 176
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 105,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 172
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 35,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: file_selector",
+                        "functionName": "text",
+                        "line": 188
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 129,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 193
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 134,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 189
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 128,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 190
+                    }
+                ],
+                "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/File_view.qml"
+            }
+        ],
+        "moduleId": "Music_NEA_MSVC(appMusic_NEA_MSVC)"
+    }
+]

@@ -26,6 +26,8 @@ set(src_and_dest_list
     "D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/UI/CMediaPlayer.qml"
     "D:/Comp Sci NEA/Music_NEA_MSVC/UI/Mixer.qml"
     "D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/UI/Mixer.qml"
+    "D:/Comp Sci NEA/Music_NEA_MSVC/UI/Sync_manager.qml"
+    "D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/Music_NEA_MSVC/UI/Sync_manager.qml"
 
 )
 set(timestamp_file "D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/.qt/appMusic_NEA_MSVC_qml.txt")

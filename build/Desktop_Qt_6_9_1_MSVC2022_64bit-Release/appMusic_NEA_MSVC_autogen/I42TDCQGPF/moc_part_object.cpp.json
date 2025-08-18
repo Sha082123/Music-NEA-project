@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "part_object",
-            "lineNumber": 15,
+            "lineNumber": 17,
             "methods": [
                 {
                     "access": "public",
@@ -16,13 +16,13 @@
                             "type": "int"
                         }
                     ],
-                    "index": 6,
+                    "index": 7,
                     "name": "openFile",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 7,
+                    "index": 8,
                     "name": "update",
                     "returnType": "void"
                 },
@@ -34,7 +34,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 8,
+                    "index": 9,
                     "name": "new_break_item",
                     "returnType": "int"
                 },
@@ -46,7 +46,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 9,
+                    "index": 10,
                     "name": "delete_break_item",
                     "returnType": "int"
                 },
@@ -62,13 +62,13 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 10,
+                    "index": 11,
                     "name": "update_break_list",
                     "returnType": "int"
                 },
                 {
                     "access": "public",
-                    "index": 11,
+                    "index": 12,
                     "name": "apply_breaks",
                     "returnType": "void"
                 },
@@ -84,7 +84,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 12,
+                    "index": 13,
                     "name": "element_from_point",
                     "returnType": "QVariantList"
                 },
@@ -96,13 +96,25 @@
                             "type": "int"
                         }
                     ],
-                    "index": 13,
+                    "index": 14,
                     "name": "coordinates_from_measure",
                     "returnType": "QVariantList"
                 },
                 {
                     "access": "public",
-                    "index": 14,
+                    "arguments": [
+                        {
+                            "name": "measure_number",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 15,
+                    "name": "time_from_measure",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 16,
                     "name": "save_file",
                     "returnType": "void"
                 }
@@ -198,6 +210,21 @@
                     "type": "QString",
                     "user": false,
                     "write": "setfile_path"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 6,
+                    "name": "tracker_info",
+                    "notify": "tracker_infoChanged",
+                    "read": "tracker_info",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false,
+                    "write": "settracker_info"
                 }
             ],
             "qualifiedClassName": "part_object",
@@ -236,6 +263,12 @@
                     "access": "public",
                     "index": 5,
                     "name": "file_pathChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "name": "tracker_infoChanged",
                     "returnType": "void"
                 }
             ],

@@ -39,13 +39,52 @@ template <> constexpr inline auto file_open::qt_create_metaobjectdata<qt_meta_ta
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "file_open",
-        "openFile",
-        ""
+        "openNewFile",
+        "",
+        "target_dir",
+        "openNewDirectory",
+        "name_from_project_files",
+        "file_path",
+        "get_base_name",
+        "get_current_dir",
+        "isDir",
+        "path",
+        "delete_file_or_dir",
+        "rename_file_or_dir",
+        "new_name"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Method 'openFile'
-        QtMocHelpers::MethodData<QString()>(1, 2, QMC::AccessPublic, QMetaType::QString),
+        // Method 'openNewFile'
+        QtMocHelpers::MethodData<QString(const QString &)>(1, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 3 },
+        }}),
+        // Method 'openNewDirectory'
+        QtMocHelpers::MethodData<void(const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 3 },
+        }}),
+        // Method 'name_from_project_files'
+        QtMocHelpers::MethodData<QString(const QString &)>(5, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 6 },
+        }}),
+        // Method 'get_base_name'
+        QtMocHelpers::MethodData<QString(const QString &)>(7, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 6 },
+        }}),
+        // Method 'get_current_dir'
+        QtMocHelpers::MethodData<QString()>(8, 2, QMC::AccessPublic, QMetaType::QString),
+        // Method 'isDir'
+        QtMocHelpers::MethodData<bool(QString)>(9, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 10 },
+        }}),
+        // Method 'delete_file_or_dir'
+        QtMocHelpers::MethodData<void(const QString &)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 6 },
+        }}),
+        // Method 'rename_file_or_dir'
+        QtMocHelpers::MethodData<void(const QString &, const QString &)>(12, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 6 }, { QMetaType::QString, 13 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -69,8 +108,19 @@ void file_open::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     auto *_t = static_cast<file_open *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: { QString _r = _t->openFile();
+        case 0: { QString _r = _t->openNewFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 1: _t->openNewDirectory((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: { QString _r = _t->name_from_project_files((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 3: { QString _r = _t->get_base_name((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 4: { QString _r = _t->get_current_dir();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 5: { bool _r = _t->isDir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 6: _t->delete_file_or_dir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 7: _t->rename_file_or_dir((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }
@@ -95,14 +145,14 @@ int file_open::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 8;
     }
     return _id;
 }

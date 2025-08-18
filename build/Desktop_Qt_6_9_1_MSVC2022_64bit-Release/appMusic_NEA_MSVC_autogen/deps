@@ -1175,6 +1175,8 @@ appMusic_NEA_MSVC_autogen/timestamp: \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/audio_options.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/file_open.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/file_open.h \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/main_options.cpp \
+	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/main_options.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/scan_existing.cpp \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/scan_existing.h \
 	D:/Comp\ Sci\ NEA/Music_NEA_MSVC/globals.cpp \

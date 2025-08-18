@@ -1,0 +1,252 @@
+{
+    "classes": [
+        {
+            "className": "part_object",
+            "lineNumber": 15,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "file_path",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "mode",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "openFile",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "update",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "input",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "new_break_item",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "measure_number",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 9,
+                    "name": "delete_break_item",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "input",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "update_break_list",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 11,
+                    "name": "apply_breaks",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "point",
+                            "type": "QPointF"
+                        },
+                        {
+                            "name": "page_number",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 12,
+                    "name": "element_from_point",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "measure_number",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 13,
+                    "name": "coordinates_from_measure",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 14,
+                    "name": "save_file",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "list_PNG_paths",
+                    "notify": "list_PNG_pathsChanged",
+                    "read": "list_PNG_paths",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false,
+                    "write": "setlist_PNG_paths"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 1,
+                    "name": "reh_y_coords",
+                    "notify": "reh_y_coordsChanged",
+                    "read": "reh_y_coords",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false,
+                    "write": "setReh_y_coords"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 2,
+                    "name": "break_list",
+                    "notify": "break_listChanged",
+                    "read": "break_list",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false,
+                    "write": "setBreak_list"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 3,
+                    "name": "part_list",
+                    "notify": "part_listChanged",
+                    "read": "part_list",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false,
+                    "write": "setpart_list"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 4,
+                    "name": "saved",
+                    "notify": "savedChanged",
+                    "read": "saved",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setsaved"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 5,
+                    "name": "file_path",
+                    "notify": "file_pathChanged",
+                    "read": "file_path",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setfile_path"
+                }
+            ],
+            "qualifiedClassName": "part_object",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "list_PNG_pathsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "reh_y_coordsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "break_listChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "name": "part_listChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "savedChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "file_pathChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "part_object.h",
+    "outputRevision": 69
+}

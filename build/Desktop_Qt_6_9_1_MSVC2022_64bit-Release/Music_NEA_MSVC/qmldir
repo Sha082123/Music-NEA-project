@@ -13,4 +13,5 @@ Music_scroll_view 1.0 UI/Music_scroll_view.qml
 Part_maker 1.0 UI/Part_maker.qml
 CMediaPlayer 1.0 UI/CMediaPlayer.qml
 Mixer 1.0 UI/Mixer.qml
+Sync_manager 1.0 UI/Sync_manager.qml
 

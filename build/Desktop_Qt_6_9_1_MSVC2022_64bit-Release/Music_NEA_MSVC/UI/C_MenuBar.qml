@@ -12,6 +12,7 @@ MenuBar {
               onTriggered: {
                      if (current_part != null) {
                             current_part.save_file()
+                            track_manager.save_playback_states()
                      }
               }
 
@@ -21,6 +22,7 @@ MenuBar {
 
               onTriggered: {
                      part_manager.save_all()
+                     track_manager.save_playback_states()
               }
        }
        MenuSeparator { }

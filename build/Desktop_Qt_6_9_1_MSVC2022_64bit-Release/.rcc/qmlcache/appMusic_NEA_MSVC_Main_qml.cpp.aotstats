@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 23,
-                        "durationMicroseconds": 195,
+                        "durationMicroseconds": 187,
                         "errorMessage": "Cannot retrieve a non-object type by ID: bar",
                         "functionName": "currentIndex",
                         "line": 44
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 22,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 34,
                         "errorMessage": "Cannot retrieve a non-object type by ID: bar",
                         "functionName": "top",
                         "line": 39
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 352,
+                        "durationMicroseconds": 351,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 40
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 114,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 41
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 114,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 42
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 158,
+                        "durationMicroseconds": 128,
                         "errorMessage": "Cannot retrieve a non-object type by ID: loading",
                         "functionName": "onFileLoaded",
                         "line": 49
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 82,
                         "errorMessage": "",
                         "functionName": "onFileLoaded",
                         "line": 49
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "centerIn",
                         "line": 83
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "centerIn",
                         "line": 88
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 538,
+                        "durationMicroseconds": 451,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "wrapMode",
                         "line": 97

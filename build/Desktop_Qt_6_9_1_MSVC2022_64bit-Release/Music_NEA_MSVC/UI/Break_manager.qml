@@ -31,8 +31,6 @@ Window {
 
         onClicked: {
             current_part.apply_breaks()
-            current_part.update()
-
         }
     }
 

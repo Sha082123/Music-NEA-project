@@ -23,6 +23,7 @@ Rectangle {
         music_stack.currentIndex = 0 // Switch to the newly created part
         media_player.refresh_media_player()
         mixer.refresh_mixer()
+        music_stack.itemAt(music_stack.currentIndex).refresh_tracker()
     }
 
     border.width: 10
@@ -59,6 +60,43 @@ Rectangle {
                 reset_values()
             }
 
+            onSnap_to_time: (value) => {
+                part_manager.set_tracker_time(value)
+            }
+
+        }
+
+        Text {
+            id: time_text
+
+            anchors {
+                left: media_player.right
+                top: parent.top
+                verticalCenter: parent.verticalCenter
+                margins: 10
+            }
+
+            horizontalAlignment: Text.AlignHCenter
+
+            width: 100
+            height: parent.height
+            text: track_manager.ms_to_time(media_player.slider.value)
+        }
+
+        Button {
+            id: sync_points_manager
+
+            anchors.left: time_text.right
+            anchors.top: parent.top
+            anchors.leftMargin: 50
+            width: 100
+            height: parent.height
+            text: "Edit sync points"
+
+            onClicked: {
+                sync_manager.visible = true
+                console.log(track_manager.qml_sync_points)
+            }
         }
 
 
@@ -106,7 +144,6 @@ Rectangle {
             onClicked: {
                 current_part.new_break_item(selection_view.measure_number)
                 current_part.apply_breaks()
-                current_part.update()
 
                 console.log("refreshing...")
 
@@ -128,7 +165,6 @@ Rectangle {
             onClicked: {
                 current_part.delete_break_item(selection_view.measure_number)
                 current_part.apply_breaks()
-                current_part.update()
 
                 console.log("deleting...")
                 music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(selection_view.page_number - 1, ListView.Beginning)
@@ -151,7 +187,7 @@ Rectangle {
             height: 10
             width: Math.max((level/100) * 200, 10)
 
-            color: audio_player.decibels > -9 ? "red" : "green"
+            color: audio_player.decibels > -8.5 ? "red" : "green"
 
         }
 
@@ -189,6 +225,7 @@ Rectangle {
 
             onClicked: {
                 current_part.save_file()
+                track_manager.save_playback_states()
             }
         }
 
@@ -218,12 +255,59 @@ Rectangle {
 
                         music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(result[0], ListView.Beginning)
                         music_stack.itemAt(music_stack.currentIndex).viewer.contentY += result[1] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor; // add y offset
+
+                        if (snap_to_tracker.active) {
+                            part_manager.set_tracker_time(current_part.time_from_measure(measure_number))
+                            audio_player.set_position(current_part.time_from_measure(measure_number))
+                        }
+
                     } else {
                         console.log("Invalid measure number:", text);
                     }
                 }
             }
 
+        }
+
+        Rectangle {
+            id: snap_to_tracker
+
+            property bool active: false
+
+            anchors {
+                right: jump_to_measure_frame.left
+                top: parent.top
+                bottom: parent.bottom
+                rightMargin: 10
+            }
+
+            width: 30
+
+            color: active? "lightgreen" : "lightgray"
+
+            Text {
+                anchors.centerIn: parent
+                text: "Follow"
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    snap_to_tracker.active = !snap_to_tracker.active
+
+                    if (snap_to_tracker.active) {
+                        music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtBeginning() // Reset view to the beginning
+
+                        music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
+                                ((current_part.tracker_info[0].y - 200) * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
+
+                        music_stack.itemAt(music_stack.currentIndex).refresh_tracker()
+                    } else {
+                        console.log("Snap to tracker disabled")
+                    }
+
+                }
+            }
         }
     }
 
@@ -243,7 +327,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             displayText: "Rehearsal marks"
-            height: 60
+            height: 40
 
             model: current_part.reh_y_coords
 
@@ -267,7 +351,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.top: rehearsal_marks.bottom
-            height: 60
+            height: 40
             text: "Edit breaks"
 
             onClicked: {
@@ -285,7 +369,7 @@ Rectangle {
                 right: parent.right
             }
 
-            height: 60
+            height: 40
 
             text: "Edit parts"
 
@@ -293,6 +377,23 @@ Rectangle {
 
                 part_maker.visible = true
 
+            }
+        }
+
+        Button {
+            id: add_new_track
+            anchors {
+                top: part_maker_button.bottom
+                left: parent.left
+                right: parent.right
+            }
+
+            height: 40
+
+            text: "Add new track"
+
+            onClicked: {
+                track_manager.open_new_track()
             }
         }
 
@@ -306,7 +407,7 @@ Rectangle {
 
             visible: track_manager.music_loaded? true : false
 
-            anchors.top: part_maker_button.bottom
+            anchors.top: add_new_track.bottom
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: selection_view.top
@@ -323,6 +424,9 @@ Rectangle {
             property int x_coords: 0
             property int y_coords: 0
             property int page_number: 0
+            property int staff_number: 0
+
+            property bool selected: false
 
             anchors {
                 bottom: parent.bottom
@@ -332,15 +436,43 @@ Rectangle {
                 margins: 10
             }
 
-            height: 80
+            height: 120
 
             Text {
                 anchors.verticalCenter: parent.verticalCenter
                 text: "Measure: " + selection_view.measure_number +
                       "\n" + "Beats: " + selection_view.start_beat + "-" + selection_view.end_beat +
                       "\n" + "Duration: " + (selection_view.end_beat - selection_view.start_beat) +
-                      "\n" + "Note: " + selection_view.note_name
+                      "\n" + "Note: " + selection_view.note_name +
+                      "\n" + "X: " + selection_view.x_coords +
+                      "\n" + "Y: " + selection_view.y_coords +
+                      "\n" + "Page: " + selection_view.page_number +
+                      "\n" + "Staff: " + selection_view.staff_number
             }
+        }
+
+        Button {
+            id: new_sync_point
+
+            anchors {
+                right: parent.right
+                bottom: parent.bottom
+                margins: 10
+            }
+
+            width: 30
+
+            text: "+"
+            visible: selection_view.selected && track_manager.music_loaded ? true : false
+
+            onClicked: {
+                track_manager.add_sync_point(media_player.slider.value, selection_view.measure_number, selection_view.start_beat)
+                track_manager.apply_sync_points()
+                audio_player.set_position(media_player.slider.value)
+                part_manager.set_tracker_time(media_player.slider.value)
+                music_stack.itemAt(music_stack.currentIndex).refresh_tracker()
+            }
+
         }
     }
 
@@ -426,6 +558,18 @@ Rectangle {
                     part_manager.set_current_part(index)
                     console.log("Current part set to:", modelData, index)
                     console.log("number of parts", part_manager.list_size())
+                    if (snap_to_tracker.active) {
+                        music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtBeginning() // Reset view to the beginning
+
+                        music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
+                            ((current_part.tracker_info[0].y - 200) * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
+
+                        music_stack.itemAt(music_stack.currentIndex).refresh_tracker()
+                    } else {
+                        console.log("Snap to tracker disabled")
+                    }
+
+
 
                     //music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(0, ListView.Beginning) // Reset view to the beginning
                 }
@@ -453,6 +597,7 @@ Rectangle {
             Repeater {
                 model: part_manager.buffer_part_name_list
 
+
                 Music_scroll_view {
                     id: scrollView
                 }
@@ -469,6 +614,11 @@ Rectangle {
 
     Part_maker {
         id: part_maker
+        visible: false
+    }
+
+    Sync_manager {
+        id: sync_manager
         visible: false
     }
 

@@ -416,6 +416,9 @@ Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 //Path to a program.
 WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.9.1/msvc2022_64/bin/windeployqt.exe
 
+//The directory containing a CMake configuration file for verovio.
+verovio_DIR:PATH=verovio_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

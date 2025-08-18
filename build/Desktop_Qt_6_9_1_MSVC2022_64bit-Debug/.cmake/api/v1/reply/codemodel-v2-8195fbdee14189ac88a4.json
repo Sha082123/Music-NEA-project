@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-b404b8145d4a1bafa188.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Music_NEA_MSVC",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-c803983cd930ccb209b0.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-d49def3e009d551cac43.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-970847dfd96fb347ccdf.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-a0239cb3f5de51c7e8c2.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-1b3d85b4137774644355.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC-Debug-5d66ccb48c73751076da.json",
+					"name" : "appMusic_NEA_MSVC",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_autogen-Debug-80f8ec1de8e39a5602a1.json",
+					"name" : "appMusic_NEA_MSVC_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_autogen_timestamp_deps-Debug-d32097a4089e51120d04.json",
+					"name" : "appMusic_NEA_MSVC_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_copy_qml-Debug-7c5d683a694dda235c24.json",
+					"name" : "appMusic_NEA_MSVC_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_copy_res-Debug-4f9de46009aa26116541.json",
+					"name" : "appMusic_NEA_MSVC_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_qmlimportscan-Debug-d226b486e7a5d2827035.json",
+					"name" : "appMusic_NEA_MSVC_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_qmllint-Debug-3d988b17a1366e52b6b8.json",
+					"name" : "appMusic_NEA_MSVC_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_qmllint_json-Debug-bc37c76cc935089de3cf.json",
+					"name" : "appMusic_NEA_MSVC_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_qmllint_module-Debug-c514b3a4dfa717378ef3.json",
+					"name" : "appMusic_NEA_MSVC_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMusic_NEA_MSVC_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMusic_NEA_MSVC_qmltyperegistration-Debug-ad0031bddc4f8caf424f.json",
+					"name" : "appMusic_NEA_MSVC_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appMusic_NEA_MSVC_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appMusic_NEA_MSVC_aotstats_target-Debug-b5336b01fde4f84f96d8.json",
+					"name" : "module_appMusic_NEA_MSVC_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug",
+		"source" : "D:/Comp Sci NEA/Music_NEA_MSVC"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

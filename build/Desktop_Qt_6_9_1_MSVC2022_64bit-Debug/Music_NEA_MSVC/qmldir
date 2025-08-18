@@ -4,4 +4,13 @@ prefer :/qt/qml/Music_NEA_MSVC/
 Main 1.0 Main.qml
 FileButton 1.0 styles/FileButton.qml
 Display_window 1.0 UI/Display_window.qml
+C_MenuBar 1.0 UI/C_MenuBar.qml
+File_menu 1.0 styles/File_menu.qml
+PreviousDirectoryButton 1.0 styles/PreviousDirectoryButton.qml
+File_view 1.0 File_view.qml
+Break_manager 1.0 UI/Break_manager.qml
+Music_scroll_view 1.0 UI/Music_scroll_view.qml
+Part_maker 1.0 UI/Part_maker.qml
+CMediaPlayer 1.0 UI/CMediaPlayer.qml
+Mixer 1.0 UI/Mixer.qml
 

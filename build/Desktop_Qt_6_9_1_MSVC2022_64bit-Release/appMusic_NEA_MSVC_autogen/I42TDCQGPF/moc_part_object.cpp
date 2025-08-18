@@ -46,6 +46,7 @@ template <> constexpr inline auto part_object::qt_create_metaobjectdata<qt_meta_
         "part_listChanged",
         "savedChanged",
         "file_pathChanged",
+        "tracker_infoChanged",
         "openFile",
         "file_path",
         "mode",
@@ -62,12 +63,14 @@ template <> constexpr inline auto part_object::qt_create_metaobjectdata<qt_meta_
         "point",
         "page_number",
         "coordinates_from_measure",
+        "time_from_measure",
         "save_file",
         "list_PNG_paths",
         "reh_y_coords",
         "break_list",
         "part_list",
-        "saved"
+        "saved",
+        "tracker_info"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -83,50 +86,58 @@ template <> constexpr inline auto part_object::qt_create_metaobjectdata<qt_meta_
         QtMocHelpers::SignalData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'file_pathChanged'
         QtMocHelpers::SignalData<void()>(7, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'tracker_infoChanged'
+        QtMocHelpers::SignalData<void()>(8, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'openFile'
-        QtMocHelpers::MethodData<void(const QString &, int)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 9 }, { QMetaType::Int, 10 },
+        QtMocHelpers::MethodData<void(const QString &, int)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 10 }, { QMetaType::Int, 11 },
         }}),
         // Method 'update'
-        QtMocHelpers::MethodData<void()>(11, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(12, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'new_break_item'
-        QtMocHelpers::MethodData<int(QString)>(12, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::QString, 13 },
+        QtMocHelpers::MethodData<int(QString)>(13, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::QString, 14 },
         }}),
         // Method 'delete_break_item'
-        QtMocHelpers::MethodData<int(int)>(14, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::Int, 15 },
+        QtMocHelpers::MethodData<int(int)>(15, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::Int, 16 },
         }}),
         // Method 'update_break_list'
-        QtMocHelpers::MethodData<int(QString, QString)>(16, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::QString, 17 }, { QMetaType::QString, 13 },
+        QtMocHelpers::MethodData<int(QString, QString)>(17, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::QString, 18 }, { QMetaType::QString, 14 },
         }}),
         // Method 'apply_breaks'
-        QtMocHelpers::MethodData<void()>(18, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(19, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'element_from_point'
-        QtMocHelpers::MethodData<QVariantList(const QPointF &, const int &)>(19, 2, QMC::AccessPublic, 0x80000000 | 20, {{
-            { QMetaType::QPointF, 21 }, { QMetaType::Int, 22 },
+        QtMocHelpers::MethodData<QVariantList(const QPointF &, const int &)>(20, 2, QMC::AccessPublic, 0x80000000 | 21, {{
+            { QMetaType::QPointF, 22 }, { QMetaType::Int, 23 },
         }}),
         // Method 'coordinates_from_measure'
-        QtMocHelpers::MethodData<QVariantList(int)>(23, 2, QMC::AccessPublic, 0x80000000 | 20, {{
-            { QMetaType::Int, 15 },
+        QtMocHelpers::MethodData<QVariantList(int)>(24, 2, QMC::AccessPublic, 0x80000000 | 21, {{
+            { QMetaType::Int, 16 },
+        }}),
+        // Method 'time_from_measure'
+        QtMocHelpers::MethodData<int(int)>(25, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::Int, 16 },
         }}),
         // Method 'save_file'
-        QtMocHelpers::MethodData<void()>(24, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(26, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'list_PNG_paths'
-        QtMocHelpers::PropertyData<QStringList>(25, QMetaType::QStringList, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 0),
+        QtMocHelpers::PropertyData<QStringList>(27, QMetaType::QStringList, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 0),
         // property 'reh_y_coords'
-        QtMocHelpers::PropertyData<QVariantList>(26, 0x80000000 | 20, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 1),
+        QtMocHelpers::PropertyData<QVariantList>(28, 0x80000000 | 21, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 1),
         // property 'break_list'
-        QtMocHelpers::PropertyData<QVariantList>(27, 0x80000000 | 20, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 2),
+        QtMocHelpers::PropertyData<QVariantList>(29, 0x80000000 | 21, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::StdCppSet | QMC::Final, 2),
         // property 'part_list'
-        QtMocHelpers::PropertyData<QVariantList>(28, 0x80000000 | 20, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 3),
+        QtMocHelpers::PropertyData<QVariantList>(30, 0x80000000 | 21, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 3),
         // property 'saved'
-        QtMocHelpers::PropertyData<QString>(29, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 4),
+        QtMocHelpers::PropertyData<QString>(31, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 4),
         // property 'file_path'
-        QtMocHelpers::PropertyData<QString>(9, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 5),
+        QtMocHelpers::PropertyData<QString>(10, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 5),
+        // property 'tracker_info'
+        QtMocHelpers::PropertyData<QVariantList>(32, 0x80000000 | 21, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 6),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -154,20 +165,23 @@ void part_object::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 3: _t->part_listChanged(); break;
         case 4: _t->savedChanged(); break;
         case 5: _t->file_pathChanged(); break;
-        case 6: _t->openFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 7: _t->update(); break;
-        case 8: { int _r = _t->new_break_item((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 6: _t->tracker_infoChanged(); break;
+        case 7: _t->openFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 8: _t->update(); break;
+        case 9: { int _r = _t->new_break_item((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 9: { int _r = _t->delete_break_item((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+        case 10: { int _r = _t->delete_break_item((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 10: { int _r = _t->update_break_list((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 11: { int _r = _t->update_break_list((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 11: _t->apply_breaks(); break;
-        case 12: { QVariantList _r = _t->element_from_point((*reinterpret_cast< std::add_pointer_t<QPointF>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 12: _t->apply_breaks(); break;
+        case 13: { QVariantList _r = _t->element_from_point((*reinterpret_cast< std::add_pointer_t<QPointF>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 13: { QVariantList _r = _t->coordinates_from_measure((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+        case 14: { QVariantList _r = _t->coordinates_from_measure((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 14: _t->save_file(); break;
+        case 15: { int _r = _t->time_from_measure((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 16: _t->save_file(); break;
         default: ;
         }
     }
@@ -184,6 +198,8 @@ void part_object::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
             return;
         if (QtMocHelpers::indexOfMethod<void (part_object::*)()>(_a, &part_object::file_pathChanged, 5))
             return;
+        if (QtMocHelpers::indexOfMethod<void (part_object::*)()>(_a, &part_object::tracker_infoChanged, 6))
+            return;
     }
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
@@ -194,6 +210,7 @@ void part_object::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 3: *reinterpret_cast<QVariantList*>(_v) = _t->part_list(); break;
         case 4: *reinterpret_cast<QString*>(_v) = _t->saved(); break;
         case 5: *reinterpret_cast<QString*>(_v) = _t->file_path(); break;
+        case 6: *reinterpret_cast<QVariantList*>(_v) = _t->tracker_info(); break;
         default: break;
         }
     }
@@ -206,6 +223,7 @@ void part_object::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 3: _t->setpart_list(*reinterpret_cast<QVariantList*>(_v)); break;
         case 4: _t->setsaved(*reinterpret_cast<QString*>(_v)); break;
         case 5: _t->setfile_path(*reinterpret_cast<QString*>(_v)); break;
+        case 6: _t->settracker_info(*reinterpret_cast<QVariantList*>(_v)); break;
         default: break;
         }
     }
@@ -230,20 +248,20 @@ int part_object::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 17;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 17)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 15;
+        _id -= 17;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }
@@ -282,5 +300,11 @@ void part_object::savedChanged()
 void part_object::file_pathChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
+}
+
+// SIGNAL 6
+void part_object::tracker_infoChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 6, nullptr);
 }
 QT_WARNING_POP

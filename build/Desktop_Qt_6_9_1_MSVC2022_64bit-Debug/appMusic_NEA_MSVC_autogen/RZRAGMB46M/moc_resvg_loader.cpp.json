@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "resvg_loader",
+            "lineNumber": 11,
+            "object": true,
+            "qualifiedClassName": "resvg_loader",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "resvg_loader.h",
+    "outputRevision": 69
+}

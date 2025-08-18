@@ -41,22 +41,38 @@ template <> constexpr inline auto render_file::qt_create_metaobjectdata<qt_meta_
         "render_file",
         "filenameChanged",
         "",
+        "output_pathChanged",
+        "list_PNG_pathsChanged",
         "openFile",
         "file_path",
-        "filename"
+        "mode",
+        "update",
+        "filename",
+        "output_path",
+        "list_PNG_paths"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'filenameChanged'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'output_pathChanged'
+        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'list_PNG_pathsChanged'
+        QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'openFile'
-        QtMocHelpers::MethodData<void(const QString &)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 4 },
+        QtMocHelpers::MethodData<void(const QString &, int)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 6 }, { QMetaType::Int, 7 },
         }}),
+        // Method 'update'
+        QtMocHelpers::MethodData<void()>(8, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'filename'
-        QtMocHelpers::PropertyData<QString>(5, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 0),
+        QtMocHelpers::PropertyData<QString>(9, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 0),
+        // property 'output_path'
+        QtMocHelpers::PropertyData<QString>(10, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 1),
+        // property 'list_PNG_paths'
+        QtMocHelpers::PropertyData<QStringList>(11, QMetaType::QStringList, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 2),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -79,18 +95,27 @@ void render_file::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->filenameChanged(); break;
-        case 1: _t->openFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->output_pathChanged(); break;
+        case 2: _t->list_PNG_pathsChanged(); break;
+        case 3: _t->openFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 4: _t->update(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (render_file::*)()>(_a, &render_file::filenameChanged, 0))
             return;
+        if (QtMocHelpers::indexOfMethod<void (render_file::*)()>(_a, &render_file::output_pathChanged, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (render_file::*)()>(_a, &render_file::list_PNG_pathsChanged, 2))
+            return;
     }
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast<QString*>(_v) = _t->filename(); break;
+        case 1: *reinterpret_cast<QString*>(_v) = _t->output_path(); break;
+        case 2: *reinterpret_cast<QStringList*>(_v) = _t->list_PNG_paths(); break;
         default: break;
         }
     }
@@ -98,6 +123,8 @@ void render_file::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setfilename(*reinterpret_cast<QString*>(_v)); break;
+        case 1: _t->setoutput_path(*reinterpret_cast<QString*>(_v)); break;
+        case 2: _t->setlist_PNG_paths(*reinterpret_cast<QStringList*>(_v)); break;
         default: break;
         }
     }
@@ -122,20 +149,20 @@ int render_file::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 5;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }
@@ -144,5 +171,17 @@ int render_file::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void render_file::filenameChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void render_file::output_pathChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+}
+
+// SIGNAL 2
+void render_file::list_PNG_pathsChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP

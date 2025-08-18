@@ -3,6 +3,15 @@
     <file alias="Main.qml">D:/Comp Sci NEA/Music_NEA_MSVC/Main.qml</file>
     <file alias="styles/FileButton.qml">D:/Comp Sci NEA/Music_NEA_MSVC/styles/FileButton.qml</file>
     <file alias="UI/Display_window.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Display_window.qml</file>
+    <file alias="UI/C_MenuBar.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/C_MenuBar.qml</file>
+    <file alias="styles/File_menu.qml">D:/Comp Sci NEA/Music_NEA_MSVC/styles/File_menu.qml</file>
+    <file alias="styles/PreviousDirectoryButton.qml">D:/Comp Sci NEA/Music_NEA_MSVC/styles/PreviousDirectoryButton.qml</file>
+    <file alias="File_view.qml">D:/Comp Sci NEA/Music_NEA_MSVC/File_view.qml</file>
+    <file alias="UI/Break_manager.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Break_manager.qml</file>
+    <file alias="UI/Music_scroll_view.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Music_scroll_view.qml</file>
+    <file alias="UI/Part_maker.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Part_maker.qml</file>
+    <file alias="UI/CMediaPlayer.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/CMediaPlayer.qml</file>
+    <file alias="UI/Mixer.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Mixer.qml</file>
   </qresource>
 </RCC>
 

@@ -31,13 +31,19 @@
                     },
                     {
                         "access": "public",
+                        "index": 4,
+                        "name": "create_sync_coordinates",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
                         "arguments": [
                             {
                                 "name": "index",
                                 "type": "int"
                             }
                         ],
-                        "index": 4,
+                        "index": 5,
                         "name": "delete_part",
                         "returnType": "int"
                     },
@@ -57,7 +63,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 5,
+                        "index": 6,
                         "name": "update_part",
                         "returnType": "int"
                     },
@@ -73,13 +79,13 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 6,
+                        "index": 7,
                         "name": "update_part_staves",
                         "returnType": "int"
                     },
                     {
                         "access": "public",
-                        "index": 7,
+                        "index": 8,
                         "name": "apply_part_actions",
                         "returnType": "void"
                     },
@@ -91,13 +97,13 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 8,
+                        "index": 9,
                         "name": "set_current_part",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 9,
+                        "index": 10,
                         "name": "list_size",
                         "returnType": "int"
                     },
@@ -113,7 +119,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 10,
+                        "index": 11,
                         "name": "staff_exists_in_part",
                         "returnType": "bool"
                     },
@@ -125,20 +131,38 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 11,
+                        "index": 12,
                         "name": "scan_part_directory",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 12,
+                        "index": 13,
                         "name": "save_all",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 13,
+                        "index": 14,
+                        "name": "set_unsaved",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 15,
                         "name": "clear_parts",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "time",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "set_tracker_time",
                         "returnType": "void"
                     }
                 ],
@@ -205,7 +229,7 @@
         "classes": [
             {
                 "className": "part_object",
-                "lineNumber": 15,
+                "lineNumber": 17,
                 "methods": [
                     {
                         "access": "public",
@@ -219,13 +243,13 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 6,
+                        "index": 7,
                         "name": "openFile",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 7,
+                        "index": 8,
                         "name": "update",
                         "returnType": "void"
                     },
@@ -237,7 +261,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 8,
+                        "index": 9,
                         "name": "new_break_item",
                         "returnType": "int"
                     },
@@ -249,7 +273,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 9,
+                        "index": 10,
                         "name": "delete_break_item",
                         "returnType": "int"
                     },
@@ -265,13 +289,13 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 10,
+                        "index": 11,
                         "name": "update_break_list",
                         "returnType": "int"
                     },
                     {
                         "access": "public",
-                        "index": 11,
+                        "index": 12,
                         "name": "apply_breaks",
                         "returnType": "void"
                     },
@@ -287,7 +311,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 12,
+                        "index": 13,
                         "name": "element_from_point",
                         "returnType": "QVariantList"
                     },
@@ -299,13 +323,25 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 13,
+                        "index": 14,
                         "name": "coordinates_from_measure",
                         "returnType": "QVariantList"
                     },
                     {
                         "access": "public",
-                        "index": 14,
+                        "arguments": [
+                            {
+                                "name": "measure_number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "time_from_measure",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "index": 16,
                         "name": "save_file",
                         "returnType": "void"
                     }
@@ -401,6 +437,21 @@
                         "type": "QString",
                         "user": false,
                         "write": "setfile_path"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 6,
+                        "name": "tracker_info",
+                        "notify": "tracker_infoChanged",
+                        "read": "tracker_info",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "settracker_info"
                     }
                 ],
                 "qualifiedClassName": "part_object",
@@ -439,6 +490,12 @@
                         "access": "public",
                         "index": 5,
                         "name": "file_pathChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 6,
+                        "name": "tracker_infoChanged",
                         "returnType": "void"
                     }
                 ],
@@ -493,48 +550,11 @@
                         "access": "public",
                         "arguments": [
                             {
-                                "name": "source_path",
-                                "type": "QString"
-                            },
-                            {
                                 "name": "target_dir",
-                                "type": "QString"
-                            },
-                            {
-                                "name": "file_name",
                                 "type": "QString"
                             }
                         ],
                         "index": 1,
-                        "name": "createNewPart",
-                        "returnType": "QString"
-                    },
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "source_path",
-                                "type": "QString"
-                            },
-                            {
-                                "name": "target_dir",
-                                "type": "QString"
-                            }
-                        ],
-                        "index": 2,
-                        "isCloned": true,
-                        "name": "createNewPart",
-                        "returnType": "QString"
-                    },
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "target_dir",
-                                "type": "QString"
-                            }
-                        ],
-                        "index": 3,
                         "name": "openNewDirectory",
                         "returnType": "void"
                     },
@@ -546,7 +566,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 4,
+                        "index": 2,
                         "name": "name_from_project_files",
                         "returnType": "QString"
                     },
@@ -558,13 +578,13 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 5,
+                        "index": 3,
                         "name": "get_base_name",
                         "returnType": "QString"
                     },
                     {
                         "access": "public",
-                        "index": 6,
+                        "index": 4,
                         "name": "get_current_dir",
                         "returnType": "QString"
                     },
@@ -576,7 +596,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 7,
+                        "index": 5,
                         "name": "isDir",
                         "returnType": "bool"
                     },
@@ -588,7 +608,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 8,
+                        "index": 6,
                         "name": "delete_file_or_dir",
                         "returnType": "void"
                     },
@@ -604,7 +624,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 9,
+                        "index": 7,
                         "name": "rename_file_or_dir",
                         "returnType": "void"
                     }
@@ -620,6 +640,24 @@
             }
         ],
         "inputFile": "file_open.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "main_options",
+                "lineNumber": 8,
+                "object": true,
+                "qualifiedClassName": "main_options",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "main_options.h",
         "outputRevision": 69
     },
     {
@@ -829,7 +867,7 @@
         "classes": [
             {
                 "className": "audio_player",
-                "lineNumber": 10,
+                "lineNumber": 11,
                 "methods": [
                     {
                         "access": "public",
@@ -1197,19 +1235,31 @@
         "classes": [
             {
                 "className": "track_manager",
-                "lineNumber": 14,
+                "lineNumber": 16,
                 "methods": [
                     {
                         "access": "public",
-                        "index": 10,
+                        "index": 11,
                         "name": "clear",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 11,
+                        "index": 12,
                         "name": "get_track_count",
                         "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "directory",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "scan_audio_directory",
+                        "returnType": "void"
                     },
                     {
                         "access": "public",
@@ -1219,7 +1269,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 12,
+                        "index": 14,
                         "name": "toggle_mute",
                         "returnType": "void"
                     },
@@ -1231,9 +1281,99 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 13,
+                        "index": 15,
                         "name": "toggle_solo",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            },
+                            {
+                                "name": "volume",
+                                "type": "float"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "set_volume",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "save_playback_states",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "open_new_track",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 19,
+                        "name": "delete_track",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 20,
+                        "name": "delete_sync_point",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "time",
+                                "type": "int"
+                            },
+                            {
+                                "name": "measure",
+                                "type": "int"
+                            },
+                            {
+                                "name": "beat",
+                                "type": "float"
+                            }
+                        ],
+                        "index": 21,
+                        "name": "add_sync_point",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 22,
+                        "name": "apply_sync_points",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "ms",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 23,
+                        "name": "ms_to_time",
+                        "returnType": "QString"
                     }
                 ],
                 "object": true,
@@ -1387,6 +1527,21 @@
                         "type": "bool",
                         "user": false,
                         "write": "setprevent_mute"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 10,
+                        "name": "qml_sync_points",
+                        "notify": "qml_sync_pointsChanged",
+                        "read": "qml_sync_points",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setqml_sync_points"
                     }
                 ],
                 "qualifiedClassName": "track_manager",
@@ -1449,6 +1604,12 @@
                         "access": "public",
                         "index": 9,
                         "name": "prevent_muteChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 10,
+                        "name": "qml_sync_pointsChanged",
                         "returnType": "void"
                     }
                 ],

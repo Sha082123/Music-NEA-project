@@ -1,0 +1,48 @@
+{
+    "classes": [
+        {
+            "className": "mei_parser",
+            "lineNumber": 12,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "measure_number",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "insert_break",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "measure_number",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "delete_break",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "mei_parser",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "mei_parser.h",
+    "outputRevision": 69
+}

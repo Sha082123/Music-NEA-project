@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "main_options",
+            "lineNumber": 8,
+            "object": true,
+            "qualifiedClassName": "main_options",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "main_options.h",
+    "outputRevision": 69
+}

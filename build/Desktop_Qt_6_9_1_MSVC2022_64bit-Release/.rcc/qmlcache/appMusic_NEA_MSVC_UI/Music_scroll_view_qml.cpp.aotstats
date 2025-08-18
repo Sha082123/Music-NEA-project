@@ -5,131 +5,187 @@
                 "entries": [
                     {
                         "codegenSuccessful": false,
-                        "column": 19,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"fill\".",
-                        "functionName": "fill",
-                        "line": 12
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 580,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 17
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 17,
-                        "durationMicroseconds": 234,
-                        "errorMessage": "",
-                        "functionName": "height",
-                        "line": 18
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 16,
-                        "durationMicroseconds": 2003,
+                        "column": 21,
+                        "durationMicroseconds": 265,
                         "errorMessage": "Cannot access value for name current_part",
-                        "functionName": "model",
-                        "line": 23
+                        "functionName": "onSnap_to_view",
+                        "line": 16
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 37,
-                        "durationMicroseconds": 1499,
-                        "errorMessage": "Cannot access value for name frame",
-                        "functionName": "scale_factor",
-                        "line": 25
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 22,
-                        "durationMicroseconds": 369,
-                        "errorMessage": "",
-                        "functionName": "top",
-                        "line": 19
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 251,
-                        "errorMessage": "",
-                        "functionName": "left",
+                        "column": 24,
+                        "durationMicroseconds": 716,
+                        "errorMessage": "Cannot generate efficient code for LoadClosure",
+                        "functionName": "onRefresh_tracker",
                         "line": 20
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 822,
-                        "errorMessage": "Cannot access value for name image_scale",
+                        "column": 19,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"fill\".",
+                        "functionName": "fill",
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"policy\".",
+                        "functionName": "policy",
+                        "line": 37
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "",
                         "functionName": "width",
-                        "line": 29
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 21,
-                        "durationMicroseconds": 605,
-                        "errorMessage": "Cannot access value for name modelData",
-                        "functionName": "source",
-                        "line": 30
+                        "line": 43
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 189,
+                        "column": 17,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
-                        "functionName": "fillMode",
-                        "line": 32
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 163,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 31
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 44,
-                        "durationMicroseconds": 104,
-                        "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
-                        "functionName": "element_data",
+                        "functionName": "height",
                         "line": 44
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 10281,
-                        "errorMessage": "Cannot access value for name mouse",
-                        "functionName": "onClicked",
+                        "column": 16,
+                        "durationMicroseconds": 1153,
+                        "errorMessage": "Cannot access value for name current_part",
+                        "functionName": "model",
                         "line": 49
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 293,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 48
+                        "codegenSuccessful": false,
+                        "column": 37,
+                        "durationMicroseconds": 679,
+                        "errorMessage": "Cannot access value for name frame",
+                        "functionName": "scale_factor",
+                        "line": 51
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 28,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: scrollView",
+                        "functionName": "onContentYChanged",
+                        "line": 53
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 194,
+                        "column": 22,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
-                        "functionName": "width",
-                        "line": 75
+                        "functionName": "top",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 112,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 46
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 16,
+                        "durationMicroseconds": 368,
+                        "errorMessage": "Cannot access value for name current_part",
+                        "functionName": "x",
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 16,
+                        "durationMicroseconds": 383,
+                        "errorMessage": "Cannot access value for name current_part",
+                        "functionName": "y",
+                        "line": 66
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 636,
+                        "durationMicroseconds": 349,
+                        "errorMessage": "Cannot access value for name current_part",
+                        "functionName": "height",
+                        "line": 68
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 25,
+                        "durationMicroseconds": 990,
+                        "errorMessage": "Cannot access value for name snap_to_tracker",
+                        "functionName": "onYChanged",
+                        "line": 73
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 504,
+                        "errorMessage": "Cannot access value for name image_scale",
+                        "functionName": "width",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 360,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "source",
+                        "line": 92
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 128,
+                        "errorMessage": "",
+                        "functionName": "fillMode",
+                        "line": 94
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
+                        "functionName": "element_data",
+                        "line": 106
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 9174,
+                        "errorMessage": "Cannot access value for name mouse",
+                        "functionName": "onClicked",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 94,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 110
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 96,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 155
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 241,
                         "errorMessage": "Cannot access value for name frame",
                         "functionName": "height",
-                        "line": 76
+                        "line": 156
                     }
                 ],
                 "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/UI/Music_scroll_view.qml"

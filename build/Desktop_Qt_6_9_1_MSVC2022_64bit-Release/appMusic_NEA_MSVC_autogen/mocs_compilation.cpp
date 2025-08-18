@@ -5,6 +5,7 @@
 #include "PUPF7Z5TEY/moc_xml_parser.cpp"
 #include "MBI2Q3SVGB/moc_audio_options.cpp"
 #include "MBI2Q3SVGB/moc_file_open.cpp"
+#include "MBI2Q3SVGB/moc_main_options.cpp"
 #include "MBI2Q3SVGB/moc_scan_existing.cpp"
 #include "I42TDCQGPF/moc_part_manager.cpp"
 #include "I42TDCQGPF/moc_part_object.cpp"

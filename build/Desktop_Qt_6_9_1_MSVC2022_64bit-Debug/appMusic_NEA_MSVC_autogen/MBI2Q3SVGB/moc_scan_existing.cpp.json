@@ -1,0 +1,69 @@
+{
+    "classes": [
+        {
+            "className": "scan_existing",
+            "lineNumber": 17,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "directory",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "scan_directory",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "current_directory",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "get_previous_directory",
+                    "returnType": "QString"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 0,
+                    "name": "list_existing_files",
+                    "notify": "list_existing_filesChanged",
+                    "read": "list_existing_files",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false,
+                    "write": "setlist_existing_files"
+                }
+            ],
+            "qualifiedClassName": "scan_existing",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "list_existing_filesChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "scan_existing.h",
+    "outputRevision": 69
+}

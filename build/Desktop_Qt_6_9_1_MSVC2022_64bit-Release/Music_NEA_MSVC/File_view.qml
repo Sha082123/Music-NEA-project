@@ -53,7 +53,15 @@ ScrollView{
                         part_manager.create_root_part("main_score");
                         part_manager.set_current_part(0);
                         current_part.openFile(file_selector.file_path, 0)
-                        scan_existing.scan_directory(file_selector.current_directory) // Scan the directory for files to update
+
+                        scan_existing.scan_directory(file_selector.current_directory)
+
+                        track_manager.scan_audio_directory(file_open.get_current_dir() + "/UserFiles/dump/" +
+                                                           file_open.name_from_project_files(file_selector.file_path) + "/tracks")
+
+                        part_manager.create_sync_coordinates()
+
+                        // Scan the directory for files to update
                         //file_selector.close()
                         //display_window.show()
                         display_window.windowOpened();
@@ -149,9 +157,16 @@ ScrollView{
                                     part_manager.clear_parts();
                                     track_manager.clear()
                                     part_manager.create_root_part("main_score")
-                                    part_manager.scan_part_directory(modelData)
                                     part_manager.set_current_part(0);
                                     current_part.openFile(modelData, 0)
+                                    part_manager.scan_part_directory(modelData)
+
+                                    track_manager.scan_audio_directory(file_open.get_current_dir() + "/UserFiles/dump/" +
+                                                                       file_open.name_from_project_files(modelData) + "/tracks")
+                                    console.log("File clicked:", file_open.get_current_dir() + "/UserFiles/dump/" + file_open.name_from_project_files(modelData) + "/tracks")
+
+                                    part_manager.create_sync_coordinates()
+
                                     //file_selector.close()
                                     //display_window.show()
                                     file_selector.fileLoaded(modelData)

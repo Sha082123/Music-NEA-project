@@ -30,13 +30,19 @@
                 },
                 {
                     "access": "public",
+                    "index": 4,
+                    "name": "create_sync_coordinates",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
                     "arguments": [
                         {
                             "name": "index",
                             "type": "int"
                         }
                     ],
-                    "index": 4,
+                    "index": 5,
                     "name": "delete_part",
                     "returnType": "int"
                 },
@@ -56,7 +62,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 5,
+                    "index": 6,
                     "name": "update_part",
                     "returnType": "int"
                 },
@@ -72,13 +78,13 @@
                             "type": "int"
                         }
                     ],
-                    "index": 6,
+                    "index": 7,
                     "name": "update_part_staves",
                     "returnType": "int"
                 },
                 {
                     "access": "public",
-                    "index": 7,
+                    "index": 8,
                     "name": "apply_part_actions",
                     "returnType": "void"
                 },
@@ -90,13 +96,13 @@
                             "type": "int"
                         }
                     ],
-                    "index": 8,
+                    "index": 9,
                     "name": "set_current_part",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 9,
+                    "index": 10,
                     "name": "list_size",
                     "returnType": "int"
                 },
@@ -112,7 +118,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 10,
+                    "index": 11,
                     "name": "staff_exists_in_part",
                     "returnType": "bool"
                 },
@@ -124,20 +130,38 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 11,
+                    "index": 12,
                     "name": "scan_part_directory",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 12,
+                    "index": 13,
                     "name": "save_all",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 13,
+                    "index": 14,
+                    "name": "set_unsaved",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 15,
                     "name": "clear_parts",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "time",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "set_tracker_time",
                     "returnType": "void"
                 }
             ],

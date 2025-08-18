@@ -50,11 +50,27 @@ template <> constexpr inline auto track_manager::qt_create_metaobjectdata<qt_met
         "duration_listChanged",
         "time_before_start_listChanged",
         "prevent_muteChanged",
+        "qml_sync_pointsChanged",
         "clear",
         "get_track_count",
+        "scan_audio_directory",
+        "directory",
         "toggle_mute",
         "index",
         "toggle_solo",
+        "set_volume",
+        "volume",
+        "save_playback_states",
+        "open_new_track",
+        "delete_track",
+        "delete_sync_point",
+        "add_sync_point",
+        "time",
+        "measure",
+        "beat",
+        "apply_sync_points",
+        "ms_to_time",
+        "ms",
         "music_loaded",
         "qml_track_list",
         "QVariantList",
@@ -65,7 +81,8 @@ template <> constexpr inline auto track_manager::qt_create_metaobjectdata<qt_met
         "end_ms_list",
         "duration_list",
         "time_before_start_list",
-        "prevent_mute"
+        "prevent_mute",
+        "qml_sync_points"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -89,40 +106,74 @@ template <> constexpr inline auto track_manager::qt_create_metaobjectdata<qt_met
         QtMocHelpers::SignalData<void()>(10, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'prevent_muteChanged'
         QtMocHelpers::SignalData<void()>(11, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'qml_sync_pointsChanged'
+        QtMocHelpers::SignalData<void()>(12, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'clear'
-        QtMocHelpers::MethodData<void()>(12, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(13, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'get_track_count'
-        QtMocHelpers::MethodData<int()>(13, 2, QMC::AccessPublic, QMetaType::Int),
+        QtMocHelpers::MethodData<int()>(14, 2, QMC::AccessPublic, QMetaType::Int),
+        // Method 'scan_audio_directory'
+        QtMocHelpers::MethodData<void(QString)>(15, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 16 },
+        }}),
         // Method 'toggle_mute'
-        QtMocHelpers::MethodData<void(int)>(14, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 15 },
+        QtMocHelpers::MethodData<void(int)>(17, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 18 },
         }}),
         // Method 'toggle_solo'
-        QtMocHelpers::MethodData<void(int)>(16, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 15 },
+        QtMocHelpers::MethodData<void(int)>(19, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 18 },
+        }}),
+        // Method 'set_volume'
+        QtMocHelpers::MethodData<void(int, float)>(20, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 18 }, { QMetaType::Float, 21 },
+        }}),
+        // Method 'save_playback_states'
+        QtMocHelpers::MethodData<void()>(22, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'open_new_track'
+        QtMocHelpers::MethodData<void()>(23, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'delete_track'
+        QtMocHelpers::MethodData<void(int)>(24, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 18 },
+        }}),
+        // Method 'delete_sync_point'
+        QtMocHelpers::MethodData<int(int)>(25, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::Int, 18 },
+        }}),
+        // Method 'add_sync_point'
+        QtMocHelpers::MethodData<void(int, int, float)>(26, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 27 }, { QMetaType::Int, 28 }, { QMetaType::Float, 29 },
+        }}),
+        // Method 'apply_sync_points'
+        QtMocHelpers::MethodData<void()>(30, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'ms_to_time'
+        QtMocHelpers::MethodData<QString(int)>(31, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::Int, 32 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'music_loaded'
-        QtMocHelpers::PropertyData<bool>(17, QMetaType::Bool, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 0),
+        QtMocHelpers::PropertyData<bool>(33, QMetaType::Bool, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 0),
         // property 'qml_track_list'
-        QtMocHelpers::PropertyData<QVariantList>(18, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 1),
+        QtMocHelpers::PropertyData<QVariantList>(34, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 1),
         // property 'mute_list'
-        QtMocHelpers::PropertyData<QVariantList>(20, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 2),
+        QtMocHelpers::PropertyData<QVariantList>(36, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 2),
         // property 'solo_list'
-        QtMocHelpers::PropertyData<QVariantList>(21, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 3),
+        QtMocHelpers::PropertyData<QVariantList>(37, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 3),
         // property 'volume_list'
-        QtMocHelpers::PropertyData<QVariantList>(22, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 4),
+        QtMocHelpers::PropertyData<QVariantList>(38, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 4),
         // property 'start_ms_list'
-        QtMocHelpers::PropertyData<QVariantList>(23, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 5),
+        QtMocHelpers::PropertyData<QVariantList>(39, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 5),
         // property 'end_ms_list'
-        QtMocHelpers::PropertyData<QVariantList>(24, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 6),
+        QtMocHelpers::PropertyData<QVariantList>(40, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 6),
         // property 'duration_list'
-        QtMocHelpers::PropertyData<QVariantList>(25, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 7),
+        QtMocHelpers::PropertyData<QVariantList>(41, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 7),
         // property 'time_before_start_list'
-        QtMocHelpers::PropertyData<QVariantList>(26, 0x80000000 | 19, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 8),
+        QtMocHelpers::PropertyData<QVariantList>(42, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 8),
         // property 'prevent_mute'
-        QtMocHelpers::PropertyData<bool>(27, QMetaType::Bool, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 9),
+        QtMocHelpers::PropertyData<bool>(43, QMetaType::Bool, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 9),
+        // property 'qml_sync_points'
+        QtMocHelpers::PropertyData<QVariantList>(44, 0x80000000 | 35, QMC::DefaultPropertyFlags | QMC::Writable | QMC::EnumOrFlag | QMC::Final, 10),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -154,11 +205,23 @@ void track_manager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 7: _t->duration_listChanged(); break;
         case 8: _t->time_before_start_listChanged(); break;
         case 9: _t->prevent_muteChanged(); break;
-        case 10: _t->clear(); break;
-        case 11: { int _r = _t->get_track_count();
+        case 10: _t->qml_sync_pointsChanged(); break;
+        case 11: _t->clear(); break;
+        case 12: { int _r = _t->get_track_count();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 12: _t->toggle_mute((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 13: _t->toggle_solo((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 13: _t->scan_audio_directory((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 14: _t->toggle_mute((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 15: _t->toggle_solo((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 16: _t->set_volume((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<float>>(_a[2]))); break;
+        case 17: _t->save_playback_states(); break;
+        case 18: _t->open_new_track(); break;
+        case 19: _t->delete_track((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 20: { int _r = _t->delete_sync_point((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 21: _t->add_sync_point((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<float>>(_a[3]))); break;
+        case 22: _t->apply_sync_points(); break;
+        case 23: { QString _r = _t->ms_to_time((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -183,6 +246,8 @@ void track_manager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
             return;
         if (QtMocHelpers::indexOfMethod<void (track_manager::*)()>(_a, &track_manager::prevent_muteChanged, 9))
             return;
+        if (QtMocHelpers::indexOfMethod<void (track_manager::*)()>(_a, &track_manager::qml_sync_pointsChanged, 10))
+            return;
     }
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
@@ -197,6 +262,7 @@ void track_manager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 7: *reinterpret_cast<QVariantList*>(_v) = _t->duration_list(); break;
         case 8: *reinterpret_cast<QVariantList*>(_v) = _t->time_before_start_list(); break;
         case 9: *reinterpret_cast<bool*>(_v) = _t->prevent_mute(); break;
+        case 10: *reinterpret_cast<QVariantList*>(_v) = _t->qml_sync_points(); break;
         default: break;
         }
     }
@@ -213,6 +279,7 @@ void track_manager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 7: _t->setduration_list(*reinterpret_cast<QVariantList*>(_v)); break;
         case 8: _t->settime_before_start_list(*reinterpret_cast<QVariantList*>(_v)); break;
         case 9: _t->setprevent_mute(*reinterpret_cast<bool*>(_v)); break;
+        case 10: _t->setqml_sync_points(*reinterpret_cast<QVariantList*>(_v)); break;
         default: break;
         }
     }
@@ -237,20 +304,20 @@ int track_manager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 24)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 24;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 24)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 14;
+        _id -= 24;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     }
     return _id;
 }
@@ -313,5 +380,11 @@ void track_manager::time_before_start_listChanged()
 void track_manager::prevent_muteChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 9, nullptr);
+}
+
+// SIGNAL 10
+void track_manager::qml_sync_pointsChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 10, nullptr);
 }
 QT_WARNING_POP

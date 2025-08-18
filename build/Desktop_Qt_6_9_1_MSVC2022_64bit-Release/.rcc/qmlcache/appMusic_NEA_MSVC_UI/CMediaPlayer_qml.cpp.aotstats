@@ -6,18 +6,18 @@
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 257,
+                        "durationMicroseconds": 232,
                         "errorMessage": "Cannot retrieve a non-object type by ID: play_button",
                         "functionName": "onReset_values",
-                        "line": 13
+                        "line": 16
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 434,
+                        "durationMicroseconds": 396,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 26
+                        "line": 29
                     },
                     {
                         "codegenSuccessful": false,
@@ -25,7 +25,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 41
+                        "line": 44
                     },
                     {
                         "codegenSuccessful": false,
@@ -33,7 +33,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"centerIn\".",
                         "functionName": "centerIn",
-                        "line": 33
+                        "line": 36
                     },
                     {
                         "codegenSuccessful": false,
@@ -41,7 +41,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"top\".",
                         "functionName": "top",
-                        "line": 34
+                        "line": 37
                     },
                     {
                         "codegenSuccessful": false,
@@ -49,7 +49,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"bottom\".",
                         "functionName": "bottom",
-                        "line": 35
+                        "line": 38
                     },
                     {
                         "codegenSuccessful": false,
@@ -57,7 +57,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 66
+                        "line": 69
                     },
                     {
                         "codegenSuccessful": false,
@@ -65,7 +65,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"right\".",
                         "functionName": "right",
-                        "line": 60
+                        "line": 63
                     },
                     {
                         "codegenSuccessful": false,
@@ -73,7 +73,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"top\".",
                         "functionName": "top",
-                        "line": 61
+                        "line": 64
                     },
                     {
                         "codegenSuccessful": false,
@@ -81,7 +81,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"bottom\".",
                         "functionName": "bottom",
-                        "line": 62
+                        "line": 65
                     },
                     {
                         "codegenSuccessful": false,
@@ -89,39 +89,39 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"left\".",
+                        "functionName": "left",
+                        "line": 80
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"top\".",
+                        "functionName": "top",
+                        "line": 81
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"bottom\".",
+                        "functionName": "bottom",
                         "line": 82
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"left\".",
-                        "functionName": "left",
-                        "line": 76
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 26,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"top\".",
-                        "functionName": "top",
-                        "line": 77
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"bottom\".",
-                        "functionName": "bottom",
-                        "line": 78
-                    },
-                    {
-                        "codegenSuccessful": false,
                         "column": 24,
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 99
+                        "line": 104
                     },
                     {
                         "codegenSuccessful": false,
@@ -129,7 +129,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"right\".",
                         "functionName": "right",
-                        "line": 93
+                        "line": 98
                     },
                     {
                         "codegenSuccessful": false,
@@ -137,7 +137,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"top\".",
                         "functionName": "top",
-                        "line": 94
+                        "line": 99
                     },
                     {
                         "codegenSuccessful": false,
@@ -145,7 +145,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"bottom\".",
                         "functionName": "bottom",
-                        "line": 95
+                        "line": 100
                     },
                     {
                         "codegenSuccessful": false,
@@ -153,23 +153,23 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"left\".",
+                        "functionName": "left",
                         "line": 115
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"left\".",
-                        "functionName": "left",
-                        "line": 109
-                    },
-                    {
-                        "codegenSuccessful": false,
                         "column": 26,
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"top\".",
                         "functionName": "top",
-                        "line": 110
+                        "line": 116
                     },
                     {
                         "codegenSuccessful": false,
@@ -177,7 +177,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"bottom\".",
                         "functionName": "bottom",
-                        "line": 111
+                        "line": 117
                     },
                     {
                         "codegenSuccessful": false,
@@ -185,7 +185,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 131
+                        "line": 138
                     },
                     {
                         "codegenSuccessful": false,
@@ -193,7 +193,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"left\".",
                         "functionName": "left",
-                        "line": 125
+                        "line": 132
                     },
                     {
                         "codegenSuccessful": false,
@@ -201,7 +201,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"top\".",
                         "functionName": "top",
-                        "line": 126
+                        "line": 133
                     },
                     {
                         "codegenSuccessful": false,
@@ -209,15 +209,15 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"bottom\".",
                         "functionName": "bottom",
-                        "line": 127
+                        "line": 134
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 309,
+                        "durationMicroseconds": 251,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 143
+                        "line": 150
                     },
                     {
                         "codegenSuccessful": false,
@@ -225,7 +225,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"to\".",
                         "functionName": "to",
-                        "line": 151
+                        "line": 158
                     },
                     {
                         "codegenSuccessful": false,
@@ -233,7 +233,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"value\".",
                         "functionName": "value",
-                        "line": 152
+                        "line": 159
                     },
                     {
                         "codegenSuccessful": false,
@@ -241,7 +241,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"moved\".",
                         "functionName": "onMoved",
-                        "line": 155
+                        "line": 162
                     }
                 ],
                 "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/UI/CMediaPlayer.qml"

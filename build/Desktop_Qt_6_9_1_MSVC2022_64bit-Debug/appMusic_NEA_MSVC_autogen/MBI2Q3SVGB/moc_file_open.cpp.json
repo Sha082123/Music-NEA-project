@@ -2,13 +2,101 @@
     "classes": [
         {
             "className": "file_open",
-            "lineNumber": 9,
+            "lineNumber": 12,
             "methods": [
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "name": "target_dir",
+                            "type": "QString"
+                        }
+                    ],
                     "index": 0,
-                    "name": "openFile",
+                    "name": "openNewFile",
                     "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "target_dir",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "openNewDirectory",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "file_path",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "name_from_project_files",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "file_path",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "get_base_name",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "get_current_dir",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "isDir",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "file_path",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "delete_file_or_dir",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "file_path",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "new_name",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "rename_file_or_dir",
+                    "returnType": "void"
                 }
             ],
             "object": true,

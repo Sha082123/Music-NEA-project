@@ -989,7 +989,9 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_manager.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSize
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QTextStream
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QUrl
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVariant
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVector
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QXmlStreamReader
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h
@@ -1129,6 +1131,7 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_manager.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversionnumber.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxmlstream.h
@@ -1165,6 +1168,16 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_manager.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtransform.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/QAudioBuffer
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/QAudioDecoder
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudio.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudiobuffer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudiodecoder.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudioformat.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtaudio.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimedia-config.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimediaexports.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimediaglobal.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetwork-config.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetworkglobal.h
@@ -1214,6 +1227,7 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_manager.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlexports.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlglobal.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/include/lunasvg/lunasvg.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/rtaudio/RtAudio.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/json/jsonxx.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/pugi/pugiconfig.hpp
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/pugi/pugixml.hpp
@@ -1266,23 +1280,30 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_manager.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_shared.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_visual.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atttypes.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/audio_parser.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/mei_parser.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/parser_data.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/xml_parser.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/audio_options.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/file_open.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/main_options.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/globals.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_manager.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/audio_player.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/image_provider.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/render_file.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/resvg_loader.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/svgrenderer.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/verovio_loader.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/track_objects/track_manager.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/track_objects/track_object.h
 D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDataStream
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDebug
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDir
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDirIterator
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QFile
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QFileInfo
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QMap
@@ -1292,7 +1313,9 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSize
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QTextStream
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QUrl
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVariant
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVector
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QXmlStreamReader
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h
@@ -1332,6 +1355,7 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdatetime.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdebug.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdir.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdiriterator.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdirlisting.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qendian.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qexceptionhandling.h
@@ -1431,6 +1455,7 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversionnumber.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxmlstream.h
@@ -1467,9 +1492,21 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtransform.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/QAudioBuffer
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/QAudioDecoder
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudio.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudiobuffer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudiodecoder.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudioformat.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtaudio.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimedia-config.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimediaexports.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimediaglobal.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetwork-config.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetworkglobal.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/QQmlApplicationEngine
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/QQmlContext
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qjsengine.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qjsmanagedvalue.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qjsnumbercoercion.h
@@ -1477,6 +1514,8 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qjsvalue.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqml.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlabstracturlinterceptor.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlapplicationengine.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlcontext.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmldebug.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlengine.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtQml/qqmlerror.h
@@ -1512,6 +1551,7 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlexports.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlglobal.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/include/lunasvg/lunasvg.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/rtaudio/RtAudio.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/json/jsonxx.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/pugi/pugiconfig.hpp
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/pugi/pugixml.hpp
@@ -1564,17 +1604,23 @@ D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_shared.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_visual.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atttypes.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/audio_parser.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/mei_parser.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/parser_data.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/xml_parser.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/audio_options.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/file_open.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/main_options.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/globals.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/part_objects/part_object.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/audio_player.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/image_provider.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/render_file.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/resvg_loader.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/svgrenderer.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/verovio_loader.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/track_objects/track_manager.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/track_objects/track_object.h
 D:/Comp Sci NEA/Music_NEA_MSVC/render/render_file.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDataStream
@@ -2740,6 +2786,7 @@ D:/Comp Sci NEA/Music_NEA_MSVC/track_objects/track_manager.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/data_parsing/xml_parser.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/audio_options.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/file_open.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/main_options.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/globals.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/audio_player.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/render/image_provider.h
@@ -3209,3 +3256,139 @@ D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/audio_options.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h
  mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/audio_options.h
 D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/audio_options.cpp
+D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/main_options.h
+ mmc:Q_OBJECT
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDir
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QFile
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20iterator.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20memory.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20type_traits.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20utility.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/q23utility.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qalgorithms.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qanystringview.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qarraydata.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qarraydataops.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qarraydatapointer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qassert.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qatomic.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qatomic_cxx11.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbindingstorage.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearray.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearrayalgorithms.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearraylist.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearrayview.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcalendar.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qchar.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcompare.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcompare_impl.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcomparehelpers.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcompilerdetection.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qconfig.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qconstructormacros.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcontainerfwd.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcontainerinfo.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcontainertools_impl.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcontiguouscache.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdarwinhelpers.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdatastream.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdatetime.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdebug.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdir.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdirlisting.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qexceptionhandling.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qfile.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qfiledevice.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qfileinfo.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qflags.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qfloat16.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qforeach.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qfunctionaltools_impl.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qfunctionpointer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qgenericatomic.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qglobal.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qglobalstatic.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qhash.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qhashfunctions.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qiodevice.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qiodevicebase.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qiterable.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qiterator.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qlatin1stringview.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qlist.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qlocale.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qlogging.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmalloc.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmap.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmath.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmetacontainer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmetatype.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qminmax.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qnamespace.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qnumeric.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qobject.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qobject_impl.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qobjectdefs.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qobjectdefs_impl.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qoverload.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qpair.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qrefcount.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qscopedpointer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qscopeguard.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qset.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qshareddata.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qshareddata_impl.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qsharedpointer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qsharedpointer_impl.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qspan.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstdlibdetection.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstring.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringalgorithms.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringbuilder.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringconverter.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringconverter_base.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringfwd.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringlist.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringliteral.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringmatcher.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringtokenizer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstringview.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qswap.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qsysinfo.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qsystemdetection.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtaggedpointer.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtclasshelpermacros.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtconfiginclude.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtconfigmacros.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtcore-config.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtcoreexports.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtcoreglobal.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtdeprecationdefinitions.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtdeprecationmarkers.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtenvironmentvariables.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtformat_impl.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtimezone.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtmetamacros.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtnoop.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtpreprocessorsupport.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtresource.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qttranslation.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qttypetraits.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtversion.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtversionchecks.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtypeinfo.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtypes.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qutf8stringview.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvariant.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxptype_traits.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h
+ mdp:D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/main_options.h
+D:/Comp Sci NEA/Music_NEA_MSVC/file_opening/main_options.cpp

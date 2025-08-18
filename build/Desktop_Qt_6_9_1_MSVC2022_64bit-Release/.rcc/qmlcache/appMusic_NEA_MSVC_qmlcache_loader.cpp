@@ -89,6 +89,13 @@ namespace _qt_qml_Music_NEA_MSVC_UI_Mixer_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_Music_NEA_MSVC_UI_Sync_manager_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -115,6 +122,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Music_NEA_MSVC/UI/Part_maker.qml"), &QmlCacheGeneratedCode::_qt_qml_Music_NEA_MSVC_UI_Part_maker_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Music_NEA_MSVC/UI/CMediaPlayer.qml"), &QmlCacheGeneratedCode::_qt_qml_Music_NEA_MSVC_UI_CMediaPlayer_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Music_NEA_MSVC/UI/Mixer.qml"), &QmlCacheGeneratedCode::_qt_qml_Music_NEA_MSVC_UI_Mixer_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Music_NEA_MSVC/UI/Sync_manager.qml"), &QmlCacheGeneratedCode::_qt_qml_Music_NEA_MSVC_UI_Sync_manager_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

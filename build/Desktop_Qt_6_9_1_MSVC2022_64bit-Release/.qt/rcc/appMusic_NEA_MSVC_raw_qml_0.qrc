@@ -12,6 +12,7 @@
     <file alias="UI/Part_maker.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Part_maker.qml</file>
     <file alias="UI/CMediaPlayer.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/CMediaPlayer.qml</file>
     <file alias="UI/Mixer.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Mixer.qml</file>
+    <file alias="UI/Sync_manager.qml">D:/Comp Sci NEA/Music_NEA_MSVC/UI/Sync_manager.qml</file>
   </qresource>
 </RCC>
 

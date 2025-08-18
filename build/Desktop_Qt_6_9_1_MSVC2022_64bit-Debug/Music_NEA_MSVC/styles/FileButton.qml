@@ -1,10 +1,13 @@
 import QtQuick 2.15
 import QtQuick.Controls
+import QtQuick.Layouts
 
 Rectangle {
     property alias text: button_text.text
     property int originalWidth: 0;
     property int originalHeight: 0;
+    property alias file_path: file_menu.file_path
+    property alias current_directory: file_menu.current_directory
 
 
     signal clicked()
@@ -16,6 +19,7 @@ Rectangle {
     radius: 10
     border.width: 2
     border.color: "black"
+    anchors.centerIn: parent
 
     Component.onCompleted: {
         originalHeight = fileButton.height;
@@ -46,10 +50,13 @@ Rectangle {
 
     Text {
         id: button_text
-        anchors.centerIn: parent
-        text: qsTr("Open File")
+        width: originalWidth
+        anchors.horizontalCenter: fileButton.horizontalCenter
+        anchors.top: fileButton.bottom
         font.pointSize: 12
         color: "black"
+        wrapMode: Text.Wrap
+        horizontalAlignment: Text.AlignHCenter
     }
 
     MouseArea {
@@ -69,5 +76,9 @@ Rectangle {
             fileButton.width = originalWidth
             fileButton.height = originalHeight
         }
+    }
+
+    File_menu {
+        id: file_menu
     }
 }

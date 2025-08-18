@@ -2,14 +2,574 @@
     {
         "classes": [
             {
-                "className": "file_open",
-                "lineNumber": 9,
+                "className": "part_manager",
+                "lineNumber": 14,
                 "methods": [
                     {
                         "access": "public",
+                        "arguments": [
+                            {
+                                "name": "part_name",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "create_root_part",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "part_name",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "create_new_part",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 4,
+                        "name": "delete_part",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            },
+                            {
+                                "name": "new_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "old_name",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 5,
+                        "name": "update_part",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "part_existence",
+                                "type": "QVariantList"
+                            },
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "update_part_staves",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "apply_part_actions",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "set_current_part",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 9,
+                        "name": "list_size",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "staff_n_value",
+                                "type": "int"
+                            },
+                            {
+                                "name": "part_name",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "staff_exists_in_part",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "source_path",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "scan_part_directory",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 12,
+                        "name": "save_all",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 13,
+                        "name": "clear_parts",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
                         "index": 0,
+                        "name": "part_name_list",
+                        "notify": "part_name_listChanged",
+                        "read": "part_name_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false,
+                        "write": "setpart_name_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 1,
+                        "name": "buffer_part_name_list",
+                        "notify": "buffer_part_name_listChanged",
+                        "read": "buffer_part_name_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false,
+                        "write": "setbuffer_part_name_list"
+                    }
+                ],
+                "qualifiedClassName": "part_manager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "part_name_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "buffer_part_name_listChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "part_manager.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "part_object",
+                "lineNumber": 15,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file_path",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "mode",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 6,
                         "name": "openFile",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "update",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "input",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "new_break_item",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "measure_number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "delete_break_item",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "input",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "update_break_list",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "index": 11,
+                        "name": "apply_breaks",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "point",
+                                "type": "QPointF"
+                            },
+                            {
+                                "name": "page_number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 12,
+                        "name": "element_from_point",
+                        "returnType": "QVariantList"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "measure_number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "coordinates_from_measure",
+                        "returnType": "QVariantList"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "save_file",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "list_PNG_paths",
+                        "notify": "list_PNG_pathsChanged",
+                        "read": "list_PNG_paths",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false,
+                        "write": "setlist_PNG_paths"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 1,
+                        "name": "reh_y_coords",
+                        "notify": "reh_y_coordsChanged",
+                        "read": "reh_y_coords",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setReh_y_coords"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 2,
+                        "name": "break_list",
+                        "notify": "break_listChanged",
+                        "read": "break_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setBreak_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 3,
+                        "name": "part_list",
+                        "notify": "part_listChanged",
+                        "read": "part_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setpart_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 4,
+                        "name": "saved",
+                        "notify": "savedChanged",
+                        "read": "saved",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setsaved"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 5,
+                        "name": "file_path",
+                        "notify": "file_pathChanged",
+                        "read": "file_path",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setfile_path"
+                    }
+                ],
+                "qualifiedClassName": "part_object",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "list_PNG_pathsChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "reh_y_coordsChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "break_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "part_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "savedChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "file_pathChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "part_object.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "audio_options",
+                "lineNumber": 9,
+                "object": true,
+                "qualifiedClassName": "audio_options",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "audio_options.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "file_open",
+                "lineNumber": 12,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "target_dir",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "openNewFile",
                         "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "target_dir",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "openNewDirectory",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file_path",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "name_from_project_files",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file_path",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "get_base_name",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "get_current_dir",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 5,
+                        "name": "isDir",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file_path",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "delete_file_or_dir",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file_path",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "new_name",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 7,
+                        "name": "rename_file_or_dir",
+                        "returnType": "void"
                     }
                 ],
                 "object": true,
@@ -28,8 +588,452 @@
     {
         "classes": [
             {
+                "className": "main_options",
+                "lineNumber": 8,
+                "object": true,
+                "qualifiedClassName": "main_options",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "main_options.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "scan_existing",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "directory",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "scan_directory",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "current_directory",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "get_previous_directory",
+                        "returnType": "QString"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "list_existing_files",
+                        "notify": "list_existing_filesChanged",
+                        "read": "list_existing_files",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false,
+                        "write": "setlist_existing_files"
+                    }
+                ],
+                "qualifiedClassName": "scan_existing",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "list_existing_filesChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "scan_existing.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "audio_parser",
+                "lineNumber": 12,
+                "object": true,
+                "qualifiedClassName": "audio_parser",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "pcm_data",
+                                "type": "QList<qint16>"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "audio_parsing_finished",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "audio_parser.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "mei_parser",
+                "lineNumber": 12,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "measure_number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "insert_break",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "measure_number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "delete_break",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "mei_parser",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "mei_parser.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "parser_data",
+                "lineNumber": 10,
+                "object": true,
+                "qualifiedClassName": "parser_data",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "parser_data.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "xml_parser",
+                "lineNumber": 10,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "point",
+                                "type": "QPointF"
+                            },
+                            {
+                                "name": "page_number",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "element_from_point",
+                        "returnType": "QVariantList"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "xml_parser",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "xml_parser.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "audio_player",
+                "lineNumber": 10,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "play_audio",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "pause_audio",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 6,
+                        "name": "refresh",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "back_10s",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 8,
+                        "name": "forward_10s",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 9,
+                        "name": "skip_to_start",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 10,
+                        "name": "skip_to_end",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "position",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "set_position",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "track_index",
+                                "type": "int"
+                            },
+                            {
+                                "name": "volume",
+                                "type": "float"
+                            }
+                        ],
+                        "index": 12,
+                        "name": "set_volume",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "volume",
+                                "type": "float"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "set_master_volume",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 14,
+                        "name": "mute",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "unmute",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "qml_position",
+                        "notify": "qml_positionChanged",
+                        "read": "qml_position",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "size_t",
+                        "user": false,
+                        "write": "setqml_position"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 1,
+                        "name": "total_ms",
+                        "notify": "total_msChanged",
+                        "read": "total_ms",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "size_t",
+                        "user": false,
+                        "write": "settotal_ms"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 2,
+                        "name": "decibels",
+                        "notify": "decibelsChanged",
+                        "read": "decibels",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "float",
+                        "user": false,
+                        "write": "setdecibels"
+                    }
+                ],
+                "qualifiedClassName": "audio_player",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "qml_positionChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "current_position",
+                                "type": "size_t"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "sample_position_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "total_msChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "decibelsChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "audio_player.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "image_provider",
+                "lineNumber": 8,
+                "object": true,
+                "qualifiedClassName": "image_provider",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QQuickImageProvider"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "image_provider.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
                 "className": "render_file",
-                "lineNumber": 15,
+                "lineNumber": 24,
                 "methods": [
                     {
                         "access": "public",
@@ -37,10 +1041,20 @@
                             {
                                 "name": "file_path",
                                 "type": "QString"
+                            },
+                            {
+                                "name": "mode",
+                                "type": "int"
                             }
                         ],
-                        "index": 1,
+                        "index": 3,
                         "name": "openFile",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "update",
                         "returnType": "void"
                     }
                 ],
@@ -60,6 +1074,36 @@
                         "type": "QString",
                         "user": false,
                         "write": "setfilename"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 1,
+                        "name": "output_path",
+                        "notify": "output_pathChanged",
+                        "read": "output_path",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setoutput_path"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 2,
+                        "name": "list_PNG_paths",
+                        "notify": "list_PNG_pathsChanged",
+                        "read": "list_PNG_paths",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false,
+                        "write": "setlist_PNG_paths"
                     }
                 ],
                 "qualifiedClassName": "render_file",
@@ -68,6 +1112,18 @@
                         "access": "public",
                         "index": 0,
                         "name": "filenameChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "output_pathChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "list_PNG_pathsChanged",
                         "returnType": "void"
                     }
                 ],
@@ -80,6 +1136,409 @@
             }
         ],
         "inputFile": "render_file.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "resvg_loader",
+                "lineNumber": 11,
+                "object": true,
+                "qualifiedClassName": "resvg_loader",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "resvg_loader.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "verovio_loader",
+                "lineNumber": 10,
+                "object": true,
+                "qualifiedClassName": "verovio_loader",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "verovio_loader.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "track_manager",
+                "lineNumber": 15,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 10,
+                        "name": "clear",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 11,
+                        "name": "get_track_count",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 12,
+                        "name": "toggle_mute",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "toggle_solo",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            },
+                            {
+                                "name": "volume",
+                                "type": "float"
+                            }
+                        ],
+                        "index": 14,
+                        "name": "set_volume",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 15,
+                        "name": "save_playback_states",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 16,
+                        "name": "open_new_track",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 17,
+                        "name": "delete_track",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "music_loaded",
+                        "notify": "music_loadedChanged",
+                        "read": "music_loaded",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setmusic_loaded"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 1,
+                        "name": "qml_track_list",
+                        "notify": "qml_track_listChanged",
+                        "read": "qml_track_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setqml_track_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 2,
+                        "name": "mute_list",
+                        "notify": "mute_listChanged",
+                        "read": "mute_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setmute_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 3,
+                        "name": "solo_list",
+                        "notify": "solo_listChanged",
+                        "read": "solo_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setmolo_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 4,
+                        "name": "volume_list",
+                        "notify": "volume_listChanged",
+                        "read": "volume_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setvolume_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 5,
+                        "name": "start_ms_list",
+                        "notify": "start_ms_listChanged",
+                        "read": "start_ms_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setstart_ms_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 6,
+                        "name": "end_ms_list",
+                        "notify": "end_ms_listChanged",
+                        "read": "end_ms_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setend_ms_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 7,
+                        "name": "duration_list",
+                        "notify": "duration_listChanged",
+                        "read": "duration_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "setduration_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 8,
+                        "name": "time_before_start_list",
+                        "notify": "time_before_start_listChanged",
+                        "read": "time_before_start_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QVariantList",
+                        "user": false,
+                        "write": "settime_before_start_list"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 9,
+                        "name": "prevent_mute",
+                        "notify": "prevent_muteChanged",
+                        "read": "prevent_mute",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setprevent_mute"
+                    }
+                ],
+                "qualifiedClassName": "track_manager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "music_loadedChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "qml_track_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "mute_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "solo_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "volume_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "start_ms_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 6,
+                        "name": "end_ms_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "duration_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 8,
+                        "name": "time_before_start_listChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 9,
+                        "name": "prevent_muteChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "track_manager.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "track_object",
+                "lineNumber": 12,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "track_name",
+                        "notify": "track_nameChanged",
+                        "read": "track_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "settrack_name"
+                    }
+                ],
+                "qualifiedClassName": "track_object",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "track_nameChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "pcm_data",
+                                "type": "QList<qint16>"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "handle_audio_parsing_finished",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "track_object.h",
         "outputRevision": 69
     }
 ]

@@ -12,7 +12,9 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSize \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QTextStream \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QUrl \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVariant \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVector \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QXmlStreamReader \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
@@ -152,6 +154,7 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvariant.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvarlengtharray.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvector.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversionnumber.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxmlstream.h \
@@ -188,6 +191,16 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtransform.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/QAudioBuffer \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/QAudioDecoder \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudio.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudiobuffer.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudiodecoder.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qaudioformat.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtaudio.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimedia-config.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimediaexports.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtMultimedia/qtmultimediaglobal.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetwork-config.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetworkexports.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtNetwork/qtnetworkglobal.h \
@@ -237,6 +250,7 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlexports.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtXml/qtxmlglobal.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/lunasvg/install/include/lunasvg/lunasvg.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/rtaudio/RtAudio.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/json/jsonxx.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/pugi/pugiconfig.hpp \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/include/pugi/pugixml.hpp \
@@ -289,14 +303,20 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_shared.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atts_visual.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/external/verovio/libmei/dist/atttypes.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/audio_parser.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/mei_parser.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/parser_data.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/xml_parser.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/audio_options.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/file_open.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/main_options.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/globals.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/part_objects/part_object.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/audio_player.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/image_provider.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/render_file.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/resvg_loader.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/svgrenderer.h \
-  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/verovio_loader.h
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/verovio_loader.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/track_objects/track_manager.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/track_objects/track_object.h

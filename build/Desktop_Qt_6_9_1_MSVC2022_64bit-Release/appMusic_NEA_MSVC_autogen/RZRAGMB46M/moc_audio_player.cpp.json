@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "audio_player",
-            "lineNumber": 10,
+            "lineNumber": 11,
             "methods": [
                 {
                     "access": "public",

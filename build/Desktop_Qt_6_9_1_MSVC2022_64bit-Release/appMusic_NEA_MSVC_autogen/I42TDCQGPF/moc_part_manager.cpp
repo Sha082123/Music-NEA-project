@@ -45,6 +45,7 @@ template <> constexpr inline auto part_manager::qt_create_metaobjectdata<qt_meta
         "create_root_part",
         "part_name",
         "create_new_part",
+        "create_sync_coordinates",
         "delete_part",
         "index",
         "update_part",
@@ -61,7 +62,10 @@ template <> constexpr inline auto part_manager::qt_create_metaobjectdata<qt_meta
         "scan_part_directory",
         "source_path",
         "save_all",
+        "set_unsaved",
         "clear_parts",
+        "set_tracker_time",
+        "time",
         "part_name_list",
         "buffer_part_name_list"
     };
@@ -79,44 +83,52 @@ template <> constexpr inline auto part_manager::qt_create_metaobjectdata<qt_meta
         QtMocHelpers::MethodData<int(QString)>(6, 2, QMC::AccessPublic, QMetaType::Int, {{
             { QMetaType::QString, 5 },
         }}),
+        // Method 'create_sync_coordinates'
+        QtMocHelpers::MethodData<void()>(7, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'delete_part'
-        QtMocHelpers::MethodData<int(int)>(7, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::Int, 8 },
+        QtMocHelpers::MethodData<int(int)>(8, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::Int, 9 },
         }}),
         // Method 'update_part'
-        QtMocHelpers::MethodData<int(int, QString, QString)>(9, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::Int, 8 }, { QMetaType::QString, 10 }, { QMetaType::QString, 11 },
+        QtMocHelpers::MethodData<int(int, QString, QString)>(10, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::Int, 9 }, { QMetaType::QString, 11 }, { QMetaType::QString, 12 },
         }}),
         // Method 'update_part_staves'
-        QtMocHelpers::MethodData<int(QVariantList, int)>(12, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { 0x80000000 | 13, 14 }, { QMetaType::Int, 8 },
+        QtMocHelpers::MethodData<int(QVariantList, int)>(13, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { 0x80000000 | 14, 15 }, { QMetaType::Int, 9 },
         }}),
         // Method 'apply_part_actions'
-        QtMocHelpers::MethodData<void()>(15, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(16, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'set_current_part'
-        QtMocHelpers::MethodData<void(int)>(16, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 8 },
+        QtMocHelpers::MethodData<void(int)>(17, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 9 },
         }}),
         // Method 'list_size'
-        QtMocHelpers::MethodData<int()>(17, 2, QMC::AccessPublic, QMetaType::Int),
+        QtMocHelpers::MethodData<int()>(18, 2, QMC::AccessPublic, QMetaType::Int),
         // Method 'staff_exists_in_part'
-        QtMocHelpers::MethodData<bool(int, QString)>(18, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::Int, 19 }, { QMetaType::QString, 5 },
+        QtMocHelpers::MethodData<bool(int, QString)>(19, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 20 }, { QMetaType::QString, 5 },
         }}),
         // Method 'scan_part_directory'
-        QtMocHelpers::MethodData<void(QString)>(20, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 21 },
+        QtMocHelpers::MethodData<void(QString)>(21, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 22 },
         }}),
         // Method 'save_all'
-        QtMocHelpers::MethodData<void()>(22, 2, QMC::AccessPublic, QMetaType::Void),
-        // Method 'clear_parts'
         QtMocHelpers::MethodData<void()>(23, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'set_unsaved'
+        QtMocHelpers::MethodData<void()>(24, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'clear_parts'
+        QtMocHelpers::MethodData<void()>(25, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'set_tracker_time'
+        QtMocHelpers::MethodData<void(int)>(26, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 27 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'part_name_list'
-        QtMocHelpers::PropertyData<QStringList>(24, QMetaType::QStringList, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 0),
+        QtMocHelpers::PropertyData<QStringList>(28, QMetaType::QStringList, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 0),
         // property 'buffer_part_name_list'
-        QtMocHelpers::PropertyData<QStringList>(25, QMetaType::QStringList, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 1),
+        QtMocHelpers::PropertyData<QStringList>(29, QMetaType::QStringList, QMC::DefaultPropertyFlags | QMC::Writable | QMC::Final, 1),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -143,21 +155,24 @@ void part_manager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 2: _t->create_root_part((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 3: { int _r = _t->create_new_part((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 4: { int _r = _t->delete_part((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+        case 4: _t->create_sync_coordinates(); break;
+        case 5: { int _r = _t->delete_part((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 5: { int _r = _t->update_part((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])));
+        case 6: { int _r = _t->update_part((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 6: { int _r = _t->update_part_staves((*reinterpret_cast< std::add_pointer_t<QVariantList>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 7: { int _r = _t->update_part_staves((*reinterpret_cast< std::add_pointer_t<QVariantList>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 7: _t->apply_part_actions(); break;
-        case 8: _t->set_current_part((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 9: { int _r = _t->list_size();
+        case 8: _t->apply_part_actions(); break;
+        case 9: _t->set_current_part((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 10: { int _r = _t->list_size();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 10: { bool _r = _t->staff_exists_in_part((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 11: { bool _r = _t->staff_exists_in_part((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 11: _t->scan_part_directory((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 12: _t->save_all(); break;
-        case 13: _t->clear_parts(); break;
+        case 12: _t->scan_part_directory((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 13: _t->save_all(); break;
+        case 14: _t->set_unsaved(); break;
+        case 15: _t->clear_parts(); break;
+        case 16: _t->set_tracker_time((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -204,14 +219,14 @@ int part_manager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 17;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 17)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 14;
+        _id -= 17;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty

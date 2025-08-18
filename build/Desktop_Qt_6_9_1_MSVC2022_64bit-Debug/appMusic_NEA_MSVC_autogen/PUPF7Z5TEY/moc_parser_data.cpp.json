@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "parser_data",
+            "lineNumber": 10,
+            "object": true,
+            "qualifiedClassName": "parser_data",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "parser_data.h",
+    "outputRevision": 69
+}

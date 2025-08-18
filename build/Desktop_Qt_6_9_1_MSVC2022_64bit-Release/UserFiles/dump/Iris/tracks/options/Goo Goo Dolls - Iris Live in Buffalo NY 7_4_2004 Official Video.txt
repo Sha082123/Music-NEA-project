@@ -1,7 +1,7 @@
-mute=0
+mute=1
 solo=0
 volume=1
 start_ms=0
-end_ms=0
-duration=0
+end_ms=342518
+duration=342518
 time_before_start=0

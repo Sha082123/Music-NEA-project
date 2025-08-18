@@ -26,7 +26,7 @@ ApplicationWindow {
             text: qsTr("Home")
         }
         TabButton {
-            text: qsTr("FileView")
+            text: qsTr("File view")
             onPressed: {
                 display_window.focus = true
             }

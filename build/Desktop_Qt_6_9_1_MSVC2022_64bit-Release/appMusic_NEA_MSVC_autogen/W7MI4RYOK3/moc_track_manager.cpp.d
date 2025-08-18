@@ -306,6 +306,7 @@ D:/Comp\ Sci\ NEA/Music_NEA_MSVC/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Release/a
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/data_parsing/xml_parser.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/audio_options.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/file_open.h \
+  D:/Comp\ Sci\ NEA/Music_NEA_MSVC/file_opening/main_options.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/globals.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/audio_player.h \
   D:/Comp\ Sci\ NEA/Music_NEA_MSVC/render/image_provider.h \

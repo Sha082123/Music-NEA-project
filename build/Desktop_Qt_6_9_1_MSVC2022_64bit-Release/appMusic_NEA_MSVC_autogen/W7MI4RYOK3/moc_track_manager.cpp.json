@@ -2,19 +2,31 @@
     "classes": [
         {
             "className": "track_manager",
-            "lineNumber": 14,
+            "lineNumber": 16,
             "methods": [
                 {
                     "access": "public",
-                    "index": 10,
+                    "index": 11,
                     "name": "clear",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 11,
+                    "index": 12,
                     "name": "get_track_count",
                     "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "directory",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 13,
+                    "name": "scan_audio_directory",
+                    "returnType": "void"
                 },
                 {
                     "access": "public",
@@ -24,7 +36,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 12,
+                    "index": 14,
                     "name": "toggle_mute",
                     "returnType": "void"
                 },
@@ -36,9 +48,99 @@
                             "type": "int"
                         }
                     ],
-                    "index": 13,
+                    "index": 15,
                     "name": "toggle_solo",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "volume",
+                            "type": "float"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "set_volume",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 17,
+                    "name": "save_playback_states",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 18,
+                    "name": "open_new_track",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 19,
+                    "name": "delete_track",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 20,
+                    "name": "delete_sync_point",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "time",
+                            "type": "int"
+                        },
+                        {
+                            "name": "measure",
+                            "type": "int"
+                        },
+                        {
+                            "name": "beat",
+                            "type": "float"
+                        }
+                    ],
+                    "index": 21,
+                    "name": "add_sync_point",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 22,
+                    "name": "apply_sync_points",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "ms",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 23,
+                    "name": "ms_to_time",
+                    "returnType": "QString"
                 }
             ],
             "object": true,
@@ -192,6 +294,21 @@
                     "type": "bool",
                     "user": false,
                     "write": "setprevent_mute"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 10,
+                    "name": "qml_sync_points",
+                    "notify": "qml_sync_pointsChanged",
+                    "read": "qml_sync_points",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false,
+                    "write": "setqml_sync_points"
                 }
             ],
             "qualifiedClassName": "track_manager",
@@ -254,6 +371,12 @@
                     "access": "public",
                     "index": 9,
                     "name": "prevent_muteChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 10,
+                    "name": "qml_sync_pointsChanged",
                     "returnType": "void"
                 }
             ],

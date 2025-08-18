@@ -248,6 +248,7 @@ Window {
 
         onClicked: {
             part_manager.apply_part_actions()
+            part_manager.create_sync_coordinates()
         }
     }
 

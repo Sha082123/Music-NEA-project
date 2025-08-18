@@ -1,0 +1,36 @@
+{
+    "classes": [
+        {
+            "className": "xml_parser",
+            "lineNumber": 10,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "point",
+                            "type": "QPointF"
+                        },
+                        {
+                            "name": "page_number",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "element_from_point",
+                    "returnType": "QVariantList"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "xml_parser",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "xml_parser.h",
+    "outputRevision": 69
+}

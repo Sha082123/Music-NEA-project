@@ -17,7 +17,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"triggered\".",
                         "functionName": "onTriggered",
-                        "line": 22
+                        "line": 23
                     },
                     {
                         "codegenSuccessful": false,
@@ -25,7 +25,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"triggered\".",
                         "functionName": "onTriggered",
-                        "line": 30
+                        "line": 32
                     }
                 ],
                 "filePath": "D:/Comp Sci NEA/Music_NEA_MSVC/UI/C_MenuBar.qml"

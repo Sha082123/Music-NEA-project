@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "render_file",
-            "lineNumber": 15,
+            "lineNumber": 24,
             "methods": [
                 {
                     "access": "public",
@@ -10,10 +10,20 @@
                         {
                             "name": "file_path",
                             "type": "QString"
+                        },
+                        {
+                            "name": "mode",
+                            "type": "int"
                         }
                     ],
-                    "index": 1,
+                    "index": 3,
                     "name": "openFile",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "update",
                     "returnType": "void"
                 }
             ],
@@ -33,6 +43,36 @@
                     "type": "QString",
                     "user": false,
                     "write": "setfilename"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 1,
+                    "name": "output_path",
+                    "notify": "output_pathChanged",
+                    "read": "output_path",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setoutput_path"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 2,
+                    "name": "list_PNG_paths",
+                    "notify": "list_PNG_pathsChanged",
+                    "read": "list_PNG_paths",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false,
+                    "write": "setlist_PNG_paths"
                 }
             ],
             "qualifiedClassName": "render_file",
@@ -41,6 +81,18 @@
                     "access": "public",
                     "index": 0,
                     "name": "filenameChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "output_pathChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "list_PNG_pathsChanged",
                     "returnType": "void"
                 }
             ],
