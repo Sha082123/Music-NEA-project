@@ -12,6 +12,8 @@ Window {
 
         anchors.fill: parent
 
+        clip: true
+
         ListView {
             id: list_view
 

@@ -74,6 +74,8 @@ void part_manager::create_sync_coordinates()
 
     }
 
+    set_tracker_time(0);
+
 }
 
 int part_manager::delete_part(int index)

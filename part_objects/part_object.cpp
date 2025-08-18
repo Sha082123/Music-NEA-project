@@ -471,7 +471,7 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                 new_sync_coordinate.page_index = current_page_index;
                 new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
                 new_sync_coordinate.measure = current_sync_point.measure;
-                new_sync_coordinate.beat = current_sync_point.beat;
+                new_sync_coordinate.beat = end_beat;
                 m_sync_coordinates.append(new_sync_coordinate);
 
                 end = true;
@@ -658,7 +658,8 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
     }
 
     for (auto sync_coordinate : m_sync_coordinates) {
-        qInfo() << "Sync Coordinate: " << sync_coordinate.coordinates << ", Time: " << sync_coordinate.time;
+        qInfo() << "Sync Coordinate: " << sync_coordinate.coordinates << ", Time: " << sync_coordinate.time <<
+                    ", Measure: " << sync_coordinate.measure << ", Beat: " << sync_coordinate.beat;
         if (sync_coordinate.measure== 20) {
                 return;
             }
@@ -807,6 +808,8 @@ void part_object::match_sync_to_root()
                 new_sync_coordinate.measure = current_element.measure_number;
                 new_sync_coordinate.beat = float(current_element.start_beat + 32) / 32.0f;
 
+                //qInfo() << new_sync_coordinate.beat;
+
                 if ((current_element.position.x() < previous_element.position.x()) && (new_sync_coordinate.coordinates.y() == m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.y())) {
                     m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.setX(current_element.position.x() - 20);
                 }
@@ -839,22 +842,71 @@ void part_object::match_sync_to_root()
     int measure_to_find = m_sync_coordinates[sync_index].measure;
     float beat_to_find = m_sync_coordinates[sync_index].beat;
 
-    for (auto &sync_coordinate : root_sync_coordinate) {
+    for (int index = 0; index < root_sync_coordinate.size(); index ++) {
+        sync_coordinate sync_coordinate = root_sync_coordinate[index];
+
+        // qInfo() << "current sync coordinate beat and measure: " << sync_coordinate.measure << sync_coordinate.beat;
+        // qInfo() << "Measure and beat to find: " << measure_to_find << beat_to_find;
+        // qInfo() << Qt::endl;
+
+        if (beat_to_find == 0) {
+            // if beat_to_find is 0, then calculate time by ourself
+
+            if (index >= root_sync_coordinate.size() - 1) {
+                m_sync_coordinates[sync_index].time = sync_coordinate.time;
+            } else {
+                m_sync_coordinates[sync_index].time = (sync_coordinate.time + root_sync_coordinate[index+1].time) / 2;
+                sync_index++;
+
+                if (sync_index < m_sync_coordinates.size()) {
+                    measure_to_find = m_sync_coordinates[sync_index].measure;
+                    beat_to_find = m_sync_coordinates[sync_index].beat;
+
+                } else {
+                    qInfo() << "last" << measure_to_find << beat_to_find;
+                    break; // no more coordinates to match
+                }
+
+            }
+
+            continue;
+        }
+
+        if (sync_coordinate.measure > measure_to_find || (sync_coordinate.measure == measure_to_find && sync_coordinate.beat > beat_to_find)) {
+            sync_index++;
+            if (sync_index < m_sync_coordinates.size()) {
+                measure_to_find = m_sync_coordinates[sync_index].measure;
+                beat_to_find = m_sync_coordinates[sync_index].beat;
+            } else {
+                qInfo() << "last" << measure_to_find << beat_to_find;
+            }
+
+            index--; // we need to check the same index again, because we might have skipped a coordinate
+            continue;
+        }
 
         if (sync_coordinate.measure == measure_to_find && sync_coordinate.beat == beat_to_find) {
             // if we find the same measure and beat, then we can use the time
             m_sync_coordinates[sync_index].time = sync_coordinate.time;
             sync_index++;
+            index--; // we need to check the same index again, because we might have skipped a coordinate
 
             if (sync_index < m_sync_coordinates.size()) {
                 measure_to_find = m_sync_coordinates[sync_index].measure;
                 beat_to_find = m_sync_coordinates[sync_index].beat;
+
             } else {
+                qInfo() << "last" << measure_to_find << beat_to_find;
                 break; // no more coordinates to match
             }
         }
 
     }
+
+    // for (auto sync_coordinate : m_sync_coordinates) {
+    //     qInfo() << "Sync Coordinate: " << sync_coordinate.coordinates << ", Time: " << sync_coordinate.time
+    //             << ", Measure: " << sync_coordinate.measure << ", Beat: " << sync_coordinate.beat;
+    // }
 
 }
 

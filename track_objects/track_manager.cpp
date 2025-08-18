@@ -141,11 +141,11 @@ void track_manager::load_tracks()
 
 
 
+
     m_audio_player->load_audio(pcm_buffer_2d, this);
 
     m_engine->rootContext()->setContextProperty("audio_player", m_audio_player);
 
-    m_part_manager->set_tracker_time(0);
 }
 
 
@@ -484,6 +484,8 @@ void track_manager::apply_sync_points()
 
     m_part_manager->create_sync_coordinates ();
     m_sync_point_actions.clear();
+
+    m_main_options->update_options(m_sync_points);
 }
 
 QString track_manager::ms_to_time(int ms)

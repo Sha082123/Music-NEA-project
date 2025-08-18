@@ -300,9 +300,12 @@ Rectangle {
 
                         music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
                                 ((current_part.tracker_info[0].y - 200) * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
+
+                        music_stack.itemAt(music_stack.currentIndex).refresh_tracker()
                     } else {
                         console.log("Snap to tracker disabled")
                     }
+
                 }
             }
         }
@@ -465,6 +468,9 @@ Rectangle {
             onClicked: {
                 track_manager.add_sync_point(media_player.slider.value, selection_view.measure_number, selection_view.start_beat)
                 track_manager.apply_sync_points()
+                audio_player.set_position(media_player.slider.value)
+                part_manager.set_tracker_time(media_player.slider.value)
+                music_stack.itemAt(music_stack.currentIndex).refresh_tracker()
             }
 
         }
@@ -552,15 +558,16 @@ Rectangle {
                     part_manager.set_current_part(index)
                     console.log("Current part set to:", modelData, index)
                     console.log("number of parts", part_manager.list_size())
+                    if (snap_to_tracker.active) {
+                        music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtBeginning() // Reset view to the beginning
 
-                if (snap_to_tracker.active) {
-                    music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtBeginning() // Reset view to the beginning
-
-                    music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
+                        music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
                             ((current_part.tracker_info[0].y - 200) * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
-                } else {
-                    console.log("Snap to tracker disabled")
-                }
+
+                        music_stack.itemAt(music_stack.currentIndex).refresh_tracker()
+                    } else {
+                        console.log("Snap to tracker disabled")
+                    }
 
 
 

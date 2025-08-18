@@ -47,7 +47,7 @@ public:
         int page_index;
         float y_no_offset;
         int measure;
-        int beat;
+        float beat;
     };
 
     void calculate_sync_coordinates(QVector<main_options::sync_point> &sync_points);

@@ -11,6 +11,11 @@ ScrollView{
     property alias tracker: tracker
 
     signal refresh_tracker()
+    signal snap_to_view()
+
+    onSnap_to_view: {
+        tracker.y = (current_part.tracker_info[0].y - 100) * viewer.scale_factor - (viewer.contentY - viewer.originY);
+    }
 
     onRefresh_tracker: {
         tracker.x = Qt.binding(function() {
@@ -22,7 +27,7 @@ ScrollView{
         tracker.height = Qt.binding(function() {
             return (current_part.tracker_info[1] + 160) * viewer.scale_factor;
         })
-        console.log("Tracker refreshed:", tracker.x, tracker.y, tracker.height);
+        //console.log("Tracker refreshed:", tracker.x, tracker.y, tracker.height);
     }
 
     clip: true
@@ -46,10 +51,11 @@ ScrollView{
         property real scale_factor: (viewer.width/3000) * frame.image_scale // 3000 is width
 
         onContentYChanged: {
-            console.log("Content Y Changed:", viewer.contentY);
+            //console.log("Content Y Changed:", viewer.contentY);
             //tracker.y = current_part.tracker_info[0].y * viewer.scale_factor - viewer.contentY;
-            console.log(current_part.tracker_info)
-            console.log("Tracker Y:", tracker.y);
+            //console.log(current_part.tracker_info)
+            //console.log("Tracker Y:", tracker.y);
+            scrollView.refresh_tracker()
         }
 
 
@@ -72,11 +78,9 @@ ScrollView{
 
                     //viewer.contentY += (current_part.tracker_info[0].y - current_part.tracker_info[4]) * viewer.scale_factor;
 
-                    tracker.y = (current_part.tracker_info[0].y - 100) * viewer.scale_factor - viewer.contentY;
+                    //tracker.y = (current_part.tracker_info[0].y - 100) * viewer.scale_factor - viewer.contentY;
 
-                    tracker.y = Qt.binding(function() {
-                        return (current_part.tracker_info[0].y - 100) * viewer.scale_factor - (viewer.contentY - viewer.originY);
-                    })
+                    scrollView.refresh_tracker()
                 }
             }
         }
