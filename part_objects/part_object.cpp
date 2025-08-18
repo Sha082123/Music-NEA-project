@@ -29,6 +29,8 @@ part_object::part_object(QObject *parent, QString part_name, part_manager *part_
     m_saved = "(saved)";
 
     m_sync_coordinates = {};
+
+    settracker_info(QVariantList());
 }
 
 
@@ -123,10 +125,10 @@ int part_object::time_from_measure(int measure_number)
     }
 
     if (measure_number > m_sync_coordinates.last().measure) {
-        // for (auto point : m_sync_coordinates) {
-        //     qInfo() << point.measure;
-        // }
-        // qInfo() << m_sync_coordinates.last().measure << "is the last measure, returning end time";
+        for (auto point : m_sync_coordinates) {
+            qInfo() << point.measure;
+        }
+        qInfo() << m_sync_coordinates.last().measure << "is the last measure, returning end time";
         return m_sync_coordinates.last().time; // end
     }
 
@@ -288,8 +290,6 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
     int time_signature_element_index = 0;
     mei_parser::tempo_element current_tempo_element = tempo_elements[tempo_element_index];
     mei_parser::time_signature_element current_time_signature_element = time_signature_elements[time_signature_element_index];
-    xml_parser::SvgElementInfo previous_element;
-    previous_element.measure_number = 1;
 
     int current_page_index = 0;
     int current_element_index = 0;
@@ -307,16 +307,19 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
     int time_to_add = 0;
 
     xml_parser::SvgElementInfo current_element;
+    xml_parser::SvgElementInfo previous_element;
+
+    previous_element.measure_number = 1;
 
     for (int index = 0; index < sync_points.size(); ++index) {
 
         if (index >= sync_points.size() - 1) { // check if at end
             //extrapolate according to tempo and time signatures
 
-            qInfo() << "current page index: " << current_page_index;
-            qInfo() << "current element index: " << current_element_index;
-            qInfo() << "current measure: " << all_elements[current_page_index][current_element_index].measure_number;
-            qInfo() << "current beat: " << all_elements[current_page_index][current_element_index].start_beat;
+            // qInfo() << "current page index: " << current_page_index;
+            // qInfo() << "current element index: " << current_element_index;
+            // qInfo() << "current measure: " << all_elements[current_page_index][current_element_index].measure_number;
+            // qInfo() << "current beat: " << all_elements[current_page_index][current_element_index].start_beat;
 
 
             for (int page_index = current_page_index; page_index < all_elements.size(); page_index++) {
@@ -324,11 +327,17 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                 for (int element_index = 0; element_index < all_elements[page_index].size(); element_index++) {
                     current_element = all_elements[page_index][element_index];
 
-                    qInfo() << "current element: " << current_element.start_beat << current_element.measure_number;
-                    qInfo() << "previous element: " << previous_element_start_beat << previous_element_measure;
+                    // qInfo() << "current element: " << current_element.start_beat << current_element.measure_number;
+                    // qInfo() << "previous element: " << previous_element_start_beat << previous_element_measure;
 
-                    if ((current_element.measure_number > previous_element_measure) || (current_element.start_beat > previous_element_start_beat)) {
+                    if ((current_element.measure_number > previous_element_measure) ||
+                        ((current_element.start_beat > previous_element_start_beat))  && (current_element.measure_number >= previous_element_measure) ) {
                         // Skip elements that are at the same beat as the last element
+
+                        // qInfo() << "Processing element at measure:" << current_element.measure_number
+                        //         << "start beat:" << current_element.start_beat;
+                        // qInfo() << "Previous element at measure:" << previous_element_measure
+                        //         << "start beat:" << previous_element_start_beat;
 
 
                         sync_coordinate new_sync_coordinate;
@@ -358,9 +367,9 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                         int measure_difference = current_element.measure_number - previous_element.measure_number;
                         float beat_difference = float(current_element.start_beat + 32)/float(32.0f) - float(previous_element.start_beat + 32)/float(32.0f);
 
-                        qInfo() << "current measure: " << current_element.measure_number;
-                        qInfo() << "previous measure: " << previous_element.measure_number;
-                        qInfo() << Qt::endl;
+                        // qInfo() << "current measure: " << current_element.measure_number;
+                        // qInfo() << "previous measure: " << previous_element.measure_number;
+                        // qInfo() << Qt::endl;
 
                         ms_per_beat = 60000.0f / float(current_tempo); // milliseconds per beat
                         ms_per_measure = float(ms_per_beat) * float(current_time_signature)/32.0f; // milliseconds per measure
@@ -380,6 +389,7 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                                 new_break_coordinate.page_index = page_index;
                                 new_break_coordinate.y_no_offset = y_list_no_offset[current_break_index];
                                 new_break_coordinate.measure = previous_element.measure_number;
+                                new_break_coordinate.beat = 0; // 0 so that when matching to other parts it will always be included
                                 m_sync_coordinates.append(new_break_coordinate);
 
                                 current_break_index ++;
@@ -403,6 +413,7 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                         new_sync_coordinate.page_index = page_index;
                         new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
                         new_sync_coordinate.measure = current_element.measure_number;
+                        new_sync_coordinate.beat = float(current_element.start_beat + 32) / 32.0f;
 
                         if ((current_element.position.x() < previous_element.position.x()) && (new_sync_coordinate.coordinates.y() == m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.y())) {
                             m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.setX(current_element.position.x() - 20);
@@ -433,6 +444,8 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
             final_coordinate.height = y_list.last().second;
             final_coordinate.page_index = all_elements.size() - 1;
             final_coordinate.y_no_offset = y_list_no_offset.last();
+            final_coordinate.measure = current_element.measure_number;
+            final_coordinate.beat = 0; // 0 so that when matching to other parts it will always be included
             m_sync_coordinates.append(final_coordinate);
         }
 
@@ -446,13 +459,31 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
             int end_measure = next_sync_point.measure;
             int end_beat = next_sync_point.beat;
 
+            bool end = false;
+            bool stationary = false;
+
+            if (end_measure == current_sync_point.measure && end_beat == current_sync_point.beat) {
+                sync_coordinate new_sync_coordinate;
+                new_sync_coordinate.time = next_sync_point.time;
+                new_sync_coordinate.coordinates.setX(all_elements[current_page_index][current_element_index].position.x());
+                new_sync_coordinate.coordinates.setY(y_list[current_break_index].first);
+                new_sync_coordinate.height = y_list[current_break_index].second;
+                new_sync_coordinate.page_index = current_page_index;
+                new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                new_sync_coordinate.measure = current_sync_point.measure;
+                new_sync_coordinate.beat = current_sync_point.beat;
+                m_sync_coordinates.append(new_sync_coordinate);
+
+                end = true;
+                stationary = true;
+            }
+
             int start_sync_index = m_sync_coordinates.size();
             float scale_factor;
             int sync_time_difference = next_sync_point.time - current_sync_point.time;
 
             int time_from_sync = 0;
 
-            bool end = false;
 
             for (int page_index = current_page_index; page_index < all_elements.size() && end == false; page_index++) {
 
@@ -462,18 +493,21 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                     // qInfo() << "current element: " << current_element.start_beat << current_element.measure_number;
                     // qInfo() << "previous element: " << previous_element_start_beat << previous_element_measure;
 
-                    if ((current_element.measure_number > previous_element_measure) || (current_element.start_beat > previous_element_start_beat)) {
+                    if ((current_element.measure_number > previous_element_measure) ||
+                        ((current_element.start_beat > previous_element_start_beat))  && (current_element.measure_number >= previous_element_measure) ) {
                         // Skip elements that are at the same beat as the last element
 
                         current_element_index = element_index;
                         current_page_index = page_index;
 
+                        //qInfo() << element_index;
+
 
 
                         float current_beat = float(current_element.start_beat + 32) / 32.0f;
 
-                        qInfo() << "Current data: " << current_beat << current_element.measure_number;
-                        qInfo() << "End data: " << end_beat << end_measure;
+                        // qInfo() << "Current data: " << current_beat << current_element.measure_number;
+                        // qInfo() << "End data: " << end_beat << end_measure;
 
 
 
@@ -535,7 +569,11 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                                 new_break_coordinate.page_index = page_index;
                                 new_break_coordinate.y_no_offset = y_list_no_offset[current_break_index];
                                 new_break_coordinate.measure = previous_element.measure_number;
+                                new_break_coordinate.beat = 0; // 0 so that when matching to root this coordinate is always included
                                 m_sync_coordinates.append(new_break_coordinate);
+
+                                // qInfo() << "Adding break coordinate at time: " << new_break_coordinate.time;
+                                // qInfo() << "Break measure: " << current_break_measure;
 
                                 current_break_index ++;
                                 current_break_measure = all_breaks[current_break_index].measure_number;
@@ -546,7 +584,7 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                         }
 
 
-                        qInfo() << time_from_sync << time_difference << time_to_add;
+                        //qInfo() << time_from_sync << time_difference << time_to_add;
 
                         new_sync_coordinate.time = time_from_sync;
                         new_sync_coordinate.coordinates.setX(current_element.position.x());
@@ -555,6 +593,7 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                         new_sync_coordinate.page_index = page_index;
                         new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
                         new_sync_coordinate.measure = current_element.measure_number;
+                        new_sync_coordinate.beat = float(current_element.start_beat + 32) / 32.0f;
 
                         if ((current_element.position.x() < previous_element.position.x()) && (new_sync_coordinate.coordinates.y() == m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.y())) {
                             m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.setX(current_element.position.x() - 20);
@@ -584,36 +623,239 @@ void part_object::calculate_sync_coordinates(QVector<main_options::sync_point> &
                 }
             }
 
-            scale_factor = float(sync_time_difference) / float(time_from_sync);
-            qInfo() << sync_time_difference << " / " << time_from_sync;
+            if (stationary == false) {
+                scale_factor = float(sync_time_difference) / float(time_from_sync);
+                qInfo() << sync_time_difference << " / " << time_from_sync;
 
-            for (int i = start_sync_index; i < m_sync_coordinates.size(); ++i) {
-                m_sync_coordinates[i].time = int(m_sync_coordinates[i].time * scale_factor) + time_difference;
+                for (int i = start_sync_index; i < m_sync_coordinates.size(); ++i) {
+                    m_sync_coordinates[i].time = int(m_sync_coordinates[i].time * scale_factor) + time_difference;
+                }
+
+                time_difference += time_from_sync * scale_factor;
+
+                //qInfo() << time_difference << " : " << next_sync_point.time;
+
+                sync_coordinate new_sync_coordinate;
+
+                new_sync_coordinate.time = time_difference;
+                new_sync_coordinate.coordinates.setX(current_element.position.x());
+                new_sync_coordinate.coordinates.setY(y_list[current_break_index].first);
+                new_sync_coordinate.height = y_list[current_break_index].second;
+                new_sync_coordinate.page_index = current_page_index;
+                new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                new_sync_coordinate.measure = current_element.measure_number;
+                new_sync_coordinate.beat = float(current_element.start_beat + 32) / 32.0f;
+
+                m_sync_coordinates.append(new_sync_coordinate);
+            } else {
+                time_difference = next_sync_point.time;
             }
 
-            time_difference += time_from_sync * scale_factor;
 
-            qInfo() << time_difference << " : " << next_sync_point.time;
 
-            sync_coordinate new_sync_coordinate;
-
-            new_sync_coordinate.time = time_difference;
-            new_sync_coordinate.coordinates.setX(current_element.position.x());
-            new_sync_coordinate.coordinates.setY(y_list[current_break_index].first);
-            new_sync_coordinate.height = y_list[current_break_index].second;
-            new_sync_coordinate.page_index = current_page_index;
-            new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
-            new_sync_coordinate.measure = current_element.measure_number;
 
         }
     }
 
-    // for (auto sync_coordinate : m_sync_coordinates) {
-    //     qInfo() << "Sync Coordinate: " << sync_coordinate.coordinates << ", Time: " << sync_coordinate.time;
-    //     if (sync_coordinate.measure== 20) {
-    //             return;
-    //         }
+    for (auto sync_coordinate : m_sync_coordinates) {
+        qInfo() << "Sync Coordinate: " << sync_coordinate.coordinates << ", Time: " << sync_coordinate.time;
+        if (sync_coordinate.measure== 20) {
+                return;
+            }
+    }
+}
+
+void part_object::match_sync_to_root()
+{
+    m_sync_coordinates.clear();
+
+    QVector<QVector<xml_parser::SvgElementInfo>> all_elements = m_xml_parser->get_all_elements();
+
+    // sort the list to ensure elements are in order //
+
+    for (auto &page : all_elements) {
+        std::sort(page.begin(), page.end(), [](const xml_parser::SvgElementInfo &a, const xml_parser::SvgElementInfo &b) {
+            return a.measure_number < b.measure_number || (a.measure_number == b.measure_number && a.start_beat < b.start_beat);
+        });
+    }
+
+    // calculate the y coordinates for each line, by finding the average y position of each element in the line
+
+    QVector<mei_parser::break_element> all_breaks = m_mei_parser->get_breaks();
+
+    QVector<QPair<float, float>> y_list; // top y coordinates, height of bar
+    QVector<float> y_list_no_offset;
+    int current_break_index = 0;
+    int current_break_measure = all_breaks[current_break_index].measure_number;
+    QVector<float> sum_list;
+
+    // for (auto break_obj : all_breaks) {
+    //     qInfo() << "Break ID: " << break_obj.id
+    //             << ", Measure Number: " << break_obj.measure_number;
     // }
+
+    // for (auto page : all_elements) {
+    //     for (auto element : page) {
+    //         qInfo() << "Element ID: " << element.id
+    //                 << ", Measure Number: " << element.measure_number
+    //                 << ", Start Beat: " << element.start_beat
+    //                 << ", Position Y: " << element.position.y();
+    //     }
+    // }
+
+    for (int page_index = 0; page_index < all_elements.size(); page_index++) {
+
+        int page_offset = m_resvg_loader->get_page_height(page_index);
+
+        for (int element_index = 0; element_index < all_elements[page_index].size(); element_index ++) {
+
+            auto element = all_elements[page_index][element_index];
+            xml_parser::SvgElementInfo next_element;
+
+            if (element_index == all_elements[page_index].size() - 1) {
+                if (page_index < all_elements.size() - 1) {
+                    next_element = all_elements[page_index + 1][0];
+                } else {
+                    next_element = xml_parser::SvgElementInfo(); // empty element if last element last page
+                }
+            } else {
+                next_element = all_elements[page_index][element_index + 1];
+            }
+
+            if (element.staff_number != 0) {
+                sum_list.append(element.position.y());
+            }
+
+
+
+
+            if ((next_element.measure_number > current_break_measure) || (element.id == all_elements.last().last().id)) {
+                // save the sum and get next break measure number, or if last then save the sum
+                // y_list.append(sum/count);
+
+                float max = std::ranges::max(sum_list);
+                float min = std::ranges::min(sum_list);
+
+                //qInfo() << max << min;
+
+                y_list.append(qMakePair (min + page_offset, max - min));
+                y_list_no_offset.append(min);
+
+                sum_list.clear();
+
+                if (current_break_index < all_breaks.size() - 1) {
+                    current_break_index++;
+                    current_break_measure = all_breaks[current_break_index].measure_number;
+                } else {
+                    current_break_measure = std::numeric_limits<int>::max(); // set to max if no more breaks
+                }
+            }
+        }
+    }
+
+    // qInfo() << "list of y coordinates: " << y_list;
+    // qInfo() << "Number of y coordinates: " << y_list.size();
+
+    //----------------------------------------------------------------------------------//
+
+    current_break_index = 0;
+    current_break_measure = all_breaks[current_break_index].measure_number;
+
+    xml_parser::SvgElementInfo current_element;
+    xml_parser::SvgElementInfo previous_element;
+
+    int previous_element_measure = 0;
+    int previous_element_start_beat = 0;
+
+
+    for (int page_index = 0; page_index < all_elements.size(); page_index++) {
+
+        for (int element_index = 0; element_index < all_elements[page_index].size(); element_index++) {
+
+            current_element = all_elements[page_index][element_index];
+            if ((current_element.measure_number > previous_element_measure) ||
+                ((current_element.start_beat > previous_element_start_beat))  && (current_element.measure_number >= previous_element_measure) ) {
+
+                if (current_break_index < all_breaks.size()) { // no -1 because y coordinates can be more than breaks
+                    if (current_element.measure_number > current_break_measure) { // add extra break coordinates
+                        sync_coordinate new_break_coordinate;
+
+                        new_break_coordinate.coordinates.setX(previous_element.position.x() + 50);
+                        new_break_coordinate.coordinates.setY(y_list[current_break_index].first);
+                        new_break_coordinate.height = y_list[current_break_index].second;
+                        new_break_coordinate.page_index = page_index;
+                        new_break_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                        new_break_coordinate.measure = previous_element.measure_number;
+                        new_break_coordinate.beat = 0; // 0 so that when matching to other parts it will always be included
+                        m_sync_coordinates.append(new_break_coordinate);
+
+                        current_break_index ++;
+                        current_break_measure = all_breaks[current_break_index].measure_number;
+                        // qInfo() << "all breaks: " << all_breaks.size();
+                        // qInfo() << "Current break index: " << current_break_index;
+
+                    }
+                }
+
+                sync_coordinate new_sync_coordinate;
+
+                new_sync_coordinate.coordinates.setX(current_element.position.x());
+                new_sync_coordinate.coordinates.setY(y_list[current_break_index].first);
+                new_sync_coordinate.height = y_list[current_break_index].second;
+                new_sync_coordinate.page_index = page_index;
+                new_sync_coordinate.y_no_offset = y_list_no_offset[current_break_index];
+                new_sync_coordinate.measure = current_element.measure_number;
+                new_sync_coordinate.beat = float(current_element.start_beat + 32) / 32.0f;
+
+                if ((current_element.position.x() < previous_element.position.x()) && (new_sync_coordinate.coordinates.y() == m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.y())) {
+                    m_sync_coordinates[m_sync_coordinates.size() - 1].coordinates.setX(current_element.position.x() - 20);
+                }
+                m_sync_coordinates.append(new_sync_coordinate);
+
+                previous_element_measure = current_element.measure_number;
+                previous_element_start_beat = current_element.start_beat;
+                previous_element = current_element;
+
+
+
+            }
+        }
+    }
+
+    sync_coordinate final_coordinate;
+
+    final_coordinate.coordinates.setX(current_element.position.x() + 50);
+    final_coordinate.coordinates.setY(y_list.last().first);
+    final_coordinate.height = y_list.last().second;
+    final_coordinate.page_index = all_elements.size() - 1;
+    final_coordinate.y_no_offset = y_list_no_offset.last();
+    final_coordinate.measure = current_element.measure_number;
+    final_coordinate.beat = 0; // 0 so that when matching to other parts it will always be included
+    m_sync_coordinates.append(final_coordinate);
+
+    QVector<sync_coordinate> root_sync_coordinate = m_part_manager->get_root_part()->get_sync_coordinates();
+
+    int sync_index = 0;
+    int measure_to_find = m_sync_coordinates[sync_index].measure;
+    float beat_to_find = m_sync_coordinates[sync_index].beat;
+
+    for (auto &sync_coordinate : root_sync_coordinate) {
+
+        if (sync_coordinate.measure == measure_to_find && sync_coordinate.beat == beat_to_find) {
+            // if we find the same measure and beat, then we can use the time
+            m_sync_coordinates[sync_index].time = sync_coordinate.time;
+            sync_index++;
+
+            if (sync_index < m_sync_coordinates.size()) {
+                measure_to_find = m_sync_coordinates[sync_index].measure;
+                beat_to_find = m_sync_coordinates[sync_index].beat;
+            } else {
+                break; // no more coordinates to match
+            }
+        }
+
+    }
+
 }
 
 void part_object::set_coordinates_from_time(int time)
@@ -688,6 +930,11 @@ void part_object::set_coordinates_from_time(int time)
         }
 
     }
+}
+
+QVector<part_object::sync_coordinate> part_object::get_sync_coordinates()
+{
+    return m_sync_coordinates;
 }
 
 

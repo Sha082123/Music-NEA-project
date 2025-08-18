@@ -45,6 +45,7 @@ public:
     Q_INVOKABLE void set_unsaved();
 
     part_object* get_current_part();
+    part_object* get_root_part();
 
     Q_INVOKABLE void clear_parts();
 

@@ -23,6 +23,7 @@ Rectangle {
         music_stack.currentIndex = 0 // Switch to the newly created part
         media_player.refresh_media_player()
         mixer.refresh_mixer()
+        music_stack.itemAt(music_stack.currentIndex).refresh_tracker()
     }
 
     border.width: 10
@@ -295,10 +296,10 @@ Rectangle {
                     snap_to_tracker.active = !snap_to_tracker.active
 
                     if (snap_to_tracker.active) {
-                        music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(current_part.tracker_info[2], ListView.Beginning) // Reset view to the beginning
+                        music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtBeginning() // Reset view to the beginning
 
                         music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
-                                (current_part.tracker_info[3] * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
+                                ((current_part.tracker_info[0].y - 200) * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
                     } else {
                         console.log("Snap to tracker disabled")
                     }
@@ -551,6 +552,17 @@ Rectangle {
                     part_manager.set_current_part(index)
                     console.log("Current part set to:", modelData, index)
                     console.log("number of parts", part_manager.list_size())
+
+                if (snap_to_tracker.active) {
+                    music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtBeginning() // Reset view to the beginning
+
+                    music_stack.itemAt(music_stack.currentIndex).viewer.contentY +=
+                            ((current_part.tracker_info[0].y - 200) * music_stack.itemAt(music_stack.currentIndex).viewer.scale_factor)
+                } else {
+                    console.log("Snap to tracker disabled")
+                }
+
+
 
                     //music_stack.itemAt(music_stack.currentIndex).viewer.positionViewAtIndex(0, ListView.Beginning) // Reset view to the beginning
                 }

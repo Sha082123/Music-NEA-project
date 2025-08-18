@@ -461,7 +461,7 @@ void track_manager::add_sync_point(int time, int measure, float beat)
     m_sync_points.append(new_sync_point);
 
     std::sort(m_sync_points.begin(), m_sync_points.end(), [](const main_options::sync_point &a, const main_options::sync_point &b) {
-        return a.measure < b.measure || (a.measure == b.measure && a.beat < b.beat);
+        return a.time < b.time;
     });
 
     m_qml_sync_points = convert_sync_points_to_qml(m_sync_points);

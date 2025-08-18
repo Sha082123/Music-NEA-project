@@ -40,8 +40,20 @@ public:
 
     Q_INVOKABLE void save_file();
 
+    struct sync_coordinate {
+        int time;
+        QPointF coordinates;
+        int height;
+        int page_index;
+        float y_no_offset;
+        int measure;
+        int beat;
+    };
+
     void calculate_sync_coordinates(QVector<main_options::sync_point> &sync_points);
+    void match_sync_to_root();
     void set_coordinates_from_time(int time);
+    QVector<sync_coordinate> get_sync_coordinates();
 
     void update_part_name(QString new_part_name);
     void update_part_staves(QVector<QPair<int, bool>> &part_existence, part_object* root_ptr);
@@ -96,15 +108,6 @@ signals:
     void tracker_infoChanged();
 
 private:
-
-    struct sync_coordinate {
-        int time;
-        QPointF coordinates;
-        int height;
-        int page_index;
-        float y_no_offset;
-        int measure;
-    };
 
     // Add all renderers and parsers
     mei_parser *m_mei_parser;

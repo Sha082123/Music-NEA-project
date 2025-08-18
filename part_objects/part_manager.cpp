@@ -66,7 +66,12 @@ void part_manager::create_sync_coordinates()
     QVector<main_options::sync_point> sync_points = m_track_manager->sync_points();
 
     for (int index = 0; index < part_object_list.size(); ++index) {
-        part_object_list.at(index)->calculate_sync_coordinates(sync_points);
+        if (index == 0) {
+            part_object_list.at(index)->calculate_sync_coordinates (sync_points);
+        } else {
+            part_object_list.at(index)->match_sync_to_root();
+        }
+
     }
 
 }
@@ -361,6 +366,11 @@ void part_manager::set_unsaved()
 part_object* part_manager::get_current_part()
 {
     return current_part;
+}
+
+part_object *part_manager::get_root_part()
+{
+    return part_object_list.at(0);
 }
 
 void part_manager::clear_parts()

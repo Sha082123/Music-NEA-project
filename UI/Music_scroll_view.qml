@@ -10,6 +10,21 @@ ScrollView{
     property alias viewer: viewer
     property alias tracker: tracker
 
+    signal refresh_tracker()
+
+    onRefresh_tracker: {
+        tracker.x = Qt.binding(function() {
+            return (current_part.tracker_info[0].x + 50) * viewer.scale_factor;
+        })
+        tracker.y = Qt.binding(function() {
+            return (current_part.tracker_info[0].y - 100) * viewer.scale_factor - (viewer.contentY - viewer.originY);
+        })
+        tracker.height = Qt.binding(function() {
+            return (current_part.tracker_info[1] + 160) * viewer.scale_factor;
+        })
+        console.log("Tracker refreshed:", tracker.x, tracker.y, tracker.height);
+    }
+
     clip: true
 
     anchors.fill: parent
@@ -34,6 +49,7 @@ ScrollView{
             console.log("Content Y Changed:", viewer.contentY);
             //tracker.y = current_part.tracker_info[0].y * viewer.scale_factor - viewer.contentY;
             console.log(current_part.tracker_info)
+            console.log("Tracker Y:", tracker.y);
         }
 
 
